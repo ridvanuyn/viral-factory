@@ -2,7 +2,7 @@
 
 Marketing, legal and support site for the [Viral Factory](https://apps.apple.com/app/id6790560948) iOS app.
 Built with [Astro](https://astro.build) 5 + Tailwind 4, fully static, deployed to **GitHub Pages** at
-**https://ridvanuyan.github.io/viral-factory/**.
+**https://ridvanuyn.github.io/viral-factory/**.
 
 ## What's here
 

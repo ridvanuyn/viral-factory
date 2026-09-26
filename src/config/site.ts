@@ -4,8 +4,14 @@
  * so there is exactly one place to change.
  */
 
-/** Canonical production origin (no trailing slash, no base path). */
-export const SITE_URL = 'https://ridvanuyan.github.io';
+/**
+ * Canonical production origin (no trailing slash, no base path). GitHub
+ * Pages project sites are always served at <github-username>.github.io —
+ * the authenticated/owning account here is "ridvanuyn" (no second "a"; not
+ * to be confused with the developer's name, Rıdvan Uyan), so that's the
+ * only origin that will ever actually resolve for this repo.
+ */
+export const SITE_URL = 'https://ridvanuyn.github.io';
 
 /** GitHub Pages project-site base path (matches the repo name). */
 export const BASE_PATH = '/viral-factory';

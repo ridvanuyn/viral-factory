@@ -1,0 +1,20 @@
+---
+/** Localized programmatic keyword pages, for the 4 non-English keyword locales. */
+import KeywordBody from '../../sections/KeywordBody.astro';
+import { keywordPages, KEYWORD_TOPICS, type KeywordLocale } from '../../i18n/keywords';
+import type { Locale } from '../../config/site';
+
+export function getStaticPaths() {
+  const locales: KeywordLocale[] = ['de', 'fr', 'es', 'it'];
+  return locales.flatMap((lang) =>
+    KEYWORD_TOPICS.map((topic) => ({
+      params: { lang, keywordSlug: keywordPages[lang][topic].slug },
+      props: { lang, topic },
+    })),
+  );
+}
+
+const { lang, topic } = Astro.props as { lang: Locale; topic: (typeof KEYWORD_TOPICS)[number] };
+const page = keywordPages[lang as KeywordLocale][topic];
+---
+<KeywordBody lang={lang} topic={topic} page={page} />

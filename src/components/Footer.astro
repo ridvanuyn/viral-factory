@@ -1,0 +1,48 @@
+---
+import { BRAND, STORE, DEFAULT_LOCALE, type Locale } from '../config/site';
+import { t, lp } from '../i18n';
+import { footerKeywordLinks } from '../i18n/keywords';
+import AppStoreBadge from './AppStoreBadge.astro';
+
+interface Props { lang?: Locale }
+const { lang = DEFAULT_LOCALE } = Astro.props;
+const tr = t(lang);
+const legalLinks = [
+  { href: lp(lang, '/privacy'), label: tr.footer.privacy },
+  { href: lp(lang, '/terms'), label: tr.footer.terms },
+  { href: lp(lang, '/support'), label: tr.footer.support },
+  { href: lp(lang, '/delete-account'), label: tr.footer.deleteAccount },
+];
+const guides = footerKeywordLinks(lang);
+const year = new Date().getFullYear();
+---
+<footer class="relative z-[1] mt-24 border-t border-line bg-bg-sunken/60">
+  <div class="container-page grid gap-10 py-14 md:grid-cols-[1.5fr_1fr_1fr]">
+    <div>
+      <div class="flex items-center gap-2.5 font-bold">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm text-white">VF</span>
+        <span class="font-display text-lg">{BRAND.name}</span>
+      </div>
+      <p class="mt-3 max-w-xs text-sm text-ink-soft">{tr.footer.tagline}</p>
+      <div class="mt-5"><AppStoreBadge /></div>
+    </div>
+    <div>
+      <h3 class="label-mono text-ink-muted">{tr.footer.legal}</h3>
+      <ul class="mt-3 space-y-2">
+        {legalLinks.map((l) => (<li><a href={l.href} class="text-sm text-ink-soft transition-colors hover:text-ink">{l.label}</a></li>))}
+      </ul>
+    </div>
+    {guides && guides.length > 0 && (
+      <div>
+        <h3 class="label-mono text-ink-muted">{tr.footer.guides}</h3>
+        <ul class="mt-3 space-y-2">
+          {guides.map((l) => (<li><a href={l.href} class="text-sm text-ink-soft transition-colors hover:text-ink">{l.label}</a></li>))}
+        </ul>
+      </div>
+    )}
+  </div>
+  <div class="container-page flex flex-col gap-2 border-t border-line py-6 text-xs text-ink-muted md:flex-row md:items-center md:justify-between">
+    <p>© {year} {BRAND.name} — {BRAND.developerName}. {tr.footer.rights}</p>
+    <a href={`mailto:${BRAND.supportEmail}`} class="transition-colors hover:text-ink">{BRAND.supportEmail}</a>
+  </div>
+</footer>

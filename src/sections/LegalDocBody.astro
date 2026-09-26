@@ -1,0 +1,39 @@
+---
+/**
+ * Shared renderer for the three "long-form legal document" pages: Privacy,
+ * Terms, and Delete Account (all share the same LegalDoc shape). Support has
+ * its own body (SupportBody.astro) since it's FAQ-shaped, not section-shaped.
+ */
+import Base from '../layouts/Base.astro';
+import { BRAND, type Locale } from '../config/site';
+import { lp } from '../i18n';
+import { legal, type LegalDoc } from '../i18n/legal';
+import { breadcrumbLd } from '../lib/seo';
+
+interface Props {
+  lang: Locale;
+  doc: LegalDoc;
+  path: string;
+  navLabel: string;
+}
+const { lang, doc, path, navLabel } = Astro.props;
+const legalPack = legal[lang] ?? legal.en;
+const jsonLd = breadcrumbLd([
+  { name: BRAND.name, path: lp(lang, '/') },
+  { name: navLabel, path: lp(lang, path) },
+]);
+---
+<Base title={doc.title} description={doc.lead} lang={lang} path={path} jsonLd={jsonLd}>
+  <article class="prose-legal container-page max-w-3xl py-16 md:py-20">
+    <h1 class="font-display text-4xl font-extrabold">{doc.title}</h1>
+    <p class="mt-2 text-sm text-ink-muted">{legalPack.updatedLabel}: {legalPack.effectiveDateLabel}</p>
+    <p class="mt-5 leading-relaxed text-ink-soft">{doc.intro}</p>
+    {doc.sections.map((s) => (
+      <Fragment>
+        <h2>{s.h}</h2>
+        {s.p?.map((para) => (<p>{para}</p>))}
+        {s.ul && (<ul>{s.ul.map((li) => (<li>{li}</li>))}</ul>)}
+      </Fragment>
+    ))}
+  </article>
+</Base>

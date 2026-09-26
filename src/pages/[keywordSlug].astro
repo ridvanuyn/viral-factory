@@ -1,0 +1,16 @@
+---
+/** English (bare-path) programmatic keyword pages — one per topic in KEYWORD_TOPICS. */
+import KeywordBody from '../sections/KeywordBody.astro';
+import { keywordPages, KEYWORD_TOPICS } from '../i18n/keywords';
+
+export function getStaticPaths() {
+  return KEYWORD_TOPICS.map((topic) => ({
+    params: { keywordSlug: keywordPages.en[topic].slug },
+    props: { topic },
+  }));
+}
+
+const { topic } = Astro.props as { topic: (typeof KEYWORD_TOPICS)[number] };
+const page = keywordPages.en[topic];
+---
+<KeywordBody lang="en" topic={topic} page={page} />

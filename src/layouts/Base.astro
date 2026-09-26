@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import Seo from '../components/Seo.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { DEFAULT_LOCALE, type Locale } from '../config/site';
+import { dir, withBase } from '../i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  /** Locale-agnostic path (for canonical/hreflang + language switcher). */
+  path?: string;
+  lang?: Locale;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  bare?: boolean;
+  hideSwitcher?: boolean;
+  /** Override the hreflang alternate set (for pages not translated into every locale). */
+  altLocales?: Locale[];
+}
+const { bare = false, hideSwitcher = false, lang = DEFAULT_LOCALE, path = '/', ...rest } = Astro.props;
+---
+<!doctype html>
+<html lang={lang} dir={dir(lang)}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/png" href={withBase('/favicon.png')} />
+    <link rel="apple-touch-icon" href={withBase('/apple-touch-icon.png')} />
+    <meta name="theme-color" content="#f4f2f8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <Seo lang={lang} path={path} {...rest} />
+    <ClientRouter />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    {!bare && <Header lang={lang} path={path} hideSwitcher={hideSwitcher} />}
+    <main class="relative z-[1] flex-1">
+      <slot />
+    </main>
+    {!bare && <Footer lang={lang} />}
+  </body>
+</html>

@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from '../components/Faq.astro';
+import { BRAND, type Locale } from '../config/site';
+import { lp, t } from '../i18n';
+import { legal } from '../i18n/legal';
+import { faqLd, breadcrumbLd } from '../lib/seo';
+
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const tr = t(lang);
+const doc = (legal[lang] ?? legal.en).support;
+const jsonLd = [
+  faqLd(doc.faqs),
+  breadcrumbLd([
+    { name: BRAND.name, path: lp(lang, '/') },
+    { name: doc.title, path: lp(lang, '/support') },
+  ]),
+];
+---
+<Base title={doc.title} description={doc.lead} lang={lang} path="/support" jsonLd={jsonLd}>
+  <article class="container-page max-w-3xl py-16 md:py-20">
+    <h1 class="font-display text-4xl font-extrabold">{doc.title}</h1>
+    <p class="mt-2 text-lg text-ink-soft">{doc.lead}</p>
+    <p class="mt-5 leading-relaxed text-ink-soft">{doc.intro}</p>
+    <p class="mt-2">
+      <a href={`mailto:${BRAND.supportEmail}`} class="text-accent underline underline-offset-2">{BRAND.supportEmail}</a>
+    </p>
+  </article>
+  <Faq faqs={doc.faqs} title={tr.faqHeading} />
+</Base>

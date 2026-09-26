@@ -1,0 +1,8 @@
+---
+import LegalDocBody from '../../sections/LegalDocBody.astro';
+import { legal } from '../../i18n/legal';
+import { t } from '../../i18n';
+
+const tr = t('en');
+---
+<LegalDocBody lang="en" doc={legal.en.terms} path="/terms" navLabel={tr.footer.terms} />

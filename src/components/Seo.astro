@@ -1,0 +1,76 @@
+---
+/**
+ * Per-page SEO + GEO head block: title/description/canonical, hreflang
+ * alternates, OpenGraph + Twitter cards, and JSON-LD. Pass `lang` + the
+ * locale-agnostic `path` so canonical/hreflang are correct.
+ */
+import { SITE_URL, BRAND, STORE, DEFAULT_LOCALE, type Locale } from '../config/site';
+import { lp, alternates, withBase } from '../i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  /** Locale-agnostic path, e.g. '/privacy'. Drives canonical + hreflang. */
+  path?: string;
+  lang?: Locale;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Restrict hreflang alternates to these locales (content not translated into every language). */
+  altLocales?: Locale[];
+}
+
+const {
+  title,
+  description = BRAND.description,
+  image,
+  path = '/',
+  lang = DEFAULT_LOCALE,
+  noindex = false,
+  jsonLd,
+  altLocales,
+} = Astro.props;
+
+const resolvedImage = image ?? `/og/${lang}.png`;
+const canonicalUrl = new URL(lp(lang, path), SITE_URL).href;
+const imageUrl = resolvedImage.startsWith('http') ? resolvedImage : new URL(withBase(resolvedImage), SITE_URL).href;
+const fullTitle = title.includes(BRAND.name) ? title : `${title} · ${BRAND.name}`;
+const graphs = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const alts = alternates(path, altLocales);
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+{/* hreflang alternates */}
+{!noindex && alts.map((a) => (
+  <link rel="alternate" hreflang={a.lang} href={new URL(a.href, SITE_URL).href} />
+))}
+{!noindex && <link rel="alternate" hreflang="x-default" href={new URL(lp(DEFAULT_LOCALE, path), SITE_URL).href} />}
+
+{/* Apple Smart App Banner */}
+<meta name="apple-itunes-app" content={`app-id=${STORE.appleAppId}`} />
+
+{/* OpenGraph */}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={BRAND.name} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:locale" content={lang} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+{/* Twitter */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+
+{/* JSON-LD structured data */}
+{graphs.map((g) => (
+  <script type="application/ld+json" set:html={JSON.stringify(g)} />
+))}

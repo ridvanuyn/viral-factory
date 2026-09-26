@@ -1,0 +1,23 @@
+---
+/** Accessible FAQ block. Render the matching FAQPage JSON-LD separately via
+ *  faqLd() so the visible Q&A and structured data stay in sync. */
+interface Props {
+  title?: string;
+  faqs: { q: string; a: string }[];
+}
+const { title = 'Frequently asked questions', faqs } = Astro.props;
+---
+<section class="container-page py-16">
+  <h2 class="text-2xl font-extrabold md:text-3xl">{title}</h2>
+  <div class="mt-8 divide-y divide-line border-y border-line">
+    {faqs.map((f) => (
+      <details class="group py-4">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-bold">
+          {f.q}
+          <span class="shrink-0 text-ink-muted transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-ink-soft">{f.a}</p>
+      </details>
+    ))}
+  </div>
+</section>

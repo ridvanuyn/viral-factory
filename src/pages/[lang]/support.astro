@@ -1,0 +1,11 @@
+---
+import SupportBody from '../../sections/SupportBody.astro';
+import { ACTIVE_LOCALES, type Locale } from '../../config/site';
+
+export function getStaticPaths() {
+  return ACTIVE_LOCALES.map((lang) => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props as { lang: Locale };
+---
+<SupportBody lang={lang} />

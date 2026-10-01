@@ -1,0 +1,117 @@
+{
+ "source": "https://itunes.apple.com/lookup?id=...&country=us",
+ "fetched": "2026-10-01",
+ "storefront": "us",
+ "own_app": {
+  "trackId": 6790560948,
+  "lookup_resultCount": 0,
+  "apps.apple.com_status": 404,
+  "note": "Viral Factory not live in any storefront checked (us gb de tr fr in jp br sa it es kr nl pl se au ca mx)"
+ },
+ "apps": [
+  {
+   "trackId": 6471394316,
+   "trackName": "invideo AI: AI Video Generator",
+   "sellerName": "Invideo Inc",
+   "averageUserRating": 4.54844,
+   "userRatingCount": 27768,
+   "formattedPrice": "Free",
+   "minimumOsVersion": "16.0",
+   "primaryGenreName": "Photo & Video",
+   "version": "4.5.55",
+   "currentVersionReleaseDate": "2026-09-28T10:05:04Z",
+   "trackViewUrl": "https://apps.apple.com/us/app/invideo-ai-ai-video-generator/id6471394316"
+  },
+  {
+   "trackId": 1500855883,
+   "trackName": "CapCut: Photo & Video Editor",
+   "sellerName": "BYTEDANCE PTE. LTD.",
+   "averageUserRating": 4.60907,
+   "userRatingCount": 1122523,
+   "formattedPrice": "Free",
+   "minimumOsVersion": "15.0",
+   "primaryGenreName": "Photo & Video",
+   "version": "19.6.0",
+   "currentVersionReleaseDate": "2026-09-21T05:13:42Z",
+   "trackViewUrl": "https://apps.apple.com/us/app/capcut-photo-video-editor/id1500855883"
+  },
+  {
+   "trackId": 1541407007,
+   "trackName": "Captions: AI Edits Your Video",
+   "sellerName": "Captions, LLC",
+   "averageUserRating": 4.74556,
+   "userRatingCount": 38190,
+   "formattedPrice": "Free",
+   "minimumOsVersion": "16.0",
+   "primaryGenreName": "Photo & Video",
+   "version": "13.36.1",
+   "currentVersionReleaseDate": "2026-09-29T13:31:26Z",
+   "trackViewUrl": "https://apps.apple.com/us/app/captions-ai-edits-your-video/id1541407007"
+  },
+  {
+   "trackId": 6711356409,
+   "trackName": "AI Avatar Generator - HeyGen",
+   "sellerName": "HeyGen Technology Inc.",
+   "averageUserRating": 4.77561,
+   "userRatingCount": 25933,
+   "formattedPrice": "Free",
+   "minimumOsVersion": "17.5",
+   "primaryGenreName": "Photo & Video",
+   "version": "2.8.1",
+   "currentVersionReleaseDate": "2026-09-25T16:19:22Z",
+   "trackViewUrl": "https://apps.apple.com/us/app/ai-avatar-generator-heygen/id6711356409"
+  },
+  {
+   "trackId": 6738049229,
+   "trackName": "Kling AI: AI Image&Video Maker",
+   "sellerName": "KLING AI PTE. LTD.",
+   "averageUserRating": 4.68068,
+   "userRatingCount": 31457,
+   "formattedPrice": "Free",
+   "minimumOsVersion": "14.0",
+   "primaryGenreName": "Graphics & Design",
+   "version": "3.8.20",
+   "currentVersionReleaseDate": "2026-09-11T13:37:17Z",
+   "trackViewUrl": "https://apps.apple.com/us/app/kling-ai-ai-image-video-maker/id6738049229"
+  },
+  {
+   "trackId": 1665024375,
+   "trackName": "Runway: AI Image & Video",
+   "sellerName": "Runway AI, Inc.",
+   "averageUserRating": 4.47779,
+   "userRatingCount": 16185,
+   "formattedPrice": "Free",
+   "minimumOsVersion": "16.4",
+   "primaryGenreName": "Photo & Video",
+   "version": "98.0.0",
+   "currentVersionReleaseDate": "2026-09-27T16:27:45Z",
+   "trackViewUrl": "https://apps.apple.com/us/app/runway-ai-image-video/id1665024375"
+  },
+  {
+   "trackId": 6680155400,
+   "trackName": "Pika - AI Video",
+   "sellerName": "Mellis, Inc.",
+   "averageUserRating": 4.72901,
+   "userRatingCount": 4144,
+   "formattedPrice": "Free",
+   "minimumOsVersion": "17",
+   "primaryGenreName": "Graphics & Design",
+   "version": "1.12.1",
+   "currentVersionReleaseDate": "2026-07-15T08:46:06Z",
+   "trackViewUrl": "https://apps.apple.com/us/app/pika-ai-video/id6680155400"
+  },
+  {
+   "trackId": 6742595426,
+   "trackName": "Adobe Firefly AI Video & Photo",
+   "sellerName": "Adobe Inc.",
+   "averageUserRating": 4.69876,
+   "userRatingCount": 10367,
+   "formattedPrice": "Free",
+   "minimumOsVersion": "18.0",
+   "primaryGenreName": "Graphics & Design",
+   "version": "26.17.0",
+   "currentVersionReleaseDate": "2026-09-30T12:38:43Z",
+   "trackViewUrl": "https://apps.apple.com/us/app/adobe-firefly-ai-video-photo/id6742595426"
+  }
+ ]
+}

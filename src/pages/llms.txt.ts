@@ -25,6 +25,7 @@ const body = `# ${BRAND.name}
 - Support (FAQ, contact): ${ORIGIN}/support/
 - Delete account and data: ${ORIGIN}/delete-account/
 - Topic guides (English, German, French, Spanish, Italian): faceless video generator, faceless Reels maker, UGC ad maker, AI video ad generator for small business, photo-to-video AI, AI carousel maker, TikTok hook ideas generator, AI character video
+- Best AI video generator apps for iPhone (2026 comparison, English, App Store data dated): ${ORIGIN}/best-ai-video-generator-apps-iphone/
 
 ## Common questions
 - What is ${BRAND.name}? A mobile app for iOS that turns a prompt, a photo, or a reel link into ready-to-post short-form content across eight ways to create, plus daily hook ideas and direct publishing to TikTok, Instagram and YouTube.

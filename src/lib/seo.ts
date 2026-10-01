@@ -2,7 +2,7 @@
  * Reusable schema.org JSON-LD builders. Centralized so every page emits
  * consistent, GEO-friendly structured data that LLMs and rich results can read.
  */
-import { SITE_URL, BASE_PATH, BRAND, STORE } from '../config/site';
+import { SITE_URL, BASE_PATH, BRAND, STORE, ACTIVE_LOCALES } from '../config/site';
 
 export const organizationLd = () => ({
   '@context': 'https://schema.org',
@@ -13,6 +13,31 @@ export const organizationLd = () => ({
   email: BRAND.supportEmail,
   founder: { '@type': 'Person', name: BRAND.developerName },
   sameAs: [STORE.appStoreUrl],
+});
+
+/** The site itself (all locales share one WebSite entity). */
+export const websiteLd = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: BRAND.name,
+  url: `${SITE_URL}${BASE_PATH}/`,
+  inLanguage: [...ACTIVE_LOCALES],
+  publisher: { '@type': 'Organization', name: BRAND.name },
+});
+
+/** A ranked/curated list of apps (comparison pages). Names + store URLs only —
+ *  no ratings, reviews or offers for third-party apps. */
+export const itemListLd = (name: string, items: { name: string; url: string }[]) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name,
+  numberOfItems: items.length,
+  itemListElement: items.map((it, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: it.name,
+    url: it.url,
+  })),
 });
 
 /** The app itself — anchors "AI video generator" / "AI carousel app" queries.

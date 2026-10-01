@@ -980,6 +980,18 @@ export const keywordPages: Record<KeywordLocale, Record<KeywordTopicId, KeywordP
   },
 };
 
+/**
+ * In-body link from every guide page to the money page (the locale's home
+ * page), with the locale's money keyword as the anchor (see seo/keywords.md).
+ */
+export const keywordHomeLink: Record<KeywordLocale, { before: string; anchor: string; after: string }> = {
+  en: { before: 'Part of Viral Factory, the ', anchor: 'AI video maker app for iPhone', after: ' that turns one idea into ready-to-post reels, ads and carousels.' },
+  de: { before: 'Teil von Viral Factory, der ', anchor: 'KI-Video-App fürs iPhone', after: ', die aus einer Idee postfertige Reels, Ads und Karussells macht.' },
+  fr: { before: "Fait partie de Viral Factory, l'", anchor: 'application vidéo IA pour iPhone', after: ' qui transforme une idée en Reels, pubs et carrousels prêts à publier.' },
+  es: { before: 'Forma parte de Viral Factory, la ', anchor: 'app para hacer vídeos con IA en iPhone', after: ' que convierte una idea en Reels, anuncios y carruseles listos para publicar.' },
+  it: { before: "Fa parte di Viral Factory, l'", anchor: 'app per creare video con IA su iPhone', after: " che trasforma un'idea in Reel, annunci e caroselli pronti da pubblicare." },
+};
+
 /** Footer "Guides" column: locale's keyword pages, or null if untranslated. */
 export function footerKeywordLinks(lang: Locale): { href: string; label: string }[] | null {
   const loc = lang as KeywordLocale;

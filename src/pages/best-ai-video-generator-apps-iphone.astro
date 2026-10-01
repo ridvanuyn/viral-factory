@@ -1,0 +1,168 @@
+---
+/**
+ * English-only comparison page: "Best AI Video Generator Apps for iPhone (2026)".
+ * Data + copy live in src/i18n/rankings.ts (App Store facts, dated). No hreflang
+ * siblings exist, so the language switcher is hidden and alternates are en-only.
+ */
+import Base from '../layouts/Base.astro';
+import Faq from '../components/Faq.astro';
+import AppStoreBadge from '../components/AppStoreBadge.astro';
+import { BRAND, SITE_URL } from '../config/site';
+import { lp, t } from '../i18n';
+import { keywordPages } from '../i18n/keywords';
+import {
+  RANKING_PATH,
+  APPSTORE_DATA_DATE,
+  rankedApps,
+  pickByJob,
+  rankingFaqs,
+} from '../i18n/rankings';
+import { faqLd, breadcrumbLd, itemListLd } from '../lib/seo';
+
+const lang = 'en' as const;
+const tr = t(lang);
+const title = 'Best AI Video Generator Apps for iPhone (2026)';
+const h1 = 'Best AI video generator apps for iPhone (2026)';
+const description =
+  'The best AI video generator apps for iPhone in 2026, compared by App Store rating, iOS requirement and the job each does best: CapCut, HeyGen, Kling and more.';
+const home = lp(lang, '/');
+const guide = (topic: keyof typeof keywordPages.en) => lp(lang, `/${keywordPages.en[topic].slug}`);
+const fmt = (n: number) => n.toLocaleString('en-US');
+
+const jsonLd = [
+  breadcrumbLd([
+    { name: BRAND.name, path: home },
+    { name: h1, path: lp(lang, RANKING_PATH) },
+  ]),
+  itemListLd(
+    h1,
+    rankedApps.map((a) => ({ name: a.name, url: a.ours ? new URL(home, SITE_URL).href : a.url })),
+  ),
+  faqLd(rankingFaqs),
+];
+---
+<Base title={title} description={description} lang={lang} path={RANKING_PATH} jsonLd={jsonLd} altLocales={['en']} hideSwitcher>
+  <article class="container-page max-w-3xl py-16 md:py-20">
+    <p class="label-mono">App Store data as of {APPSTORE_DATA_DATE}</p>
+    <h1 class="mt-4 font-display text-4xl font-extrabold leading-tight md:text-5xl">{h1}</h1>
+    <p class="mt-5 text-lg leading-relaxed text-ink-soft">
+      Eight iPhone apps that turn a prompt, a photo or your own footage into short-form video, compared on what
+      Apple’s App Store actually shows: rating and rating count, developer, download price and the iOS version
+      each one needs. Pick by the job you have, not by hype.
+    </p>
+    <p class="mt-4 rounded-card border border-line bg-bg-raised p-5 text-sm leading-relaxed text-ink-soft">
+      <strong class="text-ink">Disclosure:</strong> we make Viral Factory, the
+      <a href={home} class="text-accent underline underline-offset-2">AI video maker app for iPhone</a> listed
+      first here. Everything about the other seven apps comes from their own App Store listings (US store),
+      checked on {APPSTORE_DATA_DATE}. We did not run benchmark tests and we don’t score apps.
+    </p>
+
+    <h2 class="mt-12 font-display text-2xl font-bold">Quick picks</h2>
+    <ul class="mt-4 list-disc space-y-2 pl-6 text-ink-soft">
+      {rankedApps.map((a) => (
+        <li><a href={`#${a.id}`} class="font-semibold text-ink hover:text-accent">{a.name}{a.ours ? ' (our app)' : ''}</a> — {a.bestFor.charAt(0).toLowerCase() + a.bestFor.slice(1)}</li>
+      ))}
+    </ul>
+
+    <h2 class="mt-12 font-display text-2xl font-bold">The apps at a glance</h2>
+    <div class="mt-5 overflow-x-auto rounded-card border border-line bg-bg-raised">
+      <table class="w-full min-w-[640px] text-left text-sm">
+        <thead>
+          <tr class="text-ink">
+            <th scope="col" class="px-4 py-3 font-semibold">App</th>
+            <th scope="col" class="px-4 py-3 font-semibold">App Store rating</th>
+            <th scope="col" class="px-4 py-3 font-semibold">Download</th>
+            <th scope="col" class="px-4 py-3 font-semibold">Requires</th>
+            <th scope="col" class="px-4 py-3 font-semibold">Best for</th>
+          </tr>
+        </thead>
+        <tbody class="text-ink-soft">
+          {rankedApps.map((a) => (
+            <tr class="border-t border-line align-top">
+              <th scope="row" class="px-4 py-3 font-semibold text-ink"><a href={`#${a.id}`} class="hover:text-accent">{a.name}</a>{a.ours && <span class="block text-xs font-medium text-accent">our app</span>}</th>
+              <td class="px-4 py-3 whitespace-nowrap">{a.rating !== null ? `${a.rating.toFixed(1)} ★ (${fmt(a.ratingCount ?? 0)})` : 'No rating yet'}</td>
+              <td class="px-4 py-3">{a.price}</td>
+              <td class="px-4 py-3 whitespace-nowrap">{a.minIos ? `iOS ${a.minIos}+` : '—'}</td>
+              <td class="px-4 py-3">{a.bestFor}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-xs text-ink-muted">US App Store data, {APPSTORE_DATA_DATE}. Download price only — in-app purchases not included.</p>
+
+    <h2 class="mt-12 font-display text-2xl font-bold">Pick by job</h2>
+    <p class="mt-3 leading-relaxed text-ink-soft">Which apps on this list say, in their own App Store listing, that they do the job you need.</p>
+    <div class="mt-5 overflow-x-auto rounded-card border border-line bg-bg-raised">
+      <table class="w-full min-w-[560px] text-left text-sm">
+        <thead>
+          <tr class="text-ink">
+            <th scope="col" class="px-4 py-3 font-semibold">If you want…</th>
+            <th scope="col" class="px-4 py-3 font-semibold">Look at</th>
+          </tr>
+        </thead>
+        <tbody class="text-ink-soft">
+          {pickByJob.map((j) => (
+            <tr class="border-t border-line align-top">
+              <th scope="row" class="px-4 py-3 font-semibold text-ink">{j.job}</th>
+              <td class="px-4 py-3">{j.apps}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="mt-12 font-display text-2xl font-bold">How we picked</h2>
+    <p class="mt-3 leading-relaxed text-ink-soft">
+      We started from the 2026 roundups that rank on Google for “best AI video generator for iPhone”, “best
+      faceless video app”, “best AI UGC video generator”, “best photo to video AI app” and “best AI reel maker”,
+      kept the tools that have a native iPhone app in the US App Store, and dropped look-alike apps from
+      unrelated developers. Ratings, rating counts, developer names, download prices and minimum iOS versions
+      come from Apple’s public App Store data on {APPSTORE_DATA_DATE}; descriptions paraphrase each app’s own
+      listing. The order follows the job each app does best.
+    </p>
+
+    {rankedApps.map((a, i) => (
+      <section id={a.id} class="mt-12 scroll-mt-24">
+        <h2 class="font-display text-2xl font-bold">{i + 1}. {a.name}{a.ours ? ' (our app)' : ''}</h2>
+        <p class="mt-2 text-sm text-ink-muted">
+          {a.developer} · {a.rating !== null ? `${a.rating.toFixed(1)} ★ from ${fmt(a.ratingCount ?? 0)} ratings` : 'no App Store rating yet'} · {a.price} download{a.minIos ? ` · iOS ${a.minIos} or later` : ''}
+        </p>
+        <p class="mt-3 leading-relaxed text-ink-soft">{a.what}</p>
+        <p class="mt-3 leading-relaxed text-ink-soft"><strong class="text-ink">Best for:</strong> {a.bestFor}.</p>
+        {a.ours ? (
+          <Fragment>
+            <p class="mt-3 leading-relaxed text-ink-soft">
+              Guides: <a href={guide('faceless-video')} class="text-accent underline underline-offset-2">faceless video generator</a>,
+              <a href={guide('ugc-ads')} class="text-accent underline underline-offset-2">AI UGC ad maker</a>,
+              <a href={guide('photo-to-video')} class="text-accent underline underline-offset-2">photo to video AI</a>,
+              <a href={guide('ai-carousel')} class="text-accent underline underline-offset-2">AI carousel maker</a>.
+            </p>
+            <div class="mt-5"><AppStoreBadge /></div>
+          </Fragment>
+        ) : (
+          <p class="mt-3"><a href={a.url} rel="noopener" class="text-sm font-semibold text-accent underline underline-offset-2">{a.name} on the App Store</a></p>
+        )}
+      </section>
+    ))}
+
+    <h2 class="mt-12 font-display text-2xl font-bold">How to choose</h2>
+    <p class="mt-3 leading-relaxed text-ink-soft">
+      Start from the output you post most. If you need a new reel, ad or carousel every day and don’t want to
+      film, a generator that writes the script and storyboard for you saves the most time. If you want your own
+      face on camera without filming every time, an avatar app fits better. If you already shoot footage, an
+      editor with AI helpers is enough. Then check the iOS requirement against your iPhone before you download.
+    </p>
+
+    <div class="mt-12 rounded-card border border-line bg-bg-raised p-8 text-center">
+      <p class="font-display text-xl font-bold">Make today’s post with Viral Factory</p>
+      <p class="mx-auto mt-2 max-w-md text-sm text-ink-soft">
+        The <a href={home} class="text-accent underline underline-offset-2">AI video maker app for iPhone</a>
+        behind this guide: one idea in, a storyboard you approve, a ready-to-post video out.
+      </p>
+      <div class="mt-5 flex justify-center"><AppStoreBadge /></div>
+    </div>
+  </article>
+
+  <Faq faqs={rankingFaqs} title={tr.faqHeading} />
+</Base>

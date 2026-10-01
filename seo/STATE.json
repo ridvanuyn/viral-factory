@@ -1,0 +1,235 @@
+{
+  "site": "https://ridvanuyn.github.io/viral-factory/",
+  "money_page": "https://ridvanuyn.github.io/viral-factory/",
+  "app_store": {
+    "id": "6790560948",
+    "url": "https://apps.apple.com/app/id6790560948",
+    "live": false,
+    "checked": "2026-10-01",
+    "evidence": "iTunes lookup resultCount 0 in 18 storefronts; apps.apple.com 404"
+  },
+  "gsc": {
+    "available": false,
+    "note": "No Search Console data recorded for this property yet. Add sc numbers here when read."
+  },
+  "analytics": "none",
+  "chief_of_seo_2026-10-01": {
+    "date": "2026-10-01",
+    "sixty_day_rule": "not applicable — no GSC data, no known rankings; all titles changed",
+    "keywords_by_locale": {
+      "en": {
+        "primary": "ai video maker app for iphone",
+        "page": "/"
+      },
+      "de": {
+        "primary": "ki video app (iphone)",
+        "page": "/de/"
+      },
+      "fr": {
+        "primary": "application vidéo ia",
+        "page": "/fr/"
+      },
+      "es": {
+        "primary": "app para hacer vídeos con ia",
+        "page": "/es/"
+      },
+      "it": {
+        "primary": "app per creare video con ia",
+        "page": "/it/"
+      },
+      "pt": {
+        "primary": "app para fazer vídeos com ia",
+        "page": "/pt/"
+      },
+      "tr": {
+        "primary": "yapay zeka video uygulaması",
+        "page": "/tr/"
+      },
+      "ja": {
+        "primary": "AI 動画 作成 アプリ",
+        "page": "/ja/"
+      },
+      "ko": {
+        "primary": "AI 영상 만들기 앱",
+        "page": "/ko/"
+      },
+      "ar": {
+        "primary": "تطبيق صنع فيديو بالذكاء الاصطناعي",
+        "page": "/ar/"
+      },
+      "hi": {
+        "primary": "AI वीडियो बनाने वाला ऐप",
+        "page": "/hi/"
+      }
+    },
+    "ranking_page": {
+      "url": "https://ridvanuyn.github.io/viral-factory/best-ai-video-generator-apps-iphone/",
+      "primary": "best ai video generator apps for iphone 2026",
+      "apps": [
+        "Viral Factory (ours)",
+        "invideo AI",
+        "Captions",
+        "HeyGen",
+        "Kling AI",
+        "Runway",
+        "Adobe Firefly",
+        "CapCut"
+      ],
+      "data": "seo/data/appstore-2026-10-01.json"
+    },
+    "home_titles": {
+      "en": {
+        "before": "Viral Factory — AI short-form content studio for iOS",
+        "after": "AI Video Maker App for iPhone: Reels & UGC Ads · Viral Factory"
+      },
+      "de": {
+        "before": "Viral Factory — KI-Studio für Kurzvideos auf iOS",
+        "after": "KI-Video-App fürs iPhone: Reels & UGC-Ads · Viral Factory"
+      },
+      "fr": {
+        "before": "Viral Factory — studio IA de contenu court pour iOS",
+        "after": "Application vidéo IA : Reels et pubs UGC · Viral Factory"
+      },
+      "es": {
+        "before": "Viral Factory — estudio de IA para contenido corto en iOS",
+        "after": "App para hacer vídeos con IA: Reels y anuncios · Viral Factory"
+      },
+      "it": {
+        "before": "Viral Factory — studio IA per contenuti brevi su iOS",
+        "after": "App per creare video con IA: Reel e annunci · Viral Factory"
+      },
+      "pt": {
+        "before": "Viral Factory — estúdio de IA para conteúdo curto no iOS",
+        "after": "App para fazer vídeos com IA: Reels e anúncios · Viral Factory"
+      },
+      "tr": {
+        "before": "Viral Factory — iOS için yapay zeka kısa video stüdyosu",
+        "after": "Yapay Zeka Video Uygulaması: Reels ve Reklam · Viral Factory"
+      },
+      "ja": {
+        "before": "Viral Factory — iOS向けAIショート動画スタジオ",
+        "after": "AI動画作成アプリ｜リールとUGC広告をiPhoneで · Viral Factory"
+      },
+      "ko": {
+        "before": "Viral Factory — iOS용 AI 숏폼 콘텐츠 스튜디오",
+        "after": "AI 영상 만들기 앱 — 릴스·UGC 광고를 iPhone에서 · Viral Factory"
+      },
+      "ar": {
+        "before": "Viral Factory — استوديو محتوى قصير بالذكاء الاصطناعي لنظام iOS",
+        "after": "تطبيق صنع فيديو بالذكاء الاصطناعي: ريلز وإعلانات · Viral Factory"
+      },
+      "hi": {
+        "before": "Viral Factory — iOS के लिए AI शॉर्ट-फॉर्म कंटेंट स्टूडियो",
+        "after": "AI वीडियो बनाने वाला ऐप: रील्स और UGC विज्ञापन · Viral Factory"
+      }
+    },
+    "home_h1": {
+      "en": {
+        "before": "Faceless reels, UGC ads and swipe carousels — from one idea.",
+        "after": "AI video maker for faceless reels, UGC ads and swipe carousels — from one idea."
+      },
+      "de": {
+        "before": "Gesichtslose Reels, UGC-Ads und Swipe-Karussells — aus einer Idee.",
+        "after": "Die KI-Video-App für gesichtslose Reels, UGC-Ads und Swipe-Karussells — aus einer Idee."
+      },
+      "fr": {
+        "before": "Reels sans visage, pubs UGC et carrousels — à partir d'une seule idée.",
+        "after": "L'application vidéo IA pour Reels sans visage, pubs UGC et carrousels — à partir d'une seule idée."
+      },
+      "es": {
+        "before": "Reels sin rostro, anuncios UGC y carruseles — a partir de una sola idea.",
+        "after": "La app para hacer vídeos con IA: Reels sin rostro, anuncios UGC y carruseles — a partir de una sola idea."
+      },
+      "it": {
+        "before": "Reel senza volto, ads UGC e caroselli — da una sola idea.",
+        "after": "L'app per creare video con IA: Reel senza volto, ads UGC e caroselli — da una sola idea."
+      },
+      "pt": {
+        "before": "Reels sem rosto, anúncios UGC e carrosséis — a partir de uma ideia.",
+        "after": "O app para fazer vídeos com IA: Reels sem rosto, anúncios UGC e carrosséis — a partir de uma ideia."
+      },
+      "tr": {
+        "before": "Yüzsüz reels, UGC reklamlar ve kaydırmalı gönderiler — tek bir fikirden.",
+        "after": "Yapay zeka video uygulaması: yüzsüz reels, UGC reklamlar ve kaydırmalı gönderiler — tek bir fikirden."
+      },
+      "ja": {
+        "before": "顔出し不要のリール、UGC広告、スワイプ投稿 — すべて一つのアイデアから。",
+        "after": "AI動画作成アプリで、顔出し不要のリール、UGC広告、スワイプ投稿 — すべて一つのアイデアから。"
+      },
+      "ko": {
+        "before": "얼굴 없는 릴, UGC 광고, 스와이프 캐러셀 — 아이디어 하나로 시작합니다.",
+        "after": "AI 영상 만들기 앱으로 얼굴 없는 릴, UGC 광고, 스와이프 캐러셀 — 아이디어 하나로 시작합니다."
+      },
+      "ar": {
+        "before": "ريلز بلا وجه، إعلانات UGC، ومنشورات كاروسيل — كل ذلك من فكرة واحدة.",
+        "after": "تطبيق صنع فيديو بالذكاء الاصطناعي: ريلز بلا وجه، إعلانات UGC، ومنشورات كاروسيل — كل ذلك من فكرة واحدة."
+      },
+      "hi": {
+        "before": "बिना चेहरे वाली रील्स, UGC विज्ञापन और स्वाइप कैरोसेल — सिर्फ़ एक आइडिया से।",
+        "after": "AI वीडियो बनाने वाला ऐप: बिना चेहरे वाली रील्स, UGC विज्ञापन और स्वाइप कैरोसेल — सिर्फ़ एक आइडिया से।"
+      }
+    },
+    "home_meta_description": {
+      "en": {
+        "before": "Turn a prompt, a photo, or a reel you liked into ready-to-post short-form video and carousels for TikTok, Instagram and YouTube. Free to download on iOS.",
+        "after": "Viral Factory is an AI video maker app for iPhone: turn a prompt, a photo or a reel you liked into faceless reels, UGC ads and carousels. Free to download."
+      },
+      "de": {
+        "before": "Aus einem Prompt, einem Foto oder einem Reel, das dir gefallen hat, wird fertiger Kurzvideo- und Karussell-Content für TikTok, Instagram und YouTube. Kostenlos für iOS.",
+        "after": "Viral Factory ist die KI-Video-App fürs iPhone: Aus einem Prompt, einem Foto oder einem Reel werden gesichtslose Reels, UGC-Ads und Karussells. Kostenlos laden."
+      },
+      "fr": {
+        "before": "Transformez un prompt, une photo ou un reel que vous avez aimé en vidéos courtes et carrousels prêts à publier sur TikTok, Instagram et YouTube. Gratuit sur iOS.",
+        "after": "L'application vidéo IA pour iPhone : un prompt, une photo ou un reel deviennent des Reels sans visage, des pubs UGC et des carrousels. Téléchargement gratuit."
+      },
+      "es": {
+        "before": "Convierte un prompt, una foto o un reel que te gustó en vídeos cortos y carruseles listos para publicar en TikTok, Instagram y YouTube. Gratis en iOS.",
+        "after": "La app para hacer vídeos con IA en iPhone: convierte un prompt, una foto o un reel en Reels sin rostro, anuncios UGC y carruseles. Descarga gratis en iOS."
+      },
+      "it": {
+        "before": "Trasforma un prompt, una foto o un reel che ti è piaciuto in video brevi e caroselli pronti da pubblicare su TikTok, Instagram e YouTube. Gratis su iOS.",
+        "after": "Viral Factory è l'app per creare video con IA su iPhone: un prompt, una foto o un reel diventano Reel senza volto, annunci UGC e caroselli. Download gratuito."
+      },
+      "pt": {
+        "before": "Transforme um prompt, uma foto ou um reel que você curtiu em vídeos curtos e carrosséis prontos para publicar no TikTok, Instagram e YouTube. Grátis no iOS.",
+        "after": "Viral Factory é o app para fazer vídeos com IA no iPhone: um prompt, uma foto ou um reel viram Reels sem rosto, anúncios UGC e carrosséis. Download grátis."
+      },
+      "tr": {
+        "before": "Bir prompt, bir fotoğraf ya da beğendiğin bir reel; TikTok, Instagram ve YouTube için yayına hazır kısa video ve karusellere dönüşsün. iOS’ta ücretsiz.",
+        "after": "iPhone için yapay zeka video uygulaması: bir prompt, bir fotoğraf ya da beğendiğin bir reel; yüzsüz Reels, UGC reklam ve karusele dönüşür. iOS’ta ücretsiz."
+      },
+      "ja": {
+        "before": "プロンプト、写真、気に入ったリールを、TikTok・Instagram・YouTube向けの公開準備が整ったショート動画やカルーセルに変換。iOSで無料。",
+        "after": "Viral FactoryはiPhone向けのAI動画作成アプリ。プロンプト、写真、気に入ったリールから、顔出し不要のリール、UGC広告、カルーセルを作成。無料でダウンロード。"
+      },
+      "ko": {
+        "before": "프롬프트, 사진, 마음에 든 릴 하나를 TikTok·Instagram·YouTube에 바로 올릴 수 있는 숏폼 영상과 캐러셀로 바꿔보세요. iOS에서 무료.",
+        "after": "Viral Factory는 iPhone용 AI 영상 만들기 앱입니다. 프롬프트, 사진, 마음에 든 릴 하나로 얼굴 없는 릴스, UGC 광고, 캐러셀을 만들어 보세요. 무료 다운로드."
+      },
+      "ar": {
+        "before": "حوّل فكرة أو صورة أو ريلز أعجبك إلى فيديوهات قصيرة وكاروسيل جاهزة للنشر على TikTok وInstagram وYouTube. مجاني على iOS.",
+        "after": "Viral Factory تطبيق صنع فيديو بالذكاء الاصطناعي للآيفون: حوّل فكرة أو صورة أو ريلز أعجبك إلى ريلز بلا وجه وإعلانات UGC وكاروسيل. تنزيل مجاني."
+      },
+      "hi": {
+        "before": "एक प्रॉम्प्ट, एक फ़ोटो, या पसंद आई किसी रील को TikTok, Instagram और YouTube के लिए तैयार शॉर्ट वीडियो और कैरोसेल में बदलें। iOS पर मुफ़्त।",
+        "after": "Viral Factory iPhone के लिए AI वीडियो बनाने वाला ऐप है: प्रॉम्प्ट, फ़ोटो या पसंद आई रील से बिना चेहरे वाली रील्स, UGC विज्ञापन और कैरोसेल बनाएं। मुफ़्त डाउनलोड।"
+      }
+    },
+    "schema_added": [
+      "WebSite (home, all locales)",
+      "BreadcrumbList + ItemList + FAQPage (ranking page)"
+    ],
+    "internal_links_added": {
+      "to_money_page": "1 in-body link on each of 40 guide pages (8 en + 32 de/fr/es/it) to the locale home, anchor = locale money keyword; 2 on the ranking page",
+      "to_ranking_page": "1 in-body link on each of the 8 English guide pages + English footer Guides list + llms.txt"
+    },
+    "geo": {
+      "queries": 5,
+      "listicle_slots": 36,
+      "unique_listicles": 33,
+      "mentioned_in": 0,
+      "file": "seo/geo.md"
+    },
+    "next_check": "2026-10-29"
+  }
+}

@@ -56,11 +56,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'Language',
     faqHeading: 'Frequently asked questions',
     home: {
-      metaTitle: 'Viral Factory — AI short-form content studio for iOS',
+      metaTitle: 'AI Video Maker App for iPhone: Reels & UGC Ads',
       metaDescription:
-        'Turn a prompt, a photo, or a reel you liked into ready-to-post short-form video and carousels for TikTok, Instagram and YouTube. Free to download on iOS.',
+        'Viral Factory is an AI video maker app for iPhone: turn a prompt, a photo or a reel you liked into faceless reels, UGC ads and carousels. Free to download.',
       heroKicker: 'An AI content studio for creators and small brands',
-      heroTitleA: 'Faceless reels, UGC ads and swipe carousels —',
+      heroTitleA: 'AI video maker for faceless reels, UGC ads and swipe carousels —',
       heroTitleAccent: 'from one idea.',
       heroSub:
         'Viral Factory turns a prompt, a photo, or a reel you liked into ready-to-post short-form video and carousels for TikTok, Instagram and YouTube — no camera, no crew, no editing software.',
@@ -119,11 +119,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'Sprache',
     faqHeading: 'Häufig gestellte Fragen',
     home: {
-      metaTitle: 'Viral Factory — KI-Studio für Kurzvideos auf iOS',
+      metaTitle: 'KI-Video-App fürs iPhone: Reels & UGC-Ads',
       metaDescription:
-        'Aus einem Prompt, einem Foto oder einem Reel, das dir gefallen hat, wird fertiger Kurzvideo- und Karussell-Content für TikTok, Instagram und YouTube. Kostenlos für iOS.',
+        'Viral Factory ist die KI-Video-App fürs iPhone: Aus einem Prompt, einem Foto oder einem Reel werden gesichtslose Reels, UGC-Ads und Karussells. Kostenlos laden.',
       heroKicker: 'Ein KI-Content-Studio für Creator und kleine Marken',
-      heroTitleA: 'Gesichtslose Reels, UGC-Ads und Swipe-Karussells —',
+      heroTitleA: 'Die KI-Video-App für gesichtslose Reels, UGC-Ads und Swipe-Karussells —',
       heroTitleAccent: 'aus einer Idee.',
       heroSub:
         'Viral Factory macht aus einem Prompt, einem Foto oder einem Reel, das dir gefallen hat, fertigen Kurzvideo- und Karussell-Content für TikTok, Instagram und YouTube — ohne Kamera, ohne Team, ohne Schnittprogramm.',
@@ -182,11 +182,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'Langue',
     faqHeading: 'Questions fréquentes',
     home: {
-      metaTitle: 'Viral Factory — studio IA de contenu court pour iOS',
+      metaTitle: 'Application vidéo IA : Reels et pubs UGC',
       metaDescription:
-        "Transformez un prompt, une photo ou un reel que vous avez aimé en vidéos courtes et carrousels prêts à publier sur TikTok, Instagram et YouTube. Gratuit sur iOS.",
+        "L'application vidéo IA pour iPhone : un prompt, une photo ou un reel deviennent des Reels sans visage, des pubs UGC et des carrousels. Téléchargement gratuit.",
       heroKicker: 'Un studio de contenu IA pour créateurs et petites marques',
-      heroTitleA: 'Reels sans visage, pubs UGC et carrousels —',
+      heroTitleA: "L'application vidéo IA pour Reels sans visage, pubs UGC et carrousels —",
       heroTitleAccent: "à partir d'une seule idée.",
       heroSub:
         "Viral Factory transforme un prompt, une photo ou un reel que vous avez aimé en vidéos courtes et carrousels prêts à publier pour TikTok, Instagram et YouTube — sans caméra, sans équipe, sans logiciel de montage.",
@@ -245,11 +245,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'Idioma',
     faqHeading: 'Preguntas frecuentes',
     home: {
-      metaTitle: 'Viral Factory — estudio de IA para contenido corto en iOS',
+      metaTitle: 'App para hacer vídeos con IA: Reels y anuncios',
       metaDescription:
-        'Convierte un prompt, una foto o un reel que te gustó en vídeos cortos y carruseles listos para publicar en TikTok, Instagram y YouTube. Gratis en iOS.',
+        'La app para hacer vídeos con IA en iPhone: convierte un prompt, una foto o un reel en Reels sin rostro, anuncios UGC y carruseles. Descarga gratis en iOS.',
       heroKicker: 'Un estudio de contenido con IA para creadores y marcas pequeñas',
-      heroTitleA: 'Reels sin rostro, anuncios UGC y carruseles —',
+      heroTitleA: 'La app para hacer vídeos con IA: Reels sin rostro, anuncios UGC y carruseles —',
       heroTitleAccent: 'a partir de una sola idea.',
       heroSub:
         'Viral Factory convierte un prompt, una foto o un reel que te gustó en vídeo corto y carruseles listos para publicar en TikTok, Instagram y YouTube — sin cámara, sin equipo, sin programas de edición.',
@@ -308,11 +308,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'Lingua',
     faqHeading: 'Domande frequenti',
     home: {
-      metaTitle: 'Viral Factory — studio IA per contenuti brevi su iOS',
+      metaTitle: 'App per creare video con IA: Reel e annunci',
       metaDescription:
-        'Trasforma un prompt, una foto o un reel che ti è piaciuto in video brevi e caroselli pronti da pubblicare su TikTok, Instagram e YouTube. Gratis su iOS.',
+        "Viral Factory è l'app per creare video con IA su iPhone: un prompt, una foto o un reel diventano Reel senza volto, annunci UGC e caroselli. Download gratuito.",
       heroKicker: 'Uno studio di contenuti IA per creator e piccoli brand',
-      heroTitleA: 'Reel senza volto, ads UGC e caroselli —',
+      heroTitleA: "L'app per creare video con IA: Reel senza volto, ads UGC e caroselli —",
       heroTitleAccent: 'da una sola idea.',
       heroSub:
         'Viral Factory trasforma un prompt, una foto o un reel che ti è piaciuto in video brevi e caroselli pronti da pubblicare su TikTok, Instagram e YouTube — senza fotocamera, senza troupe, senza software di montaggio.',
@@ -371,11 +371,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'Idioma',
     faqHeading: 'Perguntas frequentes',
     home: {
-      metaTitle: 'Viral Factory — estúdio de IA para conteúdo curto no iOS',
+      metaTitle: 'App para fazer vídeos com IA: Reels e anúncios',
       metaDescription:
-        'Transforme um prompt, uma foto ou um reel que você curtiu em vídeos curtos e carrosséis prontos para publicar no TikTok, Instagram e YouTube. Grátis no iOS.',
+        'Viral Factory é o app para fazer vídeos com IA no iPhone: um prompt, uma foto ou um reel viram Reels sem rosto, anúncios UGC e carrosséis. Download grátis.',
       heroKicker: 'Um estúdio de conteúdo com IA para criadores e pequenas marcas',
-      heroTitleA: 'Reels sem rosto, anúncios UGC e carrosséis —',
+      heroTitleA: 'O app para fazer vídeos com IA: Reels sem rosto, anúncios UGC e carrosséis —',
       heroTitleAccent: 'a partir de uma ideia.',
       heroSub:
         'O Viral Factory transforma um prompt, uma foto ou um reel que você curtiu em vídeo curto e carrosséis prontos para publicar no TikTok, Instagram e YouTube — sem câmera, sem equipe, sem software de edição.',
@@ -434,11 +434,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'Dil',
     faqHeading: 'Sık sorulan sorular',
     home: {
-      metaTitle: 'Viral Factory — iOS için yapay zeka kısa video stüdyosu',
+      metaTitle: 'Yapay Zeka Video Uygulaması: Reels ve Reklam',
       metaDescription:
-        'Bir prompt, bir fotoğraf ya da beğendiğin bir reel; TikTok, Instagram ve YouTube için yayına hazır kısa video ve karusellere dönüşsün. iOS’ta ücretsiz.',
+        'iPhone için yapay zeka video uygulaması: bir prompt, bir fotoğraf ya da beğendiğin bir reel; yüzsüz Reels, UGC reklam ve karusele dönüşür. iOS’ta ücretsiz.',
       heroKicker: 'İçerik üreticileri ve küçük markalar için yapay zeka stüdyosu',
-      heroTitleA: 'Yüzsüz reels, UGC reklamlar ve kaydırmalı gönderiler —',
+      heroTitleA: 'Yapay zeka video uygulaması: yüzsüz reels, UGC reklamlar ve kaydırmalı gönderiler —',
       heroTitleAccent: 'tek bir fikirden.',
       heroSub:
         'Viral Factory; bir prompt, bir fotoğraf ya da beğendiğin bir reel’i TikTok, Instagram ve YouTube için yayına hazır kısa video ve karusellere dönüştürür — kamera yok, ekip yok, kurgu programı yok.',
@@ -497,11 +497,11 @@ export const ui: Record<Locale, Dict> = {
     lang: '言語',
     faqHeading: 'よくある質問',
     home: {
-      metaTitle: 'Viral Factory — iOS向けAIショート動画スタジオ',
+      metaTitle: 'AI動画作成アプリ｜リールとUGC広告をiPhoneで',
       metaDescription:
-        'プロンプト、写真、気に入ったリールを、TikTok・Instagram・YouTube向けの公開準備が整ったショート動画やカルーセルに変換。iOSで無料。',
+        'Viral FactoryはiPhone向けのAI動画作成アプリ。プロンプト、写真、気に入ったリールから、顔出し不要のリール、UGC広告、カルーセルを作成。無料でダウンロード。',
       heroKicker: 'クリエイターと小規模ブランドのためのAIコンテンツスタジオ',
-      heroTitleA: '顔出し不要のリール、UGC広告、スワイプ投稿 —',
+      heroTitleA: 'AI動画作成アプリで、顔出し不要のリール、UGC広告、スワイプ投稿 —',
       heroTitleAccent: 'すべて一つのアイデアから。',
       heroSub:
         'Viral Factoryは、プロンプト、写真、気に入ったリールを、TikTok・Instagram・YouTube向けの公開準備が整ったショート動画やカルーセルに変換します — カメラも撮影チームも編集ソフトも不要です。',
@@ -560,11 +560,11 @@ export const ui: Record<Locale, Dict> = {
     lang: '언어',
     faqHeading: '자주 묻는 질문',
     home: {
-      metaTitle: 'Viral Factory — iOS용 AI 숏폼 콘텐츠 스튜디오',
+      metaTitle: 'AI 영상 만들기 앱 — 릴스·UGC 광고를 iPhone에서',
       metaDescription:
-        '프롬프트, 사진, 마음에 든 릴 하나를 TikTok·Instagram·YouTube에 바로 올릴 수 있는 숏폼 영상과 캐러셀로 바꿔보세요. iOS에서 무료.',
+        'Viral Factory는 iPhone용 AI 영상 만들기 앱입니다. 프롬프트, 사진, 마음에 든 릴 하나로 얼굴 없는 릴스, UGC 광고, 캐러셀을 만들어 보세요. 무료 다운로드.',
       heroKicker: '크리에이터와 소규모 브랜드를 위한 AI 콘텐츠 스튜디오',
-      heroTitleA: '얼굴 없는 릴, UGC 광고, 스와이프 캐러셀 —',
+      heroTitleA: 'AI 영상 만들기 앱으로 얼굴 없는 릴, UGC 광고, 스와이프 캐러셀 —',
       heroTitleAccent: '아이디어 하나로 시작합니다.',
       heroSub:
         'Viral Factory는 프롬프트, 사진, 마음에 든 릴 하나를 TikTok·Instagram·YouTube에 바로 올릴 수 있는 숏폼 영상과 캐러셀로 바꿔줍니다 — 카메라도, 촬영팀도, 편집 프로그램도 필요 없습니다.',
@@ -623,11 +623,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'اللغة',
     faqHeading: 'الأسئلة الشائعة',
     home: {
-      metaTitle: 'Viral Factory — استوديو محتوى قصير بالذكاء الاصطناعي لنظام iOS',
+      metaTitle: 'تطبيق صنع فيديو بالذكاء الاصطناعي: ريلز وإعلانات',
       metaDescription:
-        'حوّل فكرة أو صورة أو ريلز أعجبك إلى فيديوهات قصيرة وكاروسيل جاهزة للنشر على TikTok وInstagram وYouTube. مجاني على iOS.',
+        'Viral Factory تطبيق صنع فيديو بالذكاء الاصطناعي للآيفون: حوّل فكرة أو صورة أو ريلز أعجبك إلى ريلز بلا وجه وإعلانات UGC وكاروسيل. تنزيل مجاني.',
       heroKicker: 'استوديو محتوى بالذكاء الاصطناعي لصنّاع المحتوى والعلامات الصغيرة',
-      heroTitleA: 'ريلز بلا وجه، إعلانات UGC، ومنشورات كاروسيل —',
+      heroTitleA: 'تطبيق صنع فيديو بالذكاء الاصطناعي: ريلز بلا وجه، إعلانات UGC، ومنشورات كاروسيل —',
       heroTitleAccent: 'كل ذلك من فكرة واحدة.',
       heroSub:
         'يحوّل Viral Factory فكرة أو صورة أو ريلز أعجبك إلى فيديو قصير وكاروسيل جاهز للنشر على TikTok وInstagram وYouTube — بلا كاميرا، بلا فريق تصوير، وبلا برنامج مونتاج.',
@@ -686,11 +686,11 @@ export const ui: Record<Locale, Dict> = {
     lang: 'भाषा',
     faqHeading: 'अक्सर पूछे जाने वाले सवाल',
     home: {
-      metaTitle: 'Viral Factory — iOS के लिए AI शॉर्ट-फॉर्म कंटेंट स्टूडियो',
+      metaTitle: 'AI वीडियो बनाने वाला ऐप: रील्स और UGC विज्ञापन',
       metaDescription:
-        'एक प्रॉम्प्ट, एक फ़ोटो, या पसंद आई किसी रील को TikTok, Instagram और YouTube के लिए तैयार शॉर्ट वीडियो और कैरोसेल में बदलें। iOS पर मुफ़्त।',
+        'Viral Factory iPhone के लिए AI वीडियो बनाने वाला ऐप है: प्रॉम्प्ट, फ़ोटो या पसंद आई रील से बिना चेहरे वाली रील्स, UGC विज्ञापन और कैरोसेल बनाएं। मुफ़्त डाउनलोड।',
       heroKicker: 'क्रिएटर्स और छोटे ब्रांड्स के लिए AI कंटेंट स्टूडियो',
-      heroTitleA: 'बिना चेहरे वाली रील्स, UGC विज्ञापन और स्वाइप कैरोसेल —',
+      heroTitleA: 'AI वीडियो बनाने वाला ऐप: बिना चेहरे वाली रील्स, UGC विज्ञापन और स्वाइप कैरोसेल —',
       heroTitleAccent: 'सिर्फ़ एक आइडिया से।',
       heroSub:
         'Viral Factory एक प्रॉम्प्ट, एक फ़ोटो, या आपको पसंद आई किसी रील को TikTok, Instagram और YouTube के लिए पब्लिश करने लायक शॉर्ट वीडियो और कैरोसेल में बदल देता है — न कैमरा चाहिए, न टीम, न एडिटिंग सॉफ़्टवेयर।',

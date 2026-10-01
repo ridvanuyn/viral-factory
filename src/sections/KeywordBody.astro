@@ -4,7 +4,8 @@ import Faq from '../components/Faq.astro';
 import AppStoreBadge from '../components/AppStoreBadge.astro';
 import { BRAND, type Locale } from '../config/site';
 import { lp, t } from '../i18n';
-import { keywordAlternates, type KeywordPage, type KeywordTopicId } from '../i18n/keywords';
+import { keywordAlternates, keywordHomeLink, type KeywordLocale, type KeywordPage, type KeywordTopicId } from '../i18n/keywords';
+import { RANKING_PATH } from '../i18n/rankings';
 import { faqLd, breadcrumbLd } from '../lib/seo';
 
 interface Props {
@@ -15,6 +16,7 @@ interface Props {
 const { lang, topic, page } = Astro.props;
 const tr = t(lang);
 const altLocales = keywordAlternates(topic).map((a) => a.lang);
+const homeLink = keywordHomeLink[lang as KeywordLocale];
 const jsonLd = [
   faqLd(page.faqs),
   breadcrumbLd([
@@ -34,6 +36,9 @@ const jsonLd = [
   <article class="container-page max-w-3xl py-16 md:py-20">
     <h1 class="font-display text-4xl font-extrabold leading-tight md:text-5xl">{page.h1}</h1>
     <p class="mt-5 text-lg leading-relaxed text-ink-soft">{page.intro}</p>
+    {homeLink && (
+      <p class="mt-4 leading-relaxed text-ink-soft">{homeLink.before}<a href={lp(lang, '/')} class="text-accent underline underline-offset-2">{homeLink.anchor}</a>{homeLink.after}</p>
+    )}
     <div class="mt-7"><AppStoreBadge /></div>
 
     {page.sections.map((s) => (
@@ -47,6 +52,10 @@ const jsonLd = [
     <ul class="mt-3 list-disc space-y-1.5 pl-6 text-ink-soft">
       {page.bullets.map((b) => (<li>{b}</li>))}
     </ul>
+
+    {lang === 'en' && (
+      <p class="mt-8 leading-relaxed text-ink-soft">Comparing apps? See the <a href={lp('en', RANKING_PATH)} class="text-accent underline underline-offset-2">best AI video generator apps for iPhone</a> in 2026, with App Store ratings and iOS requirements.</p>
+    )}
 
     <div class="mt-12 rounded-card border border-line bg-bg-raised p-8 text-center">
       <p class="font-display text-xl font-bold">{page.cta}</p>

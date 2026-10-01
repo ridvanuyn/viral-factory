@@ -4,12 +4,12 @@ import Faq from '../components/Faq.astro';
 import AppStoreBadge from '../components/AppStoreBadge.astro';
 import { type Locale } from '../config/site';
 import { t } from '../i18n';
-import { organizationLd, softwareAppLd, faqLd, howToLd } from '../lib/seo';
+import { organizationLd, websiteLd, softwareAppLd, faqLd, howToLd } from '../lib/seo';
 
 interface Props { lang: Locale }
 const { lang } = Astro.props;
 const tr = t(lang);
-const jsonLd = [organizationLd(), softwareAppLd(), howToLd(tr.home.howTitle, tr.home.steps), faqLd(tr.faqHome)];
+const jsonLd = [organizationLd(), websiteLd(), softwareAppLd(), howToLd(tr.home.howTitle, tr.home.steps), faqLd(tr.faqHome)];
 ---
 <Base title={tr.home.metaTitle} description={tr.home.metaDescription} lang={lang} path="/" jsonLd={jsonLd}>
   <!-- Hero -->

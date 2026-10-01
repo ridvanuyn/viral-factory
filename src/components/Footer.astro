@@ -2,6 +2,7 @@
 import { BRAND, STORE, DEFAULT_LOCALE, type Locale } from '../config/site';
 import { t, lp } from '../i18n';
 import { footerKeywordLinks } from '../i18n/keywords';
+import { RANKING_PATH, RANKING_LINK_LABEL } from '../i18n/rankings';
 import AppStoreBadge from './AppStoreBadge.astro';
 
 interface Props { lang?: Locale }
@@ -13,7 +14,11 @@ const legalLinks = [
   { href: lp(lang, '/support'), label: tr.footer.support },
   { href: lp(lang, '/delete-account'), label: tr.footer.deleteAccount },
 ];
-const guides = footerKeywordLinks(lang);
+const keywordGuides = footerKeywordLinks(lang);
+// The app comparison page is English-only, so it joins the English guides list only.
+const guides = keywordGuides && lang === 'en'
+  ? [...keywordGuides, { href: lp('en', RANKING_PATH), label: RANKING_LINK_LABEL }]
+  : keywordGuides;
 const year = new Date().getFullYear();
 ---
 <footer class="relative z-[1] mt-24 border-t border-line bg-bg-sunken/60">

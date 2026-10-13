@@ -10,8 +10,9 @@ const body = `# ${BRAND.name}
 > ${BRAND.name} is an iOS app that turns a prompt, a photo, or a reel link into ready-to-post short-form content for TikTok, Instagram and YouTube — faceless reels, UGC-style ads, swipe carousels, cinematic shorts, a consistent AI character, and face-in-scene cameos.
 
 ## Key facts
-- Platform: iOS (App Store)
-- App Store listing: ${STORE.appStoreUrl}
+- App Store name: ${BRAND.appName}
+- Platform: iOS
+- ${STORE.live ? `App Store listing: ${STORE.appStoreUrl}` : 'Availability: in App Review, coming soon to the App Store (not downloadable yet)'}
 - What it does: generates short-form video and image-carousel content from a text prompt, a photo, or a reference reel link, with a storyboard review step before rendering
 - Core features: Remake a hit (recreate a reel's structure with your own product), Short video ad, Creator testimonial (UGC-style), Swipe post (carousel), Cinematic short, Swap into your video, AI character (consistent persona across videos), Cameo (put a real photo into a generated scene), daily hooks (10 fresh ideas every morning), scheduling/publishing straight to TikTok, Instagram and YouTube
 - Pricing: free to download; generating content consumes credits, available via subscription (monthly allowance) or one-time credit packs

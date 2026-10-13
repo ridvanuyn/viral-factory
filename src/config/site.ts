@@ -19,7 +19,8 @@ export const BASE_PATH = '/viral-factory';
 /** Brand. */
 export const BRAND = {
   name: 'Viral Factory',
-  appName: 'Viral Factory',
+  /** The App Store name ("Faceless Video: Viral Factory"); the short brand above stays in titles. */
+  appName: 'Faceless Video: Viral Factory',
   /** English fallback description — used for <meta description> defaults and JSON-LD. */
   description:
     'Viral Factory turns a prompt, a photo, or a reel you liked into ready-to-post short-form video and carousels for TikTok, Instagram and YouTube.',
@@ -28,8 +29,14 @@ export const BRAND = {
   developerName: 'Rıdvan Uyan',
 };
 
-/** App Store listing. The app is live — every CTA links here directly. */
+/**
+ * App Store listing. The app is still in App Review and the listing 404s, so
+ * `live` is false: badges read "Coming soon", the header CTA and smart-app
+ * banner are hidden and nothing links to appStoreUrl. Flip `live` to true the
+ * day the listing is public and every CTA links here again.
+ */
 export const STORE = {
+  live: false,
   appleAppId: '6790560948',
   appStoreUrl: 'https://apps.apple.com/app/id6790560948',
   /** Apple's standard EULA, which governs auto-renewable subscriptions. */

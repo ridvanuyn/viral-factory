@@ -7,6 +7,8 @@
  * App Store listing. No test results, scores or prices are claimed.
  * Refresh the numbers (and the date) before editing this page again.
  */
+import { STORE } from '../config/site';
+
 export const RANKING_PATH = '/best-ai-video-generator-apps-iphone';
 export const RANKING_LINK_LABEL = 'Best AI video generator apps for iPhone (2026)';
 export const APPSTORE_DATA_DATE = '1 October 2026';
@@ -37,9 +39,9 @@ export const rankedApps: RankedApp[] = [
     ours: true,
     rating: null,
     ratingCount: null,
-    price: 'Free',
+    price: STORE.live ? 'Free' : 'Coming soon',
     minIos: null,
-    url: 'https://apps.apple.com/app/id6790560948',
+    url: STORE.appStoreUrl,
     bestFor: 'Posting short-form every day without filming — faceless reels, UGC-style ads and carousels from one idea',
     what: 'Turns a prompt, a photo or a reel you liked into ready-to-post faceless reels, UGC-style ads, swipe carousels and cinematic shorts. Remake a hit rebuilds a reel’s structure around your product, an AI character keeps one face and voice across videos, Cameo puts your own photo into a scene, and ten fresh hooks arrive every morning. You approve a storyboard before anything renders, then schedule straight to TikTok, Instagram or YouTube.',
   },
@@ -146,7 +148,7 @@ export const rankingFaqs: { q: string; a: string }[] = [
   },
   {
     q: 'Are these AI video apps free?',
-    a: `All eight are free to download from the App Store (checked ${APPSTORE_DATA_DATE}). Paid features and their prices are listed in each app’s In-App Purchases section on the App Store and change often, so we don’t quote them here. In Viral Factory, generating content uses credits from a subscription or a credit pack.`,
+    a: `${STORE.live ? 'All eight are' : 'The seven other apps are'} free to download from the App Store (checked ${APPSTORE_DATA_DATE})${STORE.live ? '' : '; Viral Factory is coming soon to the App Store'}. Paid features and their prices are listed in each app’s In-App Purchases section on the App Store and change often, so we don’t quote them here. In Viral Factory, generating content uses credits from a subscription or a credit pack.`,
   },
   {
     q: 'Which AI video app works on an older iPhone?',

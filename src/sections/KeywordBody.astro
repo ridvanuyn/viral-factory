@@ -15,7 +15,7 @@ interface Props {
 }
 const { lang, topic, page } = Astro.props;
 const tr = t(lang);
-const altLocales = keywordAlternates(topic).map((a) => a.lang);
+const altLinks = keywordAlternates(topic);
 const homeLink = keywordHomeLink[lang as KeywordLocale];
 const jsonLd = [
   faqLd(page.faqs),
@@ -31,7 +31,7 @@ const jsonLd = [
   lang={lang}
   path={`/${page.slug}`}
   jsonLd={jsonLd}
-  altLocales={altLocales}
+  altLinks={altLinks}
 >
   <article class="container-page max-w-3xl py-16 md:py-20">
     <h1 class="font-display text-4xl font-extrabold leading-tight md:text-5xl">{page.h1}</h1>

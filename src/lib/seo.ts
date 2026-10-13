@@ -12,7 +12,7 @@ export const organizationLd = () => ({
   logo: `${SITE_URL}${BASE_PATH}/icon-512.png`,
   email: BRAND.supportEmail,
   founder: { '@type': 'Person', name: BRAND.developerName },
-  sameAs: [STORE.appStoreUrl],
+  ...(STORE.live ? { sameAs: [STORE.appStoreUrl] } : {}),
 });
 
 /** The site itself (all locales share one WebSite entity). */
@@ -51,7 +51,7 @@ export const softwareAppLd = () => ({
   applicationCategory: 'MultimediaApplication',
   description: BRAND.description,
   url: `${SITE_URL}${BASE_PATH}/`,
-  sameAs: [STORE.appStoreUrl],
+  ...(STORE.live ? { sameAs: [STORE.appStoreUrl] } : {}),
 });
 
 export const breadcrumbLd = (items: { name: string; path: string }[]) => ({

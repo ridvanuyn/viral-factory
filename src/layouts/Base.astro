@@ -20,6 +20,8 @@ interface Props {
   hideSwitcher?: boolean;
   /** Override the hreflang alternate set (for pages not translated into every locale). */
   altLocales?: Locale[];
+  /** Per-locale URLs when the slug differs by locale — drives hreflang and the language switcher. */
+  altLinks?: { lang: Locale; href: string }[];
 }
 const { bare = false, hideSwitcher = false, lang = DEFAULT_LOCALE, path = '/', ...rest } = Astro.props;
 ---
@@ -42,7 +44,7 @@ const { bare = false, hideSwitcher = false, lang = DEFAULT_LOCALE, path = '/', .
     <ClientRouter />
   </head>
   <body class="flex min-h-screen flex-col">
-    {!bare && <Header lang={lang} path={path} hideSwitcher={hideSwitcher} />}
+    {!bare && <Header lang={lang} path={path} hideSwitcher={hideSwitcher} altLinks={rest.altLinks} />}
     <main class="relative z-[1] flex-1">
       <slot />
     </main>

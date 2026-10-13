@@ -2,14 +2,14 @@
 import { BRAND, STORE, DEFAULT_LOCALE, ACTIVE_LOCALES, LOCALE_NAMES, type Locale } from '../config/site';
 import { t, lp, alternates } from '../i18n';
 
-interface Props { lang?: Locale; path?: string; hideSwitcher?: boolean }
-const { lang = DEFAULT_LOCALE, path = '/', hideSwitcher = false } = Astro.props;
+interface Props { lang?: Locale; path?: string; hideSwitcher?: boolean; altLinks?: { lang: Locale; href: string }[] }
+const { lang = DEFAULT_LOCALE, path = '/', hideSwitcher = false, altLinks } = Astro.props;
 const tr = t(lang);
 const nav = [
   { href: `${lp(lang, '/')}#features`, label: tr.nav.features },
   { href: lp(lang, '/support'), label: tr.nav.support },
 ];
-const langs = alternates(path);
+const langs = altLinks ?? alternates(path);
 const showSwitcher = !hideSwitcher && ACTIVE_LOCALES.length > 1;
 ---
 <header class="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur">
@@ -36,7 +36,7 @@ const showSwitcher = !hideSwitcher && ACTIVE_LOCALES.length > 1;
           </div>
         </div>
       )}
-      <a href={STORE.appStoreUrl} rel="noopener" class="btn-cta px-5 py-2.5 text-sm">{tr.cta.getApp}</a>
+      {STORE.live && <a href={STORE.appStoreUrl} rel="noopener" class="btn-cta px-5 py-2.5 text-sm">{tr.cta.getApp}</a>}
     </div>
   </div>
 </header>

@@ -8,7 +8,7 @@
 import type { Locale } from '../config/site';
 
 export type LegalSection = { h: string; p?: string[]; ul?: string[] };
-export type LegalDoc = { title: string; lead: string; intro: string; sections: LegalSection[] };
+export type LegalDoc = { title: string; lead: string; intro: string; sections: LegalSection[]; effective?: string };
 export type FaqItem = { q: string; a: string };
 export type SupportDoc = { title: string; lead: string; intro: string; faqs: FaqItem[] };
 
@@ -29,6 +29,7 @@ const en: LegalPack = {
   effectiveDateLabel: 'September 26, 2026',
   privacy: {
     title: 'Privacy Policy',
+    effective: "October 15, 2026",
     lead: 'How Viral Factory collects, uses and protects your information.',
     intro:
       'This Privacy Policy explains what information the Viral Factory iOS app and this website collect, why, and the choices you have. Viral Factory is developed by Rıdvan Uyan, an individual developer, who is the controller of your information for the purposes described here.',
@@ -42,7 +43,8 @@ const en: LegalPack = {
           'Purchase information — subscription and credit-pack purchases are handled by the App Store; RevenueCat processes purchase and entitlement events on our behalf. We never receive your card number.',
           'Social account connections — if you connect TikTok, Instagram or YouTube to publish content, we receive that account’s basic profile info (handle, display name, avatar) and store an encrypted access token so the app can publish on your behalf.',
           'Analytics — we use Mixpanel and PostHog to understand how the app is used. PostHog session replay is enabled for interaction analysis, but all on-screen text and images are masked before capture, so replay never shows your prompts, photos or generated media. Analytics uses a separate, random installation identifier — never your guest account identifier.',
-          'Device and diagnostic data — app version, general device model and operating system, and language settings.',
+          'Device and diagnostic data — app version, general device model and operating system, and language settings. Our analytics and purchase providers may also derive an approximate location (such as country or region) from your IP address; the app does not request your device location. We also keep the IP address and user agent of your sign-in sessions for security.',
+          "Crash and performance diagnostics — we use Sentry (EU region) to find and fix crashes and errors. Reports include stack traces, device model and operating system, app version, a trail of recent app events such as screen navigation, and performance timings for a sample of sessions. They are linked to your Viral Factory account ID, not to your email address or name.",
           'Notification preferences — whether you have turned on the daily-idea reminder, stored locally on your device.',
         ],
         p: [
@@ -95,7 +97,7 @@ const en: LegalPack = {
       {
         h: 'Deleting your account',
         p: [
-          'You can permanently delete your account at any time in the app: Profile → Settings → Delete Account. This immediately and permanently deletes your account, credit history, videos, characters, prompts and connected social accounts, and revokes the Sign in with Apple grant if used. It does not cancel an active App Store subscription — cancel that separately in your Apple ID settings. See our Delete Account page for full, step-by-step instructions, including how to request deletion by email if you no longer have the app.',
+          'You can permanently delete your account at any time in the app: Profile → Settings → Delete Account. This immediately and permanently deletes your account, credit history, videos, characters, prompts and connected social accounts, and revokes the Sign in with Apple grant if used. It does not cancel an active App Store subscription — cancel that separately in your Apple ID settings. See our Delete Account page for full, step-by-step instructions, including how to request deletion by email if you no longer have the app. Copies already held by our analytics, crash-reporting, purchase and AI providers (Mixpanel, PostHog, Sentry, RevenueCat and fal.ai) are not removed by the in-app deletion; email us to request their deletion.',
         ],
       },
       {
@@ -265,6 +267,7 @@ const en: LegalPack = {
         p: [
           'Deleting your account does NOT cancel an active App Store subscription — cancel it separately in Settings → [your name] → Subscriptions on your device, or it will continue to renew.',
           'Content you already published to TikTok, Instagram or YouTube stays on those platforms; delete it there directly if you want it removed.',
+          "Copies already held by our analytics, crash-reporting and purchase providers (Mixpanel, PostHog, Sentry, RevenueCat) and by our AI infrastructure provider (fal.ai) are not removed by in-app deletion. Email ridvan.uyn@gmail.com to request their deletion.",
         ],
       },
       {
@@ -280,6 +283,7 @@ const de: LegalPack = {
   effectiveDateLabel: '26. September 2026',
   privacy: {
     title: 'Datenschutzerklärung',
+    effective: "15. Oktober 2026",
     lead: 'Wie Viral Factory deine Daten erhebt, nutzt und schützt.',
     intro:
       'Diese Datenschutzerklärung erklärt, welche Informationen die iOS-App Viral Factory und diese Website erheben, warum, und welche Wahlmöglichkeiten du hast. Viral Factory wird von Rıdvan Uyan, einem Einzelentwickler, entwickelt, der für die hier beschriebenen Zwecke für deine Daten verantwortlich ist.',
@@ -293,7 +297,8 @@ const de: LegalPack = {
           'Kaufinformationen — Abo- und Credit-Paket-Käufe werden über den App Store abgewickelt; RevenueCat verarbeitet Kauf- und Berechtigungsereignisse in unserem Auftrag. Wir erhalten nie deine Kartennummer.',
           'Verbindungen zu Social-Media-Konten — verbindest du TikTok, Instagram oder YouTube, um Inhalte zu veröffentlichen, erhalten wir die grundlegenden Profildaten dieses Kontos (Handle, Anzeigename, Avatar) und speichern ein verschlüsseltes Zugriffstoken, damit die App in deinem Namen veröffentlichen kann.',
           'Analyse — wir nutzen Mixpanel und PostHog, um die Nutzung der App zu verstehen. PostHog Session-Replay ist für die Interaktionsanalyse aktiviert, aber sämtlicher Bildschirmtext und alle Bilder werden vor der Aufzeichnung maskiert — Replays zeigen also nie deine Prompts, Fotos oder generierten Medien. Für Analytics wird eine separate, zufällige Installations-ID verwendet — niemals deine Gast-Konto-Kennung.',
-          'Geräte- und Diagnosedaten — App-Version, allgemeines Gerätemodell und Betriebssystem sowie Spracheinstellungen.',
+          'Geräte- und Diagnosedaten — App-Version, allgemeines Gerätemodell und Betriebssystem sowie Spracheinstellungen. Unsere Analyse- und Zahlungsdienstleister können außerdem aus deiner IP-Adresse einen ungefähren Standort (etwa Land oder Region) ableiten; die App fragt deinen Gerätestandort nicht ab. Aus Sicherheitsgründen speichern wir außerdem die IP-Adresse und den User-Agent deiner Anmeldesitzungen.',
+          "Absturz- und Leistungsdiagnose — wir nutzen Sentry (EU-Region), um Abstürze und Fehler zu finden und zu beheben. Berichte enthalten Stack-Traces, Gerätemodell und Betriebssystem, App-Version, eine Spur der letzten App-Ereignisse wie die Bildschirmnavigation sowie Leistungsmesswerte einer Stichprobe von Sitzungen. Sie sind mit deiner Viral-Factory-Konto-ID verknüpft, nicht mit deiner E-Mail-Adresse oder deinem Namen.",
           'Benachrichtigungseinstellungen — ob du die tägliche Ideen-Erinnerung aktiviert hast, lokal auf deinem Gerät gespeichert.',
         ],
         p: ['Wir verwenden keine Werbe-Tracker, und die App fragt nicht die App Tracking Transparency-Berechtigung von Apple ab.'],
@@ -339,7 +344,7 @@ const de: LegalPack = {
       },
       {
         h: 'Konto löschen',
-        p: ['Du kannst dein Konto jederzeit dauerhaft in der App löschen: Profil → Einstellungen → Konto löschen. Dies löscht sofort und dauerhaft dein Konto, deinen Credit-Verlauf, Videos, Charaktere, Prompts und verbundene Social-Media-Konten und widerruft die Sign in with Apple-Berechtigung, falls verwendet. Ein aktives App-Store-Abo wird dadurch nicht gekündigt — kündige es separat in deinen Apple-ID-Einstellungen. Die vollständige Schritt-für-Schritt-Anleitung, auch zur Löschung per E-Mail ohne App-Zugriff, findest du auf unserer Seite „Konto löschen“.'],
+        p: ['Du kannst dein Konto jederzeit dauerhaft in der App löschen: Profil → Einstellungen → Konto löschen. Dies löscht sofort und dauerhaft dein Konto, deinen Credit-Verlauf, Videos, Charaktere, Prompts und verbundene Social-Media-Konten und widerruft die Sign in with Apple-Berechtigung, falls verwendet. Ein aktives App-Store-Abo wird dadurch nicht gekündigt — kündige es separat in deinen Apple-ID-Einstellungen. Die vollständige Schritt-für-Schritt-Anleitung, auch zur Löschung per E-Mail ohne App-Zugriff, findest du auf unserer Seite „Konto löschen“. Kopien, die unsere Analyse-, Absturzberichts-, Zahlungs- und KI-Dienstleister (Mixpanel, PostHog, Sentry, RevenueCat und fal.ai) bereits halten, werden durch das Löschen in der App nicht entfernt; schreib uns, um deren Löschung zu beantragen.'],
       },
       {
         h: 'Deine Rechte nach der DSGVO (EWR, UK, Schweiz)',
@@ -476,6 +481,7 @@ const de: LegalPack = {
         p: [
           'Das Löschen deines Kontos kündigt KEIN aktives App-Store-Abo — kündige es separat unter Einstellungen → [dein Name] → Abonnements auf deinem Gerät, sonst verlängert es sich weiter.',
           'Inhalte, die du bereits auf TikTok, Instagram oder YouTube veröffentlicht hast, bleiben dort bestehen; lösche sie bei Bedarf direkt auf der jeweiligen Plattform.',
+          "Kopien, die unsere Analyse-, Absturzberichts- und Zahlungsdienstleister (Mixpanel, PostHog, Sentry, RevenueCat) sowie unser KI-Infrastrukturanbieter (fal.ai) bereits halten, werden durch das Löschen in der App nicht entfernt. Schreib an ridvan.uyn@gmail.com, um deren Löschung zu beantragen.",
         ],
       },
       {
@@ -491,6 +497,7 @@ const fr: LegalPack = {
   effectiveDateLabel: '26 septembre 2026',
   privacy: {
     title: 'Politique de confidentialité',
+    effective: "15 octobre 2026",
     lead: 'Comment Viral Factory collecte, utilise et protège vos informations.',
     intro:
       "Cette politique de confidentialité explique quelles informations l'application iOS Viral Factory et ce site web collectent, pourquoi, et les choix qui s'offrent à vous. Viral Factory est développée par Rıdvan Uyan, développeur individuel, responsable du traitement de vos données pour les finalités décrites ici.",
@@ -504,7 +511,8 @@ const fr: LegalPack = {
           "Informations d'achat — les achats d'abonnement et de packs de crédits sont traités par l'App Store ; RevenueCat traite les événements d'achat et de droits en notre nom. Nous ne recevons jamais votre numéro de carte.",
           "Connexions à des comptes sociaux — si vous connectez TikTok, Instagram ou YouTube pour publier du contenu, nous recevons les informations de profil de base de ce compte (identifiant, nom affiché, avatar) et stockons un jeton d'accès chiffré permettant à l'app de publier en votre nom.",
           "Analytique — nous utilisons Mixpanel et PostHog pour comprendre l'usage de l'app. La relecture de session (session replay) de PostHog est activée pour l'analyse des interactions, mais tout texte et toute image à l'écran sont masqués avant capture : une relecture ne montre donc jamais vos prompts, photos ou contenus générés. L'analytique utilise un identifiant d'installation distinct et aléatoire — jamais votre identifiant de compte invité.",
-          "Données d'appareil et de diagnostic — version de l'app, modèle d'appareil et système d'exploitation généraux, et paramètres de langue.",
+          "Données d'appareil et de diagnostic — version de l'app, modèle d'appareil et système d'exploitation généraux, et paramètres de langue. Nos prestataires d'analytique et d'achats peuvent aussi déduire une localisation approximative (pays ou région, par exemple) à partir de votre adresse IP ; l'app ne demande pas la localisation de votre appareil. Nous conservons également, pour des raisons de sécurité, l'adresse IP et le user-agent de vos sessions de connexion.",
+          "Diagnostics de plantages et de performance — nous utilisons Sentry (région UE) pour détecter et corriger les plantages et les erreurs. Les rapports comprennent des traces de pile, le modèle d'appareil et le système d'exploitation, la version de l'app, une trace des événements récents de l'app comme la navigation entre écrans, et des mesures de performance pour un échantillon de sessions. Ils sont liés à l'identifiant de votre compte Viral Factory, et non à votre adresse e-mail ni à votre nom.",
           "Préférences de notification — si vous avez activé le rappel quotidien d'idées, stocké localement sur votre appareil.",
         ],
         p: ["Nous n'utilisons pas de traceurs publicitaires, et l'app ne demande pas l'autorisation App Tracking Transparency d'Apple."],
@@ -542,7 +550,7 @@ const fr: LegalPack = {
       },
       { h: 'Ce que nous ne faisons pas', p: ["Nous ne vendons pas de données personnelles et ne partageons jamais vos prompts, imports ou contenus générés avec d'autres utilisateurs, sauf si vous choisissez explicitement de rendre quelque chose public."] },
       { h: 'Conservation des données', p: ["Votre compte et vos contenus générés sont conservés tant que votre compte est actif. Les photos, vidéos importées et les médias générés sont conservés avec vos projets jusqu'à ce que vous les supprimiez ou supprimiez votre compte. La suppression de votre compte (Profil → Réglages → Supprimer le compte) supprime vos données de compte et vos médias stockés. Vous pouvez supprimer des générations individuelles dans l'app à tout moment."] },
-      { h: 'Supprimer votre compte', p: ["Vous pouvez supprimer définitivement votre compte à tout moment dans l'app : Profil → Réglages → Supprimer le compte. Cela supprime immédiatement et définitivement votre compte, votre historique de crédits, vos vidéos, personnages, prompts et comptes sociaux connectés, et révoque l'autorisation Sign in with Apple si utilisée. Cela n'annule pas un abonnement App Store actif — annulez-le séparément dans les réglages de votre identifiant Apple. Voir notre page « Supprimer le compte » pour la marche à suivre complète, y compris comment demander la suppression par e-mail si vous n'avez plus l'app."] },
+      { h: 'Supprimer votre compte', p: ["Vous pouvez supprimer définitivement votre compte à tout moment dans l'app : Profil → Réglages → Supprimer le compte. Cela supprime immédiatement et définitivement votre compte, votre historique de crédits, vos vidéos, personnages, prompts et comptes sociaux connectés, et révoque l'autorisation Sign in with Apple si utilisée. Cela n'annule pas un abonnement App Store actif — annulez-le séparément dans les réglages de votre identifiant Apple. Voir notre page « Supprimer le compte » pour la marche à suivre complète, y compris comment demander la suppression par e-mail si vous n'avez plus l'app. Les copies déjà détenues par nos prestataires d'analytique, de rapports de plantage, d'achats et d'IA (Mixpanel, PostHog, Sentry, RevenueCat et fal.ai) ne sont pas supprimées par la suppression dans l'app ; écrivez-nous pour demander leur suppression."] },
       { h: 'Vos droits au titre du RGPD (EEE, Royaume-Uni, Suisse)', p: ["Si vous résidez dans l'EEE, au Royaume-Uni ou en Suisse, vous avez le droit d'accéder à vos données personnelles, de les rectifier, de les supprimer, d'en recevoir une copie (portabilité), et de vous opposer à certains traitements ou de les limiter. Nous traitons vos données sur la base de : l'exécution d'un contrat (fournir l'app), votre consentement (par exemple, l'analytique par relecture de session), et nos intérêts légitimes (sécurité, prévention des abus, amélioration du service). Pour exercer ces droits, écrivez à ridvan.uyn@gmail.com ; nous répondrons sous un mois."] },
       { h: 'Résidents de Californie (CCPA/CPRA)', p: ["Les résidents de Californie peuvent demander à connaître, supprimer ou corriger les informations personnelles que nous détenons à leur sujet, et s'opposer à leur « vente » ou « partage » — nous ne vendons pas d'informations personnelles et n'utilisons pas de traceurs publicitaires comportementaux intersites. Envoyez vos demandes à ridvan.uyn@gmail.com."] },
       { h: 'Enfants', p: ["Viral Factory ne s'adresse pas aux enfants de moins de 13 ans (ou l'âge minimum requis dans votre pays) et nous ne collectons pas sciemment leurs informations. Si vous pensez qu'un enfant nous a fourni des informations personnelles, contactez-nous et nous les supprimerons."] },
@@ -639,6 +647,7 @@ const fr: LegalPack = {
         p: [
           "Supprimer votre compte n'annule PAS un abonnement App Store actif — annulez-le séparément via Réglages → [votre nom] → Abonnements sur votre appareil, sinon il continuera à se renouveler.",
           'Le contenu déjà publié sur TikTok, Instagram ou YouTube reste sur ces plateformes ; supprimez-le directement là-bas si vous le souhaitez.',
+          "Les copies déjà détenues par nos prestataires d'analytique, de rapports de plantage et d'achats (Mixpanel, PostHog, Sentry, RevenueCat) et par notre fournisseur d'infrastructure IA (fal.ai) ne sont pas supprimées par la suppression dans l'app. Écrivez à ridvan.uyn@gmail.com pour demander leur suppression.",
         ],
       },
       {
@@ -654,6 +663,7 @@ const es: LegalPack = {
   effectiveDateLabel: '26 de septiembre de 2026',
   privacy: {
     title: 'Política de privacidad',
+    effective: "15 de octubre de 2026",
     lead: 'Cómo Viral Factory recopila, usa y protege tu información.',
     intro:
       'Esta Política de privacidad explica qué información recopilan la app de iOS Viral Factory y este sitio web, por qué, y qué opciones tienes. Viral Factory está desarrollada por Rıdvan Uyan, desarrollador individual, responsable del tratamiento de tus datos para los fines aquí descritos.',
@@ -667,7 +677,8 @@ const es: LegalPack = {
           'Información de compra — las compras de suscripciones y paquetes de créditos las gestiona el App Store; RevenueCat procesa los eventos de compra y derechos en nuestro nombre. Nunca recibimos el número de tu tarjeta.',
           'Conexiones a cuentas sociales — si conectas TikTok, Instagram o YouTube para publicar contenido, recibimos la información básica de perfil de esa cuenta (usuario, nombre visible, avatar) y almacenamos un token de acceso cifrado para que la app pueda publicar en tu nombre.',
           'Analítica — usamos Mixpanel y PostHog para entender cómo se usa la app. La repetición de sesión (session replay) de PostHog está activada para el análisis de interacciones, pero todo el texto e imágenes en pantalla se ocultan antes de capturarse, así que una repetición nunca muestra tus prompts, fotos o contenido generado. La analítica usa un identificador de instalación separado y aleatorio — nunca tu identificador de cuenta de invitado.',
-          'Datos de dispositivo y diagnóstico — versión de la app, modelo general del dispositivo y sistema operativo, y ajustes de idioma.',
+          'Datos de dispositivo y diagnóstico — versión de la app, modelo general del dispositivo y sistema operativo, y ajustes de idioma. Nuestros proveedores de analítica y de compras también pueden deducir una ubicación aproximada (como el país o la región) a partir de tu dirección IP; la app no solicita la ubicación de tu dispositivo. Además, conservamos por seguridad la dirección IP y el user-agent de tus sesiones de inicio de sesión.',
+          "Diagnósticos de fallos y rendimiento — usamos Sentry (región de la UE) para detectar y corregir fallos y errores. Los informes incluyen trazas de pila, modelo de dispositivo y sistema operativo, versión de la app, un rastro de eventos recientes de la app como la navegación entre pantallas, y tiempos de rendimiento de una muestra de sesiones. Están vinculados al ID de tu cuenta de Viral Factory, no a tu correo electrónico ni a tu nombre.",
           'Preferencias de notificación — si has activado el recordatorio diario de ideas, almacenado localmente en tu dispositivo.',
         ],
         p: ['No usamos rastreadores publicitarios, y la app no solicita el permiso de App Tracking Transparency de Apple.'],
@@ -705,7 +716,7 @@ const es: LegalPack = {
       },
       { h: 'Lo que no hacemos', p: ['No vendemos datos personales y nunca compartimos tus prompts, archivos subidos o contenido generado con otros usuarios, salvo que elijas explícitamente hacer algo público.'] },
       { h: 'Conservación de datos', p: ['Tu cuenta y el contenido generado se conservan mientras tu cuenta esté activa. Las fotos, vídeos subidos y el contenido generado se almacenan junto con tus proyectos hasta que los elimines o elimines tu cuenta. Eliminar tu cuenta (Perfil → Ajustes → Eliminar cuenta) elimina los datos de tu cuenta y los medios almacenados. Puedes eliminar generaciones individuales en la app en cualquier momento.'] },
-      { h: 'Eliminar tu cuenta', p: ['Puedes eliminar tu cuenta de forma permanente en cualquier momento desde la app: Perfil → Ajustes → Eliminar cuenta. Esto elimina de inmediato y permanentemente tu cuenta, historial de créditos, vídeos, personajes, prompts y cuentas sociales conectadas, y revoca la autorización de Sign in with Apple si la usaste. Esto no cancela una suscripción activa del App Store — cancélala por separado en los ajustes de tu ID de Apple. Consulta nuestra página «Eliminar cuenta» para instrucciones completas, incluido cómo solicitar la eliminación por correo si ya no tienes la app.'] },
+      { h: 'Eliminar tu cuenta', p: ['Puedes eliminar tu cuenta de forma permanente en cualquier momento desde la app: Perfil → Ajustes → Eliminar cuenta. Esto elimina de inmediato y permanentemente tu cuenta, historial de créditos, vídeos, personajes, prompts y cuentas sociales conectadas, y revoca la autorización de Sign in with Apple si la usaste. Esto no cancela una suscripción activa del App Store — cancélala por separado en los ajustes de tu ID de Apple. Consulta nuestra página «Eliminar cuenta» para instrucciones completas, incluido cómo solicitar la eliminación por correo si ya no tienes la app. Las copias que ya conservan nuestros proveedores de analítica, informes de fallos, compras e IA (Mixpanel, PostHog, Sentry, RevenueCat y fal.ai) no se eliminan con la eliminación desde la app; escríbenos para solicitar su eliminación.'] },
       { h: 'Tus derechos bajo el RGPD (EEE, Reino Unido, Suiza)', p: ['Si te encuentras en el EEE, el Reino Unido o Suiza, tienes derecho a acceder, corregir, eliminar y recibir una copia (portabilidad) de tus datos personales, y a oponerte a ciertos tratamientos o restringirlos. Tratamos tus datos con base en: la ejecución de un contrato (proporcionar la app), tu consentimiento (por ejemplo, la analítica por repetición de sesión), y nuestros intereses legítimos (seguridad, prevención de abuso, mejora del servicio). Para ejercer estos derechos, escribe a ridvan.uyn@gmail.com; responderemos en el plazo de un mes.'] },
       { h: 'Residentes de California (CCPA/CPRA)', p: ['Los residentes de California pueden solicitar conocer, eliminar o corregir la información personal que tenemos sobre ellos, y optar por no participar en su «venta» o «uso compartido» — no vendemos información personal ni usamos rastreadores publicitarios de comportamiento entre contextos. Envía tus solicitudes a ridvan.uyn@gmail.com.'] },
       { h: 'Menores', p: ['Viral Factory no está dirigida a menores de 13 años (o la edad mínima requerida en tu país) y no recopilamos su información a sabiendas. Si crees que un menor nos ha proporcionado información personal, contáctanos y la eliminaremos.'] },
@@ -802,6 +813,7 @@ const es: LegalPack = {
         p: [
           'Eliminar tu cuenta NO cancela una suscripción activa del App Store — cancélala por separado en Ajustes → [tu nombre] → Suscripciones en tu dispositivo, o seguirá renovándose.',
           'El contenido que ya publicaste en TikTok, Instagram o YouTube permanece en esas plataformas; elimínalo allí directamente si quieres que desaparezca.',
+          "Las copias que ya conservan nuestros proveedores de analítica, informes de fallos y compras (Mixpanel, PostHog, Sentry, RevenueCat) y nuestro proveedor de infraestructura de IA (fal.ai) no se eliminan con la eliminación desde la app. Escribe a ridvan.uyn@gmail.com para solicitar su eliminación.",
         ],
       },
       {
@@ -817,6 +829,7 @@ const it: LegalPack = {
   effectiveDateLabel: '26 settembre 2026',
   privacy: {
     title: 'Informativa sulla privacy',
+    effective: "15 ottobre 2026",
     lead: 'Come Viral Factory raccoglie, usa e protegge le tue informazioni.',
     intro:
       'Questa Informativa sulla privacy spiega quali informazioni raccolgono l’app iOS Viral Factory e questo sito web, perché, e quali scelte hai a disposizione. Viral Factory è sviluppata da Rıdvan Uyan, sviluppatore individuale, titolare del trattamento dei tuoi dati per le finalità qui descritte.',
@@ -830,7 +843,8 @@ const it: LegalPack = {
           'Informazioni di acquisto — gli acquisti di abbonamenti e pacchetti di crediti sono gestiti dall’App Store; RevenueCat elabora gli eventi di acquisto e diritti per nostro conto. Non riceviamo mai il numero della tua carta.',
           'Connessioni ad account social — se colleghi TikTok, Instagram o YouTube per pubblicare contenuti, riceviamo le informazioni di base del profilo di quell’account (handle, nome visualizzato, avatar) e memorizziamo un token di accesso cifrato che permette all’app di pubblicare per tuo conto.',
           'Analisi — usiamo Mixpanel e PostHog per capire come viene usata l’app. Il session replay di PostHog è attivo per l’analisi delle interazioni, ma tutto il testo e le immagini a schermo vengono mascherati prima della cattura, quindi un replay non mostra mai i tuoi prompt, foto o contenuti generati. L’analisi usa un identificatore di installazione separato e casuale — mai il tuo identificatore di account ospite.',
-          'Dati del dispositivo e diagnostici — versione dell’app, modello generale del dispositivo e sistema operativo, e impostazioni della lingua.',
+          'Dati del dispositivo e diagnostici — versione dell’app, modello generale del dispositivo e sistema operativo, e impostazioni della lingua. I nostri fornitori di analisi e di acquisti possono inoltre ricavare una posizione approssimativa (ad esempio paese o regione) dal tuo indirizzo IP; l\'app non richiede la posizione del tuo dispositivo. Per motivi di sicurezza conserviamo anche l\'indirizzo IP e lo user agent delle tue sessioni di accesso.',
+          "Diagnostica di crash e prestazioni — usiamo Sentry (regione UE) per individuare e correggere crash ed errori. I report includono stack trace, modello del dispositivo e sistema operativo, versione dell'app, una traccia degli eventi recenti dell'app come la navigazione tra le schermate e i tempi di prestazione di un campione di sessioni. Sono collegati all'ID del tuo account Viral Factory, non al tuo indirizzo email né al tuo nome.",
           'Preferenze di notifica — se hai attivato il promemoria giornaliero delle idee, memorizzato localmente sul tuo dispositivo.',
         ],
         p: ['Non utilizziamo tracker pubblicitari, e l’app non richiede il permesso App Tracking Transparency di Apple.'],
@@ -868,7 +882,7 @@ const it: LegalPack = {
       },
       { h: 'Cosa non facciamo', p: ['Non vendiamo dati personali e non condividiamo mai i tuoi prompt, i file caricati o i contenuti generati con altri utenti, a meno che tu non scelga esplicitamente di rendere pubblico qualcosa.'] },
       { h: 'Conservazione dei dati', p: ['Il tuo account e i contenuti generati vengono conservati finché il tuo account è attivo. Le foto, i video caricati e i contenuti generati vengono conservati insieme ai tuoi progetti finché non li elimini o non elimini il tuo account. Eliminare il tuo account (Profilo → Impostazioni → Elimina account) rimuove i dati del tuo account e i media salvati. Puoi eliminare singole generazioni nell’app in qualsiasi momento.'] },
-      { h: 'Eliminare il tuo account', p: ['Puoi eliminare permanentemente il tuo account in qualsiasi momento nell’app: Profilo → Impostazioni → Elimina account. Questo elimina immediatamente e permanentemente il tuo account, la cronologia crediti, i video, i personaggi, i prompt e gli account social collegati, e revoca l’autorizzazione Sign in with Apple se utilizzata. Non annulla un abbonamento App Store attivo — annullalo separatamente nelle impostazioni del tuo ID Apple. Consulta la nostra pagina «Elimina account» per le istruzioni complete, incluso come richiedere l’eliminazione via email se non hai più l’app.'] },
+      { h: 'Eliminare il tuo account', p: ['Puoi eliminare permanentemente il tuo account in qualsiasi momento nell’app: Profilo → Impostazioni → Elimina account. Questo elimina immediatamente e permanentemente il tuo account, la cronologia crediti, i video, i personaggi, i prompt e gli account social collegati, e revoca l’autorizzazione Sign in with Apple se utilizzata. Non annulla un abbonamento App Store attivo — annullalo separatamente nelle impostazioni del tuo ID Apple. Consulta la nostra pagina «Elimina account» per le istruzioni complete, incluso come richiedere l’eliminazione via email se non hai più l’app. Le copie già detenute dai nostri fornitori di analisi, segnalazione dei crash, acquisti e IA (Mixpanel, PostHog, Sentry, RevenueCat e fal.ai) non vengono rimosse dall\'eliminazione nell\'app; scrivici per richiederne la cancellazione.'] },
       { h: 'I tuoi diritti secondo il GDPR (SEE, Regno Unito, Svizzera)', p: ['Se ti trovi nel SEE, nel Regno Unito o in Svizzera, hai il diritto di accedere, correggere, eliminare e ricevere una copia (portabilità) dei tuoi dati personali, e di opporti a determinati trattamenti o limitarli. Trattiamo i tuoi dati sulla base di: esecuzione di un contratto (fornire l’app), il tuo consenso (ad esempio, l’analisi tramite session replay), e i nostri legittimi interessi (sicurezza, prevenzione degli abusi, miglioramento del servizio). Per esercitare questi diritti, scrivi a ridvan.uyn@gmail.com; risponderemo entro un mese.'] },
       { h: 'Residenti in California (CCPA/CPRA)', p: ['I residenti in California possono richiedere di conoscere, eliminare o correggere le informazioni personali che deteniamo su di loro, e di rinunciare alla loro «vendita» o «condivisione» — non vendiamo informazioni personali e non usiamo tracker pubblicitari comportamentali cross-context. Invia le richieste a ridvan.uyn@gmail.com.'] },
       { h: 'Minori', p: ['Viral Factory non è rivolta a minori di 13 anni (o l’età minima richiesta nel tuo paese) e non raccogliamo consapevolmente le loro informazioni. Se ritieni che un minore ci abbia fornito informazioni personali, contattaci e le elimineremo.'] },
@@ -965,6 +979,7 @@ const it: LegalPack = {
         p: [
           'Eliminare il tuo account NON annulla un abbonamento App Store attivo — annullalo separatamente da Impostazioni → [il tuo nome] → Abbonamenti sul tuo dispositivo, altrimenti continuerà a rinnovarsi.',
           'I contenuti già pubblicati su TikTok, Instagram o YouTube restano su quelle piattaforme; eliminali direttamente lì se vuoi rimuoverli.',
+          "Le copie già detenute dai nostri fornitori di analisi, segnalazione dei crash e acquisti (Mixpanel, PostHog, Sentry, RevenueCat) e dal nostro fornitore di infrastruttura IA (fal.ai) non vengono rimosse dall'eliminazione nell'app. Scrivi a ridvan.uyn@gmail.com per richiederne la cancellazione.",
         ],
       },
       {
@@ -980,6 +995,7 @@ const pt: LegalPack = {
   effectiveDateLabel: '26 de setembro de 2026',
   privacy: {
     title: 'Política de Privacidade',
+    effective: "15 de outubro de 2026",
     lead: 'Como o Viral Factory coleta, usa e protege suas informações.',
     intro:
       'Esta Política de Privacidade explica quais informações o app iOS Viral Factory e este site coletam, por quê, e quais escolhas você tem. O Viral Factory é desenvolvido por Rıdvan Uyan, desenvolvedor individual, controlador dos seus dados para as finalidades aqui descritas.',
@@ -993,7 +1009,8 @@ const pt: LegalPack = {
           'Informações de compra — compras de assinaturas e pacotes de créditos são processadas pela App Store; a RevenueCat processa eventos de compra e direitos em nosso nome. Nunca recebemos o número do seu cartão.',
           'Conexões com contas sociais — se você conectar TikTok, Instagram ou YouTube para publicar conteúdo, recebemos as informações básicas de perfil dessa conta (identificador, nome de exibição, avatar) e armazenamos um token de acesso criptografado para que o app publique em seu nome.',
           'Análise — usamos Mixpanel e PostHog para entender como o app é usado. A repetição de sessão (session replay) do PostHog está ativada para análise de interação, mas todo texto e imagens na tela são mascarados antes da captura, então uma repetição nunca mostra seus prompts, fotos ou conteúdo gerado. A análise usa um identificador de instalação separado e aleatório — nunca o identificador da sua conta de convidado.',
-          'Dados de dispositivo e diagnóstico — versão do app, modelo geral do dispositivo e sistema operacional, e configurações de idioma.',
+          'Dados de dispositivo e diagnóstico — versão do app, modelo geral do dispositivo e sistema operacional, e configurações de idioma. Nossos provedores de análise e de compras também podem inferir uma localização aproximada (como país ou região) a partir do seu endereço IP; o app não solicita a localização do seu dispositivo. Por segurança, também mantemos o endereço IP e o user agent das suas sessões de login.',
+          "Diagnóstico de falhas e desempenho — usamos o Sentry (região da UE) para encontrar e corrigir falhas e erros. Os relatórios incluem stack traces, modelo do dispositivo e sistema operacional, versão do app, um rastro de eventos recentes do app, como a navegação entre telas, e medições de desempenho de uma amostra de sessões. Eles são vinculados ao ID da sua conta do Viral Factory, não ao seu e-mail nem ao seu nome.",
           'Preferências de notificação — se você ativou o lembrete diário de ideias, armazenado localmente no seu dispositivo.',
         ],
         p: ['Não usamos rastreadores de publicidade, e o app não solicita a permissão de App Tracking Transparency da Apple.'],
@@ -1031,7 +1048,7 @@ const pt: LegalPack = {
       },
       { h: 'O que não fazemos', p: ['Não vendemos dados pessoais e nunca compartilhamos seus prompts, envios ou conteúdo gerado com outros usuários, a menos que você escolha explicitamente tornar algo público.'] },
       { h: 'Retenção de dados', p: ['Sua conta e o conteúdo gerado são retidos enquanto sua conta estiver ativa. As fotos, vídeos enviados e a mídia gerada são armazenados junto com seus projetos até que você os exclua ou exclua sua conta. Excluir sua conta (Perfil → Configurações → Excluir conta) remove os dados da sua conta e a mídia armazenada. Você pode excluir gerações individuais no app a qualquer momento.'] },
-      { h: 'Excluindo sua conta', p: ['Você pode excluir permanentemente sua conta a qualquer momento no app: Perfil → Configurações → Excluir conta. Isso exclui imediata e permanentemente sua conta, histórico de créditos, vídeos, personagens, prompts e contas sociais conectadas, e revoga a autorização Sign in with Apple, se usada. Isso não cancela uma assinatura ativa da App Store — cancele-a separadamente nas configurações do seu ID Apple. Veja nossa página «Excluir conta» para instruções completas, incluindo como solicitar a exclusão por e-mail se você não tiver mais o app.'] },
+      { h: 'Excluindo sua conta', p: ['Você pode excluir permanentemente sua conta a qualquer momento no app: Perfil → Configurações → Excluir conta. Isso exclui imediata e permanentemente sua conta, histórico de créditos, vídeos, personagens, prompts e contas sociais conectadas, e revoga a autorização Sign in with Apple, se usada. Isso não cancela uma assinatura ativa da App Store — cancele-a separadamente nas configurações do seu ID Apple. Veja nossa página «Excluir conta» para instruções completas, incluindo como solicitar a exclusão por e-mail se você não tiver mais o app. As cópias que nossos provedores de análise, relatório de falhas, compras e IA (Mixpanel, PostHog, Sentry, RevenueCat e fal.ai) já mantêm não são removidas pela exclusão no app; escreva para nós para solicitar a exclusão delas.'] },
       { h: 'Seus direitos sob o RGPD (EEE, Reino Unido, Suíça)', p: ['Se você estiver no EEE, no Reino Unido ou na Suíça, você tem o direito de acessar, corrigir, excluir e receber uma cópia (portabilidade) de seus dados pessoais, e de se opor a ou restringir certos tratamentos. Tratamos seus dados com base em: execução de um contrato (fornecer o app), seu consentimento (por exemplo, análise por repetição de sessão), e nossos interesses legítimos (segurança, prevenção de abusos, melhoria do serviço). Para exercer esses direitos, escreva para ridvan.uyn@gmail.com; responderemos em até um mês.'] },
       { h: 'Residentes da Califórnia (CCPA/CPRA)', p: ['Residentes da Califórnia podem solicitar saber, excluir ou corrigir as informações pessoais que mantemos sobre eles, e optar por não participar de sua «venda» ou «compartilhamento» — não vendemos informações pessoais nem usamos rastreadores de publicidade comportamental entre contextos. Envie solicitações para ridvan.uyn@gmail.com.'] },
       { h: 'Crianças', p: ['O Viral Factory não é direcionado a crianças menores de 13 anos (ou a idade mínima exigida no seu país) e não coletamos intencionalmente suas informações. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco para que possamos excluí-las.'] },
@@ -1128,6 +1145,7 @@ const pt: LegalPack = {
         p: [
           'Excluir sua conta NÃO cancela uma assinatura ativa da App Store — cancele-a separadamente em Ajustes → [seu nome] → Assinaturas no seu dispositivo, ou ela continuará se renovando.',
           'Conteúdo que você já publicou no TikTok, Instagram ou YouTube permanece nessas plataformas; exclua-o diretamente lá se quiser removê-lo.',
+          "As cópias que nossos provedores de análise, relatório de falhas e compras (Mixpanel, PostHog, Sentry, RevenueCat) e nosso provedor de infraestrutura de IA (fal.ai) já mantêm não são removidas pela exclusão no app. Escreva para ridvan.uyn@gmail.com para solicitar a exclusão delas.",
         ],
       },
       {
@@ -1143,6 +1161,7 @@ const tr: LegalPack = {
   effectiveDateLabel: '26 Eylül 2026',
   privacy: {
     title: 'Gizlilik Politikası',
+    effective: "15 Ekim 2026",
     lead: 'Viral Factory bilgilerini nasıl toplar, kullanır ve korur.',
     intro:
       'Bu Gizlilik Politikası, Viral Factory iOS uygulamasının ve bu web sitesinin hangi bilgileri, neden topladığını ve sahip olduğun seçenekleri açıklar. Viral Factory, burada açıklanan amaçlar için verilerinin sorumlusu olan bireysel geliştirici Rıdvan Uyan tarafından geliştirilmektedir.',
@@ -1156,7 +1175,8 @@ const tr: LegalPack = {
           'Satın alma bilgileri — abonelik ve kredi paketi satın alımları App Store tarafından işlenir; RevenueCat satın alma ve hak olaylarını bizim adımıza işler. Kart numaranı asla almayız.',
           'Sosyal medya hesabı bağlantıları — içerik paylaşmak için TikTok, Instagram ya da YouTube bağlarsan, o hesabın temel profil bilgilerini (kullanıcı adı, görünen ad, avatar) alır ve uygulamanın senin adına paylaşım yapabilmesi için şifrelenmiş bir erişim anahtarı saklarız.',
           'Analitik — uygulamanın nasıl kullanıldığını anlamak için Mixpanel ve PostHog kullanırız. PostHog oturum tekrarı (session replay), etkileşim analizi için etkindir, ancak yakalamadan önce ekrandaki tüm metin ve görseller gizlenir; bu yüzden bir tekrar oynatma asla prompt’larını, fotoğraflarını ya da ürettiğin içerikleri göstermez. Analitik, ayrı ve rastgele bir kurulum kimliği kullanır — asla misafir hesap kimliğini değil.',
-          'Cihaz ve tanılama verileri — uygulama sürümü, genel cihaz modeli ve işletim sistemi, ve dil ayarları.',
+          'Cihaz ve tanılama verileri — uygulama sürümü, genel cihaz modeli ve işletim sistemi, ve dil ayarları. Analitik ve satın alma sağlayıcılarımız ayrıca IP adresinden yaklaşık bir konum (ülke veya bölge gibi) çıkarabilir; uygulama cihazının konumunu istemez. Güvenlik için oturum açma oturumlarının IP adresini ve user-agent bilgisini de saklarız.',
+          "Çökme ve performans tanılaması — çökmeleri ve hataları bulup düzeltmek için Sentry'yi (AB bölgesi) kullanıyoruz. Raporlar yığın izlerini (stack trace), cihaz modelini ve işletim sistemini, uygulama sürümünü, ekranlar arası gezinme gibi son uygulama olaylarının akışını ve oturumların bir örneklemi için performans ölçümlerini içerir. Raporlar Viral Factory hesap kimliğine bağlanır; e-posta adresine veya adına bağlanmaz.",
           'Bildirim tercihleri — günlük fikir hatırlatıcısını açıp açmadığın, cihazında yerel olarak saklanır.',
         ],
         p: ['Reklam takip teknolojileri kullanmıyoruz ve uygulama Apple’ın App Tracking Transparency iznini istemez.'],
@@ -1194,7 +1214,7 @@ const tr: LegalPack = {
       },
       { h: 'Yapmadıklarımız', p: ['Kişisel verileri satmayız ve açıkça bir şeyi herkese açık yapmayı seçmediğin sürece prompt’larını, yüklemelerini ya da ürettiğin içeriği asla başka kullanıcılarla paylaşmayız.'] },
       { h: 'Veri saklama', p: ['Hesabın ve ürettiğin içerik, hesabın aktif olduğu sürece saklanır. Yüklediğin fotoğraf ve videolar ile üretilen medya, sen silene veya hesabını silene kadar projelerinle birlikte saklanır. Hesabını silmen (Profil → Ayarlar → Hesabı Sil) hesap verilerini ve saklanan medyayı kaldırır. Uygulamada istediğin zaman tekil üretimleri silebilirsin.'] },
-      { h: 'Hesabını silme', p: ['Hesabını istediğin zaman uygulamada kalıcı olarak silebilirsin: Profil → Ayarlar → Hesabı Sil. Bu, hesabını, kredi geçmişini, videolarını, karakterlerini, prompt’larını ve bağlı sosyal medya hesaplarını hemen ve kalıcı olarak siler, kullanıldıysa Sign in with Apple iznini iptal eder. Bu, aktif bir App Store aboneliğini iptal etmez — bunu Apple Kimliği ayarlarından ayrıca iptal etmen gerekir. Uygulamaya artık erişimin yoksa e-posta yoluyla silme talep etme dahil, tam adım adım talimatlar için «Hesabı Sil» sayfamıza bakabilirsin.'] },
+      { h: 'Hesabını silme', p: ['Hesabını istediğin zaman uygulamada kalıcı olarak silebilirsin: Profil → Ayarlar → Hesabı Sil. Bu, hesabını, kredi geçmişini, videolarını, karakterlerini, prompt’larını ve bağlı sosyal medya hesaplarını hemen ve kalıcı olarak siler, kullanıldıysa Sign in with Apple iznini iptal eder. Bu, aktif bir App Store aboneliğini iptal etmez — bunu Apple Kimliği ayarlarından ayrıca iptal etmen gerekir. Uygulamaya artık erişimin yoksa e-posta yoluyla silme talep etme dahil, tam adım adım talimatlar için «Hesabı Sil» sayfamıza bakabilirsin. Analitik, çökme raporlama, satın alma ve yapay zekâ sağlayıcılarımızın (Mixpanel, PostHog, Sentry, RevenueCat ve fal.ai) elinde hâlihazırda bulunan kopyalar uygulama içi silme ile kaldırılmaz; silinmesini istemek için bize yaz.'] },
       { h: 'GDPR kapsamındaki hakların (AEA, Birleşik Krallık, İsviçre)', p: ['AEA, Birleşik Krallık ya da İsviçre’de bulunuyorsan, kişisel verilerine erişme, düzeltme, silme ve bir kopyasını alma (taşınabilirlik) ile belirli işlemlere itiraz etme ya da bunları kısıtlama hakkına sahipsin. Verilerini şu temellerle işleriz: bir sözleşmenin ifası (uygulamayı sağlamak), rızan (örneğin, oturum tekrarı analitiği) ve meşru menfaatlerimiz (güvenlik, kötüye kullanımın önlenmesi, hizmetin geliştirilmesi). Bu hakları kullanmak için ridvan.uyn@gmail.com adresine yaz; bir ay içinde yanıt veririz.'] },
       { h: 'Kaliforniya sakinleri (CCPA/CPRA)', p: ['Kaliforniya sakinleri, haklarında sakladığımız kişisel bilgileri öğrenme, silme ya da düzeltme talep edebilir ve bunların “satışından” ya da “paylaşımından” vazgeçebilir — kişisel bilgi satmayız ve bağlamlar arası davranışsal reklam takibi kullanmayız. Taleplerini ridvan.uyn@gmail.com adresine gönder.'] },
       { h: 'Çocuklar', p: ['Viral Factory, 13 yaşın altındaki çocuklara (ya da ülkende gereken asgari yaşın altındakilere) yönelik değildir ve bilerek bilgilerini toplamayız. Bir çocuğun bize kişisel bilgi sağladığını düşünüyorsan bizimle iletişime geç, bu bilgileri sileriz.'] },
@@ -1291,6 +1311,7 @@ const tr: LegalPack = {
         p: [
           'Hesabını silmek, aktif bir App Store aboneliğini İPTAL ETMEZ — cihazında Ayarlar → [adın] → Abonelikler üzerinden ayrıca iptal etmezsen yenilenmeye devam eder.',
           'TikTok, Instagram ya da YouTube’da zaten yayınladığın içerikler o platformlarda kalır; kaldırmak istersen doğrudan orada silmen gerekir.',
+          "Analitik, çökme raporlama ve satın alma sağlayıcılarımızın (Mixpanel, PostHog, Sentry, RevenueCat) ve yapay zekâ altyapı sağlayıcımızın (fal.ai) elinde hâlihazırda bulunan kopyalar uygulama içi silme ile kaldırılmaz. Silinmesini istemek için ridvan.uyn@gmail.com adresine yaz.",
         ],
       },
       {
@@ -1306,6 +1327,7 @@ const ja: LegalPack = {
   effectiveDateLabel: '2026年9月26日',
   privacy: {
     title: 'プライバシーポリシー',
+    effective: "2026年10月15日",
     lead: 'Viral Factoryが情報をどのように収集、利用、保護するか。',
     intro:
       '本プライバシーポリシーは、Viral FactoryのiOSアプリおよび本ウェブサイトが収集する情報の内容、理由、そしてお客様が持つ選択肢について説明します。Viral Factoryは個人開発者であるRıdvan Uyanが開発しており、ここで説明する目的においてお客様の情報の管理者となります。',
@@ -1319,7 +1341,8 @@ const ja: LegalPack = {
           '購入情報 — サブスクリプションとクレジットパックの購入はApp Storeが処理します。RevenueCatが購入・権利イベントを当社に代わって処理します。カード番号を受け取ることは一切ありません。',
           'ソーシャルアカウント連携 — コンテンツ投稿のためにTikTok、Instagram、YouTubeを連携した場合、そのアカウントの基本プロフィール情報（ハンドル名、表示名、アバター）を受け取り、アプリがお客様に代わって投稿できるよう暗号化されたアクセストークンを保存します。',
           '分析 — アプリの利用状況を把握するためMixpanelとPostHogを使用しています。PostHogのセッションリプレイは操作分析のために有効ですが、記録前に画面上のすべてのテキストと画像がマスクされるため、リプレイでプロンプト・写真・生成コンテンツが表示されることはありません。分析には別途生成されるランダムなインストールIDを使用し、ゲストアカウント識別子は決して使用しません。',
-          '端末・診断データ — アプリのバージョン、一般的な端末モデルとOS、言語設定。',
+          '端末・診断データ — アプリのバージョン、一般的な端末モデルとOS、言語設定。また、分析および購入処理の提供事業者は、IPアドレスからおおよその位置（国や地域など）を推定する場合があります。アプリが端末の位置情報を要求することはありません。さらに、セキュリティのため、ログインセッションのIPアドレスとユーザーエージェントを保持します。',
+          "クラッシュとパフォーマンスの診断 — クラッシュやエラーを検出して修正するために、Sentry（EUリージョン）を使用します。レポートには、スタックトレース、端末モデルとOS、アプリのバージョン、画面遷移などの直近のアプリ内イベントの履歴、一部のセッションのパフォーマンス計測値が含まれます。これらはViral FactoryのアカウントIDに紐づけられ、メールアドレスや氏名には紐づけられません。",
           '通知設定 — 毎日のアイデアリマインダーを有効にしているかどうか。端末内にローカルに保存されます。',
         ],
         p: ['広告トラッカーは使用しておらず、本アプリはAppleのApp Tracking Transparencyの許可を求めません。'],
@@ -1357,7 +1380,7 @@ const ja: LegalPack = {
       },
       { h: '当社が行わないこと', p: ['当社は個人データを販売することはなく、お客様が明示的に公開を選択しない限り、プロンプト、アップロードした素材、生成コンテンツを他の利用者と共有することもありません。'] },
       { h: 'データの保持', p: ['アカウントおよび生成コンテンツは、アカウントが有効である間保持されます。アップロードされた写真・動画や生成されたメディアは、お客様が削除するかアカウントを削除するまでプロジェクトとともに保存されます。アカウントを削除する（プロフィール→設定→アカウントを削除）と、アカウントデータと保存されたメディアが削除されます。個々の生成物はアプリ内でいつでも削除できます。'] },
-      { h: 'アカウントの削除', p: ['アプリ内でいつでもアカウントを完全に削除できます：プロフィール→設定→アカウントを削除。これにより、アカウント、クレジット履歴、動画、キャラクター、プロンプト、連携済みソーシャルアカウントが即座かつ完全に削除され、Sign in with Appleを使用している場合はその認可も取り消されます。有効なApp Storeサブスクリプションは自動解約されません。Apple IDの設定から別途解約してください。アプリにアクセスできない場合のメールでの削除依頼方法を含む詳しい手順は「アカウントを削除」ページをご覧ください。'] },
+      { h: 'アカウントの削除', p: ['アプリ内でいつでもアカウントを完全に削除できます：プロフィール→設定→アカウントを削除。これにより、アカウント、クレジット履歴、動画、キャラクター、プロンプト、連携済みソーシャルアカウントが即座かつ完全に削除され、Sign in with Appleを使用している場合はその認可も取り消されます。有効なApp Storeサブスクリプションは自動解約されません。Apple IDの設定から別途解約してください。アプリにアクセスできない場合のメールでの削除依頼方法を含む詳しい手順は「アカウントを削除」ページをご覧ください。分析、クラッシュレポート、購入処理、AIの各提供事業者（Mixpanel、PostHog、Sentry、RevenueCat、fal.ai）がすでに保有しているコピーは、アプリ内での削除では削除されません。削除をご希望の場合はメールでご連絡ください。'] },
       { h: 'GDPRに基づく権利（EEA、英国、スイス）', p: ['EEA、英国、スイスにお住まいの場合、個人データへのアクセス、訂正、削除、コピーの受領（データポータビリティ）、および一部の処理への異議申し立てや制限を求める権利があります。当社は、契約の履行（アプリの提供）、お客様の同意（セッションリプレイ分析など）、当社の正当な利益（セキュリティ、不正防止、サービス改善）を根拠にデータを処理します。これらの権利を行使するには ridvan.uyn@gmail.com までご連絡ください。1か月以内に対応します。'] },
       { h: 'カリフォルニア州居住者（CCPA/CPRA）', p: ['カリフォルニア州の居住者は、当社が保有する個人情報の開示、削除、訂正を請求し、その「販売」や「共有」をオプトアウトする権利があります。当社は個人情報を販売せず、コンテキストをまたぐ行動ターゲティング広告トラッカーも使用していません。請求は ridvan.uyn@gmail.com までお送りください。'] },
       { h: 'お子様について', p: ['Viral Factoryは13歳未満（またはお住まいの国で定められた最低年齢未満）のお子様を対象としておらず、意図的にその情報を収集することはありません。お子様が当社に個人情報を提供したと思われる場合はご連絡ください。速やかに削除します。'] },
@@ -1454,6 +1477,7 @@ const ja: LegalPack = {
         p: [
           'アカウントを削除しても、有効なApp Storeサブスクリプションは解約されません。端末の設定→［お客様の名前］→サブスクリプションから別途解約しない限り、更新され続けます。',
           'すでにTikTok、Instagram、YouTubeに公開したコンテンツはそれらのプラットフォームに残ります。削除したい場合は各プラットフォーム上で直接削除してください。',
+          "分析、クラッシュレポート、購入処理の提供事業者（Mixpanel、PostHog、Sentry、RevenueCat）およびAIインフラ提供事業者（fal.ai）がすでに保有しているコピーは、アプリ内での削除では削除されません。削除をご希望の場合は ridvan.uyn@gmail.com までメールでご連絡ください。",
         ],
       },
       {
@@ -1469,6 +1493,7 @@ const ko: LegalPack = {
   effectiveDateLabel: '2026년 9월 26일',
   privacy: {
     title: '개인정보처리방침',
+    effective: "2026년 10월 15일",
     lead: 'Viral Factory가 정보를 수집, 이용, 보호하는 방법.',
     intro:
       '본 개인정보처리방침은 Viral Factory iOS 앱과 본 웹사이트가 수집하는 정보의 내용과 이유, 그리고 이용자가 가진 선택권을 설명합니다. Viral Factory는 개인 개발자인 Rıdvan Uyan이 개발하며, 여기에 설명된 목적을 위해 귀하의 정보에 대한 처리자입니다.',
@@ -1482,7 +1507,8 @@ const ko: LegalPack = {
           '결제 정보 — 구독 및 크레딧 팩 구매는 App Store가 처리합니다. RevenueCat이 당사를 대신하여 구매 및 권한 이벤트를 처리합니다. 카드 번호를 받는 일은 결코 없습니다.',
           '소셜 계정 연결 — 콘텐츠 게시를 위해 TikTok, Instagram, YouTube를 연결하면 해당 계정의 기본 프로필 정보(핸들, 표시 이름, 아바타)를 받고, 앱이 귀하를 대신해 게시할 수 있도록 암호화된 액세스 토큰을 저장합니다.',
           '분석 — 앱 사용 현황을 파악하기 위해 Mixpanel과 PostHog를 사용합니다. PostHog 세션 리플레이는 상호작용 분석을 위해 활성화되어 있지만, 기록 전에 화면상의 모든 텍스트와 이미지가 마스킹되므로 리플레이에 프롬프트·사진·생성된 미디어가 표시되는 일은 없습니다. 분석에는 별도의 무작위 설치 ID를 사용하며, 게스트 계정 식별자는 절대 사용하지 않습니다.',
-          '기기 및 진단 데이터 — 앱 버전, 일반적인 기기 모델 및 운영체제, 언어 설정.',
+          '기기 및 진단 데이터 — 앱 버전, 일반적인 기기 모델 및 운영체제, 언어 설정. 또한 분석 및 결제 제공업체는 IP 주소로부터 대략적인 위치(국가나 지역 등)를 추정할 수 있으며, 앱은 기기의 위치를 요청하지 않습니다. 보안을 위해 로그인 세션의 IP 주소와 사용자 에이전트도 보관합니다.',
+          "충돌 및 성능 진단 — 충돌과 오류를 찾아 수정하기 위해 Sentry(EU 리전)를 사용합니다. 보고서에는 스택 트레이스, 기기 모델과 운영체제, 앱 버전, 화면 이동 같은 최근 앱 이벤트 기록, 일부 세션의 성능 측정값이 포함됩니다. 보고서는 Viral Factory 계정 ID와 연결되며, 이메일 주소나 이름과는 연결되지 않습니다.",
           '알림 설정 — 매일 아이디어 알림을 켰는지 여부. 기기에 로컬로 저장됩니다.',
         ],
         p: ['당사는 광고 추적기를 사용하지 않으며, 앱은 Apple의 앱 추적 투명성(App Tracking Transparency) 권한을 요청하지 않습니다.'],
@@ -1520,7 +1546,7 @@ const ko: LegalPack = {
       },
       { h: '당사가 하지 않는 것', p: ['당사는 개인정보를 판매하지 않으며, 귀하가 명시적으로 공개를 선택하지 않는 한 프롬프트, 업로드한 자료, 생성된 콘텐츠를 다른 이용자와 공유하는 일은 결코 없습니다.'] },
       { h: '데이터 보존', p: ['계정과 생성된 콘텐츠는 계정이 활성 상태인 동안 보존됩니다. 업로드한 사진과 동영상, 생성된 미디어는 귀하가 삭제하거나 계정을 삭제할 때까지 프로젝트와 함께 저장됩니다. 계정을 삭제하면(프로필 → 설정 → 계정 삭제) 계정 데이터와 저장된 미디어가 제거됩니다. 개별 생성물은 앱에서 언제든지 삭제할 수 있습니다.'] },
-      { h: '계정 삭제', p: ['앱에서 언제든지 계정을 영구적으로 삭제할 수 있습니다: 프로필 → 설정 → 계정 삭제. 이렇게 하면 계정, 크레딧 내역, 동영상, 캐릭터, 프롬프트, 연결된 소셜 계정이 즉시 영구적으로 삭제되며, 사용한 경우 Sign in with Apple 권한도 취소됩니다. 이는 활성 App Store 구독을 취소하지 않으므로 Apple ID 설정에서 별도로 취소해야 합니다. 앱에 더 이상 접근할 수 없을 때 이메일로 삭제를 요청하는 방법을 포함한 전체 단계별 안내는 「계정 삭제」 페이지를 참고하세요.'] },
+      { h: '계정 삭제', p: ['앱에서 언제든지 계정을 영구적으로 삭제할 수 있습니다: 프로필 → 설정 → 계정 삭제. 이렇게 하면 계정, 크레딧 내역, 동영상, 캐릭터, 프롬프트, 연결된 소셜 계정이 즉시 영구적으로 삭제되며, 사용한 경우 Sign in with Apple 권한도 취소됩니다. 이는 활성 App Store 구독을 취소하지 않으므로 Apple ID 설정에서 별도로 취소해야 합니다. 앱에 더 이상 접근할 수 없을 때 이메일로 삭제를 요청하는 방법을 포함한 전체 단계별 안내는 「계정 삭제」 페이지를 참고하세요. 분석, 충돌 보고, 결제, AI 제공업체(Mixpanel, PostHog, Sentry, RevenueCat, fal.ai)가 이미 보유한 사본은 앱 내 삭제로 제거되지 않습니다. 삭제를 요청하시려면 이메일로 문의해 주세요.'] },
       { h: 'GDPR상의 권리 (EEA, 영국, 스위스)', p: ['EEA, 영국, 스위스에 거주하는 경우 개인정보에 대한 접근, 정정, 삭제, 사본 수령(이동성) 권리와 특정 처리에 이의를 제기하거나 제한할 권리가 있습니다. 당사는 계약 이행(앱 제공), 귀하의 동의(예: 세션 리플레이 분석), 당사의 정당한 이익(보안, 악용 방지, 서비스 개선)을 근거로 데이터를 처리합니다. 이러한 권리를 행사하려면 ridvan.uyn@gmail.com으로 연락해 주세요. 한 달 이내에 답변드립니다.'] },
       { h: '캘리포니아 거주자 (CCPA/CPRA)', p: ['캘리포니아 거주자는 당사가 보유한 개인정보의 열람, 삭제, 정정을 요청하고 그 「판매」나 「공유」를 거부할 권리가 있습니다 — 당사는 개인정보를 판매하지 않으며 상황 간 행동 기반 광고 추적기를 사용하지 않습니다. 요청은 ridvan.uyn@gmail.com으로 보내주세요.'] },
       { h: '아동', p: ['Viral Factory는 만 13세 미만(또는 거주 국가에서 요구하는 최소 연령 미만) 아동을 대상으로 하지 않으며, 이들의 정보를 고의로 수집하지 않습니다. 아동이 당사에 개인정보를 제공했다고 판단되는 경우 연락해 주시면 삭제하겠습니다.'] },
@@ -1617,6 +1643,7 @@ const ko: LegalPack = {
         p: [
           '계정을 삭제해도 활성 App Store 구독은 해지되지 않습니다 — 기기의 설정 → [이름] → 구독에서 별도로 해지하지 않으면 계속 갱신됩니다.',
           '이미 TikTok, Instagram, YouTube에 게시한 콘텐츠는 해당 플랫폼에 그대로 남습니다. 제거하려면 해당 플랫폼에서 직접 삭제하세요.',
+          "분석, 충돌 보고, 결제 제공업체(Mixpanel, PostHog, Sentry, RevenueCat)와 AI 인프라 제공업체(fal.ai)가 이미 보유한 사본은 앱 내 삭제로 제거되지 않습니다. 삭제를 요청하시려면 ridvan.uyn@gmail.com으로 이메일을 보내 주세요.",
         ],
       },
       {
@@ -1632,6 +1659,7 @@ const ar: LegalPack = {
   effectiveDateLabel: '26 سبتمبر 2026',
   privacy: {
     title: 'سياسة الخصوصية',
+    effective: "15 أكتوبر 2026",
     lead: 'كيف يجمع Viral Factory معلوماتك ويستخدمها ويحميها.',
     intro:
       'توضح سياسة الخصوصية هذه المعلومات التي يجمعها تطبيق Viral Factory لنظام iOS وهذا الموقع الإلكتروني، ولماذا، والخيارات المتاحة لك. تم تطوير Viral Factory بواسطة Rıdvan Uyan، مطور مستقل، وهو المتحكم في بياناتك للأغراض الموضحة هنا.',
@@ -1645,7 +1673,8 @@ const ar: LegalPack = {
           'معلومات الشراء — يتم التعامل مع مشتريات الاشتراكات وحزم الأرصدة عبر App Store؛ وتقوم RevenueCat بمعالجة أحداث الشراء والاستحقاقات نيابة عنا. لا نتلقى أبدًا رقم بطاقتك.',
           'ربط الحسابات الاجتماعية — إذا قمت بربط TikTok أو Instagram أو YouTube لنشر المحتوى، فإننا نتلقى معلومات الملف الشخصي الأساسية لذلك الحساب (اسم المستخدم، الاسم المعروض، الصورة الرمزية) ونخزّن رمز وصول مشفّر ليتمكن التطبيق من النشر نيابة عنك.',
           'التحليلات — نستخدم Mixpanel وPostHog لفهم كيفية استخدام التطبيق. ميزة إعادة تشغيل الجلسة (session replay) في PostHog مفعّلة لتحليل التفاعل، لكن يتم إخفاء كل النصوص والصور على الشاشة قبل التسجيل، لذا فإن إعادة التشغيل لا تُظهر أبدًا أوامرك النصية أو صورك أو المحتوى المولّد. تستخدم التحليلات معرّف تثبيت عشوائيًا منفصلاً — وليس أبدًا معرّف حساب الضيف الخاص بك.',
-          'بيانات الجهاز والتشخيص — إصدار التطبيق، طراز الجهاز العام ونظام التشغيل، وإعدادات اللغة.',
+          'بيانات الجهاز والتشخيص — إصدار التطبيق، طراز الجهاز العام ونظام التشغيل، وإعدادات اللغة. كما قد يستنتج مزوّدو التحليلات والمشتريات لدينا موقعًا تقريبيًا (مثل البلد أو المنطقة) من عنوان IP الخاص بك؛ ولا يطلب التطبيق موقع جهازك. ونحتفظ أيضًا، لأغراض أمنية، بعنوان IP ووكيل المستخدم (user agent) لجلسات تسجيل دخولك.',
+          "تشخيص الأعطال والأداء — نستخدم Sentry (منطقة الاتحاد الأوروبي) لاكتشاف الأعطال والأخطاء وإصلاحها. تتضمن التقارير تتبّع المكدّس وطراز الجهاز ونظام التشغيل وإصدار التطبيق وسجلًا بأحدث أحداث التطبيق مثل التنقل بين الشاشات وقياسات الأداء لعيّنة من الجلسات. وهي مرتبطة بمعرّف حسابك في Viral Factory، لا ببريدك الإلكتروني ولا باسمك.",
           'تفضيلات الإشعارات — ما إذا كنت قد فعّلت تذكير الأفكار اليومي، ويُخزَّن محليًا على جهازك.',
         ],
         p: ['لا نستخدم متتبعات إعلانية، ولا يطلب التطبيق إذن App Tracking Transparency من Apple.'],
@@ -1683,7 +1712,7 @@ const ar: LegalPack = {
       },
       { h: 'ما لا نقوم به', p: ['لا نبيع البيانات الشخصية، ولا نشارك أبدًا أوامرك النصية أو ملفاتك المرفوعة أو المحتوى الذي تولّده مع مستخدمين آخرين، إلا إذا اخترت صراحةً جعل شيء ما عامًا.'] },
       { h: 'الاحتفاظ بالبيانات', p: ['يُحتفظ بحسابك والمحتوى الذي تولّده طالما كان حسابك نشطًا. تُخزَّن الصور والفيديوهات المرفوعة والوسائط المولَّدة مع مشاريعك إلى أن تحذفها أو تحذف حسابك. حذف حسابك (الملف الشخصي ← الإعدادات ← حذف الحساب) يزيل بيانات حسابك والوسائط المخزَّنة. يمكنك حذف عمليات التوليد الفردية في التطبيق في أي وقت.'] },
-      { h: 'حذف حسابك', p: ['يمكنك حذف حسابك نهائيًا في أي وقت من داخل التطبيق: الملف الشخصي ← الإعدادات ← حذف الحساب. يؤدي هذا إلى حذف حسابك وسجل أرصدتك وفيديوهاتك وشخصياتك وأوامرك النصية وحساباتك الاجتماعية المرتبطة فورًا ونهائيًا، وإلغاء إذن Sign in with Apple إن استُخدم. لا يؤدي هذا إلى إلغاء اشتراك نشط في App Store — عليك إلغاءه بشكل منفصل من إعدادات معرّف Apple الخاص بك. راجع صفحة «حذف الحساب» للحصول على تعليمات كاملة خطوة بخطوة، بما في ذلك كيفية طلب الحذف عبر البريد الإلكتروني إذا لم يعد لديك التطبيق.'] },
+      { h: 'حذف حسابك', p: ['يمكنك حذف حسابك نهائيًا في أي وقت من داخل التطبيق: الملف الشخصي ← الإعدادات ← حذف الحساب. يؤدي هذا إلى حذف حسابك وسجل أرصدتك وفيديوهاتك وشخصياتك وأوامرك النصية وحساباتك الاجتماعية المرتبطة فورًا ونهائيًا، وإلغاء إذن Sign in with Apple إن استُخدم. لا يؤدي هذا إلى إلغاء اشتراك نشط في App Store — عليك إلغاءه بشكل منفصل من إعدادات معرّف Apple الخاص بك. راجع صفحة «حذف الحساب» للحصول على تعليمات كاملة خطوة بخطوة، بما في ذلك كيفية طلب الحذف عبر البريد الإلكتروني إذا لم يعد لديك التطبيق. لا يؤدي الحذف داخل التطبيق إلى إزالة النسخ التي تحتفظ بها بالفعل جهات التحليلات والإبلاغ عن الأعطال والمشتريات والذكاء الاصطناعي لدينا (Mixpanel وPostHog وSentry وRevenueCat وfal.ai)؛ راسلنا لطلب حذفها.'] },
       { h: 'حقوقك بموجب اللائحة العامة لحماية البيانات (المنطقة الاقتصادية الأوروبية، المملكة المتحدة، سويسرا)', p: ['إذا كنت مقيمًا في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة أو سويسرا، فلديك الحق في الوصول إلى بياناتك الشخصية وتصحيحها وحذفها والحصول على نسخة منها (قابلية النقل)، والاعتراض على معالجات معينة أو تقييدها. نعالج بياناتك استنادًا إلى: تنفيذ العقد (توفير التطبيق)، موافقتك (مثل تحليلات إعادة تشغيل الجلسة)، ومصالحنا المشروعة (الأمان، منع إساءة الاستخدام، تحسين الخدمة). لممارسة أي من هذه الحقوق، راسلنا على ridvan.uyn@gmail.com؛ وسنرد خلال شهر واحد.'] },
       { h: 'المقيمون في كاليفورنيا (CCPA/CPRA)', p: ['يمكن لسكان كاليفورنيا طلب معرفة أو حذف أو تصحيح المعلومات الشخصية التي نحتفظ بها عنهم، وإلغاء الاشتراك في «بيعها» أو «مشاركتها» — نحن لا نبيع معلومات شخصية ولا نستخدم متتبعات إعلانية سلوكية عبر السياقات المختلفة. أرسل الطلبات إلى ridvan.uyn@gmail.com.'] },
       { h: 'الأطفال', p: ['لا يستهدف Viral Factory الأطفال دون سن 13 عامًا (أو الحد الأدنى للسن المطلوب في بلدك)، ولا نجمع معلوماتهم عن علم. إذا كنت تعتقد أن طفلاً قدّم لنا معلومات شخصية، فيرجى التواصل معنا وسنقوم بحذفها.'] },
@@ -1780,6 +1809,7 @@ const ar: LegalPack = {
         p: [
           'حذف حسابك لا يُلغي اشتراكًا نشطًا في App Store — يجب إلغاؤه بشكل منفصل عبر الإعدادات ← [اسمك] ← الاشتراكات على جهازك، وإلا فسيستمر في التجدد.',
           'يبقى المحتوى الذي نشرته بالفعل على TikTok أو Instagram أو YouTube على تلك المنصات؛ احذفه مباشرة هناك إذا أردت إزالته.',
+          "لا يؤدي الحذف داخل التطبيق إلى إزالة النسخ التي تحتفظ بها بالفعل جهات التحليلات والإبلاغ عن الأعطال والمشتريات لدينا (Mixpanel وPostHog وSentry وRevenueCat) ومزوّد بنية الذكاء الاصطناعي لدينا (fal.ai). راسل ridvan.uyn@gmail.com لطلب حذفها.",
         ],
       },
       {
@@ -1795,6 +1825,7 @@ const hi: LegalPack = {
   effectiveDateLabel: '26 सितंबर 2026',
   privacy: {
     title: 'गोपनीयता नीति',
+    effective: "15 अक्टूबर 2026",
     lead: 'Viral Factory आपकी जानकारी कैसे एकत्र, उपयोग और सुरक्षित करता है।',
     intro:
       'यह गोपनीयता नीति बताती है कि Viral Factory iOS ऐप और यह वेबसाइट कौन-सी जानकारी एकत्र करते हैं, क्यों, और आपके पास कौन-से विकल्प हैं। Viral Factory को व्यक्तिगत डेवलपर Rıdvan Uyan द्वारा विकसित किया गया है, जो यहाँ बताए गए उद्देश्यों के लिए आपके डेटा के नियंत्रक हैं।',
@@ -1808,7 +1839,8 @@ const hi: LegalPack = {
           'खरीद संबंधी जानकारी — सब्सक्रिप्शन और क्रेडिट-पैक खरीद App Store द्वारा संभाली जाती हैं; RevenueCat हमारी ओर से खरीद और अधिकार संबंधी इवेंट्स को प्रोसेस करता है। हमें आपका कार्ड नंबर कभी नहीं मिलता।',
           'सोशल अकाउंट कनेक्शन — अगर आप कंटेंट पब्लिश करने के लिए TikTok, Instagram या YouTube कनेक्ट करते हैं, तो हमें उस अकाउंट की बुनियादी प्रोफ़ाइल जानकारी (हैंडल, डिस्प्ले नाम, अवतार) मिलती है और हम एक एन्क्रिप्टेड एक्सेस टोकन संग्रहीत करते हैं ताकि ऐप आपकी ओर से पब्लिश कर सके।',
           'एनालिटिक्स — ऐप का उपयोग कैसे होता है यह समझने के लिए हम Mixpanel और PostHog का उपयोग करते हैं। इंटरैक्शन विश्लेषण के लिए PostHog सेशन रीप्ले सक्षम है, लेकिन कैप्चर से पहले स्क्रीन पर मौजूद सभी टेक्स्ट और इमेज मास्क कर दी जाती हैं, इसलिए रीप्ले में आपके प्रॉम्प्ट, फ़ोटो या जनरेट की गई सामग्री कभी नहीं दिखती। एनालिटिक्स एक अलग, रैंडम इंस्टॉलेशन आईडी का उपयोग करता है — कभी भी आपके गेस्ट खाता पहचानकर्ता का नहीं।',
-          'डिवाइस और डायग्नोस्टिक डेटा — ऐप वर्शन, सामान्य डिवाइस मॉडल और ऑपरेटिंग सिस्टम, और भाषा सेटिंग्स।',
+          'डिवाइस और डायग्नोस्टिक डेटा — ऐप वर्शन, सामान्य डिवाइस मॉडल और ऑपरेटिंग सिस्टम, और भाषा सेटिंग्स। हमारे एनालिटिक्स और खरीदारी प्रदाता आपके IP पते से अनुमानित स्थान (जैसे देश या क्षेत्र) भी निकाल सकते हैं; ऐप आपके डिवाइस का स्थान नहीं माँगता। सुरक्षा के लिए हम आपके साइन-इन सेशन का IP पता और यूज़र-एजेंट भी रखते हैं।',
+          "क्रैश और प्रदर्शन डायग्नोस्टिक्स — हम क्रैश और त्रुटियों का पता लगाने और उन्हें ठीक करने के लिए Sentry (EU क्षेत्र) का उपयोग करते हैं। रिपोर्ट में स्टैक ट्रेस, डिवाइस मॉडल और ऑपरेटिंग सिस्टम, ऐप संस्करण, स्क्रीन नेविगेशन जैसे हाल के ऐप इवेंट का क्रम, और कुछ सेशन के प्रदर्शन-समय शामिल होते हैं। ये आपके Viral Factory खाता ID से जुड़ी होती हैं, आपके ईमेल पते या नाम से नहीं।",
           'सूचना प्राथमिकताएँ — क्या आपने डेली आइडिया रिमाइंडर चालू किया है, जो आपके डिवाइस पर स्थानीय रूप से संग्रहीत होता है।',
         ],
         p: ['हम विज्ञापन ट्रैकर्स का उपयोग नहीं करते, और ऐप Apple की App Tracking Transparency अनुमति नहीं मांगता।'],
@@ -1846,7 +1878,7 @@ const hi: LegalPack = {
       },
       { h: 'हम क्या नहीं करते', p: ['हम व्यक्तिगत डेटा नहीं बेचते, और जब तक आप स्पष्ट रूप से किसी चीज़ को सार्वजनिक करना न चुनें, हम आपके प्रॉम्प्ट, अपलोड या जनरेट की गई सामग्री को कभी भी अन्य उपयोगकर्ताओं के साथ साझा नहीं करते।'] },
       { h: 'डेटा प्रतिधारण', p: ['आपका खाता और जनरेट की गई सामग्री तब तक बनी रहती है जब तक आपका खाता सक्रिय है। अपलोड की गई फ़ोटो, वीडियो और जनरेट की गई मीडिया आपके प्रोजेक्ट्स के साथ तब तक संग्रहीत रहती है जब तक आप उन्हें या अपना खाता न हटा दें। अपना खाता हटाने से (प्रोफ़ाइल → सेटिंग्स → खाता हटाएं) आपका खाता डेटा और संग्रहीत मीडिया हट जाता है। आप किसी भी समय ऐप में अलग-अलग जनरेशन हटा सकते हैं।'] },
-      { h: 'अपना खाता हटाना', p: ['आप किसी भी समय ऐप में अपना खाता स्थायी रूप से हटा सकते हैं: प्रोफ़ाइल → सेटिंग्स → खाता हटाएं। इससे आपका खाता, क्रेडिट इतिहास, वीडियो, कैरेक्टर, प्रॉम्प्ट और जुड़े हुए सोशल अकाउंट तुरंत और स्थायी रूप से हट जाते हैं, और उपयोग किए जाने पर Sign in with Apple अनुमति रद्द हो जाती है। इससे कोई सक्रिय App Store सब्सक्रिप्शन रद्द नहीं होता — उसे अपनी Apple ID सेटिंग्स में अलग से रद्द करें। अगर आपके पास अब ऐप नहीं है तो ईमेल द्वारा हटाने का अनुरोध करने सहित पूरी चरण-दर-चरण जानकारी के लिए हमारा «खाता हटाएं» पेज देखें।'] },
+      { h: 'अपना खाता हटाना', p: ['आप किसी भी समय ऐप में अपना खाता स्थायी रूप से हटा सकते हैं: प्रोफ़ाइल → सेटिंग्स → खाता हटाएं। इससे आपका खाता, क्रेडिट इतिहास, वीडियो, कैरेक्टर, प्रॉम्प्ट और जुड़े हुए सोशल अकाउंट तुरंत और स्थायी रूप से हट जाते हैं, और उपयोग किए जाने पर Sign in with Apple अनुमति रद्द हो जाती है। इससे कोई सक्रिय App Store सब्सक्रिप्शन रद्द नहीं होता — उसे अपनी Apple ID सेटिंग्स में अलग से रद्द करें। अगर आपके पास अब ऐप नहीं है तो ईमेल द्वारा हटाने का अनुरोध करने सहित पूरी चरण-दर-चरण जानकारी के लिए हमारा «खाता हटाएं» पेज देखें। हमारे एनालिटिक्स, क्रैश-रिपोर्टिंग, खरीदारी और AI प्रदाताओं (Mixpanel, PostHog, Sentry, RevenueCat और fal.ai) के पास पहले से मौजूद प्रतियाँ ऐप में हटाने से नहीं हटतीं; उन्हें हटवाने के लिए हमें ईमेल करें।'] },
       { h: 'GDPR के तहत आपके अधिकार (EEA, यूके, स्विट्ज़रलैंड)', p: ['अगर आप EEA, यूके या स्विट्ज़रलैंड में हैं, तो आपको अपने व्यक्तिगत डेटा तक पहुँचने, उसे सही करने, हटाने और उसकी एक प्रति (पोर्टेबिलिटी) प्राप्त करने, और कुछ प्रोसेसिंग पर आपत्ति करने या उसे सीमित करने का अधिकार है। हम आपके डेटा को इन आधारों पर प्रोसेस करते हैं: अनुबंध का निष्पादन (ऐप प्रदान करना), आपकी सहमति (जैसे, सेशन-रीप्ले एनालिटिक्स), और हमारे वैध हित (सुरक्षा, दुरुपयोग रोकथाम, सेवा में सुधार)। इन अधिकारों का उपयोग करने के लिए ridvan.uyn@gmail.com पर लिखें; हम एक महीने के भीतर जवाब देंगे।'] },
       { h: 'कैलिफ़ोर्निया निवासी (CCPA/CPRA)', p: ['कैलिफ़ोर्निया के निवासी हमारे पास मौजूद अपनी व्यक्तिगत जानकारी को जानने, हटाने या सही करने का अनुरोध कर सकते हैं, और उसकी «बिक्री» या «साझाकरण» से बाहर निकल सकते हैं — हम व्यक्तिगत जानकारी नहीं बेचते और क्रॉस-कॉन्टेक्स्ट बिहेवियरल विज्ञापन ट्रैकर्स का उपयोग नहीं करते। अनुरोध ridvan.uyn@gmail.com पर भेजें।'] },
       { h: 'बच्चे', p: ['Viral Factory 13 वर्ष से कम आयु के बच्चों (या आपके देश में आवश्यक न्यूनतम आयु) के लिए नहीं है, और हम जानबूझकर उनकी जानकारी एकत्र नहीं करते। अगर आपको लगता है कि किसी बच्चे ने हमें व्यक्तिगत जानकारी दी है, तो हमसे संपर्क करें और हम उसे हटा देंगे।'] },
@@ -1943,6 +1975,7 @@ const hi: LegalPack = {
         p: [
           'खाता हटाने से कोई सक्रिय App Store सब्सक्रिप्शन रद्द नहीं होता — इसे अपने डिवाइस पर सेटिंग्स → [आपका नाम] → सब्सक्रिप्शन में जाकर अलग से रद्द करें, नहीं तो यह रिन्यू होता रहेगा।',
           'आपने TikTok, Instagram या YouTube पर पहले से जो कंटेंट पब्लिश किया है वह उन प्लेटफ़ॉर्म पर बना रहता है; अगर आप उसे हटवाना चाहते हैं तो उसे सीधे वहीं से हटाएं।',
+          "हमारे एनालिटिक्स, क्रैश-रिपोर्टिंग और खरीदारी प्रदाताओं (Mixpanel, PostHog, Sentry, RevenueCat) तथा AI इंफ्रास्ट्रक्चर प्रदाता (fal.ai) के पास पहले से मौजूद प्रतियाँ ऐप में हटाने से नहीं हटतीं। उन्हें हटवाने के लिए ridvan.uyn@gmail.com पर ईमेल करें।",
         ],
       },
       {

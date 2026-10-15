@@ -26,7 +26,7 @@ const jsonLd = breadcrumbLd([
 <Base title={doc.title} description={doc.lead} lang={lang} path={path} jsonLd={jsonLd}>
   <article class="prose-legal container-page max-w-3xl py-16 md:py-20">
     <h1 class="font-display text-4xl font-extrabold">{doc.title}</h1>
-    <p class="mt-2 text-sm text-ink-muted">{legalPack.updatedLabel}: {legalPack.effectiveDateLabel}</p>
+    <p class="mt-2 text-sm text-ink-muted">{legalPack.updatedLabel}: {doc.effective ?? legalPack.effectiveDateLabel}</p>
     <p class="mt-5 leading-relaxed text-ink-soft">{doc.intro}</p>
     {doc.sections.map((s) => (
       <Fragment>

@@ -1,0 +1,131 @@
+---
+/**
+ * English-only press kit (/press/). Linked from the App Store launch
+ * nomination as supplemental material, deliberately not in the header nav or
+ * footer. The About copy is founder-verified — edit it only with sign-off and
+ * don't add feature claims here. Artwork lives in public/press/ (full PNGs for
+ * download + lighter JPEG thumbnails for display).
+ */
+import Base from '../layouts/Base.astro';
+import AppStoreBadge from '../components/AppStoreBadge.astro';
+import { BRAND, STORE } from '../config/site';
+import { lp, withBase } from '../i18n';
+import { breadcrumbLd } from '../lib/seo';
+
+const lang = 'en' as const;
+const path = '/press';
+const title = 'Viral Factory press kit';
+const tagline = 'Faceless short videos, storyboard first.';
+const description =
+  'Press kit for Viral Factory, a video studio for short vertical video without being on camera: about the app, key facts, key art, app icon and press contact.';
+
+const about = [
+  'Viral Factory is a video studio for people who need short vertical video but don’t want to be on camera: small businesses, app founders and faceless channels.',
+  'Start from an idea or a product photo, and the app plans the piece scene by scene. Every scene appears as a storyboard you can edit before anything renders, so the result is what you approved, not a surprise.',
+  'Studios cover the formats people actually post: photo to video, short video ads, UGC-style ads, swipe posts, cinematic shorts and AI characters. A planner and daily ideas help keep a posting rhythm, and finished videos save to Photos with the caption ready to paste.',
+  'Faceless by default. Rendering runs on our servers, so it works on any iPhone.',
+];
+
+const facts = [
+  { term: 'Platform', value: STORE.live ? 'iPhone (App Store)' : 'iPhone (launching on the App Store)', href: STORE.live ? STORE.appStoreUrl : undefined },
+  { term: 'Languages', value: '11 (English, Turkish, Spanish, Italian, Portuguese, Hindi, Arabic, Japanese, Korean, German, French)' },
+  { term: 'Price', value: 'Free to download, with subscriptions and credit packs' },
+  { term: 'Developer', value: 'Mirrket' },
+];
+
+const assets = [
+  {
+    label: 'Key art 16:9',
+    size: '1672 × 941',
+    file: '/press/viral-factory-key-art-16x9.png',
+    thumb: '/press/viral-factory-key-art-16x9-thumb.jpg',
+    w: 960,
+    h: 540,
+    alt: 'Viral Factory key art: six iPhones in an arc, each playing a short vertical video, on a violet background',
+    wide: true,
+  },
+  {
+    label: 'Key art 1:1',
+    size: '941 × 941',
+    file: '/press/viral-factory-key-art-1x1.png',
+    thumb: '/press/viral-factory-key-art-1x1-thumb.jpg',
+    w: 640,
+    h: 640,
+    alt: 'Viral Factory square key art: iPhones in an arc, each playing a short vertical video, on a violet background',
+  },
+  {
+    label: 'App icon',
+    size: '1024 × 1024',
+    file: '/press/viral-factory-icon-1024.png',
+    thumb: '/press/viral-factory-icon-1024.png',
+    w: 1024,
+    h: 1024,
+    alt: 'Viral Factory app icon',
+    icon: true,
+  },
+];
+
+const jsonLd = breadcrumbLd([
+  { name: BRAND.name, path: lp(lang, '/') },
+  { name: 'Press kit', path: lp(lang, path) },
+]);
+---
+<Base title={title} description={description} lang={lang} path={path} jsonLd={jsonLd} altLocales={['en']} hideSwitcher>
+  <article class="container-page max-w-3xl py-16 md:py-20">
+    <p class="label-mono">Press kit</p>
+    <h1 class="mt-4 font-display text-4xl font-extrabold leading-tight md:text-5xl">{title}</h1>
+    <p class="mt-5 text-lg leading-relaxed text-ink-soft">{tagline}</p>
+    <div class="mt-6"><AppStoreBadge /></div>
+
+    <h2 class="mt-14 font-display text-2xl font-bold">About</h2>
+    {about.map((p) => (<p class="mt-3 leading-relaxed text-ink-soft">{p}</p>))}
+
+    <h2 class="mt-12 font-display text-2xl font-bold">Facts</h2>
+    <dl class="card mt-5 divide-y divide-line text-sm">
+      {facts.map((f) => (
+        <div class="grid gap-1 px-5 py-4 sm:grid-cols-[9rem_1fr] sm:gap-4">
+          <dt class="font-semibold text-ink">{f.term}</dt>
+          <dd class="text-ink-soft">
+            {f.href ? <a href={f.href} rel="noopener" class="text-accent underline underline-offset-2">{f.value}</a> : f.value}
+          </dd>
+        </div>
+      ))}
+    </dl>
+
+    <h2 class="mt-12 font-display text-2xl font-bold">Artwork</h2>
+    <p class="mt-3 leading-relaxed text-ink-soft">Artwork may be used for editorial coverage of Viral Factory.</p>
+    <div class="mt-5 grid gap-5 sm:grid-cols-2">
+      {assets.map((a) => (
+        <figure class:list={['card flex flex-col overflow-hidden', a.wide && 'sm:col-span-2']}>
+          <div class:list={['bg-bg-sunken', a.icon && 'flex flex-1 items-center justify-center p-10']}>
+            <img
+              src={withBase(a.thumb)}
+              alt={a.alt}
+              width={a.w}
+              height={a.h}
+              loading="lazy"
+              decoding="async"
+              class:list={[a.icon ? 'h-auto w-40 rounded-[22.5%] shadow-sm sm:w-48' : 'block h-auto w-full']}
+            />
+          </div>
+          <figcaption class="flex flex-wrap items-center justify-between gap-3 px-5 py-4">
+            <span>
+              <span class="block font-semibold text-ink">{a.label}</span>
+              <span class="block text-xs text-ink-muted">PNG · {a.size}</span>
+            </span>
+            <a
+              href={withBase(a.file)}
+              download={a.file.split('/').pop()}
+              class="inline-flex items-center gap-2 rounded-pill border border-line-strong px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-black/[0.03]"
+            >Download PNG</a>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <h2 class="mt-12 font-display text-2xl font-bold">Press contact</h2>
+    <p class="mt-3 leading-relaxed text-ink-soft">
+      <a href={`mailto:${BRAND.supportEmail}`} class="text-accent underline underline-offset-2">{BRAND.supportEmail}</a>
+    </p>
+  </article>
+</Base>

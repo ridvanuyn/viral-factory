@@ -307,25 +307,29 @@ const de: LegalPack = {
   effectiveDateLabel: '26. September 2026',
   privacy: {
     title: 'Datenschutzerklärung',
-    effective: "15. Oktober 2026",
+    effective: "26. Oktober 2026",
     lead: 'Wie Viral Factory deine Daten erhebt, nutzt und schützt.',
     intro:
-      'Diese Datenschutzerklärung erklärt, welche Informationen die iOS-App Viral Factory und diese Website erheben, warum, und welche Wahlmöglichkeiten du hast. Viral Factory wird von Rıdvan Uyan, einem Einzelentwickler, entwickelt, der für die hier beschriebenen Zwecke für deine Daten verantwortlich ist.',
+      'Diese Datenschutzerklärung erklärt, welche Informationen die iOS- und Android-Apps von Viral Factory und diese Website erheben, warum, und welche Wahlmöglichkeiten du hast. Viral Factory wird von Rıdvan Uyan, einem Einzelentwickler, entwickelt, der für die hier beschriebenen Zwecke für deine Daten verantwortlich ist.',
     sections: [
       {
         h: 'Informationen, die wir erheben',
         ul: [
-          'Konto-Kennungen — eine zufällige Gerätekennung, die beim ersten Öffnen der App erstellt wird und für dein Gast-Konto auf diesem Gerät verwendet wird; meldest du dich stattdessen mit Apple oder Google an, erhalten wir deinen Namen, deine E-Mail-Adresse (oder eine private Weiterleitungsadresse) und die Anbieter-Konto-ID.',
+          'Konto-Kennungen — eine zufällige Gerätekennung, die beim ersten Öffnen der App erstellt wird und für dein Gast-Konto auf diesem Gerät verwendet wird; meldest du dich stattdessen mit Apple (iOS) oder Google (iOS und Android) an, erhalten wir deinen Namen, deine E-Mail-Adresse (oder eine private Weiterleitungsadresse) und die Anbieter-Konto-ID.',
           'Von dir bereitgestellte Inhalte — Prompts und Texte, die du schreibst; Fotos, Videos oder Links, die du hochlädst oder einfügst, etwa einen Reel-Link zum Nachbauen, ein Referenzfoto für die Studios Character oder Cameo, oder eine Bildschirmaufnahme zur Analyse.',
           'Generierte Inhalte — die Medien, Skripte und Bildunterschriften, die die App für dich erstellt, sowie dein Generierungs- und Credit-Transaktionsverlauf.',
-          'Kaufinformationen — Abo- und Credit-Paket-Käufe werden über den App Store abgewickelt; RevenueCat verarbeitet Kauf- und Berechtigungsereignisse in unserem Auftrag. Wir erhalten nie deine Kartennummer.',
+          'Kaufinformationen — Abo- und Credit-Paket-Käufe werden unter iOS über den App Store und unter Android über Google Play abgewickelt; RevenueCat verarbeitet Kauf- und Berechtigungsereignisse in unserem Auftrag. Wir erhalten nie deine Kartennummer.',
+          'AI-Edit-Videos — wenn du AI Edit nutzt, die von dir hochgeladenen Rohvideodateien (bis zu 2 GB), das Sprachtranskript mit Wort-Zeitstempeln, der Schnittplan sowie die fertig bearbeiteten Videos, Vorschaubilder und Untertiteldateien, die wir für dich rendern. Details findest du im Abschnitt zu AI Edit weiter unten.',
           'Verbindungen zu Social-Media-Konten — verbindest du TikTok, Instagram oder YouTube, um Inhalte zu veröffentlichen, erhalten wir die grundlegenden Profildaten dieses Kontos (Handle, Anzeigename, Avatar) und speichern ein verschlüsseltes Zugriffstoken, damit die App in deinem Namen veröffentlichen kann.',
           'Analyse — wir nutzen Mixpanel und PostHog, um die Nutzung der App zu verstehen. PostHog Session-Replay ist für die Interaktionsanalyse aktiviert, aber sämtlicher Bildschirmtext und alle Bilder werden vor der Aufzeichnung maskiert — Replays zeigen also nie deine Prompts, Fotos oder generierten Medien. Für Analytics wird eine separate, zufällige Installations-ID verwendet — niemals deine Gast-Konto-Kennung.',
           'Geräte- und Diagnosedaten — App-Version, allgemeines Gerätemodell und Betriebssystem sowie Spracheinstellungen. Unsere Analyse- und Zahlungsdienstleister können außerdem aus deiner IP-Adresse einen ungefähren Standort (etwa Land oder Region) ableiten; die App fragt deinen Gerätestandort nicht ab. Aus Sicherheitsgründen speichern wir außerdem die IP-Adresse und den User-Agent deiner Anmeldesitzungen.',
           "Absturz- und Leistungsdiagnose — wir nutzen Sentry (EU-Region), um Abstürze und Fehler zu finden und zu beheben. Berichte enthalten Stack-Traces, Gerätemodell und Betriebssystem, App-Version, eine Spur der letzten App-Ereignisse wie die Bildschirmnavigation sowie Leistungsmesswerte einer Stichprobe von Sitzungen. Sie sind mit deiner Viral-Factory-Konto-ID verknüpft, nicht mit deiner E-Mail-Adresse oder deinem Namen.",
           'Benachrichtigungseinstellungen — ob du die tägliche Ideen-Erinnerung aktiviert hast, lokal auf deinem Gerät gespeichert.',
         ],
-        p: ['Wir verwenden keine Werbe-Tracker, und die App fragt nicht die App Tracking Transparency-Berechtigung von Apple ab.'],
+        p: [
+          'Wir verwenden keine Werbe-Tracker, und die App fragt nicht die App Tracking Transparency-Berechtigung von Apple ab.',
+          'Android: Käufe werden über Google Play (Abrechnung) und RevenueCat abgewickelt. Meldest du dich mit Google an, erhalten wir deinen Namen, deine E-Mail-Adresse und die Google-Konto-ID. Die Android-App verwendet nicht die Werbe-ID (Advertising ID) und fragt keine Berechtigung für Standort, Kamera, Mikrofon oder Kontakte ab. Benachrichtigungen sind optional.',
+        ],
       },
       {
         h: 'Wie wir deine Informationen nutzen',
@@ -343,9 +347,23 @@ const de: LegalPack = {
       {
         h: 'KI-Generierung und Auftragsverarbeiter',
         p: [
-          'Inhalte und Referenzmaterial, die du einreichst, werden an fal.ai, unseren KI-Infrastrukturanbieter, gesendet — ausschließlich um die von dir angeforderte Ausgabe zu erzeugen. Je nach Anfrage leitet fal.ai den Auftrag an Modellanbieter weiter, aktuell unter anderem OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz und OmniHuman. Wir unterhalten keine eigenen direkten Konten bei diesen Anbietern — fal.ai ist der Auftragsverarbeiter, mit dem wir einen Vertrag haben. Wir nutzen deine Inhalte nicht, um eigene Modelle zu trainieren. Unser KI-Infrastrukturanbieter fal.ai verarbeitet deine Inhalte nur, um die von dir angeforderte Ausgabe zu erzeugen, gemäß seinen eigenen Bedingungen und seiner Datenschutzerklärung (fal.ai/privacy).',
+          'Inhalte und Referenzmaterial, die du einreichst, werden an fal.ai, unseren KI-Infrastrukturanbieter, gesendet — ausschließlich um die von dir angeforderte Ausgabe zu erzeugen. Je nach Anfrage leitet fal.ai den Auftrag an Modellanbieter weiter, aktuell unter anderem OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz und OmniHuman, und fal.ai ist der Auftragsverarbeiter, mit dem wir dafür einen Vertrag haben. Anthropic ist außerdem ein Auftragsverarbeiter, den wir für Text und die AI-Edit-Planung direkt aufrufen, wie unten beschrieben. Wir nutzen deine Inhalte nicht, um eigene Modelle zu trainieren. Unser KI-Infrastrukturanbieter fal.ai verarbeitet deine Inhalte nur, um die von dir angeforderte Ausgabe zu erzeugen, gemäß seinen eigenen Bedingungen und seiner Datenschutzerklärung (fal.ai/privacy).',
           'Hochgeladene Fotos, Videos und die von uns erzeugten Medien werden zusammen mit deinen Projekten gespeichert, bis du sie oder dein Konto löschst. Referenzlinks, die du einfügst — zum Beispiel ein Reel, das nachgebaut werden soll —, werden nur analysiert, um dein Storyboard zu erstellen; das Referenzvideo selbst wird nicht in deiner Bibliothek gespeichert.',
           'Generierte Medien werden auf Amazon Web Services (S3) und, für bestimmte Dateien, auf Supabase Storage gespeichert und über ein Content Delivery Network ausgeliefert. Anwendungsdaten (Konten, Projekte, Credit-Verlauf) werden in MongoDB gespeichert. Unser Backend wird bei DigitalOcean gehostet.',
+        ],
+      },
+      {
+        h: 'AI Edit: deine Rohvideos',
+        p: [
+          'AI Edit macht aus von dir hochgeladenem Rohmaterial fertige Kurzvideos. Dafür wird dein Upload wie folgt verarbeitet:',
+        ],
+        ul: [
+          'Speicherung — die von dir hochgeladenen Videodateien (bis zu 2 GB) sowie die daraus gerenderten bearbeiteten Videos, Vorschaubilder und Untertiteldateien werden in unseren Speicher-Buckets (Supabase Storage, ersatzweise Amazon S3) in Ordnern abgelegt, die deinem Konto vorbehalten sind.',
+          'Transkription — die Tonspur wird an fal.ai gesendet, das ElevenLabs Scribe ausführt, um ein Transkript mit Wort-Zeitstempeln zu erstellen. Das Transkript, die erkannte Sprache und der Schnittplan werden zusammen mit dem AI-Edit-Auftrag in unserer Datenbank gespeichert.',
+          'Anthropic als Auftragsverarbeiter — das Transkript und eine kleine Anzahl von Standbildern aus deinem Video werden über die kommerzielle API an Anthropic (Claude) gesendet, damit es die Schnitte, Hook-Texte und Untertitel festlegen und das fertige Ergebnis prüfen kann. Anthropic verarbeitet diese Daten nur, um diese Ausgabe zurückzugeben; nach den kommerziellen Bedingungen werden API-Eingaben und -Ausgaben nicht zum Training seiner Modelle verwendet.',
+          'Rendering — Schnitt, Untertitel und Bildformat-Anpassung (Reframing) erfolgen auf unseren eigenen Servern mit FFmpeg; die Dateien werden zum Rendern nicht an einen anderen Anbieter gesendet.',
+          'Dauer — wir bewahren Uploads, Schnittpläne, Transkripte und gerenderte Videos auf, bis du sie oder dein Konto löschst. Wir verwenden sie nicht für Werbung und geben sie nicht an andere Nutzer weiter.',
+          'Löschung — das Löschen deines Kontos (Profil → Einstellungen → Konto löschen) löscht deine AI-Edit-Aufträge, Transkripte und Schnittpläne dauerhaft und entfernt deine hochgeladenen Quellvideos sowie gerenderte Videos, Vorschaubilder und Untertiteldateien aus unserem Speicher. Kopien, die fal.ai, ElevenLabs und Anthropic als Auftragsverarbeiter bereits halten, werden durch das Löschen in der App nicht entfernt; schreib uns, um deren Löschung zu beantragen.',
         ],
       },
       {
@@ -364,11 +382,11 @@ const de: LegalPack = {
       },
       {
         h: 'Aufbewahrung',
-        p: ['Dein Konto und generierte Inhalte werden aufbewahrt, solange dein Konto aktiv ist. Hochgeladene Fotos, Videos und generierte Medien werden zusammen mit deinen Projekten gespeichert, bis du sie oder dein Konto löschst. Das Löschen deines Kontos (Profil → Einstellungen → Konto löschen) entfernt deine Kontodaten und gespeicherten Medien. Einzelne Generierungen kannst du jederzeit in der App löschen.'],
+        p: ['Dein Konto und generierte Inhalte werden aufbewahrt, solange dein Konto aktiv ist. Hochgeladene Fotos, Videos und generierte Medien werden zusammen mit deinen Projekten gespeichert, bis du sie oder dein Konto löschst. AI-Edit-Uploads, Transkripte, Schnittpläne und gerenderte Videos werden nach demselben Prinzip aufbewahrt. Das Löschen deines Kontos (Profil → Einstellungen → Konto löschen) entfernt deine Kontodaten, AI-Edit-Daten und gespeicherten Medien. Einzelne Generierungen kannst du jederzeit in der App löschen.'],
       },
       {
         h: 'Konto löschen',
-        p: ['Du kannst dein Konto jederzeit dauerhaft in der App löschen: Profil → Einstellungen → Konto löschen. Dies löscht sofort und dauerhaft dein Konto, deinen Credit-Verlauf, Videos, Charaktere, Prompts und verbundene Social-Media-Konten und widerruft die Sign in with Apple-Berechtigung, falls verwendet. Ein aktives App-Store-Abo wird dadurch nicht gekündigt — kündige es separat in deinen Apple-ID-Einstellungen. Die vollständige Schritt-für-Schritt-Anleitung, auch zur Löschung per E-Mail ohne App-Zugriff, findest du auf unserer Seite „Konto löschen“. Kopien, die unsere Analyse-, Absturzberichts-, Zahlungs- und KI-Dienstleister (Mixpanel, PostHog, Sentry, RevenueCat und fal.ai) bereits halten, werden durch das Löschen in der App nicht entfernt; schreib uns, um deren Löschung zu beantragen.'],
+        p: ['Du kannst dein Konto jederzeit dauerhaft in der App löschen: Profil → Einstellungen → Konto löschen. Dies löscht sofort und dauerhaft dein Konto, deinen Credit-Verlauf, Videos, AI-Edit-Aufträge und die Videos, die du bei AI Edit hochgeladen oder damit gerendert hast, Charaktere, Prompts und verbundene Social-Media-Konten und widerruft die Sign in with Apple-Berechtigung, falls verwendet. Ein aktives Abo wird dadurch nicht gekündigt: kündige ein App-Store-Abo in deinen Apple-ID-Einstellungen oder ein Google-Play-Abo unter Google Play → Zahlungen & Abos. Die vollständige Schritt-für-Schritt-Anleitung, auch zur Löschung per E-Mail ohne App-Zugriff, findest du auf unserer Seite „Konto löschen“. Kopien, die unsere Analyse-, Absturzberichts-, Zahlungs- und KI-Dienstleister (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai und Anthropic) bereits halten, werden durch das Löschen in der App nicht entfernt; schreib uns, um deren Löschung zu beantragen.'],
       },
       {
         h: 'Deine Rechte nach der DSGVO (EWR, UK, Schweiz)',
@@ -399,9 +417,10 @@ const de: LegalPack = {
   },
   terms: {
     title: 'Nutzungsbedingungen',
+    effective: '26. Oktober 2026',
     lead: 'Die Bedingungen für die Nutzung von Viral Factory.',
     intro:
-      'Diese Nutzungsbedingungen („Bedingungen“) regeln deine Nutzung der iOS-App Viral Factory und dieser Website (zusammen der „Dienst“), bereitgestellt von Rıdvan Uyan („wir“, „uns“). Mit dem Herunterladen, Aufrufen oder Nutzen des Dienstes stimmst du diesen Bedingungen zu.',
+      'Diese Nutzungsbedingungen („Bedingungen“) regeln deine Nutzung der iOS- und Android-Apps von Viral Factory und dieser Website (zusammen der „Dienst“), bereitgestellt von Rıdvan Uyan („wir“, „uns“). Mit dem Herunterladen, Aufrufen oder Nutzen des Dienstes stimmst du diesen Bedingungen zu.',
     sections: [
       {
         h: 'Der Dienst',
@@ -410,6 +429,12 @@ const de: LegalPack = {
       {
         h: 'Apples Lizenzbedingungen',
         p: ['Automatisch verlängernde Abos, die über den App Store gekauft werden, unterliegen zusätzlich Apples Lizenzvertrag für Endnutzer (Licensed Application End User License Agreement), abrufbar unter apple.com/legal/internet-services/itunes/dev/stdeula. Widersprechen sich diese Bedingungen und dieser Vertrag in einer Abo- oder Kauffrage, gilt Apples Vertrag.'],
+      },
+      {
+        h: 'Google Play',
+        p: [
+          'Abos und Credit-Pakete, die über Google Play gekauft werden, werden von Google Play abgerechnet und verwaltet; Rückerstattungsanfragen für Google-Play-Käufe bearbeitet Google (support.google.com/googleplay).',
+        ],
       },
       {
         h: 'Zulässige Nutzung',
@@ -437,8 +462,8 @@ const de: LegalPack = {
           'Das Erstellen von Inhalten verbraucht Credits; die Kosten werden vor der Generierung in der App angezeigt.',
           'Einmalige Credit-Pakete verfallen nicht, sofern beim Kauf nichts anderes angegeben ist.',
           'Abo-Pläne enthalten ein Credit-Guthaben, das sich pro Abrechnungszeitraum erneuert; nicht genutzte Abo-Credits werden nicht in den nächsten Zeitraum übertragen.',
-          'Abos verlängern sich automatisch zu den dann gültigen Preisen, sofern sie nicht mindestens 24 Stunden vor Ende des aktuellen Zeitraums gekündigt werden. Verwalten oder kündigen jederzeit über Einstellungen → [dein Name] → Abonnements auf deinem Gerät — siehe unsere Support-Seite.',
-          'Sofern gesetzlich nicht anders vorgeschrieben, sind alle Käufe nicht erstattungsfähig; Rückerstattungsanfragen für App-Store-Käufe bearbeitet Apple.',
+          'Abos verlängern sich automatisch zu den dann gültigen Preisen, sofern sie nicht mindestens 24 Stunden vor Ende des aktuellen Zeitraums gekündigt werden. Verwalten oder kündigen jederzeit unter iOS über Einstellungen → [dein Name] → Abonnements oder unter Android über Google Play → Zahlungen & Abos — siehe unsere Support-Seite.',
+          'Sofern gesetzlich nicht anders vorgeschrieben, sind alle Käufe nicht erstattungsfähig; Rückerstattungsanfragen für App-Store-Käufe bearbeitet Apple, Rückerstattungsanfragen für Google-Play-Käufe bearbeitet Google.',
         ],
       },
       {
@@ -464,12 +489,12 @@ const de: LegalPack = {
     intro: 'Hast du eine Frage oder ein Problem? Schreib an ridvan.uyn@gmail.com — wir antworten in der Regel innerhalb von 2 Werktagen.',
     faqs: [
       { q: 'Wie funktionieren Credits?', a: 'Jede Generierung (ein Video, ein Bilder-Set, ein Karussell) kostet eine bestimmte Anzahl an Credits, die vor der Bestätigung angezeigt wird — die genauen Kosten hängen vom gewählten Studio und der Qualitätsstufe ab. Ein Abo enthält ein monatliches Guthaben, das sich pro Zeitraum erneuert und nicht übertragen wird; zusätzlich lässt sich ein einmaliges Credit-Paket kaufen, das nicht verfällt.' },
-      { q: 'Wie stelle ich meine Käufe wieder her?', a: 'Öffne Viral Factory → Profil → Einstellungen → Käufe wiederherstellen. Achte darauf, mit derselben Apple-ID angemeldet zu sein, mit der du gekauft hast.' },
-      { q: 'Wie kündige ich mein Abo?', a: 'Abos werden von Apple abgerechnet und verwaltet, nicht von uns. Auf dem iPhone: Einstellungen-App → [dein Name] → Abonnements → Viral Factory → Abo kündigen. Die Kündigung stoppt zukünftige Verlängerungen; der Zugang bleibt bis zum Ende des bereits bezahlten Zeitraums bestehen.' },
-      { q: 'Wie lösche ich mein Konto?', a: 'In der App: Profil → Einstellungen → Konto löschen. Was dabei genau gelöscht wird und wie du die Löschung per E-Mail beantragst, wenn du keinen App-Zugriff mehr hast, steht auf unserer Seite „Konto löschen“.' },
+      { q: 'Wie stelle ich meine Käufe wieder her?', a: 'Öffne Viral Factory → Profil → Einstellungen → Käufe wiederherstellen. Achte darauf, mit derselben Apple-ID (iOS) bzw. demselben Google-Konto (Android) angemeldet zu sein, mit dem du gekauft hast.' },
+      { q: 'Wie kündige ich mein Abo?', a: 'Abos werden von Apple oder Google abgerechnet und verwaltet, nicht von uns. Auf dem iPhone: Einstellungen-App → [dein Name] → Abonnements → Viral Factory → Abo kündigen. Unter Android: Google Play → Profilsymbol → Zahlungen & Abos → Abos → Viral Factory → Abo kündigen. Die Kündigung stoppt zukünftige Verlängerungen; der Zugang bleibt bis zum Ende des bereits bezahlten Zeitraums bestehen.' },
+      { q: 'Wie lösche ich mein Konto?', a: 'In der App (iOS oder Android): Profil → Einstellungen → Konto löschen. Dabei werden auch deine AI-Edit-Videos und -Daten gelöscht. Was genau gelöscht wird und wie du die Löschung per E-Mail beantragst, wenn du keinen App-Zugriff mehr hast, steht auf unserer Seite „Konto löschen“.' },
       { q: 'Welche Sprachen unterstützt die App?', a: 'Englisch, Deutsch, Französisch, Spanisch, Italienisch, Portugiesisch, Türkisch, Japanisch, Koreanisch, Arabisch und Hindi.' },
       { q: 'Was machen die Studios?', a: '„Hit nachbauen“ baut ein von dir eingefügtes Reel mit deinem eigenen Produkt nach. „Kurzer Video-Ad“ und „Cinematic Short“ generieren ein Video mit Skript aus einer Beschreibung. „Creator-Testimonial“ erstellt eine Talking-Head-UGC-Werbung. „Swipe-Post“ baut ein Bilder-Karussell. „KI-Charakter“ hält eine Figur über mehrere Videos hinweg konsistent. „Cameo“ und „In dein Video einsetzen“ platzieren ein echtes Foto in einer generierten oder bestehenden Szene. Die täglichen Hooks liefern jeden Morgen zehn frische Ideen, und fertige Posts lassen sich direkt für TikTok, Instagram und YouTube planen.' },
-      { q: 'Warum fragt die App nach Kamera-, Fotomediathek- oder Mikrofonzugriff?', a: 'Nur damit du Fotos und Videos für die Generierung aufnehmen oder auswählen kannst, und damit die App deine fertigen Videos in deiner Fotomediathek speichern kann. Details in unserer Datenschutzerklärung.' },
+      { q: 'Warum fragt die App nach Kamera-, Fotomediathek- oder Mikrofonzugriff?', a: 'Nur damit du Fotos und Videos für die Generierung aufnehmen oder auswählen kannst, und damit die App deine fertigen Videos in deiner Fotomediathek speichern kann. Unter Android nutzt die App die System-Auswahl für Fotos und Dateien und fordert keine dieser Berechtigungen an. Details in unserer Datenschutzerklärung.' },
       { q: 'Eine Generierung ist fehlgeschlagen, hat aber Credits verbraucht — was tun?', a: 'Schreib uns ungefähres Datum und Uhrzeit sowie, wenn möglich, einen Screenshot; wir prüfen den Fall und erstatten Credits bei einem bestätigten Systemfehler zurück.' },
     ],
   },
@@ -480,12 +505,12 @@ const de: LegalPack = {
     sections: [
       {
         h: 'In der App löschen (empfohlen)',
-        p: ['Öffne Viral Factory auf deinem Gerät und folge diesen Schritten:'],
+        p: ['Öffne Viral Factory auf deinem iPhone oder Android-Gerät und folge diesen Schritten (der Menüpfad ist auf beiden gleich):'],
         ul: [
           'Gehe zu Profil (unten in der Navigation).',
           'Tippe auf Einstellungen.',
           'Tippe auf Konto löschen, weiter unten auf dem Bildschirm.',
-          'Hast du dich mit Apple angemeldet, wirst du möglicherweise gebeten, dich per Sign in with Apple erneut zu authentifizieren, um dies zu bestätigen.',
+          'Hast du dich mit Apple oder Google angemeldet, wirst du möglicherweise gebeten, dich erneut zu authentifizieren, um dies zu bestätigen.',
           'Bestätige die Löschung. Sie wird sofort wirksam und kann nicht rückgängig gemacht werden.',
         ],
       },
@@ -495,17 +520,18 @@ const de: LegalPack = {
           'dein Konto und deine Profilinformationen',
           'dein Credit-Guthaben und der Transaktionsverlauf',
           'jedes von dir generierte Video, Bilder-Set, Karussell und jeder Charakter sowie deren Quellmedien',
+          'deine AI-Edit-Aufträge, Transkripte und Schnittpläne sowie die Videos, die du bei AI Edit hochgeladen oder damit gerendert hast (hochgeladene Quellvideos, bearbeitete Videos, Vorschaubilder und Untertiteldateien)',
           'verbundene Social-Media-Konten (TikTok, Instagram, YouTube) und deren gespeicherte Zugriffstoken',
           'gespeicherte Prompts und Benachrichtigungen',
-          'deine Sign in with Apple-/Google-Verknüpfung (die Apple-Berechtigung wird widerrufen)',
+          'deine Sign in with Apple-/Google-Verknüpfung (die Apple-Berechtigung wird widerrufen; unter Android wird die Verknüpfung mit deinem Google-Konto aus unseren Systemen entfernt, und du kannst die App zusätzlich in den Sicherheitseinstellungen deines Google-Kontos unter Drittanbieter-Apps und -Dienste entfernen)',
         ],
       },
       {
         h: 'Was nicht automatisch betroffen ist',
         p: [
-          'Das Löschen deines Kontos kündigt KEIN aktives App-Store-Abo — kündige es separat unter Einstellungen → [dein Name] → Abonnements auf deinem Gerät, sonst verlängert es sich weiter.',
+          'Das Löschen deines Kontos kündigt KEIN aktives Abo — kündige es separat, sonst verlängert es sich weiter: unter iOS über Einstellungen → [dein Name] → Abonnements; unter Android über Google Play → Zahlungen & Abos → Abos.',
           'Inhalte, die du bereits auf TikTok, Instagram oder YouTube veröffentlicht hast, bleiben dort bestehen; lösche sie bei Bedarf direkt auf der jeweiligen Plattform.',
-          "Kopien, die unsere Analyse-, Absturzberichts- und Zahlungsdienstleister (Mixpanel, PostHog, Sentry, RevenueCat) sowie unser KI-Infrastrukturanbieter (fal.ai) bereits halten, werden durch das Löschen in der App nicht entfernt. Schreib an ridvan.uyn@gmail.com, um deren Löschung zu beantragen.",
+          "Kopien, die unsere Analyse-, Absturzberichts- und Zahlungsdienstleister (Mixpanel, PostHog, Sentry, RevenueCat) sowie unsere KI-Anbieter (fal.ai und Anthropic, einschließlich der für AI Edit verarbeiteten Kopien) bereits halten, werden durch das Löschen in der App nicht entfernt. Schreib an ridvan.uyn@gmail.com, um deren Löschung zu beantragen.",
         ],
       },
       {
@@ -521,25 +547,29 @@ const fr: LegalPack = {
   effectiveDateLabel: '26 septembre 2026',
   privacy: {
     title: 'Politique de confidentialité',
-    effective: "15 octobre 2026",
+    effective: "26 octobre 2026",
     lead: 'Comment Viral Factory collecte, utilise et protège vos informations.',
     intro:
-      "Cette politique de confidentialité explique quelles informations l'application iOS Viral Factory et ce site web collectent, pourquoi, et les choix qui s'offrent à vous. Viral Factory est développée par Rıdvan Uyan, développeur individuel, responsable du traitement de vos données pour les finalités décrites ici.",
+      "Cette politique de confidentialité explique quelles informations les applications iOS et Android Viral Factory et ce site web collectent, pourquoi, et les choix qui s'offrent à vous. Viral Factory est développée par Rıdvan Uyan, développeur individuel, responsable du traitement de vos données pour les finalités décrites ici.",
     sections: [
       {
         h: 'Informations que nous collectons',
         ul: [
-          "Identifiants de compte — un identifiant d'appareil aléatoire créé à la première ouverture de l'app, utilisé pour votre compte invité sur cet appareil ; si vous vous connectez avec Apple ou Google, nous recevons votre nom, votre adresse e-mail (ou une adresse de relais privée) et l'identifiant de compte du fournisseur.",
+          "Identifiants de compte — un identifiant d'appareil aléatoire créé à la première ouverture de l'app, utilisé pour votre compte invité sur cet appareil ; si vous vous connectez avec Apple (iOS) ou Google (iOS et Android), nous recevons votre nom, votre adresse e-mail (ou une adresse de relais privée) et l'identifiant de compte du fournisseur.",
           "Contenus que vous fournissez — prompts et textes que vous rédigez ; photos, vidéos ou liens que vous importez ou collez, comme un lien de reel à reproduire, une photo de référence pour les studios Personnage ou Cameo, ou un enregistrement d'écran à analyser.",
           "Contenus générés — les médias, scripts et légendes que l'app crée pour vous, ainsi que votre historique de générations et de transactions de crédits.",
-          "Informations d'achat — les achats d'abonnement et de packs de crédits sont traités par l'App Store ; RevenueCat traite les événements d'achat et de droits en notre nom. Nous ne recevons jamais votre numéro de carte.",
+          "Informations d'achat — les achats d'abonnement et de packs de crédits sont traités par l'App Store sur iOS et par Google Play sur Android ; RevenueCat traite les événements d'achat et de droits en notre nom. Nous ne recevons jamais votre numéro de carte.",
+          "Vidéos AI Edit — lorsque vous utilisez AI Edit, les fichiers vidéo bruts que vous importez (jusqu'à 2 Go), la transcription de la parole avec horodatage des mots, le plan de montage, ainsi que les vidéos montées, miniatures et fichiers de sous-titres finalisés que nous générons pour vous. Les détails figurent dans la section AI Edit ci-dessous.",
           "Connexions à des comptes sociaux — si vous connectez TikTok, Instagram ou YouTube pour publier du contenu, nous recevons les informations de profil de base de ce compte (identifiant, nom affiché, avatar) et stockons un jeton d'accès chiffré permettant à l'app de publier en votre nom.",
           "Analytique — nous utilisons Mixpanel et PostHog pour comprendre l'usage de l'app. La relecture de session (session replay) de PostHog est activée pour l'analyse des interactions, mais tout texte et toute image à l'écran sont masqués avant capture : une relecture ne montre donc jamais vos prompts, photos ou contenus générés. L'analytique utilise un identifiant d'installation distinct et aléatoire — jamais votre identifiant de compte invité.",
           "Données d'appareil et de diagnostic — version de l'app, modèle d'appareil et système d'exploitation généraux, et paramètres de langue. Nos prestataires d'analytique et d'achats peuvent aussi déduire une localisation approximative (pays ou région, par exemple) à partir de votre adresse IP ; l'app ne demande pas la localisation de votre appareil. Nous conservons également, pour des raisons de sécurité, l'adresse IP et le user-agent de vos sessions de connexion.",
           "Diagnostics de plantages et de performance — nous utilisons Sentry (région UE) pour détecter et corriger les plantages et les erreurs. Les rapports comprennent des traces de pile, le modèle d'appareil et le système d'exploitation, la version de l'app, une trace des événements récents de l'app comme la navigation entre écrans, et des mesures de performance pour un échantillon de sessions. Ils sont liés à l'identifiant de votre compte Viral Factory, et non à votre adresse e-mail ni à votre nom.",
           "Préférences de notification — si vous avez activé le rappel quotidien d'idées, stocké localement sur votre appareil.",
         ],
-        p: ["Nous n'utilisons pas de traceurs publicitaires, et l'app ne demande pas l'autorisation App Tracking Transparency d'Apple."],
+        p: [
+          "Nous n'utilisons pas de traceurs publicitaires, et l'app ne demande pas l'autorisation App Tracking Transparency d'Apple.",
+          "Android : les achats sont traités par Google Play (facturation) et RevenueCat. Si vous vous connectez avec Google, nous recevons votre nom, votre adresse e-mail et l'identifiant de votre compte Google. L'app Android n'utilise pas l'identifiant publicitaire (Advertising ID) et ne demande aucune autorisation de localisation, d'appareil photo, de micro ni de contacts. Les notifications sont facultatives.",
+        ],
       },
       {
         h: 'Comment nous utilisons vos informations',
@@ -557,9 +587,23 @@ const fr: LegalPack = {
       {
         h: 'Génération IA et sous-traitants',
         p: [
-          "Les contenus et le matériel de référence que vous soumettez sont envoyés à fal.ai, notre fournisseur d'infrastructure IA, uniquement pour générer le résultat demandé. Selon la demande, fal.ai achemine la tâche vers des fournisseurs de modèles incluant actuellement OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz et OmniHuman. Nous n'avons pas de comptes directs séparés auprès de ces fournisseurs — fal.ai est le sous-traitant avec lequel nous contractons. Nous n'utilisons pas votre contenu pour entraîner nos propres modèles. Notre fournisseur d'infrastructure IA, fal.ai, traite votre contenu uniquement pour générer le résultat que vous avez demandé, selon ses propres conditions et sa politique de confidentialité (fal.ai/privacy).",
+          "Les contenus et le matériel de référence que vous soumettez sont envoyés à fal.ai, notre fournisseur d'infrastructure IA, uniquement pour générer le résultat demandé. Selon la demande, fal.ai achemine la tâche vers des fournisseurs de modèles incluant actuellement OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz et OmniHuman, et fal.ai est le sous-traitant avec lequel nous contractons pour ceux-ci. Anthropic est aussi un sous-traitant que nous appelons directement pour le texte et la planification d'AI Edit, comme décrit ci-dessous. Nous n'utilisons pas votre contenu pour entraîner nos propres modèles. Notre fournisseur d'infrastructure IA, fal.ai, traite votre contenu uniquement pour générer le résultat que vous avez demandé, selon ses propres conditions et sa politique de confidentialité (fal.ai/privacy).",
           "Les photos, vidéos importées et les médias que nous générons sont conservés avec vos projets jusqu'à ce que vous les supprimiez ou supprimiez votre compte. Les liens de référence que vous collez — par exemple un reel à reproduire — sont analysés uniquement pour rédiger votre storyboard ; la vidéo de référence elle-même n'est pas stockée dans votre bibliothèque.",
           "Les médias générés sont stockés sur Amazon Web Services (S3) et, pour certains fichiers, sur Supabase Storage, puis diffusés via un réseau de diffusion de contenu (CDN). Les données applicatives (comptes, projets, historique de crédits) sont stockées dans MongoDB. Notre backend est hébergé sur DigitalOcean.",
+        ],
+      },
+      {
+        h: 'AI Edit : vos vidéos brutes',
+        p: [
+          "AI Edit transforme les rushs que vous importez en vidéos courtes finalisées. Pour cela, votre import est traité comme suit :",
+        ],
+        ul: [
+          "Stockage — les fichiers vidéo que vous importez (jusqu'à 2 Go), ainsi que les vidéos montées, miniatures et fichiers de sous-titres que nous en générons, sont stockés dans nos buckets de stockage (Supabase Storage, ou Amazon S3 en secours), dans des dossiers réservés à votre compte.",
+          "Transcription — la piste audio est envoyée à fal.ai, qui exécute ElevenLabs Scribe pour produire une transcription avec horodatage des mots. La transcription, la langue détectée et le plan de montage sont enregistrés avec la tâche AI Edit dans notre base de données.",
+          "Anthropic en tant que sous-traitant — la transcription et un petit nombre d'images fixes extraites de votre vidéo sont envoyées à Anthropic (Claude) via son API commerciale afin qu'il décide des coupes, des textes d'accroche et des sous-titres, et vérifie le résultat final. Anthropic ne traite ces données que pour renvoyer ce résultat ; selon ses conditions commerciales, les entrées et sorties de l'API ne sont pas utilisées pour entraîner ses modèles.",
+          "Rendu — le découpage, les sous-titres et le recadrage sont effectués sur nos propres serveurs avec FFmpeg ; les fichiers ne sont envoyés à aucun autre prestataire pour le rendu.",
+          "Durée — nous conservons les imports, plans de montage, transcriptions et vidéos rendues jusqu'à ce que vous les supprimiez ou supprimiez votre compte. Nous ne les utilisons pas à des fins publicitaires et ne les partageons pas avec d'autres utilisateurs.",
+          "Suppression — la suppression de votre compte (Profil → Réglages → Supprimer le compte) supprime définitivement vos tâches AI Edit, transcriptions et plans de montage, et retire de notre stockage vos vidéos sources importées ainsi que les vidéos rendues, miniatures et fichiers de sous-titres. Les copies déjà détenues par fal.ai, ElevenLabs et Anthropic en tant que sous-traitants ne sont pas supprimées par la suppression dans l'app ; écrivez-nous pour demander leur suppression.",
         ],
       },
       {
@@ -573,8 +617,8 @@ const fr: LegalPack = {
         ],
       },
       { h: 'Ce que nous ne faisons pas', p: ["Nous ne vendons pas de données personnelles et ne partageons jamais vos prompts, imports ou contenus générés avec d'autres utilisateurs, sauf si vous choisissez explicitement de rendre quelque chose public."] },
-      { h: 'Conservation des données', p: ["Votre compte et vos contenus générés sont conservés tant que votre compte est actif. Les photos, vidéos importées et les médias générés sont conservés avec vos projets jusqu'à ce que vous les supprimiez ou supprimiez votre compte. La suppression de votre compte (Profil → Réglages → Supprimer le compte) supprime vos données de compte et vos médias stockés. Vous pouvez supprimer des générations individuelles dans l'app à tout moment."] },
-      { h: 'Supprimer votre compte', p: ["Vous pouvez supprimer définitivement votre compte à tout moment dans l'app : Profil → Réglages → Supprimer le compte. Cela supprime immédiatement et définitivement votre compte, votre historique de crédits, vos vidéos, personnages, prompts et comptes sociaux connectés, et révoque l'autorisation Sign in with Apple si utilisée. Cela n'annule pas un abonnement App Store actif — annulez-le séparément dans les réglages de votre identifiant Apple. Voir notre page « Supprimer le compte » pour la marche à suivre complète, y compris comment demander la suppression par e-mail si vous n'avez plus l'app. Les copies déjà détenues par nos prestataires d'analytique, de rapports de plantage, d'achats et d'IA (Mixpanel, PostHog, Sentry, RevenueCat et fal.ai) ne sont pas supprimées par la suppression dans l'app ; écrivez-nous pour demander leur suppression."] },
+      { h: 'Conservation des données', p: ["Votre compte et vos contenus générés sont conservés tant que votre compte est actif. Les photos, vidéos importées et les médias générés sont conservés avec vos projets jusqu'à ce que vous les supprimiez ou supprimiez votre compte. Les imports, transcriptions, plans de montage et vidéos rendues d'AI Edit sont conservés selon le même principe. La suppression de votre compte (Profil → Réglages → Supprimer le compte) supprime vos données de compte, vos données AI Edit et vos médias stockés. Vous pouvez supprimer des générations individuelles dans l'app à tout moment."] },
+      { h: 'Supprimer votre compte', p: ["Vous pouvez supprimer définitivement votre compte à tout moment dans l'app : Profil → Réglages → Supprimer le compte. Cela supprime immédiatement et définitivement votre compte, votre historique de crédits, vos vidéos, vos tâches AI Edit et les vidéos que vous avez importées ou rendues avec AI Edit, vos personnages, prompts et comptes sociaux connectés, et révoque l'autorisation Sign in with Apple si utilisée. Cela n'annule pas un abonnement actif : annulez un abonnement App Store dans les réglages de votre identifiant Apple, ou un abonnement Google Play dans Google Play → Paiements et abonnements. Voir notre page « Supprimer le compte » pour la marche à suivre complète, y compris comment demander la suppression par e-mail si vous n'avez plus l'app. Les copies déjà détenues par nos prestataires d'analytique, de rapports de plantage, d'achats et d'IA (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai et Anthropic) ne sont pas supprimées par la suppression dans l'app ; écrivez-nous pour demander leur suppression."] },
       { h: 'Vos droits au titre du RGPD (EEE, Royaume-Uni, Suisse)', p: ["Si vous résidez dans l'EEE, au Royaume-Uni ou en Suisse, vous avez le droit d'accéder à vos données personnelles, de les rectifier, de les supprimer, d'en recevoir une copie (portabilité), et de vous opposer à certains traitements ou de les limiter. Nous traitons vos données sur la base de : l'exécution d'un contrat (fournir l'app), votre consentement (par exemple, l'analytique par relecture de session), et nos intérêts légitimes (sécurité, prévention des abus, amélioration du service). Pour exercer ces droits, écrivez à ridvan.uyn@gmail.com ; nous répondrons sous un mois."] },
       { h: 'Résidents de Californie (CCPA/CPRA)', p: ["Les résidents de Californie peuvent demander à connaître, supprimer ou corriger les informations personnelles que nous détenons à leur sujet, et s'opposer à leur « vente » ou « partage » — nous ne vendons pas d'informations personnelles et n'utilisons pas de traceurs publicitaires comportementaux intersites. Envoyez vos demandes à ridvan.uyn@gmail.com."] },
       { h: 'Enfants', p: ["Viral Factory ne s'adresse pas aux enfants de moins de 13 ans (ou l'âge minimum requis dans votre pays) et nous ne collectons pas sciemment leurs informations. Si vous pensez qu'un enfant nous a fourni des informations personnelles, contactez-nous et nous les supprimerons."] },
@@ -586,12 +630,19 @@ const fr: LegalPack = {
   },
   terms: {
     title: "Conditions d'utilisation",
+    effective: "26 octobre 2026",
     lead: "Les conditions régissant votre utilisation de Viral Factory.",
     intro:
-      "Les présentes Conditions d'utilisation (« Conditions ») régissent votre utilisation de l'application iOS Viral Factory et de ce site web (ensemble, le « Service »), fournis par Rıdvan Uyan (« nous »). En téléchargeant, accédant à ou utilisant le Service, vous acceptez ces Conditions.",
+      "Les présentes Conditions d'utilisation (« Conditions ») régissent votre utilisation des applications iOS et Android Viral Factory et de ce site web (ensemble, le « Service »), fournis par Rıdvan Uyan (« nous »). En téléchargeant, accédant à ou utilisant le Service, vous acceptez ces Conditions.",
     sections: [
       { h: 'Le service', p: ["Viral Factory génère du contenu court — vidéo, images et légendes — à partir de prompts et de matériel de référence que vous fournissez, à l'aide de modèles d'IA tiers. Le résultat généré peut être inexact, inattendu ou inadapté à votre objectif ; vous êtes responsable de le vérifier avant de le publier ou de vous y fier."] },
       { h: "Conditions de licence d'Apple", p: ["Les abonnements à renouvellement automatique achetés via l'App Store sont également régis par le contrat de licence utilisateur final d'Apple (Licensed Application End User License Agreement), disponible sur apple.com/legal/internet-services/itunes/dev/stdeula. En cas de conflit entre ces Conditions et ce contrat sur une question d'abonnement ou d'achat, le contrat d'Apple prévaut."] },
+      {
+        h: 'Google Play',
+        p: [
+          "Les abonnements et packs de crédits achetés via Google Play sont facturés et gérés par Google Play ; les demandes de remboursement pour les achats Google Play sont traitées par Google (support.google.com/googleplay).",
+        ],
+      },
       {
         h: 'Utilisation autorisée',
         p: ['Vous vous engagez à ne pas utiliser le Service pour :'],
@@ -612,8 +663,8 @@ const fr: LegalPack = {
           "Générer du contenu consomme des crédits ; le coût est affiché dans l'app avant la génération.",
           "Les packs de crédits à usage unique n'expirent pas, sauf indication contraire au moment de l'achat.",
           "Les formules d'abonnement incluent un quota de crédits qui se renouvelle à chaque période de facturation ; les crédits d'abonnement non utilisés ne sont pas reportés à la période suivante.",
-          "Les abonnements se renouvellent automatiquement pour la même durée, au tarif alors en vigueur, sauf annulation au moins 24 heures avant la fin de la période en cours. Gérez ou annulez à tout moment via Réglages → [votre nom] → Abonnements sur votre appareil — voir notre page Assistance.",
-          "Sauf obligation légale contraire, tous les achats sont non remboursables ; les demandes de remboursement pour les achats App Store sont traitées par Apple.",
+          "Les abonnements se renouvellent automatiquement pour la même durée, au tarif alors en vigueur, sauf annulation au moins 24 heures avant la fin de la période en cours. Gérez ou annulez à tout moment sur iOS via Réglages → [votre nom] → Abonnements, ou sur Android via Google Play → Paiements et abonnements — voir notre page Assistance.",
+          "Sauf obligation légale contraire, tous les achats sont non remboursables ; les demandes de remboursement pour les achats App Store sont traitées par Apple, et celles pour les achats Google Play sont traitées par Google.",
         ],
       },
       { h: 'Résiliation', p: ["Vous pouvez cesser d'utiliser le Service et supprimer votre compte à tout moment — voir notre page « Supprimer le compte ». Nous pouvons suspendre ou résilier votre accès en cas de violation de ces Conditions, d'usage abusif des crédits, de fraude ou d'abus du Service, avec ou sans préavis."] },
@@ -630,12 +681,12 @@ const fr: LegalPack = {
     intro: 'Une question ou un problème ? Écrivez à ridvan.uyn@gmail.com — nous répondons généralement sous 2 jours ouvrés.',
     faqs: [
       { q: 'Comment fonctionnent les crédits ?', a: "Chaque génération (une vidéo, une série d'images, un carrousel) coûte un nombre de crédits affiché avant confirmation — le coût exact dépend du studio et du niveau de qualité choisis. Un abonnement inclut un quota mensuel de crédits qui se renouvelle chaque période sans report ; vous pouvez aussi acheter un pack de crédits à usage unique, qui n'expire pas." },
-      { q: 'Comment restaurer mes achats ?', a: 'Ouvrez Viral Factory → Profil → Réglages → Restaurer les achats. Assurez-vous d’être connecté avec le même identifiant Apple que celui utilisé pour l’achat.' },
-      { q: 'Comment annuler mon abonnement ?', a: 'Les abonnements sont facturés et gérés par Apple, pas par nous. Sur iPhone : app Réglages → [votre nom] → Abonnements → Viral Factory → Annuler l’abonnement. L’annulation arrête les futurs renouvellements ; l’accès reste actif jusqu’à la fin de la période déjà payée.' },
-      { q: 'Comment supprimer mon compte ?', a: 'Dans l’app : Profil → Réglages → Supprimer le compte. Notre page « Supprimer le compte » détaille exactement ce qui est supprimé et comment demander la suppression par e-mail si vous n’avez plus l’app.' },
+      { q: 'Comment restaurer mes achats ?', a: 'Ouvrez Viral Factory → Profil → Réglages → Restaurer les achats. Assurez-vous d’être connecté avec le même identifiant Apple (iOS) ou le même compte Google (Android) que celui utilisé pour l’achat.' },
+      { q: 'Comment annuler mon abonnement ?', a: 'Les abonnements sont facturés et gérés par Apple ou Google, pas par nous. Sur iPhone : app Réglages → [votre nom] → Abonnements → Viral Factory → Annuler l’abonnement. Sur Android : Google Play → icône de profil → Paiements et abonnements → Abonnements → Viral Factory → Annuler l’abonnement. L’annulation arrête les futurs renouvellements ; l’accès reste actif jusqu’à la fin de la période déjà payée.' },
+      { q: 'Comment supprimer mon compte ?', a: 'Dans l’app (iOS ou Android) : Profil → Réglages → Supprimer le compte. Cela supprime aussi vos vidéos et données AI Edit. Notre page « Supprimer le compte » détaille exactement ce qui est supprimé et comment demander la suppression par e-mail si vous n’avez plus l’app.' },
       { q: 'Quelles langues l’app prend-elle en charge ?', a: 'Anglais, allemand, français, espagnol, italien, portugais, turc, japonais, coréen, arabe et hindi.' },
       { q: 'Que font les studios ?', a: '« Reproduire un carton » reconstruit un reel que vous collez avec votre propre produit. « Pub vidéo courte » et « Court-métrage cinématique » génèrent une vidéo scénarisée à partir d’une description. « Témoignage créateur » crée une pub UGC face caméra. « Post carrousel » construit un carrousel d’images. « Personnage IA » garde une identité cohérente d’une vidéo à l’autre. « Cameo » et « Intégrer dans votre vidéo » placent une vraie photo dans une scène générée ou existante. Les accroches quotidiennes livrent dix idées fraîches chaque matin, et les posts finis peuvent être planifiés directement sur TikTok, Instagram et YouTube.' },
-      { q: 'Pourquoi l’app demande-t-elle l’accès à l’appareil photo, à la photothèque ou au micro ?', a: 'Uniquement pour capturer ou choisir des photos et vidéos à utiliser comme source de génération, et pour enregistrer vos vidéos finies dans votre photothèque. Détails dans notre politique de confidentialité.' },
+      { q: 'Pourquoi l’app demande-t-elle l’accès à l’appareil photo, à la photothèque ou au micro ?', a: 'Uniquement pour capturer ou choisir des photos et vidéos à utiliser comme source de génération, et pour enregistrer vos vidéos finies dans votre photothèque. Sur Android, l’app utilise les sélecteurs système de photos et de fichiers et ne demande aucune de ces autorisations. Détails dans notre politique de confidentialité.' },
       { q: 'Une génération a échoué mais a consommé mes crédits — que faire ?', a: 'Écrivez-nous la date et l’heure approximatives et, si possible, une capture d’écran ; nous enquêterons et rembourserons les crédits en cas d’erreur système confirmée.' },
     ],
   },
@@ -646,12 +697,12 @@ const fr: LegalPack = {
     sections: [
       {
         h: 'Supprimer dans l’app (recommandé)',
-        p: ["Ouvrez Viral Factory sur votre appareil et suivez ces étapes :"],
+        p: ["Ouvrez Viral Factory sur votre iPhone ou appareil Android et suivez ces étapes (le chemin de menu est identique sur les deux) :"],
         ul: [
           'Allez dans Profil (onglet du bas).',
           'Appuyez sur Réglages.',
           'Appuyez sur Supprimer le compte, vers le bas de l’écran.',
-          'Si vous vous êtes connecté avec Apple, il se peut qu’on vous demande de vous réauthentifier via Sign in with Apple pour confirmer.',
+          'Si vous vous êtes connecté avec Apple ou Google, il se peut qu’on vous demande de vous réauthentifier pour confirmer.',
           'Confirmez la suppression. Elle prend effet immédiatement et ne peut pas être annulée.',
         ],
       },
@@ -661,17 +712,18 @@ const fr: LegalPack = {
           'votre compte et vos informations de profil',
           'votre solde de crédits et votre historique de transactions',
           'chaque vidéo, série d’images, carrousel et personnage que vous avez générés, ainsi que leurs médias source',
+          'vos tâches AI Edit, transcriptions et plans de montage, ainsi que les vidéos que vous avez importées ou rendues avec AI Edit (vidéos sources importées, vidéos montées, miniatures et fichiers de sous-titres)',
           'les comptes sociaux connectés (TikTok, Instagram, YouTube) et leurs jetons d’accès stockés',
           'les prompts enregistrés et les notifications',
-          'votre lien Sign in with Apple / Google (l’autorisation Apple est révoquée)',
+          'votre lien Sign in with Apple / Google (l’autorisation Apple est révoquée ; sur Android, le lien avec votre compte Google est supprimé de nos systèmes, et vous pouvez aussi retirer l’app dans les paramètres de sécurité de votre compte Google → Applications et services tiers)',
         ],
       },
       {
         h: "Ce qui n'est pas affecté automatiquement",
         p: [
-          "Supprimer votre compte n'annule PAS un abonnement App Store actif — annulez-le séparément via Réglages → [votre nom] → Abonnements sur votre appareil, sinon il continuera à se renouveler.",
+          "Supprimer votre compte n'annule PAS un abonnement actif — annulez-le séparément, sinon il continuera à se renouveler : sur iOS via Réglages → [votre nom] → Abonnements ; sur Android via Google Play → Paiements et abonnements → Abonnements.",
           'Le contenu déjà publié sur TikTok, Instagram ou YouTube reste sur ces plateformes ; supprimez-le directement là-bas si vous le souhaitez.',
-          "Les copies déjà détenues par nos prestataires d'analytique, de rapports de plantage et d'achats (Mixpanel, PostHog, Sentry, RevenueCat) et par notre fournisseur d'infrastructure IA (fal.ai) ne sont pas supprimées par la suppression dans l'app. Écrivez à ridvan.uyn@gmail.com pour demander leur suppression.",
+          "Les copies déjà détenues par nos prestataires d'analytique, de rapports de plantage et d'achats (Mixpanel, PostHog, Sentry, RevenueCat) et par nos fournisseurs d'IA (fal.ai et Anthropic, y compris les copies traitées pour AI Edit) ne sont pas supprimées par la suppression dans l'app. Écrivez à ridvan.uyn@gmail.com pour demander leur suppression.",
         ],
       },
       {
@@ -687,23 +739,25 @@ const es: LegalPack = {
   effectiveDateLabel: '26 de septiembre de 2026',
   privacy: {
     title: 'Política de privacidad',
-    effective: "15 de octubre de 2026",
+    effective: "26 de octubre de 2026",
     lead: 'Cómo Viral Factory recopila, usa y protege tu información.',
     intro:
-      'Esta Política de privacidad explica qué información recopilan la app de iOS Viral Factory y este sitio web, por qué, y qué opciones tienes. Viral Factory está desarrollada por Rıdvan Uyan, desarrollador individual, responsable del tratamiento de tus datos para los fines aquí descritos.',
+      'Esta Política de privacidad explica qué información recopilan las apps de Viral Factory para iOS y Android y este sitio web, por qué, y qué opciones tienes. Viral Factory está desarrollada por Rıdvan Uyan, desarrollador individual, responsable del tratamiento de tus datos para los fines aquí descritos.',
     sections: [
       {
         h: 'Información que recopilamos',
         ul: [
-          'Identificadores de cuenta — un identificador de dispositivo aleatorio creado la primera vez que abres la app, usado para tu cuenta de invitado en ese dispositivo; si inicias sesión con Apple o Google, recibimos tu nombre, tu correo electrónico (o un correo de reenvío privado) y el ID de cuenta del proveedor.',
+          'Identificadores de cuenta — un identificador de dispositivo aleatorio creado la primera vez que abres la app, usado para tu cuenta de invitado en ese dispositivo; si inicias sesión con Apple (iOS) o Google (iOS y Android), recibimos tu nombre, tu correo electrónico (o un correo de reenvío privado) y el ID de cuenta del proveedor.',
           'Contenido que proporcionas — prompts y textos que escribes; fotos, vídeos o enlaces que subes o pegas, como un enlace de reel para rehacer, una foto de referencia para los estudios de Personaje o Cameo, o una grabación de pantalla para analizar.',
           'Contenido generado — los medios, guiones y descripciones que la app crea para ti, y tu historial de generaciones y transacciones de créditos.',
-          'Información de compra — las compras de suscripciones y paquetes de créditos las gestiona el App Store; RevenueCat procesa los eventos de compra y derechos en nuestro nombre. Nunca recibimos el número de tu tarjeta.',
+          'Información de compra — las compras de suscripciones y paquetes de créditos las gestiona el App Store en iOS y Google Play en Android; RevenueCat procesa los eventos de compra y derechos en nuestro nombre. Nunca recibimos el número de tu tarjeta.',
+          'Vídeos de AI Edit — cuando usas AI Edit, los archivos de vídeo en bruto que subes (hasta 2 GB), la transcripción del habla con marcas de tiempo por palabra, el plan de edición, y los vídeos editados terminados, miniaturas y archivos de subtítulos que renderizamos para ti. Los detalles están en la sección de AI Edit más abajo.',
           'Conexiones a cuentas sociales — si conectas TikTok, Instagram o YouTube para publicar contenido, recibimos la información básica de perfil de esa cuenta (usuario, nombre visible, avatar) y almacenamos un token de acceso cifrado para que la app pueda publicar en tu nombre.',
           'Analítica — usamos Mixpanel y PostHog para entender cómo se usa la app. La repetición de sesión (session replay) de PostHog está activada para el análisis de interacciones, pero todo el texto e imágenes en pantalla se ocultan antes de capturarse, así que una repetición nunca muestra tus prompts, fotos o contenido generado. La analítica usa un identificador de instalación separado y aleatorio — nunca tu identificador de cuenta de invitado.',
           'Datos de dispositivo y diagnóstico — versión de la app, modelo general del dispositivo y sistema operativo, y ajustes de idioma. Nuestros proveedores de analítica y de compras también pueden deducir una ubicación aproximada (como el país o la región) a partir de tu dirección IP; la app no solicita la ubicación de tu dispositivo. Además, conservamos por seguridad la dirección IP y el user-agent de tus sesiones de inicio de sesión.',
           "Diagnósticos de fallos y rendimiento — usamos Sentry (región de la UE) para detectar y corregir fallos y errores. Los informes incluyen trazas de pila, modelo de dispositivo y sistema operativo, versión de la app, un rastro de eventos recientes de la app como la navegación entre pantallas, y tiempos de rendimiento de una muestra de sesiones. Están vinculados al ID de tu cuenta de Viral Factory, no a tu correo electrónico ni a tu nombre.",
           'Preferencias de notificación — si has activado el recordatorio diario de ideas, almacenado localmente en tu dispositivo.',
+          'Android: las compras las procesan Google Play (facturación) y RevenueCat. Si inicias sesión con Google, recibimos tu nombre, tu correo electrónico y el ID de tu cuenta de Google. La app de Android no usa el ID de publicidad y no solicita permisos de ubicación, cámara, micrófono ni contactos. Las notificaciones son opcionales.',
         ],
         p: ['No usamos rastreadores publicitarios, y la app no solicita el permiso de App Tracking Transparency de Apple.'],
       },
@@ -723,9 +777,23 @@ const es: LegalPack = {
       {
         h: 'Generación con IA y encargados del tratamiento',
         p: [
-          'El contenido y el material de referencia que envías se transmiten a fal.ai, nuestro proveedor de infraestructura de IA, únicamente para generar el resultado solicitado. Según la solicitud, fal.ai dirige la tarea a proveedores de modelos que actualmente incluyen OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz y OmniHuman. No mantenemos cuentas directas propias con estos proveedores — fal.ai es el encargado del tratamiento con el que contratamos. No utilizamos tu contenido para entrenar nuestros propios modelos. Nuestro proveedor de infraestructura de IA, fal.ai, procesa tu contenido únicamente para generar el resultado que solicitaste, conforme a sus propios términos y su política de privacidad (fal.ai/privacy).',
+          'El contenido y el material de referencia que envías se transmiten a fal.ai, nuestro proveedor de infraestructura de IA, únicamente para generar el resultado solicitado. Según la solicitud, fal.ai dirige la tarea a proveedores de modelos que actualmente incluyen OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz y OmniHuman, y fal.ai es el encargado del tratamiento con el que contratamos para ellos. Anthropic es además un encargado al que llamamos directamente para texto y planificación de AI Edit, como se describe más abajo. No utilizamos tu contenido para entrenar nuestros propios modelos. Nuestro proveedor de infraestructura de IA, fal.ai, procesa tu contenido únicamente para generar el resultado que solicitaste, conforme a sus propios términos y su política de privacidad (fal.ai/privacy).',
           'Las fotos y vídeos subidos y el contenido que generamos se almacenan junto con tus proyectos hasta que los elimines o elimines tu cuenta. Los enlaces de referencia que pegas —por ejemplo, un reel para recrear— se analizan únicamente para redactar tu guion gráfico (storyboard); el vídeo de referencia en sí no se almacena en tu biblioteca.',
           'El contenido generado se almacena en Amazon Web Services (S3) y, para algunos archivos, en Supabase Storage, y se entrega a través de una red de distribución de contenidos (CDN). Los datos de la aplicación (cuentas, proyectos, historial de créditos) se almacenan en MongoDB. Nuestro backend está alojado en DigitalOcean.',
+        ],
+      },
+      {
+        h: 'AI Edit: tus vídeos en bruto',
+        p: [
+          'AI Edit convierte el material en bruto que subes en vídeos cortos terminados. Para ello, tu subida se procesa así:',
+        ],
+        ul: [
+          'Almacenamiento — los archivos de vídeo que subes (hasta 2 GB) y los vídeos editados, miniaturas y archivos de subtítulos que renderizamos a partir de ellos se almacenan en nuestros buckets de almacenamiento (Supabase Storage o, como alternativa, Amazon S3), en carpetas reservadas para tu cuenta.',
+          'Transcripción — la pista de audio se envía a fal.ai, que ejecuta ElevenLabs Scribe para generar una transcripción con marcas de tiempo por palabra. La transcripción, el idioma detectado y el plan de edición se guardan con la tarea de AI Edit en nuestra base de datos.',
+          'Anthropic como encargado del tratamiento — la transcripción y un pequeño número de fotogramas fijos extraídos de tu vídeo se envían a Anthropic (Claude) a través de su API comercial para que decida los cortes, el texto del gancho y los subtítulos, y revise el resultado final. Anthropic los procesa únicamente para devolver ese resultado; según sus términos comerciales, las entradas y salidas de la API no se usan para entrenar sus modelos.',
+          'Renderizado — el corte, los subtítulos y el reencuadre se realizan en nuestros propios servidores con FFmpeg; los archivos no se envían a ningún otro proveedor para renderizar.',
+          'Duración — conservamos las subidas, los planes de edición, las transcripciones y los vídeos renderizados hasta que los elimines o elimines tu cuenta. No los usamos para publicidad ni los compartimos con otros usuarios.',
+          'Eliminación — eliminar tu cuenta (Perfil → Ajustes → Eliminar cuenta) elimina permanentemente tus tareas de AI Edit, transcripciones y planes de edición, y borra de nuestro almacenamiento tus vídeos de origen subidos y los vídeos renderizados, miniaturas y archivos de subtítulos. Las copias que ya conservan fal.ai, ElevenLabs y Anthropic como encargados del tratamiento no se eliminan con la eliminación desde la app; escríbenos para solicitar su eliminación.',
         ],
       },
       {
@@ -739,8 +807,8 @@ const es: LegalPack = {
         ],
       },
       { h: 'Lo que no hacemos', p: ['No vendemos datos personales y nunca compartimos tus prompts, archivos subidos o contenido generado con otros usuarios, salvo que elijas explícitamente hacer algo público.'] },
-      { h: 'Conservación de datos', p: ['Tu cuenta y el contenido generado se conservan mientras tu cuenta esté activa. Las fotos, vídeos subidos y el contenido generado se almacenan junto con tus proyectos hasta que los elimines o elimines tu cuenta. Eliminar tu cuenta (Perfil → Ajustes → Eliminar cuenta) elimina los datos de tu cuenta y los medios almacenados. Puedes eliminar generaciones individuales en la app en cualquier momento.'] },
-      { h: 'Eliminar tu cuenta', p: ['Puedes eliminar tu cuenta de forma permanente en cualquier momento desde la app: Perfil → Ajustes → Eliminar cuenta. Esto elimina de inmediato y permanentemente tu cuenta, historial de créditos, vídeos, personajes, prompts y cuentas sociales conectadas, y revoca la autorización de Sign in with Apple si la usaste. Esto no cancela una suscripción activa del App Store — cancélala por separado en los ajustes de tu ID de Apple. Consulta nuestra página «Eliminar cuenta» para instrucciones completas, incluido cómo solicitar la eliminación por correo si ya no tienes la app. Las copias que ya conservan nuestros proveedores de analítica, informes de fallos, compras e IA (Mixpanel, PostHog, Sentry, RevenueCat y fal.ai) no se eliminan con la eliminación desde la app; escríbenos para solicitar su eliminación.'] },
+      { h: 'Conservación de datos', p: ['Tu cuenta y el contenido generado se conservan mientras tu cuenta esté activa. Las fotos, vídeos subidos y el contenido generado se almacenan junto con tus proyectos hasta que los elimines o elimines tu cuenta. Las subidas, transcripciones, planes de edición y vídeos renderizados de AI Edit se conservan con el mismo criterio. Eliminar tu cuenta (Perfil → Ajustes → Eliminar cuenta) elimina los datos de tu cuenta, los datos de AI Edit y los medios almacenados. Puedes eliminar generaciones individuales en la app en cualquier momento.'] },
+      { h: 'Eliminar tu cuenta', p: ['Puedes eliminar tu cuenta de forma permanente en cualquier momento desde la app: Perfil → Ajustes → Eliminar cuenta. Esto elimina de inmediato y permanentemente tu cuenta, historial de créditos, vídeos, tareas de AI Edit y los vídeos que subiste o renderizaste con AI Edit, personajes, prompts y cuentas sociales conectadas, y revoca la autorización de Sign in with Apple si la usaste. Esto no cancela una suscripción activa: cancela una suscripción del App Store en los ajustes de tu ID de Apple, o una de Google Play en Google Play → Pagos y suscripciones. Consulta nuestra página «Eliminar cuenta» para instrucciones completas, incluido cómo solicitar la eliminación por correo si ya no tienes la app. Las copias que ya conservan nuestros proveedores de analítica, informes de fallos, compras e IA (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai y Anthropic) no se eliminan con la eliminación desde la app; escríbenos para solicitar su eliminación.'] },
       { h: 'Tus derechos bajo el RGPD (EEE, Reino Unido, Suiza)', p: ['Si te encuentras en el EEE, el Reino Unido o Suiza, tienes derecho a acceder, corregir, eliminar y recibir una copia (portabilidad) de tus datos personales, y a oponerte a ciertos tratamientos o restringirlos. Tratamos tus datos con base en: la ejecución de un contrato (proporcionar la app), tu consentimiento (por ejemplo, la analítica por repetición de sesión), y nuestros intereses legítimos (seguridad, prevención de abuso, mejora del servicio). Para ejercer estos derechos, escribe a ridvan.uyn@gmail.com; responderemos en el plazo de un mes.'] },
       { h: 'Residentes de California (CCPA/CPRA)', p: ['Los residentes de California pueden solicitar conocer, eliminar o corregir la información personal que tenemos sobre ellos, y optar por no participar en su «venta» o «uso compartido» — no vendemos información personal ni usamos rastreadores publicitarios de comportamiento entre contextos. Envía tus solicitudes a ridvan.uyn@gmail.com.'] },
       { h: 'Menores', p: ['Viral Factory no está dirigida a menores de 13 años (o la edad mínima requerida en tu país) y no recopilamos su información a sabiendas. Si crees que un menor nos ha proporcionado información personal, contáctanos y la eliminaremos.'] },
@@ -752,12 +820,14 @@ const es: LegalPack = {
   },
   terms: {
     title: 'Términos de uso',
+    effective: '26 de octubre de 2026',
     lead: 'Los términos que rigen tu uso de Viral Factory.',
     intro:
-      'Estos Términos de uso («Términos») rigen tu uso de la app de iOS Viral Factory y de este sitio web (conjuntamente, el «Servicio»), proporcionados por Rıdvan Uyan («nosotros»). Al descargar, acceder o usar el Servicio, aceptas estos Términos.',
+      'Estos Términos de uso («Términos») rigen tu uso de las apps de Viral Factory para iOS y Android y de este sitio web (conjuntamente, el «Servicio»), proporcionados por Rıdvan Uyan («nosotros»). Al descargar, acceder o usar el Servicio, aceptas estos Términos.',
     sections: [
       { h: 'El servicio', p: ['Viral Factory genera contenido corto — vídeo, imágenes y descripciones — a partir de prompts y material de referencia que proporcionas, usando modelos de IA de terceros. El resultado generado puede ser inexacto, inesperado o no adecuado para tu propósito; eres responsable de revisarlo antes de publicarlo o confiar en él.'] },
       { h: 'Términos de licencia de Apple', p: ['Las suscripciones de renovación automática compradas a través del App Store también se rigen por el Contrato de licencia de usuario final de aplicaciones con licencia de Apple, disponible en apple.com/legal/internet-services/itunes/dev/stdeula. Si estos Términos entran en conflicto con ese contrato en un asunto de suscripción o compra, prevalece el contrato de Apple.'] },
+      { h: 'Google Play', p: ['Las suscripciones y paquetes de créditos comprados a través de Google Play son facturados y gestionados por Google Play; las solicitudes de reembolso de compras de Google Play las gestiona Google (support.google.com/googleplay).'] },
       {
         h: 'Uso aceptable',
         p: ['Aceptas no usar el Servicio para:'],
@@ -778,8 +848,8 @@ const es: LegalPack = {
           'Generar contenido consume créditos; el coste se muestra en la app antes de generar.',
           'Los paquetes de créditos de un solo uso no caducan, salvo que se indique lo contrario en el momento de la compra.',
           'Los planes de suscripción incluyen una asignación de créditos que se renueva cada periodo de facturación; los créditos de suscripción no usados no se trasladan al periodo siguiente.',
-          'Las suscripciones se renuevan automáticamente por el mismo periodo al precio entonces vigente, salvo que se cancelen al menos 24 horas antes del final del periodo en curso. Gestiona o cancela en cualquier momento en Ajustes → [tu nombre] → Suscripciones en tu dispositivo — consulta nuestra página de Ayuda.',
-          'Salvo que la ley exija lo contrario, todas las compras son no reembolsables; las solicitudes de reembolso de compras del App Store las gestiona Apple.',
+          'Las suscripciones se renuevan automáticamente por el mismo periodo al precio entonces vigente, salvo que se cancelen al menos 24 horas antes del final del periodo en curso. Gestiona o cancela en cualquier momento en Ajustes → [tu nombre] → Suscripciones en iOS, o en Google Play → Pagos y suscripciones en Android — consulta nuestra página de Ayuda.',
+          'Salvo que la ley exija lo contrario, todas las compras son no reembolsables; las solicitudes de reembolso de compras del App Store las gestiona Apple, y las de compras de Google Play las gestiona Google.',
         ],
       },
       { h: 'Terminación', p: ['Puedes dejar de usar el Servicio y eliminar tu cuenta en cualquier momento — consulta nuestra página «Eliminar cuenta». Podemos suspender o cancelar tu acceso por infringir estos Términos, usar créditos de forma indebida, fraude o abuso del Servicio, con o sin previo aviso.'] },
@@ -796,12 +866,12 @@ const es: LegalPack = {
     intro: '¿Tienes una pregunta o un problema? Escribe a ridvan.uyn@gmail.com — normalmente respondemos en 2 días hábiles.',
     faqs: [
       { q: '¿Cómo funcionan los créditos?', a: 'Cada generación (un vídeo, un conjunto de imágenes, un carrusel) cuesta una cantidad de créditos que se muestra antes de confirmar — el coste exacto depende del estudio y el nivel de calidad elegidos. Una suscripción incluye una asignación mensual de créditos que se renueva cada periodo sin acumularse; también puedes comprar un paquete de créditos de un solo uso, que no caduca.' },
-      { q: '¿Cómo restauro mis compras?', a: 'Abre Viral Factory → Perfil → Ajustes → Restaurar compras. Asegúrate de haber iniciado sesión con el mismo ID de Apple con el que compraste.' },
-      { q: '¿Cómo cancelo mi suscripción?', a: 'Las suscripciones las factura y gestiona Apple, no nosotros. En tu iPhone: app Ajustes → [tu nombre] → Suscripciones → Viral Factory → Cancelar suscripción. Cancelar detiene futuras renovaciones; conservas el acceso hasta el final del periodo ya pagado.' },
-      { q: '¿Cómo elimino mi cuenta?', a: 'En la app: Perfil → Ajustes → Eliminar cuenta. Nuestra página «Eliminar cuenta» detalla exactamente qué se elimina y cómo solicitar la eliminación por correo si ya no tienes la app.' },
+      { q: '¿Cómo restauro mis compras?', a: 'Abre Viral Factory → Perfil → Ajustes → Restaurar compras. Asegúrate de haber iniciado sesión con el mismo ID de Apple (iOS) o la misma cuenta de Google (Android) con la que compraste.' },
+      { q: '¿Cómo cancelo mi suscripción?', a: 'Las suscripciones las factura y gestiona Apple o Google, no nosotros. En iPhone: app Ajustes → [tu nombre] → Suscripciones → Viral Factory → Cancelar suscripción. En Android: Google Play → icono de perfil → Pagos y suscripciones → Suscripciones → Viral Factory → Cancelar suscripción. Cancelar detiene futuras renovaciones; conservas el acceso hasta el final del periodo ya pagado.' },
+      { q: '¿Cómo elimino mi cuenta?', a: 'En la app (iOS o Android): Perfil → Ajustes → Eliminar cuenta. Esto también elimina tus vídeos y datos de AI Edit. Nuestra página «Eliminar cuenta» detalla exactamente qué se elimina y cómo solicitar la eliminación por correo si ya no tienes la app.' },
       { q: '¿Qué idiomas admite la app?', a: 'Inglés, alemán, francés, español, italiano, portugués, turco, japonés, coreano, árabe e hindi.' },
       { q: '¿Qué hacen los estudios?', a: '«Rehacer un éxito» reconstruye un reel que pegas con tu propio producto. «Anuncio en vídeo corto» y «Corto cinematográfico» generan un vídeo con guion a partir de una descripción. «Testimonio de creador» crea un anuncio UGC hablando a cámara. «Publicación deslizable» construye un carrusel de imágenes. «Personaje de IA» mantiene una identidad coherente entre vídeos. «Cameo» e «Insertar en tu vídeo» colocan una foto real en una escena generada o existente. Los ganchos diarios ofrecen diez ideas frescas cada mañana, y las publicaciones terminadas se pueden programar directamente en TikTok, Instagram y YouTube.' },
-      { q: '¿Por qué la app pide acceso a la cámara, la fototeca o el micrófono?', a: 'Solo para que puedas capturar o elegir fotos y vídeos como entrada para la generación, y para que la app pueda guardar tus vídeos terminados en tu fototeca. Más detalles en nuestra Política de privacidad.' },
+      { q: '¿Por qué la app pide acceso a la cámara, la fototeca o el micrófono?', a: 'Solo para que puedas capturar o elegir fotos y vídeos como entrada para la generación, y para que la app pueda guardar tus vídeos terminados en tu fototeca. En Android la app usa los selectores de fotos y archivos del sistema y no solicita ninguno de estos permisos. Más detalles en nuestra Política de privacidad.' },
       { q: 'Una generación falló pero consumió mis créditos — ¿qué hago?', a: 'Escríbenos la fecha y hora aproximadas y, si es posible, una captura de pantalla; investigaremos y restauraremos los créditos si se confirma un error del sistema.' },
     ],
   },
@@ -812,12 +882,12 @@ const es: LegalPack = {
     sections: [
       {
         h: 'Eliminar desde la app (recomendado)',
-        p: ['Abre Viral Factory en tu dispositivo y sigue estos pasos:'],
+        p: ['Abre Viral Factory en tu iPhone o dispositivo Android y sigue estos pasos (la ruta del menú es la misma en ambos):'],
         ul: [
           'Ve a Perfil (pestaña inferior).',
           'Toca Ajustes.',
           'Toca Eliminar cuenta, cerca de la parte inferior de la pantalla.',
-          'Si iniciaste sesión con Apple, puede que te pidamos volver a autenticarte con Sign in with Apple para confirmar que eres tú.',
+          'Si iniciaste sesión con Apple o Google, puede que te pidamos volver a autenticarte para confirmar que eres tú.',
           'Confirma la eliminación. Se aplica de inmediato y no se puede deshacer.',
         ],
       },
@@ -827,17 +897,18 @@ const es: LegalPack = {
           'tu cuenta e información de perfil',
           'tu saldo de créditos e historial de transacciones',
           'cada vídeo, conjunto de imágenes, carrusel y personaje que hayas generado, y sus medios de origen',
+          'tus tareas de AI Edit, transcripciones y planes de edición, y los vídeos que subiste o renderizaste con AI Edit (vídeos de origen subidos, vídeos editados, miniaturas y archivos de subtítulos)',
           'las cuentas sociales conectadas (TikTok, Instagram, YouTube) y sus tokens de acceso almacenados',
           'los prompts guardados y las notificaciones',
-          'tu vínculo de Sign in with Apple / Google (se revoca la autorización de Apple)',
+          'tu vínculo de Sign in with Apple / Google (se revoca la autorización de Apple; en Android, el vínculo con tu cuenta de Google se elimina de nuestros sistemas, y también puedes quitar la app en los ajustes de seguridad de tu cuenta de Google → Apps y servicios de terceros)',
         ],
       },
       {
         h: 'Qué no se ve afectado automáticamente',
         p: [
-          'Eliminar tu cuenta NO cancela una suscripción activa del App Store — cancélala por separado en Ajustes → [tu nombre] → Suscripciones en tu dispositivo, o seguirá renovándose.',
+          'Eliminar tu cuenta NO cancela una suscripción activa — cancélala por separado, o seguirá renovándose: en iOS en Ajustes → [tu nombre] → Suscripciones; en Android en Google Play → Pagos y suscripciones → Suscripciones.',
           'El contenido que ya publicaste en TikTok, Instagram o YouTube permanece en esas plataformas; elimínalo allí directamente si quieres que desaparezca.',
-          "Las copias que ya conservan nuestros proveedores de analítica, informes de fallos y compras (Mixpanel, PostHog, Sentry, RevenueCat) y nuestro proveedor de infraestructura de IA (fal.ai) no se eliminan con la eliminación desde la app. Escribe a ridvan.uyn@gmail.com para solicitar su eliminación.",
+          "Las copias que ya conservan nuestros proveedores de analítica, informes de fallos y compras (Mixpanel, PostHog, Sentry, RevenueCat) y nuestros proveedores de IA (fal.ai y Anthropic, incluidas las copias procesadas para AI Edit) no se eliminan con la eliminación desde la app. Escribe a ridvan.uyn@gmail.com para solicitar su eliminación.",
         ],
       },
       {
@@ -853,23 +924,25 @@ const it: LegalPack = {
   effectiveDateLabel: '26 settembre 2026',
   privacy: {
     title: 'Informativa sulla privacy',
-    effective: "15 ottobre 2026",
+    effective: "26 ottobre 2026",
     lead: 'Come Viral Factory raccoglie, usa e protegge le tue informazioni.',
     intro:
-      'Questa Informativa sulla privacy spiega quali informazioni raccolgono l’app iOS Viral Factory e questo sito web, perché, e quali scelte hai a disposizione. Viral Factory è sviluppata da Rıdvan Uyan, sviluppatore individuale, titolare del trattamento dei tuoi dati per le finalità qui descritte.',
+      'Questa Informativa sulla privacy spiega quali informazioni raccolgono le app iOS e Android Viral Factory e questo sito web, perché, e quali scelte hai a disposizione. Viral Factory è sviluppata da Rıdvan Uyan, sviluppatore individuale, titolare del trattamento dei tuoi dati per le finalità qui descritte.',
     sections: [
       {
         h: 'Informazioni che raccogliamo',
         ul: [
-          'Identificatori account — un identificatore di dispositivo casuale creato al primo avvio dell’app, usato per il tuo account ospite su quel dispositivo; se accedi con Apple o Google, riceviamo il tuo nome, indirizzo email (o un indirizzo di inoltro privato) e l’ID account del provider.',
+          'Identificatori account — un identificatore di dispositivo casuale creato al primo avvio dell’app, usato per il tuo account ospite su quel dispositivo; se accedi con Apple (iOS) o Google (iOS e Android), riceviamo il tuo nome, indirizzo email (o un indirizzo di inoltro privato) e l’ID account del provider.',
           'Contenuti che fornisci — prompt e testi che scrivi; foto, video o link che carichi o incolli, come un link a un reel da rifare, una foto di riferimento per gli studi Personaggio o Cameo, o una registrazione dello schermo da analizzare.',
           'Contenuti generati — i media, gli script e le didascalie che l’app crea per te, e la cronologia delle tue generazioni e transazioni di crediti.',
-          'Informazioni di acquisto — gli acquisti di abbonamenti e pacchetti di crediti sono gestiti dall’App Store; RevenueCat elabora gli eventi di acquisto e diritti per nostro conto. Non riceviamo mai il numero della tua carta.',
+          'Informazioni di acquisto — gli acquisti di abbonamenti e pacchetti di crediti sono gestiti dall’App Store su iOS e da Google Play su Android; RevenueCat elabora gli eventi di acquisto e diritti per nostro conto. Non riceviamo mai il numero della tua carta.',
+          'Video di AI Edit — quando usi AI Edit, i file video grezzi che carichi (fino a 2 GB), la trascrizione del parlato con i timestamp per parola, il piano di montaggio, e i video montati finiti, le miniature e i file dei sottotitoli che renderizziamo per te. I dettagli sono nella sezione AI Edit più sotto.',
           'Connessioni ad account social — se colleghi TikTok, Instagram o YouTube per pubblicare contenuti, riceviamo le informazioni di base del profilo di quell’account (handle, nome visualizzato, avatar) e memorizziamo un token di accesso cifrato che permette all’app di pubblicare per tuo conto.',
           'Analisi — usiamo Mixpanel e PostHog per capire come viene usata l’app. Il session replay di PostHog è attivo per l’analisi delle interazioni, ma tutto il testo e le immagini a schermo vengono mascherati prima della cattura, quindi un replay non mostra mai i tuoi prompt, foto o contenuti generati. L’analisi usa un identificatore di installazione separato e casuale — mai il tuo identificatore di account ospite.',
           'Dati del dispositivo e diagnostici — versione dell’app, modello generale del dispositivo e sistema operativo, e impostazioni della lingua. I nostri fornitori di analisi e di acquisti possono inoltre ricavare una posizione approssimativa (ad esempio paese o regione) dal tuo indirizzo IP; l\'app non richiede la posizione del tuo dispositivo. Per motivi di sicurezza conserviamo anche l\'indirizzo IP e lo user agent delle tue sessioni di accesso.',
           "Diagnostica di crash e prestazioni — usiamo Sentry (regione UE) per individuare e correggere crash ed errori. I report includono stack trace, modello del dispositivo e sistema operativo, versione dell'app, una traccia degli eventi recenti dell'app come la navigazione tra le schermate e i tempi di prestazione di un campione di sessioni. Sono collegati all'ID del tuo account Viral Factory, non al tuo indirizzo email né al tuo nome.",
           'Preferenze di notifica — se hai attivato il promemoria giornaliero delle idee, memorizzato localmente sul tuo dispositivo.',
+          'Android: gli acquisti sono elaborati da Google Play (fatturazione) e RevenueCat. Se accedi con Google, riceviamo il tuo nome, indirizzo email e ID account Google. L’app Android non usa l’Advertising ID e non richiede alcun permesso per posizione, fotocamera, microfono o contatti. Le notifiche sono facoltative.',
         ],
         p: ['Non utilizziamo tracker pubblicitari, e l’app non richiede il permesso App Tracking Transparency di Apple.'],
       },
@@ -889,9 +962,23 @@ const it: LegalPack = {
       {
         h: 'Generazione IA e responsabili del trattamento',
         p: [
-          'I contenuti e il materiale di riferimento che invii vengono trasmessi a fal.ai, il nostro fornitore di infrastruttura IA, esclusivamente per generare il risultato richiesto. A seconda della richiesta, fal.ai instrada il compito a fornitori di modelli che attualmente includono OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz e OmniHuman. Non abbiamo account diretti separati con questi fornitori — fal.ai è il responsabile del trattamento con cui abbiamo un contratto. Non utilizziamo i tuoi contenuti per addestrare i nostri modelli. Il nostro fornitore di infrastruttura IA, fal.ai, elabora i tuoi contenuti solo per generare il risultato richiesto, in conformità ai propri termini e alla propria informativa sulla privacy (fal.ai/privacy).',
+          'I contenuti e il materiale di riferimento che invii vengono trasmessi a fal.ai, il nostro fornitore di infrastruttura IA, esclusivamente per generare il risultato richiesto. A seconda della richiesta, fal.ai instrada il compito a fornitori di modelli che attualmente includono OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz e OmniHuman, e fal.ai è il responsabile del trattamento con cui abbiamo un contratto per questi. Anthropic è inoltre un responsabile che chiamiamo direttamente per il testo e la pianificazione di AI Edit, come descritto più sotto. Non utilizziamo i tuoi contenuti per addestrare i nostri modelli. Il nostro fornitore di infrastruttura IA, fal.ai, elabora i tuoi contenuti solo per generare il risultato richiesto, in conformità ai propri termini e alla propria informativa sulla privacy (fal.ai/privacy).',
           'Le foto e i video caricati e i contenuti che generiamo vengono conservati insieme ai tuoi progetti finché non li elimini o non elimini il tuo account. I link di riferimento che incolli — ad esempio un reel da ricreare — vengono analizzati solo per scrivere il tuo storyboard; il video di riferimento in sé non viene salvato nella tua libreria.',
           'I contenuti generati sono memorizzati su Amazon Web Services (S3) e, per alcuni file, su Supabase Storage, e distribuiti tramite una rete di distribuzione dei contenuti (CDN). I dati applicativi (account, progetti, storico crediti) sono memorizzati in MongoDB. Il nostro backend è ospitato su DigitalOcean.',
+        ],
+      },
+      {
+        h: 'AI Edit: i tuoi video grezzi',
+        p: [
+          'AI Edit trasforma i filmati grezzi che carichi in brevi video finiti. Per farlo, il tuo caricamento viene elaborato così:',
+        ],
+        ul: [
+          'Archiviazione — i file video che carichi (fino a 2 GB) e i video montati, le miniature e i file dei sottotitoli che renderizziamo a partire da essi sono memorizzati nei nostri bucket di storage (Supabase Storage o, in alternativa, Amazon S3), in cartelle riservate al tuo account.',
+          'Trascrizione — la traccia audio viene inviata a fal.ai, che esegue ElevenLabs Scribe per produrre una trascrizione con timestamp per parola. La trascrizione, la lingua rilevata e il piano di montaggio vengono salvati con il job AI Edit nel nostro database.',
+          'Anthropic come responsabile del trattamento — la trascrizione e un piccolo numero di fotogrammi estratti dal tuo video vengono inviati ad Anthropic (Claude) tramite la sua API commerciale, affinché decida i tagli, il testo dell’hook e i sottotitoli e verifichi il risultato finale. Anthropic li elabora solo per restituire tale risultato; secondo i suoi termini commerciali, input e output dell’API non vengono usati per addestrare i suoi modelli.',
+          'Rendering — taglio, sottotitoli e riquadratura vengono eseguiti sui nostri server con FFmpeg; i file non vengono inviati ad altri fornitori per il rendering.',
+          'Per quanto tempo — conserviamo caricamenti, piani di montaggio, trascrizioni e video renderizzati finché non li elimini o non elimini il tuo account. Non li usiamo per la pubblicità e non li condividiamo con altri utenti.',
+          'Eliminazione — eliminare il tuo account (Profilo → Impostazioni → Elimina account) elimina permanentemente i tuoi job AI Edit, le trascrizioni e i piani di montaggio, e rimuove dal nostro storage i video sorgente caricati e i video renderizzati, le miniature e i file dei sottotitoli. Le copie già detenute da fal.ai, ElevenLabs e Anthropic come responsabili del trattamento non vengono rimosse dall’eliminazione nell’app; scrivici per richiederne la cancellazione.',
         ],
       },
       {
@@ -905,8 +992,8 @@ const it: LegalPack = {
         ],
       },
       { h: 'Cosa non facciamo', p: ['Non vendiamo dati personali e non condividiamo mai i tuoi prompt, i file caricati o i contenuti generati con altri utenti, a meno che tu non scelga esplicitamente di rendere pubblico qualcosa.'] },
-      { h: 'Conservazione dei dati', p: ['Il tuo account e i contenuti generati vengono conservati finché il tuo account è attivo. Le foto, i video caricati e i contenuti generati vengono conservati insieme ai tuoi progetti finché non li elimini o non elimini il tuo account. Eliminare il tuo account (Profilo → Impostazioni → Elimina account) rimuove i dati del tuo account e i media salvati. Puoi eliminare singole generazioni nell’app in qualsiasi momento.'] },
-      { h: 'Eliminare il tuo account', p: ['Puoi eliminare permanentemente il tuo account in qualsiasi momento nell’app: Profilo → Impostazioni → Elimina account. Questo elimina immediatamente e permanentemente il tuo account, la cronologia crediti, i video, i personaggi, i prompt e gli account social collegati, e revoca l’autorizzazione Sign in with Apple se utilizzata. Non annulla un abbonamento App Store attivo — annullalo separatamente nelle impostazioni del tuo ID Apple. Consulta la nostra pagina «Elimina account» per le istruzioni complete, incluso come richiedere l’eliminazione via email se non hai più l’app. Le copie già detenute dai nostri fornitori di analisi, segnalazione dei crash, acquisti e IA (Mixpanel, PostHog, Sentry, RevenueCat e fal.ai) non vengono rimosse dall\'eliminazione nell\'app; scrivici per richiederne la cancellazione.'] },
+      { h: 'Conservazione dei dati', p: ['Il tuo account e i contenuti generati vengono conservati finché il tuo account è attivo. Le foto, i video caricati e i contenuti generati vengono conservati insieme ai tuoi progetti finché non li elimini o non elimini il tuo account. I caricamenti, le trascrizioni, i piani di montaggio e i video renderizzati di AI Edit sono conservati con lo stesso criterio. Eliminare il tuo account (Profilo → Impostazioni → Elimina account) rimuove i dati del tuo account, i dati di AI Edit e i media salvati. Puoi eliminare singole generazioni nell’app in qualsiasi momento.'] },
+      { h: 'Eliminare il tuo account', p: ['Puoi eliminare permanentemente il tuo account in qualsiasi momento nell’app: Profilo → Impostazioni → Elimina account. Questo elimina immediatamente e permanentemente il tuo account, la cronologia crediti, i video, i job AI Edit e i video che hai caricato o renderizzato con AI Edit, i personaggi, i prompt e gli account social collegati, e revoca l’autorizzazione Sign in with Apple se utilizzata. Non annulla un abbonamento attivo: annulla un abbonamento App Store nelle impostazioni del tuo ID Apple, oppure uno Google Play in Google Play → Pagamenti e abbonamenti. Consulta la nostra pagina «Elimina account» per le istruzioni complete, incluso come richiedere l’eliminazione via email se non hai più l’app. Le copie già detenute dai nostri fornitori di analisi, segnalazione dei crash, acquisti e IA (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai e Anthropic) non vengono rimosse dall\'eliminazione nell\'app; scrivici per richiederne la cancellazione.'] },
       { h: 'I tuoi diritti secondo il GDPR (SEE, Regno Unito, Svizzera)', p: ['Se ti trovi nel SEE, nel Regno Unito o in Svizzera, hai il diritto di accedere, correggere, eliminare e ricevere una copia (portabilità) dei tuoi dati personali, e di opporti a determinati trattamenti o limitarli. Trattiamo i tuoi dati sulla base di: esecuzione di un contratto (fornire l’app), il tuo consenso (ad esempio, l’analisi tramite session replay), e i nostri legittimi interessi (sicurezza, prevenzione degli abusi, miglioramento del servizio). Per esercitare questi diritti, scrivi a ridvan.uyn@gmail.com; risponderemo entro un mese.'] },
       { h: 'Residenti in California (CCPA/CPRA)', p: ['I residenti in California possono richiedere di conoscere, eliminare o correggere le informazioni personali che deteniamo su di loro, e di rinunciare alla loro «vendita» o «condivisione» — non vendiamo informazioni personali e non usiamo tracker pubblicitari comportamentali cross-context. Invia le richieste a ridvan.uyn@gmail.com.'] },
       { h: 'Minori', p: ['Viral Factory non è rivolta a minori di 13 anni (o l’età minima richiesta nel tuo paese) e non raccogliamo consapevolmente le loro informazioni. Se ritieni che un minore ci abbia fornito informazioni personali, contattaci e le elimineremo.'] },
@@ -918,12 +1005,14 @@ const it: LegalPack = {
   },
   terms: {
     title: 'Termini di utilizzo',
+    effective: '26 ottobre 2026',
     lead: 'I termini che regolano il tuo utilizzo di Viral Factory.',
     intro:
-      'I presenti Termini di utilizzo («Termini») regolano il tuo utilizzo dell’app iOS Viral Factory e di questo sito web (insieme, il «Servizio»), forniti da Rıdvan Uyan («noi»). Scaricando, accedendo o utilizzando il Servizio, accetti questi Termini.',
+      'I presenti Termini di utilizzo («Termini») regolano il tuo utilizzo delle app iOS e Android Viral Factory e di questo sito web (insieme, il «Servizio»), forniti da Rıdvan Uyan («noi»). Scaricando, accedendo o utilizzando il Servizio, accetti questi Termini.',
     sections: [
       { h: 'Il servizio', p: ['Viral Factory genera contenuti brevi — video, immagini e didascalie — a partire da prompt e materiale di riferimento che fornisci, utilizzando modelli IA di terze parti. Il risultato generato potrebbe essere impreciso, inatteso o inadatto al tuo scopo; sei responsabile di verificarlo prima di pubblicarlo o farvi affidamento.'] },
       { h: 'Termini di licenza Apple', p: ['Gli abbonamenti a rinnovo automatico acquistati tramite l’App Store sono inoltre disciplinati dal Contratto di licenza con l’utente finale per applicazioni con licenza di Apple, disponibile su apple.com/legal/internet-services/itunes/dev/stdeula. In caso di conflitto tra questi Termini e tale contratto su una questione di abbonamento o acquisto, prevale il contratto Apple.'] },
+      { h: 'Google Play', p: ['Gli abbonamenti e i pacchetti di crediti acquistati tramite Google Play sono fatturati e gestiti da Google Play; le richieste di rimborso per gli acquisti su Google Play sono gestite da Google (support.google.com/googleplay).'] },
       {
         h: 'Uso consentito',
         p: ['Accetti di non utilizzare il Servizio per:'],
@@ -944,8 +1033,8 @@ const it: LegalPack = {
           'Generare contenuti consuma crediti; il costo è mostrato nell’app prima della generazione.',
           'I pacchetti di crediti monouso non scadono, salvo diversa indicazione al momento dell’acquisto.',
           'I piani in abbonamento includono una dotazione di crediti che si rinnova a ogni periodo di fatturazione; i crediti dell’abbonamento non utilizzati non vengono riportati al periodo successivo.',
-          'Gli abbonamenti si rinnovano automaticamente per lo stesso periodo al prezzo allora vigente, salvo cancellazione almeno 24 ore prima della fine del periodo in corso. Gestisci o cancella in qualsiasi momento da Impostazioni → [il tuo nome] → Abbonamenti sul tuo dispositivo — vedi la nostra pagina Assistenza.',
-          'Salvo quanto diversamente richiesto dalla legge, tutti gli acquisti non sono rimborsabili; le richieste di rimborso per gli acquisti App Store sono gestite da Apple.',
+          'Gli abbonamenti si rinnovano automaticamente per lo stesso periodo al prezzo allora vigente, salvo cancellazione almeno 24 ore prima della fine del periodo in corso. Gestisci o cancella in qualsiasi momento da Impostazioni → [il tuo nome] → Abbonamenti su iOS, o da Google Play → Pagamenti e abbonamenti su Android — vedi la nostra pagina Assistenza.',
+          'Salvo quanto diversamente richiesto dalla legge, tutti gli acquisti non sono rimborsabili; le richieste di rimborso per gli acquisti App Store sono gestite da Apple e le richieste di rimborso per gli acquisti Google Play sono gestite da Google.',
         ],
       },
       { h: 'Risoluzione', p: ['Puoi smettere di usare il Servizio ed eliminare il tuo account in qualsiasi momento — vedi la nostra pagina «Elimina account». Possiamo sospendere o terminare il tuo accesso per violazione di questi Termini, uso improprio dei crediti, frode o abuso del Servizio, con o senza preavviso.'] },
@@ -962,12 +1051,12 @@ const it: LegalPack = {
     intro: 'Hai una domanda o un problema? Scrivi a ridvan.uyn@gmail.com — di norma rispondiamo entro 2 giorni lavorativi.',
     faqs: [
       { q: 'Come funzionano i crediti?', a: 'Ogni generazione (un video, un set di immagini, un carosello) costa un certo numero di crediti, mostrato prima della conferma — il costo esatto dipende dallo studio e dal livello di qualità scelti. Un abbonamento include una dotazione mensile di crediti che si rinnova a ogni periodo senza accumularsi; puoi anche acquistare un pacchetto di crediti monouso, che non scade.' },
-      { q: 'Come ripristino i miei acquisti?', a: 'Apri Viral Factory → Profilo → Impostazioni → Ripristina acquisti. Assicurati di aver effettuato l’accesso con lo stesso ID Apple usato per l’acquisto.' },
-      { q: 'Come annullo il mio abbonamento?', a: 'Gli abbonamenti sono fatturati e gestiti da Apple, non da noi. Sul tuo iPhone: app Impostazioni → [il tuo nome] → Abbonamenti → Viral Factory → Annulla abbonamento. L’annullamento interrompe i rinnovi futuri; mantieni l’accesso fino alla fine del periodo già pagato.' },
-      { q: 'Come elimino il mio account?', a: 'Nell’app: Profilo → Impostazioni → Elimina account. La nostra pagina «Elimina account» descrive esattamente cosa viene eliminato e come richiedere l’eliminazione via email se non hai più l’app.' },
+      { q: 'Come ripristino i miei acquisti?', a: 'Apri Viral Factory → Profilo → Impostazioni → Ripristina acquisti. Assicurati di aver effettuato l’accesso con lo stesso ID Apple (iOS) o account Google (Android) usato per l’acquisto.' },
+      { q: 'Come annullo il mio abbonamento?', a: 'Gli abbonamenti sono fatturati e gestiti da Apple o Google, non da noi. Su iPhone: app Impostazioni → [il tuo nome] → Abbonamenti → Viral Factory → Annulla abbonamento. Su Android: Google Play → icona del profilo → Pagamenti e abbonamenti → Abbonamenti → Viral Factory → Annulla abbonamento. L’annullamento interrompe i rinnovi futuri; mantieni l’accesso fino alla fine del periodo già pagato.' },
+      { q: 'Come elimino il mio account?', a: 'Nell’app (iOS o Android): Profilo → Impostazioni → Elimina account. Questo elimina anche i tuoi video e dati di AI Edit. La nostra pagina «Elimina account» descrive esattamente cosa viene eliminato e come richiedere l’eliminazione via email se non hai più l’app.' },
       { q: 'Quali lingue supporta l’app?', a: 'Inglese, tedesco, francese, spagnolo, italiano, portoghese, turco, giapponese, coreano, arabo e hindi.' },
       { q: 'Cosa fanno gli studi?', a: '«Rifai un successo» ricostruisce un reel che incolli, con il tuo prodotto al posto dell’originale. «Video ad breve» e «Cortometraggio cinematico» generano un video sceneggiato da una descrizione. «Testimonianza creator» crea una pubblicità UGC volto in camera. «Post a scorrimento» costruisce un carosello di immagini. «Personaggio IA» mantiene un’identità coerente tra i video. «Cameo» e «Inserisci nel tuo video» inseriscono una foto reale in una scena generata o esistente. Gli hook giornalieri offrono dieci idee fresche ogni mattina, e i post finiti possono essere pianificati direttamente su TikTok, Instagram e YouTube.' },
-      { q: 'Perché l’app chiede l’accesso a fotocamera, libreria foto o microfono?', a: 'Solo per permetterti di catturare o scegliere foto e video da usare come input per la generazione, e per permettere all’app di salvare i tuoi video finiti nella libreria foto. Dettagli nella nostra Informativa sulla privacy.' },
+      { q: 'Perché l’app chiede l’accesso a fotocamera, libreria foto o microfono?', a: 'Solo per permetterti di catturare o scegliere foto e video da usare come input per la generazione, e per permettere all’app di salvare i tuoi video finiti nella libreria foto. Su Android l’app usa i selettori di foto e file di sistema e non richiede nessuno di questi permessi. Dettagli nella nostra Informativa sulla privacy.' },
       { q: 'Una generazione è fallita ma ha consumato i miei crediti — cosa faccio?', a: 'Scrivici la data e l’ora approssimative e, se possibile, uno screenshot; indagheremo e ripristineremo i crediti in caso di errore di sistema confermato.' },
     ],
   },
@@ -978,12 +1067,12 @@ const it: LegalPack = {
     sections: [
       {
         h: 'Elimina dall’app (consigliato)',
-        p: ['Apri Viral Factory sul tuo dispositivo e segui questi passaggi:'],
+        p: ['Apri Viral Factory sul tuo iPhone o dispositivo Android e segui questi passaggi (il percorso del menu è lo stesso su entrambi):'],
         ul: [
           'Vai su Profilo (scheda in basso).',
           'Tocca Impostazioni.',
           'Tocca Elimina account, verso la fine della schermata.',
-          'Se hai effettuato l’accesso con Apple, potremmo chiederti di riautenticarti con Sign in with Apple per confermare che sei tu.',
+          'Se hai effettuato l’accesso con Apple o Google, potremmo chiederti di riautenticarti per confermare che sei tu.',
           'Conferma l’eliminazione. Ha effetto immediato e non può essere annullata.',
         ],
       },
@@ -993,17 +1082,18 @@ const it: LegalPack = {
           'il tuo account e le informazioni di profilo',
           'il tuo saldo crediti e lo storico delle transazioni',
           'ogni video, set di immagini, carosello e personaggio che hai generato, e i relativi media di origine',
+          'i tuoi job AI Edit, le trascrizioni e i piani di montaggio, e i video che hai caricato o renderizzato con AI Edit (video sorgente caricati, video montati, miniature e file dei sottotitoli)',
           'gli account social collegati (TikTok, Instagram, YouTube) e i loro token di accesso memorizzati',
           'i prompt salvati e le notifiche',
-          'il tuo collegamento Sign in with Apple / Google (l’autorizzazione Apple viene revocata)',
+          'il tuo collegamento Sign in with Apple / Google (l’autorizzazione Apple viene revocata; su Android il collegamento al tuo account Google viene rimosso dai nostri sistemi, e puoi anche rimuovere l’app dalle impostazioni di sicurezza del tuo account Google → App e servizi di terze parti)',
         ],
       },
       {
         h: 'Cosa non viene interessato automaticamente',
         p: [
-          'Eliminare il tuo account NON annulla un abbonamento App Store attivo — annullalo separatamente da Impostazioni → [il tuo nome] → Abbonamenti sul tuo dispositivo, altrimenti continuerà a rinnovarsi.',
+          'Eliminare il tuo account NON annulla un abbonamento attivo — annullalo separatamente, altrimenti continuerà a rinnovarsi: su iOS da Impostazioni → [il tuo nome] → Abbonamenti; su Android da Google Play → Pagamenti e abbonamenti → Abbonamenti.',
           'I contenuti già pubblicati su TikTok, Instagram o YouTube restano su quelle piattaforme; eliminali direttamente lì se vuoi rimuoverli.',
-          "Le copie già detenute dai nostri fornitori di analisi, segnalazione dei crash e acquisti (Mixpanel, PostHog, Sentry, RevenueCat) e dal nostro fornitore di infrastruttura IA (fal.ai) non vengono rimosse dall'eliminazione nell'app. Scrivi a ridvan.uyn@gmail.com per richiederne la cancellazione.",
+          "Le copie già detenute dai nostri fornitori di analisi, segnalazione dei crash e acquisti (Mixpanel, PostHog, Sentry, RevenueCat) e dai nostri fornitori di IA (fal.ai e Anthropic, comprese le copie elaborate per AI Edit) non vengono rimosse dall'eliminazione nell'app. Scrivi a ridvan.uyn@gmail.com per richiederne la cancellazione.",
         ],
       },
       {
@@ -1019,25 +1109,26 @@ const pt: LegalPack = {
   effectiveDateLabel: '26 de setembro de 2026',
   privacy: {
     title: 'Política de Privacidade',
-    effective: "15 de outubro de 2026",
+    effective: "26 de outubro de 2026",
     lead: 'Como o Viral Factory coleta, usa e protege suas informações.',
     intro:
-      'Esta Política de Privacidade explica quais informações o app iOS Viral Factory e este site coletam, por quê, e quais escolhas você tem. O Viral Factory é desenvolvido por Rıdvan Uyan, desenvolvedor individual, controlador dos seus dados para as finalidades aqui descritas.',
+      'Esta Política de Privacidade explica quais informações os apps iOS e Android Viral Factory e este site coletam, por quê, e quais escolhas você tem. O Viral Factory é desenvolvido por Rıdvan Uyan, desenvolvedor individual, controlador dos seus dados para as finalidades aqui descritas.',
     sections: [
       {
         h: 'Informações que coletamos',
         ul: [
-          'Identificadores de conta — um identificador de dispositivo aleatório criado na primeira vez que você abre o app, usado para sua conta de convidado nesse dispositivo; se você entrar com Apple ou Google, recebemos seu nome, e-mail (ou um e-mail de encaminhamento privado) e o ID de conta do provedor.',
+          'Identificadores de conta — um identificador de dispositivo aleatório criado na primeira vez que você abre o app, usado para sua conta de convidado nesse dispositivo; se você entrar com Apple (iOS) ou Google (iOS e Android), recebemos seu nome, e-mail (ou um e-mail de encaminhamento privado) e o ID de conta do provedor.',
           'Conteúdo que você fornece — prompts e textos que você escreve; fotos, vídeos ou links que você envia ou cola, como um link de reel para refazer, uma foto de referência para os estúdios de Personagem ou Cameo, ou uma gravação de tela para analisar.',
           'Conteúdo gerado — as mídias, roteiros e legendas que o app cria para você, e seu histórico de gerações e transações de créditos.',
-          'Informações de compra — compras de assinaturas e pacotes de créditos são processadas pela App Store; a RevenueCat processa eventos de compra e direitos em nosso nome. Nunca recebemos o número do seu cartão.',
+          'Informações de compra — compras de assinaturas e pacotes de créditos são processadas pela App Store no iOS e pelo Google Play no Android; a RevenueCat processa eventos de compra e direitos em nosso nome. Nunca recebemos o número do seu cartão.',
+          'Vídeos do AI Edit — ao usar o AI Edit, os arquivos de vídeo bruto que você envia (até 2 GB), a transcrição da fala com marcação de tempo por palavra, o plano de edição e os vídeos editados finais, miniaturas e arquivos de legenda que renderizamos para você. Os detalhes estão na seção AI Edit abaixo.',
           'Conexões com contas sociais — se você conectar TikTok, Instagram ou YouTube para publicar conteúdo, recebemos as informações básicas de perfil dessa conta (identificador, nome de exibição, avatar) e armazenamos um token de acesso criptografado para que o app publique em seu nome.',
           'Análise — usamos Mixpanel e PostHog para entender como o app é usado. A repetição de sessão (session replay) do PostHog está ativada para análise de interação, mas todo texto e imagens na tela são mascarados antes da captura, então uma repetição nunca mostra seus prompts, fotos ou conteúdo gerado. A análise usa um identificador de instalação separado e aleatório — nunca o identificador da sua conta de convidado.',
           'Dados de dispositivo e diagnóstico — versão do app, modelo geral do dispositivo e sistema operacional, e configurações de idioma. Nossos provedores de análise e de compras também podem inferir uma localização aproximada (como país ou região) a partir do seu endereço IP; o app não solicita a localização do seu dispositivo. Por segurança, também mantemos o endereço IP e o user agent das suas sessões de login.',
           "Diagnóstico de falhas e desempenho — usamos o Sentry (região da UE) para encontrar e corrigir falhas e erros. Os relatórios incluem stack traces, modelo do dispositivo e sistema operacional, versão do app, um rastro de eventos recentes do app, como a navegação entre telas, e medições de desempenho de uma amostra de sessões. Eles são vinculados ao ID da sua conta do Viral Factory, não ao seu e-mail nem ao seu nome.",
           'Preferências de notificação — se você ativou o lembrete diário de ideias, armazenado localmente no seu dispositivo.',
         ],
-        p: ['Não usamos rastreadores de publicidade, e o app não solicita a permissão de App Tracking Transparency da Apple.'],
+        p: ['Não usamos rastreadores de publicidade, e o app não solicita a permissão de App Tracking Transparency da Apple.', 'Android: as compras são processadas pelo Google Play (cobrança) e pela RevenueCat. Se você entrar com Google, recebemos seu nome, e-mail e ID da conta Google. O app Android não usa o ID de publicidade e não solicita permissão de localização, câmera, microfone ou contatos. As notificações são opcionais.'],
       },
       {
         h: 'Como usamos suas informações',
@@ -1055,9 +1146,23 @@ const pt: LegalPack = {
       {
         h: 'Geração por IA e operadores terceirizados',
         p: [
-          'O conteúdo e o material de referência que você envia são transmitidos à fal.ai, nossa fornecedora de infraestrutura de IA, apenas para gerar o resultado solicitado. Dependendo da solicitação, a fal.ai encaminha a tarefa a provedores de modelos que atualmente incluem OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz e OmniHuman. Não mantemos contas diretas próprias com esses provedores — a fal.ai é a operadora com quem contratamos. Não usamos seu conteúdo para treinar nossos próprios modelos. Nossa fornecedora de infraestrutura de IA, a fal.ai, processa seu conteúdo apenas para gerar o resultado solicitado, sob seus próprios termos e política de privacidade (fal.ai/privacy).',
+          'O conteúdo e o material de referência que você envia são transmitidos à fal.ai, nossa fornecedora de infraestrutura de IA, apenas para gerar o resultado solicitado. Dependendo da solicitação, a fal.ai encaminha a tarefa a provedores de modelos que atualmente incluem OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz e OmniHuman, e a fal.ai é a operadora com quem contratamos para eles. A Anthropic também é uma operadora que chamamos diretamente para texto e planejamento do AI Edit, conforme descrito abaixo. Não usamos seu conteúdo para treinar nossos próprios modelos. Nossa fornecedora de infraestrutura de IA, a fal.ai, processa seu conteúdo apenas para gerar o resultado solicitado, sob seus próprios termos e política de privacidade (fal.ai/privacy).',
           'As fotos e vídeos enviados e a mídia que geramos são armazenados junto com seus projetos até que você os exclua ou exclua sua conta. Os links de referência que você cola — por exemplo, um reel para recriar — são analisados apenas para escrever seu storyboard; o vídeo de referência em si não é armazenado na sua biblioteca.',
           'O conteúdo gerado é armazenado na Amazon Web Services (S3) e, para alguns arquivos, no Supabase Storage, e entregue por meio de uma rede de distribuição de conteúdo (CDN). Os dados da aplicação (contas, projetos, histórico de créditos) são armazenados no MongoDB. Nosso backend é hospedado na DigitalOcean.',
+        ],
+      },
+      {
+        h: 'AI Edit: seus vídeos brutos',
+        p: [
+          'O AI Edit transforma o material bruto que você envia em vídeos curtos finalizados. Para isso, seu envio é processado da seguinte forma:',
+        ],
+        ul: [
+          'Armazenamento — os arquivos de vídeo que você envia (até 2 GB) e os vídeos editados, miniaturas e arquivos de legenda que renderizamos a partir deles são armazenados em nossos buckets de armazenamento (Supabase Storage, ou Amazon S3 como alternativa), em pastas reservadas à sua conta.',
+          'Transcrição — a faixa de áudio é enviada à fal.ai, que executa o ElevenLabs Scribe para produzir uma transcrição com marcação de tempo por palavra. A transcrição, o idioma detectado e o plano de edição são salvos com a tarefa do AI Edit em nosso banco de dados.',
+          'Anthropic como operadora — a transcrição e um pequeno número de quadros estáticos amostrados do seu vídeo são enviados à Anthropic (Claude) por meio de sua API comercial, para que ela decida os cortes, o texto do gancho e as legendas e verifique o resultado final. A Anthropic processa isso apenas para devolver esse resultado; nos termos comerciais dela, as entradas e saídas da API não são usadas para treinar seus modelos.',
+          'Renderização — corte, legendas e reenquadramento são feitos em nossos próprios servidores com FFmpeg; os arquivos não são enviados a nenhum outro provedor para renderização.',
+          'Por quanto tempo — mantemos envios, planos de edição, transcrições e vídeos renderizados até que você os exclua ou exclua sua conta. Não os usamos para publicidade e não os compartilhamos com outros usuários.',
+          'Exclusão — excluir sua conta (Perfil → Configurações → Excluir conta) apaga permanentemente suas tarefas do AI Edit, transcrições e planos de edição, e remove de nosso armazenamento seus vídeos de origem enviados e os vídeos renderizados, miniaturas e arquivos de legenda. As cópias já mantidas pela fal.ai, ElevenLabs e Anthropic como operadoras não são removidas pela exclusão no app; escreva para nós para solicitar a exclusão delas.',
         ],
       },
       {
@@ -1071,8 +1176,8 @@ const pt: LegalPack = {
         ],
       },
       { h: 'O que não fazemos', p: ['Não vendemos dados pessoais e nunca compartilhamos seus prompts, envios ou conteúdo gerado com outros usuários, a menos que você escolha explicitamente tornar algo público.'] },
-      { h: 'Retenção de dados', p: ['Sua conta e o conteúdo gerado são retidos enquanto sua conta estiver ativa. As fotos, vídeos enviados e a mídia gerada são armazenados junto com seus projetos até que você os exclua ou exclua sua conta. Excluir sua conta (Perfil → Configurações → Excluir conta) remove os dados da sua conta e a mídia armazenada. Você pode excluir gerações individuais no app a qualquer momento.'] },
-      { h: 'Excluindo sua conta', p: ['Você pode excluir permanentemente sua conta a qualquer momento no app: Perfil → Configurações → Excluir conta. Isso exclui imediata e permanentemente sua conta, histórico de créditos, vídeos, personagens, prompts e contas sociais conectadas, e revoga a autorização Sign in with Apple, se usada. Isso não cancela uma assinatura ativa da App Store — cancele-a separadamente nas configurações do seu ID Apple. Veja nossa página «Excluir conta» para instruções completas, incluindo como solicitar a exclusão por e-mail se você não tiver mais o app. As cópias que nossos provedores de análise, relatório de falhas, compras e IA (Mixpanel, PostHog, Sentry, RevenueCat e fal.ai) já mantêm não são removidas pela exclusão no app; escreva para nós para solicitar a exclusão delas.'] },
+      { h: 'Retenção de dados', p: ['Sua conta e o conteúdo gerado são retidos enquanto sua conta estiver ativa. As fotos, vídeos enviados e a mídia gerada são armazenados junto com seus projetos até que você os exclua ou exclua sua conta. Os envios, transcrições, planos de edição e vídeos renderizados do AI Edit são mantidos nas mesmas condições. Excluir sua conta (Perfil → Configurações → Excluir conta) remove os dados da sua conta, os dados do AI Edit e a mídia armazenada. Você pode excluir gerações individuais no app a qualquer momento.'] },
+      { h: 'Excluindo sua conta', p: ['Você pode excluir permanentemente sua conta a qualquer momento no app: Perfil → Configurações → Excluir conta. Isso exclui imediata e permanentemente sua conta, histórico de créditos, vídeos, tarefas do AI Edit e os vídeos que você enviou ou renderizou com o AI Edit, personagens, prompts e contas sociais conectadas, e revoga a autorização Sign in with Apple, se usada. Isso não cancela uma assinatura ativa: cancele uma assinatura da App Store nas configurações do seu ID Apple, ou uma assinatura do Google Play em Google Play → Pagamentos e assinaturas. Veja nossa página «Excluir conta» para instruções completas, incluindo como solicitar a exclusão por e-mail se você não tiver mais o app. As cópias que nossos provedores de análise, relatório de falhas, compras e IA (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai e Anthropic) já mantêm não são removidas pela exclusão no app; escreva para nós para solicitar a exclusão delas.'] },
       { h: 'Seus direitos sob o RGPD (EEE, Reino Unido, Suíça)', p: ['Se você estiver no EEE, no Reino Unido ou na Suíça, você tem o direito de acessar, corrigir, excluir e receber uma cópia (portabilidade) de seus dados pessoais, e de se opor a ou restringir certos tratamentos. Tratamos seus dados com base em: execução de um contrato (fornecer o app), seu consentimento (por exemplo, análise por repetição de sessão), e nossos interesses legítimos (segurança, prevenção de abusos, melhoria do serviço). Para exercer esses direitos, escreva para ridvan.uyn@gmail.com; responderemos em até um mês.'] },
       { h: 'Residentes da Califórnia (CCPA/CPRA)', p: ['Residentes da Califórnia podem solicitar saber, excluir ou corrigir as informações pessoais que mantemos sobre eles, e optar por não participar de sua «venda» ou «compartilhamento» — não vendemos informações pessoais nem usamos rastreadores de publicidade comportamental entre contextos. Envie solicitações para ridvan.uyn@gmail.com.'] },
       { h: 'Crianças', p: ['O Viral Factory não é direcionado a crianças menores de 13 anos (ou a idade mínima exigida no seu país) e não coletamos intencionalmente suas informações. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco para que possamos excluí-las.'] },
@@ -1084,12 +1189,17 @@ const pt: LegalPack = {
   },
   terms: {
     title: 'Termos de Uso',
+    effective: '26 de outubro de 2026',
     lead: 'Os termos que regem o uso do Viral Factory.',
     intro:
-      'Estes Termos de Uso («Termos») regem seu uso do app iOS Viral Factory e deste site (em conjunto, o «Serviço»), fornecidos por Rıdvan Uyan («nós»). Ao baixar, acessar ou usar o Serviço, você concorda com estes Termos.',
+      'Estes Termos de Uso («Termos») regem seu uso dos apps iOS e Android Viral Factory e deste site (em conjunto, o «Serviço»), fornecidos por Rıdvan Uyan («nós»). Ao baixar, acessar ou usar o Serviço, você concorda com estes Termos.',
     sections: [
       { h: 'O serviço', p: ['O Viral Factory gera conteúdo curto — vídeo, imagens e legendas — a partir de prompts e material de referência que você fornece, usando modelos de IA de terceiros. O resultado gerado pode ser impreciso, inesperado ou inadequado para o seu propósito; você é responsável por revisá-lo antes de publicá-lo ou confiar nele.'] },
       { h: 'Termos de licenciamento da Apple', p: ['Assinaturas de renovação automática compradas pela App Store também são regidas pelo Contrato de Licença de Usuário Final de Aplicativos Licenciados da Apple, disponível em apple.com/legal/internet-services/itunes/dev/stdeula. Se estes Termos conflitarem com esse contrato em uma questão de assinatura ou compra, o contrato da Apple prevalece.'] },
+      {
+        h: 'Google Play',
+        p: ['Assinaturas e pacotes de créditos comprados pelo Google Play são cobrados e gerenciados pelo Google Play; solicitações de reembolso de compras do Google Play são tratadas pelo Google (support.google.com/googleplay).'],
+      },
       {
         h: 'Uso aceitável',
         p: ['Você concorda em não usar o Serviço para:'],
@@ -1110,8 +1220,8 @@ const pt: LegalPack = {
           'Gerar conteúdo consome créditos; o custo é mostrado no app antes da geração.',
           'Pacotes de créditos avulsos não expiram, salvo indicação contrária no momento da compra.',
           'Os planos de assinatura incluem um pacote de créditos que se renova a cada período de cobrança; créditos de assinatura não usados não são transferidos para o próximo período.',
-          'As assinaturas se renovam automaticamente pelo mesmo período, pelo preço então vigente, a menos que canceladas com pelo menos 24 horas de antecedência do fim do período atual. Gerencie ou cancele a qualquer momento em Ajustes → [seu nome] → Assinaturas no seu dispositivo — veja nossa página de Suporte.',
-          'Salvo quando exigido por lei, todas as compras são não reembolsáveis; solicitações de reembolso de compras da App Store são tratadas pela Apple.',
+          'As assinaturas se renovam automaticamente pelo mesmo período, pelo preço então vigente, a menos que canceladas com pelo menos 24 horas de antecedência do fim do período atual. Gerencie ou cancele a qualquer momento em Ajustes → [seu nome] → Assinaturas no iOS, ou em Google Play → Pagamentos e assinaturas no Android — veja nossa página de Suporte.',
+          'Salvo quando exigido por lei, todas as compras são não reembolsáveis; solicitações de reembolso de compras da App Store são tratadas pela Apple, e solicitações de reembolso de compras do Google Play são tratadas pelo Google.',
         ],
       },
       { h: 'Rescisão', p: ['Você pode parar de usar o Serviço e excluir sua conta a qualquer momento — veja nossa página «Excluir conta». Podemos suspender ou encerrar seu acesso por violação destes Termos, uso indevido de créditos, fraude ou abuso do Serviço, com ou sem aviso prévio.'] },
@@ -1128,12 +1238,12 @@ const pt: LegalPack = {
     intro: 'Tem uma dúvida ou um problema? Envie um e-mail para ridvan.uyn@gmail.com — normalmente respondemos em até 2 dias úteis.',
     faqs: [
       { q: 'Como funcionam os créditos?', a: 'Cada geração (um vídeo, um conjunto de imagens, um carrossel) custa uma quantidade de créditos, mostrada antes de você confirmar — o custo exato depende do estúdio e do nível de qualidade escolhidos. Uma assinatura inclui um pacote mensal de créditos que se renova a cada período sem acumular; você também pode comprar um pacote de créditos avulso, que não expira.' },
-      { q: 'Como restauro minhas compras?', a: 'Abra o Viral Factory → Perfil → Ajustes → Restaurar Compras. Certifique-se de estar conectado com o mesmo ID Apple usado na compra.' },
-      { q: 'Como cancelo minha assinatura?', a: 'As assinaturas são cobradas e gerenciadas pela Apple, não por nós. No seu iPhone: app Ajustes → [seu nome] → Assinaturas → Viral Factory → Cancelar assinatura. Cancelar interrompe as renovações futuras; você mantém o acesso até o fim do período já pago.' },
-      { q: 'Como excluo minha conta?', a: 'No app: Perfil → Ajustes → Excluir Conta. Nossa página «Excluir conta» detalha exatamente o que é excluído e como solicitar a exclusão por e-mail se você não tiver mais o app.' },
+      { q: 'Como restauro minhas compras?', a: 'Abra o Viral Factory → Perfil → Ajustes → Restaurar Compras. Certifique-se de estar conectado com o mesmo ID Apple (iOS) ou a mesma conta Google (Android) usada na compra.' },
+      { q: 'Como cancelo minha assinatura?', a: 'As assinaturas são cobradas e gerenciadas pela Apple ou pelo Google, não por nós. No iPhone: app Ajustes → [seu nome] → Assinaturas → Viral Factory → Cancelar assinatura. No Android: Google Play → ícone do perfil → Pagamentos e assinaturas → Assinaturas → Viral Factory → Cancelar assinatura. Cancelar interrompe as renovações futuras; você mantém o acesso até o fim do período já pago.' },
+      { q: 'Como excluo minha conta?', a: 'No app (iOS ou Android): Perfil → Ajustes → Excluir Conta. Isso também exclui seus vídeos e dados do AI Edit. Nossa página «Excluir conta» detalha exatamente o que é excluído e como solicitar a exclusão por e-mail se você não tiver mais o app.' },
       { q: 'Quais idiomas o app suporta?', a: 'Inglês, alemão, francês, espanhol, italiano, português, turco, japonês, coreano, árabe e hindi.' },
       { q: 'O que os estúdios fazem?', a: '«Refazer um sucesso» reconstrói um reel que você cola, com o seu produto no lugar do original. «Anúncio em vídeo curto» e «Curta cinematográfico» geram um vídeo roteirizado a partir de uma descrição. «Depoimento estilo criador» cria um anúncio UGC falando para a câmera. «Post em carrossel» monta um carrossel de imagens. «Personagem de IA» mantém uma identidade consistente entre vídeos. «Cameo» e «Inserir no seu vídeo» colocam uma foto real em uma cena gerada ou existente. Os ganchos diários trazem dez ideias novas toda manhã, e posts prontos podem ser agendados direto para TikTok, Instagram e YouTube.' },
-      { q: 'Por que o app pede acesso à câmera, à galeria de fotos ou ao microfone?', a: 'Apenas para você capturar ou escolher fotos e vídeos como entrada para a geração, e para o app salvar seus vídeos prontos na sua galeria de fotos. Detalhes na nossa Política de Privacidade.' },
+      { q: 'Por que o app pede acesso à câmera, à galeria de fotos ou ao microfone?', a: 'Apenas para você capturar ou escolher fotos e vídeos como entrada para a geração, e para o app salvar seus vídeos prontos na sua galeria de fotos. No Android, o app usa os seletores de fotos e arquivos do sistema e não solicita nenhuma dessas permissões. Detalhes na nossa Política de Privacidade.' },
       { q: 'Uma geração falhou mas consumiu meus créditos — o que eu faço?', a: 'Envie a data e hora aproximadas e, se possível, uma captura de tela; vamos investigar e restaurar os créditos em caso de erro de sistema confirmado.' },
     ],
   },
@@ -1144,12 +1254,12 @@ const pt: LegalPack = {
     sections: [
       {
         h: 'Excluir pelo app (recomendado)',
-        p: ['Abra o Viral Factory no seu dispositivo e siga estes passos:'],
+        p: ['Abra o Viral Factory no seu iPhone ou dispositivo Android e siga estes passos (o caminho do menu é o mesmo nos dois):'],
         ul: [
           'Vá em Perfil (aba inferior).',
           'Toque em Ajustes.',
           'Toque em Excluir Conta, perto do final da tela.',
-          'Se você entrou com Apple, pode ser solicitado que você se reautentique com Sign in with Apple para confirmar que é você.',
+          'Se você entrou com Apple ou Google, pode ser solicitado que você se reautentique para confirmar que é você.',
           'Confirme a exclusão. Ela tem efeito imediato e não pode ser desfeita.',
         ],
       },
@@ -1159,17 +1269,18 @@ const pt: LegalPack = {
           'sua conta e informações de perfil',
           'seu saldo de créditos e histórico de transações',
           'todo vídeo, conjunto de imagens, carrossel e personagem que você gerou, e suas mídias de origem',
+          'suas tarefas do AI Edit, transcrições e planos de edição, e os vídeos que você enviou ou renderizou com o AI Edit (vídeos de origem enviados, vídeos editados, miniaturas e arquivos de legenda)',
           'contas sociais conectadas (TikTok, Instagram, YouTube) e seus tokens de acesso armazenados',
           'prompts salvos e notificações',
-          'seu vínculo de Sign in with Apple / Google (a autorização da Apple é revogada)',
+          'seu vínculo de Sign in with Apple / Google (a autorização da Apple é revogada; no Android, o vínculo com sua conta Google é removido de nossos sistemas, e você também pode remover o app em Segurança da sua conta Google → Apps e serviços de terceiros)',
         ],
       },
       {
         h: 'O que não é afetado automaticamente',
         p: [
-          'Excluir sua conta NÃO cancela uma assinatura ativa da App Store — cancele-a separadamente em Ajustes → [seu nome] → Assinaturas no seu dispositivo, ou ela continuará se renovando.',
+          'Excluir sua conta NÃO cancela uma assinatura ativa — cancele-a separadamente, ou ela continuará se renovando: no iOS em Ajustes → [seu nome] → Assinaturas; no Android em Google Play → Pagamentos e assinaturas → Assinaturas.',
           'Conteúdo que você já publicou no TikTok, Instagram ou YouTube permanece nessas plataformas; exclua-o diretamente lá se quiser removê-lo.',
-          "As cópias que nossos provedores de análise, relatório de falhas e compras (Mixpanel, PostHog, Sentry, RevenueCat) e nosso provedor de infraestrutura de IA (fal.ai) já mantêm não são removidas pela exclusão no app. Escreva para ridvan.uyn@gmail.com para solicitar a exclusão delas.",
+          "As cópias que nossos provedores de análise, relatório de falhas e compras (Mixpanel, PostHog, Sentry, RevenueCat) e nossos provedores de IA (fal.ai e Anthropic, incluindo cópias processadas para o AI Edit) já mantêm não são removidas pela exclusão no app. Escreva para ridvan.uyn@gmail.com para solicitar a exclusão delas.",
         ],
       },
       {
@@ -1185,25 +1296,26 @@ const tr: LegalPack = {
   effectiveDateLabel: '26 Eylül 2026',
   privacy: {
     title: 'Gizlilik Politikası',
-    effective: "15 Ekim 2026",
+    effective: "26 Ekim 2026",
     lead: 'Viral Factory bilgilerini nasıl toplar, kullanır ve korur.',
     intro:
-      'Bu Gizlilik Politikası, Viral Factory iOS uygulamasının ve bu web sitesinin hangi bilgileri, neden topladığını ve sahip olduğun seçenekleri açıklar. Viral Factory, burada açıklanan amaçlar için verilerinin sorumlusu olan bireysel geliştirici Rıdvan Uyan tarafından geliştirilmektedir.',
+      'Bu Gizlilik Politikası, Viral Factory iOS ve Android uygulamalarının ve bu web sitesinin hangi bilgileri, neden topladığını ve sahip olduğun seçenekleri açıklar. Viral Factory, burada açıklanan amaçlar için verilerinin sorumlusu olan bireysel geliştirici Rıdvan Uyan tarafından geliştirilmektedir.',
     sections: [
       {
         h: 'Topladığımız bilgiler',
         ul: [
-          'Hesap kimlikleri — uygulamayı ilk açtığında oluşturulan ve o cihazdaki misafir hesabın için kullanılan rastgele bir cihaz kimliği; bunun yerine Apple ya da Google ile giriş yaparsan adını, e-posta adresini (ya da özel bir yönlendirme e-postasını) ve sağlayıcı hesap kimliğini alırız.',
+          'Hesap kimlikleri — uygulamayı ilk açtığında oluşturulan ve o cihazdaki misafir hesabın için kullanılan rastgele bir cihaz kimliği; bunun yerine Apple (iOS) ya da Google (iOS ve Android) ile giriş yaparsan adını, e-posta adresini (ya da özel bir yönlendirme e-postasını) ve sağlayıcı hesap kimliğini alırız.',
           'Sağladığın içerikler — yazdığın prompt ve metinler; yeniden yapmak istediğin bir reel bağlantısı, Karakter ya da Cameo stüdyoları için bir referans fotoğrafı ya da analiz edilecek bir ekran kaydı gibi yüklediğin veya yapıştırdığın fotoğraf, video ya da bağlantılar.',
           'Üretilen içerikler — uygulamanın senin için oluşturduğu medya, senaryo ve açıklamalar, ayrıca üretim ve kredi işlemi geçmişin.',
-          'Satın alma bilgileri — abonelik ve kredi paketi satın alımları App Store tarafından işlenir; RevenueCat satın alma ve hak olaylarını bizim adımıza işler. Kart numaranı asla almayız.',
+          'Satın alma bilgileri — abonelik ve kredi paketi satın alımları iOS’ta App Store, Android’de Google Play tarafından işlenir; RevenueCat satın alma ve hak olaylarını bizim adımıza işler. Kart numaranı asla almayız.',
+          'AI Edit videoları — AI Edit’i kullandığında yüklediğin ham video dosyaları (2 GB’a kadar), kelime zaman damgalı konuşma metni, kurgu planı ve senin için oluşturduğumuz bitmiş kurgulanmış videolar, küçük resimler ve altyazı dosyaları. Ayrıntılar aşağıdaki AI Edit bölümündedir.',
           'Sosyal medya hesabı bağlantıları — içerik paylaşmak için TikTok, Instagram ya da YouTube bağlarsan, o hesabın temel profil bilgilerini (kullanıcı adı, görünen ad, avatar) alır ve uygulamanın senin adına paylaşım yapabilmesi için şifrelenmiş bir erişim anahtarı saklarız.',
           'Analitik — uygulamanın nasıl kullanıldığını anlamak için Mixpanel ve PostHog kullanırız. PostHog oturum tekrarı (session replay), etkileşim analizi için etkindir, ancak yakalamadan önce ekrandaki tüm metin ve görseller gizlenir; bu yüzden bir tekrar oynatma asla prompt’larını, fotoğraflarını ya da ürettiğin içerikleri göstermez. Analitik, ayrı ve rastgele bir kurulum kimliği kullanır — asla misafir hesap kimliğini değil.',
           'Cihaz ve tanılama verileri — uygulama sürümü, genel cihaz modeli ve işletim sistemi, ve dil ayarları. Analitik ve satın alma sağlayıcılarımız ayrıca IP adresinden yaklaşık bir konum (ülke veya bölge gibi) çıkarabilir; uygulama cihazının konumunu istemez. Güvenlik için oturum açma oturumlarının IP adresini ve user-agent bilgisini de saklarız.',
           "Çökme ve performans tanılaması — çökmeleri ve hataları bulup düzeltmek için Sentry'yi (AB bölgesi) kullanıyoruz. Raporlar yığın izlerini (stack trace), cihaz modelini ve işletim sistemini, uygulama sürümünü, ekranlar arası gezinme gibi son uygulama olaylarının akışını ve oturumların bir örneklemi için performans ölçümlerini içerir. Raporlar Viral Factory hesap kimliğine bağlanır; e-posta adresine veya adına bağlanmaz.",
           'Bildirim tercihleri — günlük fikir hatırlatıcısını açıp açmadığın, cihazında yerel olarak saklanır.',
         ],
-        p: ['Reklam takip teknolojileri kullanmıyoruz ve uygulama Apple’ın App Tracking Transparency iznini istemez.'],
+        p: ['Reklam takip teknolojileri kullanmıyoruz ve uygulama Apple’ın App Tracking Transparency iznini istemez.', 'Android: satın alımlar Google Play (faturalandırma) ve RevenueCat tarafından işlenir. Google ile giriş yaparsan adını, e-posta adresini ve Google hesap kimliğini alırız. Android uygulaması Reklam Kimliği’ni kullanmaz ve konum, kamera, mikrofon ya da rehber izni istemez. Bildirimler isteğe bağlıdır.'],
       },
       {
         h: 'Bilgilerini nasıl kullanırız',
@@ -1221,9 +1333,23 @@ const tr: LegalPack = {
       {
         h: 'Yapay zeka üretimi ve veri işleyenler',
         p: [
-          'Gönderdiğin içerik ve referans materyaller, yalnızca talep ettiğin çıktıyı üretmek amacıyla yapay zeka altyapı sağlayıcımız fal.ai’ye gönderilir. Talebe bağlı olarak fal.ai, işi şu anda OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz ve OmniHuman gibi model sağlayıcılarına yönlendirir. Bu sağlayıcılarla ayrı, doğrudan hesaplarımız yoktur — sözleşme yaptığımız veri işleyen fal.ai’dir. İçeriğini kendi modellerimizi eğitmek için kullanmayız. Yapay zeka altyapı sağlayıcımız fal.ai, içeriğini yalnızca talep ettiğin çıktıyı üretmek amacıyla, kendi şartları ve gizlilik politikası kapsamında işler (fal.ai/privacy).',
+          'Gönderdiğin içerik ve referans materyaller, yalnızca talep ettiğin çıktıyı üretmek amacıyla yapay zeka altyapı sağlayıcımız fal.ai’ye gönderilir. Talebe bağlı olarak fal.ai, işi şu anda OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz ve OmniHuman gibi model sağlayıcılarına yönlendirir ve bunlar için sözleşme yaptığımız veri işleyen fal.ai’dir. Anthropic ise metin ve AI Edit planlaması için doğrudan çağırdığımız bir veri işleyendir; aşağıda açıklanmıştır. İçeriğini kendi modellerimizi eğitmek için kullanmayız. Yapay zeka altyapı sağlayıcımız fal.ai, içeriğini yalnızca talep ettiğin çıktıyı üretmek amacıyla, kendi şartları ve gizlilik politikası kapsamında işler (fal.ai/privacy).',
           'Yüklediğin fotoğraf ve videolar ile ürettiğimiz medya, sen silene veya hesabını silene kadar projelerinle birlikte saklanır. Yapıştırdığın referans linkler — örneğin yeniden oluşturulacak bir reel — yalnızca senaryonu (storyboard) yazmak için analiz edilir; referans videonun kendisi kütüphanende saklanmaz.',
           'Üretilen medya, Amazon Web Services (S3) üzerinde ve bazı dosyalar için Supabase Storage üzerinde saklanır ve bir içerik dağıtım ağı (CDN) üzerinden iletilir. Uygulama verileri (hesaplar, projeler, kredi kayıtları) MongoDB’de saklanır. Backend’imiz DigitalOcean üzerinde barındırılır.',
+        ],
+      },
+      {
+        h: 'AI Edit: ham videoların',
+        p: [
+          'AI Edit, yüklediğin ham görüntüleri bitmiş kısa videolara dönüştürür. Bunun için yüklemen şu şekilde işlenir:',
+        ],
+        ul: [
+          'Depolama — yüklediğin video dosyaları (2 GB’a kadar) ile bunlardan oluşturduğumuz kurgulanmış videolar, küçük resimler ve altyazı dosyaları, hesabına ayrılmış klasörlerde depolama alanlarımızda (Supabase Storage, yedek olarak Amazon S3) saklanır.',
+          'Transkripsiyon — ses kanalı, kelime zaman damgalı bir konuşma metni üretmek için ElevenLabs Scribe’ı çalıştıran fal.ai’ye gönderilir. Konuşma metni, algılanan dil ve kurgu planı, AI Edit işiyle birlikte veritabanımızda saklanır.',
+          'Veri işleyen olarak Anthropic — konuşma metni ve videondan örneklenen az sayıda sabit kare, kesimleri, hook metnini ve altyazıları belirleyebilmesi ve bitmiş sonucu kontrol edebilmesi için ticari API’si üzerinden Anthropic’e (Claude) gönderilir. Anthropic bunu yalnızca bu çıktıyı döndürmek için işler; ticari şartları kapsamında API girdileri ve çıktıları modellerini eğitmek için kullanılmaz.',
+          'Render — kesme, altyazı ve yeniden kadrajlama FFmpeg ile kendi sunucularımızda yapılır; dosyalar render için başka hiçbir sağlayıcıya gönderilmez.',
+          'Ne kadar süre — yüklemeleri, kurgu planlarını, konuşma metinlerini ve render edilmiş videoları sen silene veya hesabını silene kadar saklarız. Bunları reklam için kullanmayız ve diğer kullanıcılarla paylaşmayız.',
+          'Silme — hesabını silmek (Profil → Ayarlar → Hesabı Sil) AI Edit işlerini, konuşma metinlerini ve kurgu planlarını kalıcı olarak siler; yüklediğin kaynak videoları ile render edilmiş videoları, küçük resimleri ve altyazı dosyalarını depolama alanımızdan kaldırır. fal.ai, ElevenLabs ve Anthropic’in veri işleyen olarak elinde hâlihazırda bulunan kopyalar uygulama içi silme ile kaldırılmaz; silinmesini istemek için bize yaz.',
         ],
       },
       {
@@ -1237,8 +1363,8 @@ const tr: LegalPack = {
         ],
       },
       { h: 'Yapmadıklarımız', p: ['Kişisel verileri satmayız ve açıkça bir şeyi herkese açık yapmayı seçmediğin sürece prompt’larını, yüklemelerini ya da ürettiğin içeriği asla başka kullanıcılarla paylaşmayız.'] },
-      { h: 'Veri saklama', p: ['Hesabın ve ürettiğin içerik, hesabın aktif olduğu sürece saklanır. Yüklediğin fotoğraf ve videolar ile üretilen medya, sen silene veya hesabını silene kadar projelerinle birlikte saklanır. Hesabını silmen (Profil → Ayarlar → Hesabı Sil) hesap verilerini ve saklanan medyayı kaldırır. Uygulamada istediğin zaman tekil üretimleri silebilirsin.'] },
-      { h: 'Hesabını silme', p: ['Hesabını istediğin zaman uygulamada kalıcı olarak silebilirsin: Profil → Ayarlar → Hesabı Sil. Bu, hesabını, kredi geçmişini, videolarını, karakterlerini, prompt’larını ve bağlı sosyal medya hesaplarını hemen ve kalıcı olarak siler, kullanıldıysa Sign in with Apple iznini iptal eder. Bu, aktif bir App Store aboneliğini iptal etmez — bunu Apple Kimliği ayarlarından ayrıca iptal etmen gerekir. Uygulamaya artık erişimin yoksa e-posta yoluyla silme talep etme dahil, tam adım adım talimatlar için «Hesabı Sil» sayfamıza bakabilirsin. Analitik, çökme raporlama, satın alma ve yapay zekâ sağlayıcılarımızın (Mixpanel, PostHog, Sentry, RevenueCat ve fal.ai) elinde hâlihazırda bulunan kopyalar uygulama içi silme ile kaldırılmaz; silinmesini istemek için bize yaz.'] },
+      { h: 'Veri saklama', p: ['Hesabın ve ürettiğin içerik, hesabın aktif olduğu sürece saklanır. Yüklediğin fotoğraf ve videolar ile üretilen medya, sen silene veya hesabını silene kadar projelerinle birlikte saklanır. AI Edit yüklemeleri, konuşma metinleri, kurgu planları ve render edilmiş videolar aynı esasla saklanır. Hesabını silmen (Profil → Ayarlar → Hesabı Sil) hesap verilerini, AI Edit verilerini ve saklanan medyayı kaldırır. Uygulamada istediğin zaman tekil üretimleri silebilirsin.'] },
+      { h: 'Hesabını silme', p: ['Hesabını istediğin zaman uygulamada kalıcı olarak silebilirsin: Profil → Ayarlar → Hesabı Sil. Bu, hesabını, kredi geçmişini, videolarını, AI Edit işlerini ve AI Edit’e yüklediğin ya da AI Edit ile render ettiğin videoları, karakterlerini, prompt’larını ve bağlı sosyal medya hesaplarını hemen ve kalıcı olarak siler, kullanıldıysa Sign in with Apple iznini iptal eder. Bu, aktif bir aboneliği iptal etmez: App Store aboneliğini Apple Kimliği ayarlarından, Google Play aboneliğini Google Play → Ödemeler ve abonelikler bölümünden ayrıca iptal etmen gerekir. Uygulamaya artık erişimin yoksa e-posta yoluyla silme talep etme dahil, tam adım adım talimatlar için «Hesabı Sil» sayfamıza bakabilirsin. Analitik, çökme raporlama, satın alma ve yapay zekâ sağlayıcılarımızın (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai ve Anthropic) elinde hâlihazırda bulunan kopyalar uygulama içi silme ile kaldırılmaz; silinmesini istemek için bize yaz.'] },
       { h: 'GDPR kapsamındaki hakların (AEA, Birleşik Krallık, İsviçre)', p: ['AEA, Birleşik Krallık ya da İsviçre’de bulunuyorsan, kişisel verilerine erişme, düzeltme, silme ve bir kopyasını alma (taşınabilirlik) ile belirli işlemlere itiraz etme ya da bunları kısıtlama hakkına sahipsin. Verilerini şu temellerle işleriz: bir sözleşmenin ifası (uygulamayı sağlamak), rızan (örneğin, oturum tekrarı analitiği) ve meşru menfaatlerimiz (güvenlik, kötüye kullanımın önlenmesi, hizmetin geliştirilmesi). Bu hakları kullanmak için ridvan.uyn@gmail.com adresine yaz; bir ay içinde yanıt veririz.'] },
       { h: 'Kaliforniya sakinleri (CCPA/CPRA)', p: ['Kaliforniya sakinleri, haklarında sakladığımız kişisel bilgileri öğrenme, silme ya da düzeltme talep edebilir ve bunların “satışından” ya da “paylaşımından” vazgeçebilir — kişisel bilgi satmayız ve bağlamlar arası davranışsal reklam takibi kullanmayız. Taleplerini ridvan.uyn@gmail.com adresine gönder.'] },
       { h: 'Çocuklar', p: ['Viral Factory, 13 yaşın altındaki çocuklara (ya da ülkende gereken asgari yaşın altındakilere) yönelik değildir ve bilerek bilgilerini toplamayız. Bir çocuğun bize kişisel bilgi sağladığını düşünüyorsan bizimle iletişime geç, bu bilgileri sileriz.'] },
@@ -1250,12 +1376,17 @@ const tr: LegalPack = {
   },
   terms: {
     title: 'Kullanım Koşulları',
+    effective: '26 Ekim 2026',
     lead: 'Viral Factory’yi kullanımını düzenleyen koşullar.',
     intro:
-      'Bu Kullanım Koşulları («Koşullar»), Rıdvan Uyan («biz») tarafından sağlanan Viral Factory iOS uygulamasının ve bu web sitesinin (birlikte, «Hizmet») kullanımını düzenler. Hizmeti indirerek, erişerek ya da kullanarak bu Koşulları kabul etmiş olursun.',
+      'Bu Kullanım Koşulları («Koşullar»), Rıdvan Uyan («biz») tarafından sağlanan Viral Factory iOS ve Android uygulamalarının ve bu web sitesinin (birlikte, «Hizmet») kullanımını düzenler. Hizmeti indirerek, erişerek ya da kullanarak bu Koşulları kabul etmiş olursun.',
     sections: [
       { h: 'Hizmet', p: ['Viral Factory, sağladığın prompt’lar ve referans materyallerden, üçüncü taraf yapay zeka modelleri kullanarak kısa video, görsel ve açıklamalardan oluşan kısa içerikler üretir. Üretilen çıktı yanlış, beklenmedik ya da amacına uygun olmayabilir; yayınlamadan ya da güvenmeden önce onu incelemekten sen sorumlusun.'] },
       { h: 'Apple’ın lisans koşulları', p: ['App Store üzerinden satın alınan otomatik yenilenen abonelikler, apple.com/legal/internet-services/itunes/dev/stdeula adresinde bulunan Apple’ın Lisanslı Uygulama Son Kullanıcı Lisans Sözleşmesi’ne de tabidir. Bu Koşullar, bir abonelik ya da satın alma konusunda bu sözleşmeyle çelişirse, Apple’ın sözleşmesi geçerli olur.'] },
+      {
+        h: 'Google Play',
+        p: ['Google Play üzerinden satın alınan abonelikler ve kredi paketleri Google Play tarafından faturalandırılır ve yönetilir; Google Play satın alımları için iade talepleri Google tarafından ele alınır (support.google.com/googleplay).'],
+      },
       {
         h: 'Kabul edilebilir kullanım',
         p: ['Hizmeti şu amaçlarla kullanmamayı kabul edersin:'],
@@ -1276,8 +1407,8 @@ const tr: LegalPack = {
           'İçerik üretmek kredi harcar; maliyet üretmeden önce uygulamada gösterilir.',
           'Tek seferlik kredi paketleri, satın alma sırasında aksi belirtilmedikçe süresi dolmaz.',
           'Abonelik planları, her fatura döneminde yenilenen bir kredi kontenjanı içerir; kullanılmayan abonelik kredileri bir sonraki döneme devretmez.',
-          'Abonelikler, mevcut dönemin bitiminden en az 24 saat önce iptal edilmedikçe, o sıradaki geçerli fiyattan aynı süre için otomatik olarak yenilenir. Cihazında Ayarlar → [adın] → Abonelikler üzerinden istediğin zaman yönet ya da iptal et — Destek sayfamıza bak.',
-          'Yasaların gerektirdiği durumlar dışında, tüm satın alımlar iade edilemez; App Store satın alımları için iade talepleri Apple tarafından ele alınır.',
+          'Abonelikler, mevcut dönemin bitiminden en az 24 saat önce iptal edilmedikçe, o sıradaki geçerli fiyattan aynı süre için otomatik olarak yenilenir. iOS’ta Ayarlar → [adın] → Abonelikler üzerinden ya da Android’de Google Play → Ödemeler ve abonelikler üzerinden istediğin zaman yönet ya da iptal et — Destek sayfamıza bak.',
+          'Yasaların gerektirdiği durumlar dışında, tüm satın alımlar iade edilemez; App Store satın alımları için iade talepleri Apple tarafından, Google Play satın alımları için iade talepleri Google tarafından ele alınır.',
         ],
       },
       { h: 'Fesih', p: ['Hizmeti kullanmayı istediğin zaman durdurabilir ve hesabını silebilirsin — «Hesabı Sil» sayfamıza bak. Bu Koşulları ihlal etmen, kredileri kötüye kullanman, dolandırıcılık ya da Hizmetin kötüye kullanılması durumunda erişimini bildirimli ya da bildirimsiz olarak askıya alabilir ya da sonlandırabiliriz.'] },
@@ -1294,12 +1425,12 @@ const tr: LegalPack = {
     intro: 'Bir sorun mu var? ridvan.uyn@gmail.com adresine yaz — genellikle 2 iş günü içinde yanıt veriyoruz.',
     faqs: [
       { q: 'Krediler nasıl çalışır?', a: 'Her üretim (bir video, bir görsel seti, bir karusel), onaylamadan önce gösterilen belirli bir miktarda kredi harcar — tam maliyet, seçtiğin stüdyoya ve kalite kademesine bağlıdır. Bir abonelik, her dönemde yenilenen ve devretmeyen aylık bir kredi kontenjanı içerir; ayrıca süresi dolmayan tek seferlik bir kredi paketi de satın alabilirsin.' },
-      { q: 'Satın alımlarımı nasıl geri yüklerim?', a: 'Viral Factory → Profil → Ayarlar → Satın Alımları Geri Yükle yolunu izle. Satın aldığın Apple Kimliğiyle giriş yaptığından emin ol.' },
-      { q: 'Aboneliğimi nasıl iptal ederim?', a: 'Abonelikler bizim tarafımızdan değil, Apple tarafından faturalandırılır ve yönetilir. iPhone’unda: Ayarlar uygulaması → [adın] → Abonelikler → Viral Factory → Aboneliği İptal Et. İptal, gelecekteki yenilemeleri durdurur; zaten ödediğin dönemin sonuna kadar erişimin devam eder.' },
-      { q: 'Hesabımı nasıl silerim?', a: 'Uygulamada: Profil → Ayarlar → Hesabı Sil. Tam olarak neyin silindiğini ve uygulaman artık yoksa e-posta yoluyla nasıl silme talep edeceğini «Hesabı Sil» sayfamızda bulabilirsin.' },
+      { q: 'Satın alımlarımı nasıl geri yüklerim?', a: 'Viral Factory → Profil → Ayarlar → Satın Alımları Geri Yükle yolunu izle. Satın aldığın Apple Kimliği (iOS) ya da Google hesabıyla (Android) giriş yaptığından emin ol.' },
+      { q: 'Aboneliğimi nasıl iptal ederim?', a: 'Abonelikler bizim tarafımızdan değil, Apple ya da Google tarafından faturalandırılır ve yönetilir. iPhone’da: Ayarlar uygulaması → [adın] → Abonelikler → Viral Factory → Aboneliği İptal Et. Android’de: Google Play → Profil simgesi → Ödemeler ve abonelikler → Abonelikler → Viral Factory → Aboneliği iptal et. İptal, gelecekteki yenilemeleri durdurur; zaten ödediğin dönemin sonuna kadar erişimin devam eder.' },
+      { q: 'Hesabımı nasıl silerim?', a: 'Uygulamada (iOS ya da Android): Profil → Ayarlar → Hesabı Sil. Bu, AI Edit videolarını ve verilerini de siler. Tam olarak neyin silindiğini ve uygulaman artık yoksa e-posta yoluyla nasıl silme talep edeceğini «Hesabı Sil» sayfamızda bulabilirsin.' },
       { q: 'Uygulama hangi dilleri destekliyor?', a: 'İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Türkçe, Japonca, Korece, Arapça ve Hintçe.' },
       { q: 'Stüdyolar ne işe yarar?', a: '“Beğendiğini yeniden yap”, yapıştırdığın bir reel’i kendi ürününle yeniden kurar. “Kısa video reklam” ve “Sinematik kısa film”, bir açıklamadan senaryolu video üretir. “İçerik üretici tanıtımı”, kameraya bakan bir UGC tarzı reklam oluşturur. “Kaydırmalı gönderi”, bir görsel karusel kurar. “Yapay zeka karakteri”, videolar arasında tutarlı bir kimlik korur. “Cameo” ve “Videona yerleştir”, gerçek bir fotoğrafı üretilen ya da mevcut bir sahneye yerleştirir. Günlük hook’lar her sabah on taze fikir sunar, bitmiş gönderiler doğrudan TikTok, Instagram ve YouTube için planlanabilir.' },
-      { q: 'Uygulama neden kamera, fotoğraf kitaplığı ya da mikrofon erişimi istiyor?', a: 'Yalnızca üretim için girdi olarak kullanılacak fotoğraf ve videoları çekebilmen ya da seçebilmen, ve uygulamanın bitmiş videolarını fotoğraf kitaplığına kaydedebilmesi için. Ayrıntılar için Gizlilik Politikamıza bak.' },
+      { q: 'Uygulama neden kamera, fotoğraf kitaplığı ya da mikrofon erişimi istiyor?', a: 'Yalnızca üretim için girdi olarak kullanılacak fotoğraf ve videoları çekebilmen ya da seçebilmen, ve uygulamanın bitmiş videolarını fotoğraf kitaplığına kaydedebilmesi için. Android’de uygulama sistemin fotoğraf ve dosya seçicilerini kullanır ve bu izinlerden hiçbirini istemez. Ayrıntılar için Gizlilik Politikamıza bak.' },
       { q: 'Bir üretim başarısız oldu ama kredilerimi kullandı — ne yapmalıyım?', a: 'Bize yaklaşık tarih ve saati, mümkünse bir ekran görüntüsünü e-posta ile gönder; doğrulanmış bir sistem hatası durumunda inceleyip kredilerini iade ederiz.' },
     ],
   },
@@ -1310,12 +1441,12 @@ const tr: LegalPack = {
     sections: [
       {
         h: 'Uygulamada sil (önerilen)',
-        p: ['Cihazında Viral Factory’yi aç ve şu adımları izle:'],
+        p: ['iPhone’unda ya da Android cihazında Viral Factory’yi aç ve şu adımları izle (menü yolu ikisinde de aynıdır):'],
         ul: [
           'Profil’e git (alt sekme).',
           'Ayarlar’a dokun.',
           'Ekranın alt kısmına yakın, Hesabı Sil’e dokun.',
-          'Apple ile giriş yaptıysan, sen olduğunu doğrulamak için Sign in with Apple ile yeniden kimlik doğrulaman istenebilir.',
+          'Apple ya da Google ile giriş yaptıysan, sen olduğunu doğrulamak için yeniden kimlik doğrulaman istenebilir.',
           'Silmeyi onayla. Bu hemen geçerli olur ve geri alınamaz.',
         ],
       },
@@ -1325,17 +1456,18 @@ const tr: LegalPack = {
           'hesabın ve profil bilgilerin',
           'kredi bakiyen ve işlem geçmişin',
           'ürettiğin her video, görsel seti, karusel ve karakter, ve bunların kaynak medyaları',
+          'AI Edit işlerin, konuşma metinlerin ve kurgu planların ile AI Edit’e yüklediğin ya da AI Edit ile render ettiğin videolar (yüklenen kaynak videolar, kurgulanmış videolar, küçük resimler ve altyazı dosyaları)',
           'bağlı sosyal medya hesapları (TikTok, Instagram, YouTube) ve saklanan erişim anahtarları',
           'kayıtlı prompt’lar ve bildirimler',
-          'Sign in with Apple / Google bağlantın (Apple izni iptal edilir)',
+          'Sign in with Apple / Google bağlantın (Apple izni iptal edilir; Android’de Google hesabınla bağlantı sistemlerimizden kaldırılır, ayrıca uygulamayı Google hesabının güvenlik ayarları → Üçüncü taraf uygulamalar ve hizmetler bölümünden de kaldırabilirsin)',
         ],
       },
       {
         h: 'Otomatik olarak etkilenmeyenler',
         p: [
-          'Hesabını silmek, aktif bir App Store aboneliğini İPTAL ETMEZ — cihazında Ayarlar → [adın] → Abonelikler üzerinden ayrıca iptal etmezsen yenilenmeye devam eder.',
+          'Hesabını silmek, aktif bir aboneliği İPTAL ETMEZ — ayrıca iptal etmezsen yenilenmeye devam eder: iOS’ta Ayarlar → [adın] → Abonelikler; Android’de Google Play → Ödemeler ve abonelikler → Abonelikler üzerinden.',
           'TikTok, Instagram ya da YouTube’da zaten yayınladığın içerikler o platformlarda kalır; kaldırmak istersen doğrudan orada silmen gerekir.',
-          "Analitik, çökme raporlama ve satın alma sağlayıcılarımızın (Mixpanel, PostHog, Sentry, RevenueCat) ve yapay zekâ altyapı sağlayıcımızın (fal.ai) elinde hâlihazırda bulunan kopyalar uygulama içi silme ile kaldırılmaz. Silinmesini istemek için ridvan.uyn@gmail.com adresine yaz.",
+          "Analitik, çökme raporlama ve satın alma sağlayıcılarımızın (Mixpanel, PostHog, Sentry, RevenueCat) ve yapay zekâ sağlayıcılarımızın (fal.ai ve Anthropic, AI Edit için işlenen kopyalar dahil) elinde hâlihazırda bulunan kopyalar uygulama içi silme ile kaldırılmaz. Silinmesini istemek için ridvan.uyn@gmail.com adresine yaz.",
         ],
       },
       {
@@ -1351,25 +1483,29 @@ const ja: LegalPack = {
   effectiveDateLabel: '2026年9月26日',
   privacy: {
     title: 'プライバシーポリシー',
-    effective: "2026年10月15日",
+    effective: "2026年10月26日",
     lead: 'Viral Factoryが情報をどのように収集、利用、保護するか。',
     intro:
-      '本プライバシーポリシーは、Viral FactoryのiOSアプリおよび本ウェブサイトが収集する情報の内容、理由、そしてお客様が持つ選択肢について説明します。Viral Factoryは個人開発者であるRıdvan Uyanが開発しており、ここで説明する目的においてお客様の情報の管理者となります。',
+      '本プライバシーポリシーは、Viral FactoryのiOSおよびAndroidアプリならびに本ウェブサイトが収集する情報の内容、理由、そしてお客様が持つ選択肢について説明します。Viral Factoryは個人開発者であるRıdvan Uyanが開発しており、ここで説明する目的においてお客様の情報の管理者となります。',
     sections: [
       {
         h: '収集する情報',
         ul: [
-          'アカウント識別子 — アプリを初めて開いたときに作成され、その端末のゲストアカウントに使用されるランダムな端末識別子。AppleまたはGoogleでサインインした場合は、氏名、メールアドレス（またはプライベートリレーメール）、プロバイダーのアカウントIDを受け取ります。',
+          'アカウント識別子 — アプリを初めて開いたときに作成され、その端末のゲストアカウントに使用されるランダムな端末識別子。Apple（iOS）またはGoogle（iOSおよびAndroid）でサインインした場合は、氏名、メールアドレス（またはプライベートリレーメール）、プロバイダーのアカウントIDを受け取ります。',
           'お客様が提供するコンテンツ — 入力したプロンプトやテキスト、アップロードまたは貼り付けた写真・動画・リンク（作り直したいリールのリンク、キャラクターやカメオ用の参照写真、分析用の画面録画など）。',
           '生成されたコンテンツ — アプリがお客様のために作成したメディア、台本、キャプション、および生成履歴とクレジット取引履歴。',
-          '購入情報 — サブスクリプションとクレジットパックの購入はApp Storeが処理します。RevenueCatが購入・権利イベントを当社に代わって処理します。カード番号を受け取ることは一切ありません。',
+          '購入情報 — サブスクリプションとクレジットパックの購入は、iOSではApp Store、AndroidではGoogle Playが処理します。RevenueCatが購入・権利イベントを当社に代わって処理します。カード番号を受け取ることは一切ありません。',
+          'AI編集の動画 — AI編集を使用した場合、アップロードされた未編集の動画ファイル（最大2GB）、単語ごとのタイムスタンプ付きの音声文字起こし、編集プラン、および当社がお客様のためにレンダリングした完成動画、サムネイル、キャプションファイル。詳細は下記のAI編集のセクションをご覧ください。',
           'ソーシャルアカウント連携 — コンテンツ投稿のためにTikTok、Instagram、YouTubeを連携した場合、そのアカウントの基本プロフィール情報（ハンドル名、表示名、アバター）を受け取り、アプリがお客様に代わって投稿できるよう暗号化されたアクセストークンを保存します。',
           '分析 — アプリの利用状況を把握するためMixpanelとPostHogを使用しています。PostHogのセッションリプレイは操作分析のために有効ですが、記録前に画面上のすべてのテキストと画像がマスクされるため、リプレイでプロンプト・写真・生成コンテンツが表示されることはありません。分析には別途生成されるランダムなインストールIDを使用し、ゲストアカウント識別子は決して使用しません。',
           '端末・診断データ — アプリのバージョン、一般的な端末モデルとOS、言語設定。また、分析および購入処理の提供事業者は、IPアドレスからおおよその位置（国や地域など）を推定する場合があります。アプリが端末の位置情報を要求することはありません。さらに、セキュリティのため、ログインセッションのIPアドレスとユーザーエージェントを保持します。',
           "クラッシュとパフォーマンスの診断 — クラッシュやエラーを検出して修正するために、Sentry（EUリージョン）を使用します。レポートには、スタックトレース、端末モデルとOS、アプリのバージョン、画面遷移などの直近のアプリ内イベントの履歴、一部のセッションのパフォーマンス計測値が含まれます。これらはViral FactoryのアカウントIDに紐づけられ、メールアドレスや氏名には紐づけられません。",
           '通知設定 — 毎日のアイデアリマインダーを有効にしているかどうか。端末内にローカルに保存されます。',
         ],
-        p: ['広告トラッカーは使用しておらず、本アプリはAppleのApp Tracking Transparencyの許可を求めません。'],
+        p: [
+          '広告トラッカーは使用しておらず、本アプリはAppleのApp Tracking Transparencyの許可を求めません。',
+          'Android：購入はGoogle Play（課金）とRevenueCatが処理します。Googleでサインインした場合、氏名、メールアドレス、GoogleアカウントIDを受け取ります。Androidアプリは広告IDを使用せず、位置情報、カメラ、マイク、連絡先の権限も要求しません。通知は任意です。',
+        ],
       },
       {
         h: '情報の利用目的',
@@ -1387,9 +1523,23 @@ const ja: LegalPack = {
       {
         h: 'AI生成と第三者の処理者',
         p: [
-          'お客様が送信したコンテンツや参照素材は、リクエストされた出力を生成する目的のみでAIインフラプロバイダーであるfal.aiに送信されます。リクエスト内容に応じて、fal.aiは現在OpenAI、Google（Gemini）、Anthropic（Claude）、Kling、ElevenLabs、Topaz、OmniHumanなどのモデルプロバイダーに処理を振り分けます。当社はこれらのプロバイダーと直接の別契約を結んでおらず、契約している処理者はfal.aiのみです。当社はお客様のコンテンツを当社独自のモデルの学習には使用しません。当社のAIインフラプロバイダーであるfal.aiは、お客様のコンテンツを、リクエストされた出力を生成する目的のみで、同社独自の規約およびプライバシーポリシー（fal.ai/privacy）に基づいて処理します。',
+          'お客様が送信したコンテンツや参照素材は、リクエストされた出力を生成する目的のみでAIインフラプロバイダーであるfal.aiに送信されます。リクエスト内容に応じて、fal.aiは現在OpenAI、Google（Gemini）、Anthropic（Claude）、Kling、ElevenLabs、Topaz、OmniHumanなどのモデルプロバイダーに処理を振り分けます。これらについて当社が契約している処理者はfal.aiです。Anthropicは、後述のとおり、テキストおよびAI編集の計画のために当社が直接呼び出す処理者でもあります。当社はお客様のコンテンツを当社独自のモデルの学習には使用しません。当社のAIインフラプロバイダーであるfal.aiは、お客様のコンテンツを、リクエストされた出力を生成する目的のみで、同社独自の規約およびプライバシーポリシー（fal.ai/privacy）に基づいて処理します。',
           'アップロードされた写真・動画や当社が生成したメディアは、お客様が削除するかアカウントを削除するまで、プロジェクトとともに保存されます。貼り付けられた参照リンク（例：再現したいリール）は、ストーリーボードを作成する目的のみで解析され、参照動画自体はライブラリに保存されません。',
           '生成されたメディアはAmazon Web Services（S3）、一部のファイルについてはSupabase Storageに保存され、コンテンツデリバリーネットワーク（CDN）経由で配信されます。アプリケーションデータ（アカウント、プロジェクト、クレジット履歴）はMongoDBに保存されます。当社のバックエンドはDigitalOceanでホスティングされています。',
+        ],
+      },
+      {
+        h: 'AI編集：アップロードされた未編集動画',
+        p: [
+          'AI編集は、お客様がアップロードした未編集の映像を完成した短尺動画に仕上げます。そのため、アップロードされたデータは次のように処理されます。',
+        ],
+        ul: [
+          '保存 — アップロードされた動画ファイル（最大2GB）と、それをもとに当社がレンダリングした編集済み動画、サムネイル、キャプションファイルは、お客様のアカウント専用のフォルダ内で、当社のストレージバケット（Supabase Storage、またはフォールバックとしてAmazon S3）に保存されます。',
+          '文字起こし — 音声トラックはfal.aiに送信され、fal.aiがElevenLabs Scribeを実行して単語ごとのタイムスタンプ付きの文字起こしを生成します。文字起こし、検出された言語、編集プランは、AI編集ジョブとともに当社のデータベースに保存されます。',
+          '処理者としてのAnthropic — 文字起こしと、お客様の動画からサンプリングした少数の静止フレームは、カット、フック文、キャプションの決定および完成した結果の確認のために、商用APIを通じてAnthropic（Claude）に送信されます。Anthropicはその出力を返す目的のみでこれを処理し、同社の商用規約に基づき、APIの入力と出力が同社のモデルの学習に使用されることはありません。',
+          'レンダリング — カット、キャプション、リフレームは当社自身のサーバー上でFFmpegにより行われ、レンダリングのためにファイルが他の事業者に送信されることはありません。',
+          '保持期間 — アップロード、編集プラン、文字起こし、レンダリング済み動画は、お客様が削除するかアカウントを削除するまで保持します。広告には使用せず、他の利用者と共有することもありません。',
+          '削除 — アカウントを削除する（プロフィール→設定→アカウントを削除）と、AI編集ジョブ、文字起こし、編集プランが完全に削除され、アップロードされた元動画とレンダリング済み動画、サムネイル、キャプションファイルが当社のストレージから削除されます。fal.ai、ElevenLabs、Anthropicが処理者としてすでに保有しているコピーは、アプリ内での削除では削除されません。削除をご希望の場合はメールでご連絡ください。',
         ],
       },
       {
@@ -1403,8 +1553,8 @@ const ja: LegalPack = {
         ],
       },
       { h: '当社が行わないこと', p: ['当社は個人データを販売することはなく、お客様が明示的に公開を選択しない限り、プロンプト、アップロードした素材、生成コンテンツを他の利用者と共有することもありません。'] },
-      { h: 'データの保持', p: ['アカウントおよび生成コンテンツは、アカウントが有効である間保持されます。アップロードされた写真・動画や生成されたメディアは、お客様が削除するかアカウントを削除するまでプロジェクトとともに保存されます。アカウントを削除する（プロフィール→設定→アカウントを削除）と、アカウントデータと保存されたメディアが削除されます。個々の生成物はアプリ内でいつでも削除できます。'] },
-      { h: 'アカウントの削除', p: ['アプリ内でいつでもアカウントを完全に削除できます：プロフィール→設定→アカウントを削除。これにより、アカウント、クレジット履歴、動画、キャラクター、プロンプト、連携済みソーシャルアカウントが即座かつ完全に削除され、Sign in with Appleを使用している場合はその認可も取り消されます。有効なApp Storeサブスクリプションは自動解約されません。Apple IDの設定から別途解約してください。アプリにアクセスできない場合のメールでの削除依頼方法を含む詳しい手順は「アカウントを削除」ページをご覧ください。分析、クラッシュレポート、購入処理、AIの各提供事業者（Mixpanel、PostHog、Sentry、RevenueCat、fal.ai）がすでに保有しているコピーは、アプリ内での削除では削除されません。削除をご希望の場合はメールでご連絡ください。'] },
+      { h: 'データの保持', p: ['アカウントおよび生成コンテンツは、アカウントが有効である間保持されます。アップロードされた写真・動画や生成されたメディアは、お客様が削除するかアカウントを削除するまでプロジェクトとともに保存されます。AI編集のアップロード、文字起こし、編集プラン、レンダリング済み動画も同じ基準で保持されます。アカウントを削除する（プロフィール→設定→アカウントを削除）と、アカウントデータ、AI編集のデータ、保存されたメディアが削除されます。個々の生成物はアプリ内でいつでも削除できます。'] },
+      { h: 'アカウントの削除', p: ['アプリ内でいつでもアカウントを完全に削除できます：プロフィール→設定→アカウントを削除。これにより、アカウント、クレジット履歴、動画、AI編集ジョブとAI編集でアップロードまたはレンダリングした動画、キャラクター、プロンプト、連携済みソーシャルアカウントが即座かつ完全に削除され、Sign in with Appleを使用している場合はその認可も取り消されます。有効なサブスクリプションは自動解約されません。App StoreのサブスクリプションはApple IDの設定から、Google PlayのサブスクリプションはGoogle Play→お支払いと定期購入から、別途解約してください。アプリにアクセスできない場合のメールでの削除依頼方法を含む詳しい手順は「アカウントを削除」ページをご覧ください。分析、クラッシュレポート、購入処理、AIの各提供事業者（Mixpanel、PostHog、Sentry、RevenueCat、fal.ai、Anthropic）がすでに保有しているコピーは、アプリ内での削除では削除されません。削除をご希望の場合はメールでご連絡ください。'] },
       { h: 'GDPRに基づく権利（EEA、英国、スイス）', p: ['EEA、英国、スイスにお住まいの場合、個人データへのアクセス、訂正、削除、コピーの受領（データポータビリティ）、および一部の処理への異議申し立てや制限を求める権利があります。当社は、契約の履行（アプリの提供）、お客様の同意（セッションリプレイ分析など）、当社の正当な利益（セキュリティ、不正防止、サービス改善）を根拠にデータを処理します。これらの権利を行使するには ridvan.uyn@gmail.com までご連絡ください。1か月以内に対応します。'] },
       { h: 'カリフォルニア州居住者（CCPA/CPRA）', p: ['カリフォルニア州の居住者は、当社が保有する個人情報の開示、削除、訂正を請求し、その「販売」や「共有」をオプトアウトする権利があります。当社は個人情報を販売せず、コンテキストをまたぐ行動ターゲティング広告トラッカーも使用していません。請求は ridvan.uyn@gmail.com までお送りください。'] },
       { h: 'お子様について', p: ['Viral Factoryは13歳未満（またはお住まいの国で定められた最低年齢未満）のお子様を対象としておらず、意図的にその情報を収集することはありません。お子様が当社に個人情報を提供したと思われる場合はご連絡ください。速やかに削除します。'] },
@@ -1416,12 +1566,14 @@ const ja: LegalPack = {
   },
   terms: {
     title: '利用規約',
+    effective: '2026年10月26日',
     lead: 'Viral Factoryのご利用に関する規約です。',
     intro:
-      '本利用規約（「本規約」）は、Rıdvan Uyan（「当社」）が提供するViral Factory iOSアプリおよび本ウェブサイト（総称して「本サービス」）のご利用について定めるものです。本サービスをダウンロード、アクセス、または利用することにより、本規約に同意したものとみなされます。',
+      '本利用規約（「本規約」）は、Rıdvan Uyan（「当社」）が提供するViral Factory iOSおよびAndroidアプリならびに本ウェブサイト（総称して「本サービス」）のご利用について定めるものです。本サービスをダウンロード、アクセス、または利用することにより、本規約に同意したものとみなされます。',
     sections: [
       { h: '本サービスについて', p: ['Viral Factoryは、お客様が提供するプロンプトおよび参照素材から、第三者のAIモデルを使用して動画、画像、キャプションなどの短尺コンテンツを生成します。生成された出力は不正確、予期しないもの、または目的に適さない場合があります。公開または利用する前に内容を確認する責任はお客様にあります。'] },
       { h: 'Appleのライセンス条項', p: ['App Store経由で購入した自動更新サブスクリプションには、apple.com/legal/internet-services/itunes/dev/stdeula に掲載されているAppleのライセンス契約（使用許諾契約）も適用されます。本規約とAppleの契約がサブスクリプションまたは購入に関して矛盾する場合、Appleの契約が優先します。'] },
+      { h: 'Google Play', p: ['Google Playで購入したサブスクリプションとクレジットパックはGoogle Playが請求・管理します。Google Play購入の返金依頼はGoogleが対応します（support.google.com/googleplay）。'] },
       {
         h: '禁止事項',
         p: ['本サービスを以下の目的で利用しないことに同意していただきます。'],
@@ -1442,8 +1594,8 @@ const ja: LegalPack = {
           'コンテンツの生成にはクレジットを消費し、生成前にアプリ内でコストが表示されます。',
           '購入時に別段の定めがない限り、都度購入型のクレジットパックに有効期限はありません。',
           'サブスクリプションプランには、各請求期間ごとに更新されるクレジット付与が含まれ、未使用のサブスクリプションクレジットは翌期間に繰り越されません。',
-          'サブスクリプションは、現在の期間の終了の少なくとも24時間前に解約されない限り、その時点の価格で同じ期間について自動的に更新されます。端末の設定→［お客様の名前］→サブスクリプションからいつでも管理・解約できます。詳しくはサポートページをご覧ください。',
-          '法律で義務付けられている場合を除き、すべての購入は返金不可です。App Store購入の返金依頼はAppleが対応します。',
+          'サブスクリプションは、現在の期間の終了の少なくとも24時間前に解約されない限り、その時点の価格で同じ期間について自動的に更新されます。iOSでは端末の設定→［お客様の名前］→サブスクリプション、AndroidではGoogle Play→お支払いと定期購入からいつでも管理・解約できます。詳しくはサポートページをご覧ください。',
+          '法律で義務付けられている場合を除き、すべての購入は返金不可です。App Store購入の返金依頼はApple、Google Play購入の返金依頼はGoogleが対応します。',
         ],
       },
       { h: '解約', p: ['お客様はいつでも本サービスの利用を停止し、アカウントを削除できます。詳しくは「アカウントを削除」ページをご覧ください。本規約への違反、クレジットの不正利用、詐欺、本サービスの悪用があった場合、当社は事前通知の有無にかかわらずアクセスを停止または終了することがあります。'] },
@@ -1460,12 +1612,12 @@ const ja: LegalPack = {
     intro: 'ご質問や不具合がございましたら ridvan.uyn@gmail.com までメールをお送りください。通常2営業日以内に返信いたします。',
     faqs: [
       { q: 'クレジットの仕組みは？', a: '動画、画像セット、カルーセルなど各生成には確認前に表示される一定数のクレジットがかかります。正確なコストは選択したスタジオと品質ティアによって異なります。サブスクリプションには期間ごとに更新される（繰り越されない）月間クレジット付与が含まれ、有効期限のない都度購入型のクレジットパックも購入できます。' },
-      { q: '購入を復元するには？', a: 'Viral Factory→プロフィール→設定→購入を復元、と進んでください。購入時と同じApple IDでサインインしていることを確認してください。' },
-      { q: 'サブスクリプションを解約するには？', a: 'サブスクリプションは当社ではなくAppleが請求・管理しています。iPhoneでは：設定アプリ→［お客様の名前］→サブスクリプション→Viral Factory→サブスクリプションをキャンセル。解約すると今後の更新は停止しますが、すでに支払い済みの期間の終了までは利用を継続できます。' },
-      { q: 'アカウントを削除するには？', a: 'アプリ内で：プロフィール→設定→アカウントを削除。具体的に何が削除されるか、アプリにアクセスできない場合のメールでの削除依頼方法は「アカウントを削除」ページをご覧ください。' },
+      { q: '購入を復元するには？', a: 'Viral Factory→プロフィール→設定→購入を復元、と進んでください。購入時と同じApple ID（iOS）またはGoogleアカウント（Android）でサインインしていることを確認してください。' },
+      { q: 'サブスクリプションを解約するには？', a: 'サブスクリプションは当社ではなくAppleまたはGoogleが請求・管理しています。iPhoneでは：設定アプリ→［お客様の名前］→サブスクリプション→Viral Factory→サブスクリプションをキャンセル。Androidでは：Google Play→プロフィールアイコン→お支払いと定期購入→定期購入→Viral Factory→定期購入を解約。解約すると今後の更新は停止しますが、すでに支払い済みの期間の終了までは利用を継続できます。' },
+      { q: 'アカウントを削除するには？', a: 'アプリ内（iOSまたはAndroid）で：プロフィール→設定→アカウントを削除。AI編集の動画とデータも削除されます。具体的に何が削除されるか、アプリにアクセスできない場合のメールでの削除依頼方法は「アカウントを削除」ページをご覧ください。' },
       { q: 'アプリはどの言語に対応していますか？', a: '英語、ドイツ語、フランス語、スペイン語、イタリア語、ポルトガル語、トルコ語、日本語、韓国語、アラビア語、ヒンディー語に対応しています。' },
       { q: '各スタジオは何をしますか？', a: '「ヒットを作り直す」は貼り付けたリールを自分の商品で再構成します。「ショート動画広告」と「シネマティックショート」は説明文から台本付きの動画を生成します。「クリエイター風レビュー」はカメラ目線のUGC風広告を作成します。「スワイプ投稿」は画像カルーセルを構成します。「AIキャラクター」は動画間で一貫した人物像を保ちます。「カメオ出演」と「動画に合成する」は実際の写真を生成済みまたは既存のシーンに配置します。毎日のフックは毎朝10個の新しいアイデアを提供し、完成した投稿はTikTok・Instagram・YouTubeに直接予約投稿できます。' },
-      { q: 'なぜアプリはカメラ、写真ライブラリ、マイクへのアクセスを求めるのですか？', a: '生成の入力として使う写真や動画を撮影・選択できるようにするため、また完成した動画を写真ライブラリに保存できるようにするためだけです。詳細はプライバシーポリシーをご覧ください。' },
+      { q: 'なぜアプリはカメラ、写真ライブラリ、マイクへのアクセスを求めるのですか？', a: '生成の入力として使う写真や動画を撮影・選択できるようにするため、また完成した動画を写真ライブラリに保存できるようにするためだけです。Androidでは、アプリはシステムの写真・ファイルピッカーを使用し、これらの権限は一切要求しません。詳細はプライバシーポリシーをご覧ください。' },
       { q: '生成に失敗したのにクレジットが消費されました。どうすればいいですか？', a: 'おおよその日時と、可能であればスクリーンショットをメールでお送りください。システムエラーが確認された場合はクレジットを調査のうえ復元します。' },
     ],
   },
@@ -1476,12 +1628,12 @@ const ja: LegalPack = {
     sections: [
       {
         h: 'アプリ内で削除する（推奨）',
-        p: ['お使いの端末でViral Factoryを開き、以下の手順に従ってください。'],
+        p: ['iPhoneまたはAndroid端末でViral Factoryを開き、以下の手順に従ってください（メニューの経路はどちらも同じです）。'],
         ul: [
           'プロフィール（下部タブ）に移動します。',
           '設定をタップします。',
           '画面下部付近にあるアカウントを削除をタップします。',
-          'Appleでサインインしている場合、本人確認のためSign in with Appleでの再認証を求められることがあります。',
+          'AppleまたはGoogleでサインインしている場合、本人確認のため再認証を求められることがあります。',
           '削除を確定します。これは即座に反映され、元に戻すことはできません。',
         ],
       },
@@ -1491,17 +1643,18 @@ const ja: LegalPack = {
           'アカウントとプロフィール情報',
           'クレジット残高と取引履歴',
           '生成したすべての動画、画像セット、カルーセル、キャラクター、およびその元となる素材',
+          'AI編集ジョブ、文字起こし、編集プラン、およびAI編集でアップロードまたはレンダリングした動画（アップロードした元動画、編集済み動画、サムネイル、キャプションファイル）',
           '連携済みソーシャルアカウント（TikTok、Instagram、YouTube）とその保存済みアクセストークン',
           '保存したプロンプトと通知',
-          'Sign in with Apple／Googleとの連携（Appleの認可は取り消されます）',
+          'Sign in with Apple／Googleとの連携（Appleの認可は取り消されます。Androidでは、Googleアカウントとの連携が当社のシステムから削除されます。また、Googleアカウントのセキュリティ設定→サードパーティのアプリとサービスからアプリを削除することもできます）',
         ],
       },
       {
         h: '自動的には影響を受けないもの',
         p: [
-          'アカウントを削除しても、有効なApp Storeサブスクリプションは解約されません。端末の設定→［お客様の名前］→サブスクリプションから別途解約しない限り、更新され続けます。',
+          'アカウントを削除しても、有効なサブスクリプションは解約されません。別途解約しない限り更新され続けます。iOSでは設定→［お客様の名前］→サブスクリプション、AndroidではGoogle Play→お支払いと定期購入→定期購入から解約してください。',
           'すでにTikTok、Instagram、YouTubeに公開したコンテンツはそれらのプラットフォームに残ります。削除したい場合は各プラットフォーム上で直接削除してください。',
-          "分析、クラッシュレポート、購入処理の提供事業者（Mixpanel、PostHog、Sentry、RevenueCat）およびAIインフラ提供事業者（fal.ai）がすでに保有しているコピーは、アプリ内での削除では削除されません。削除をご希望の場合は ridvan.uyn@gmail.com までメールでご連絡ください。",
+          "分析、クラッシュレポート、購入処理の提供事業者（Mixpanel、PostHog、Sentry、RevenueCat）およびAI提供事業者（fal.aiとAnthropic。AI編集のために処理されたコピーを含む）がすでに保有しているコピーは、アプリ内での削除では削除されません。削除をご希望の場合は ridvan.uyn@gmail.com までメールでご連絡ください。",
         ],
       },
       {
@@ -1517,25 +1670,29 @@ const ko: LegalPack = {
   effectiveDateLabel: '2026년 9월 26일',
   privacy: {
     title: '개인정보처리방침',
-    effective: "2026년 10월 15일",
+    effective: "2026년 10월 26일",
     lead: 'Viral Factory가 정보를 수집, 이용, 보호하는 방법.',
     intro:
-      '본 개인정보처리방침은 Viral Factory iOS 앱과 본 웹사이트가 수집하는 정보의 내용과 이유, 그리고 이용자가 가진 선택권을 설명합니다. Viral Factory는 개인 개발자인 Rıdvan Uyan이 개발하며, 여기에 설명된 목적을 위해 귀하의 정보에 대한 처리자입니다.',
+      '본 개인정보처리방침은 Viral Factory iOS 및 Android 앱과 본 웹사이트가 수집하는 정보의 내용과 이유, 그리고 이용자가 가진 선택권을 설명합니다. Viral Factory는 개인 개발자인 Rıdvan Uyan이 개발하며, 여기에 설명된 목적을 위해 귀하의 정보에 대한 처리자입니다.',
     sections: [
       {
         h: '수집하는 정보',
         ul: [
-          '계정 식별자 — 앱을 처음 열 때 생성되어 해당 기기의 게스트 계정에 사용되는 임의의 기기 식별자. Apple 또는 Google로 로그인하면 이름, 이메일 주소(또는 비공개 릴레이 이메일), 제공업체 계정 ID를 받습니다.',
+          '계정 식별자 — 앱을 처음 열 때 생성되어 해당 기기의 게스트 계정에 사용되는 임의의 기기 식별자. Apple(iOS) 또는 Google(iOS 및 Android)로 로그인하면 이름, 이메일 주소(또는 비공개 릴레이 이메일), 제공업체 계정 ID를 받습니다.',
           '제공하는 콘텐츠 — 작성한 프롬프트와 텍스트, 업로드하거나 붙여넣은 사진·동영상·링크(다시 만들고 싶은 릴 링크, 캐릭터·카메오 스튜디오용 참조 사진, 분석할 화면 녹화 등).',
           '생성된 콘텐츠 — 앱이 생성한 미디어, 대본, 캡션, 그리고 생성 및 크레딧 거래 내역.',
-          '결제 정보 — 구독 및 크레딧 팩 구매는 App Store가 처리합니다. RevenueCat이 당사를 대신하여 구매 및 권한 이벤트를 처리합니다. 카드 번호를 받는 일은 결코 없습니다.',
+          '결제 정보 — 구독 및 크레딧 팩 구매는 iOS에서는 App Store, Android에서는 Google Play가 처리합니다. RevenueCat이 당사를 대신하여 구매 및 권한 이벤트를 처리합니다. 카드 번호를 받는 일은 결코 없습니다.',
+          'AI 편집 동영상 — AI 편집을 사용할 때 업로드하는 원본 동영상 파일(최대 2GB), 단어별 타임스탬프가 포함된 음성 대본, 편집 계획, 그리고 당사가 귀하를 위해 렌더링한 완성 동영상, 썸네일, 자막 파일. 자세한 내용은 아래 AI 편집 섹션을 참고하세요.',
           '소셜 계정 연결 — 콘텐츠 게시를 위해 TikTok, Instagram, YouTube를 연결하면 해당 계정의 기본 프로필 정보(핸들, 표시 이름, 아바타)를 받고, 앱이 귀하를 대신해 게시할 수 있도록 암호화된 액세스 토큰을 저장합니다.',
           '분석 — 앱 사용 현황을 파악하기 위해 Mixpanel과 PostHog를 사용합니다. PostHog 세션 리플레이는 상호작용 분석을 위해 활성화되어 있지만, 기록 전에 화면상의 모든 텍스트와 이미지가 마스킹되므로 리플레이에 프롬프트·사진·생성된 미디어가 표시되는 일은 없습니다. 분석에는 별도의 무작위 설치 ID를 사용하며, 게스트 계정 식별자는 절대 사용하지 않습니다.',
           '기기 및 진단 데이터 — 앱 버전, 일반적인 기기 모델 및 운영체제, 언어 설정. 또한 분석 및 결제 제공업체는 IP 주소로부터 대략적인 위치(국가나 지역 등)를 추정할 수 있으며, 앱은 기기의 위치를 요청하지 않습니다. 보안을 위해 로그인 세션의 IP 주소와 사용자 에이전트도 보관합니다.',
           "충돌 및 성능 진단 — 충돌과 오류를 찾아 수정하기 위해 Sentry(EU 리전)를 사용합니다. 보고서에는 스택 트레이스, 기기 모델과 운영체제, 앱 버전, 화면 이동 같은 최근 앱 이벤트 기록, 일부 세션의 성능 측정값이 포함됩니다. 보고서는 Viral Factory 계정 ID와 연결되며, 이메일 주소나 이름과는 연결되지 않습니다.",
           '알림 설정 — 매일 아이디어 알림을 켰는지 여부. 기기에 로컬로 저장됩니다.',
         ],
-        p: ['당사는 광고 추적기를 사용하지 않으며, 앱은 Apple의 앱 추적 투명성(App Tracking Transparency) 권한을 요청하지 않습니다.'],
+        p: [
+          '당사는 광고 추적기를 사용하지 않으며, 앱은 Apple의 앱 추적 투명성(App Tracking Transparency) 권한을 요청하지 않습니다.',
+          'Android: 구매는 Google Play(결제)와 RevenueCat이 처리합니다. Google로 로그인하면 이름, 이메일 주소, Google 계정 ID를 받습니다. Android 앱은 광고 ID를 사용하지 않으며 위치, 카메라, 마이크, 연락처 권한을 요청하지 않습니다. 알림은 선택 사항입니다.',
+        ],
       },
       {
         h: '정보 이용 방법',
@@ -1553,9 +1710,23 @@ const ko: LegalPack = {
       {
         h: 'AI 생성 및 제3자 처리자',
         p: [
-          '제출한 콘텐츠와 참조 자료는 요청한 결과물을 생성하는 목적으로만 당사의 AI 인프라 제공업체인 fal.ai로 전송됩니다. 요청 내용에 따라 fal.ai는 현재 OpenAI, Google(Gemini), Anthropic(Claude), Kling, ElevenLabs, Topaz, OmniHuman 등의 모델 제공업체로 작업을 전달합니다. 당사는 이들 제공업체와 별도의 직접 계약을 맺고 있지 않으며, 당사가 계약한 처리자는 fal.ai뿐입니다. 당사는 귀하의 콘텐츠를 자체 모델 학습에 사용하지 않습니다. 당사의 AI 인프라 제공업체인 fal.ai는 귀하의 콘텐츠를 요청한 결과물을 생성하는 목적으로만, 자체 약관 및 개인정보 처리방침(fal.ai/privacy)에 따라 처리합니다.',
+          '제출한 콘텐츠와 참조 자료는 요청한 결과물을 생성하는 목적으로만 당사의 AI 인프라 제공업체인 fal.ai로 전송됩니다. 요청 내용에 따라 fal.ai는 현재 OpenAI, Google(Gemini), Anthropic(Claude), Kling, ElevenLabs, Topaz, OmniHuman 등의 모델 제공업체로 작업을 전달합니다. 이들에 대해 당사가 계약한 처리자는 fal.ai입니다. Anthropic은 아래 설명과 같이 텍스트 및 AI 편집 계획을 위해 당사가 직접 호출하는 처리자이기도 합니다. 당사는 귀하의 콘텐츠를 자체 모델 학습에 사용하지 않습니다. 당사의 AI 인프라 제공업체인 fal.ai는 귀하의 콘텐츠를 요청한 결과물을 생성하는 목적으로만, 자체 약관 및 개인정보 처리방침(fal.ai/privacy)에 따라 처리합니다.',
           '업로드한 사진과 동영상, 그리고 당사가 생성한 미디어는 귀하가 삭제하거나 계정을 삭제할 때까지 프로젝트와 함께 저장됩니다. 붙여넣은 참조 링크(예: 리메이크할 릴)는 스토리보드를 작성하는 목적으로만 분석되며, 참조 동영상 자체는 라이브러리에 저장되지 않습니다.',
           '생성된 미디어는 Amazon Web Services(S3)에, 일부 파일은 Supabase Storage에 저장되며 콘텐츠 전송 네트워크(CDN)를 통해 전달됩니다. 애플리케이션 데이터(계정, 프로젝트, 크레딧 내역)는 MongoDB에 저장됩니다. 당사의 백엔드는 DigitalOcean에서 호스팅됩니다.',
+        ],
+      },
+      {
+        h: 'AI 편집: 업로드한 원본 동영상',
+        p: [
+          'AI 편집은 귀하가 업로드한 원본 영상을 완성된 짧은 동영상으로 만들어 줍니다. 이를 위해 업로드한 파일은 다음과 같이 처리됩니다.',
+        ],
+        ul: [
+          '저장 — 업로드한 동영상 파일(최대 2GB)과 이를 바탕으로 당사가 렌더링한 편집 동영상, 썸네일, 자막 파일은 귀하의 계정 전용 폴더에서 당사의 저장소 버킷(Supabase Storage, 또는 대체 수단으로 Amazon S3)에 저장됩니다.',
+          '음성 변환 — 오디오 트랙은 fal.ai로 전송되며, fal.ai가 ElevenLabs Scribe를 실행하여 단어별 타임스탬프가 포함된 대본을 생성합니다. 대본, 감지된 언어, 편집 계획은 AI 편집 작업과 함께 당사 데이터베이스에 저장됩니다.',
+          '처리자로서의 Anthropic — 컷, 후크 문구, 자막을 결정하고 완성된 결과를 확인할 수 있도록, 대본과 귀하의 동영상에서 추출한 소수의 정지 프레임이 상용 API를 통해 Anthropic(Claude)에 전송됩니다. Anthropic은 그 결과물을 돌려주는 목적으로만 이를 처리하며, 상용 약관에 따라 API 입력과 출력은 Anthropic의 모델 학습에 사용되지 않습니다.',
+          '렌더링 — 컷 편집, 자막, 화면 비율 조정은 당사 자체 서버에서 FFmpeg로 수행되며, 렌더링을 위해 파일이 다른 제공업체로 전송되지 않습니다.',
+          '보관 기간 — 업로드, 편집 계획, 대본, 렌더링된 동영상은 귀하가 삭제하거나 계정을 삭제할 때까지 보관합니다. 광고에 사용하지 않으며 다른 이용자와 공유하지 않습니다.',
+          '삭제 — 계정을 삭제하면(프로필 → 설정 → 계정 삭제) AI 편집 작업, 대본, 편집 계획이 영구적으로 삭제되고, 업로드한 원본 동영상과 렌더링된 동영상, 썸네일, 자막 파일이 당사 저장소에서 제거됩니다. fal.ai, ElevenLabs, Anthropic이 처리자로서 이미 보유한 사본은 앱 내 삭제로 제거되지 않으므로, 삭제를 요청하시려면 이메일로 문의해 주세요.',
         ],
       },
       {
@@ -1569,8 +1740,8 @@ const ko: LegalPack = {
         ],
       },
       { h: '당사가 하지 않는 것', p: ['당사는 개인정보를 판매하지 않으며, 귀하가 명시적으로 공개를 선택하지 않는 한 프롬프트, 업로드한 자료, 생성된 콘텐츠를 다른 이용자와 공유하는 일은 결코 없습니다.'] },
-      { h: '데이터 보존', p: ['계정과 생성된 콘텐츠는 계정이 활성 상태인 동안 보존됩니다. 업로드한 사진과 동영상, 생성된 미디어는 귀하가 삭제하거나 계정을 삭제할 때까지 프로젝트와 함께 저장됩니다. 계정을 삭제하면(프로필 → 설정 → 계정 삭제) 계정 데이터와 저장된 미디어가 제거됩니다. 개별 생성물은 앱에서 언제든지 삭제할 수 있습니다.'] },
-      { h: '계정 삭제', p: ['앱에서 언제든지 계정을 영구적으로 삭제할 수 있습니다: 프로필 → 설정 → 계정 삭제. 이렇게 하면 계정, 크레딧 내역, 동영상, 캐릭터, 프롬프트, 연결된 소셜 계정이 즉시 영구적으로 삭제되며, 사용한 경우 Sign in with Apple 권한도 취소됩니다. 이는 활성 App Store 구독을 취소하지 않으므로 Apple ID 설정에서 별도로 취소해야 합니다. 앱에 더 이상 접근할 수 없을 때 이메일로 삭제를 요청하는 방법을 포함한 전체 단계별 안내는 「계정 삭제」 페이지를 참고하세요. 분석, 충돌 보고, 결제, AI 제공업체(Mixpanel, PostHog, Sentry, RevenueCat, fal.ai)가 이미 보유한 사본은 앱 내 삭제로 제거되지 않습니다. 삭제를 요청하시려면 이메일로 문의해 주세요.'] },
+      { h: '데이터 보존', p: ['계정과 생성된 콘텐츠는 계정이 활성 상태인 동안 보존됩니다. 업로드한 사진과 동영상, 생성된 미디어는 귀하가 삭제하거나 계정을 삭제할 때까지 프로젝트와 함께 저장됩니다. AI 편집 업로드, 대본, 편집 계획, 렌더링된 동영상도 같은 기준으로 보관됩니다. 계정을 삭제하면(프로필 → 설정 → 계정 삭제) 계정 데이터, AI 편집 데이터, 저장된 미디어가 제거됩니다. 개별 생성물은 앱에서 언제든지 삭제할 수 있습니다.'] },
+      { h: '계정 삭제', p: ['앱에서 언제든지 계정을 영구적으로 삭제할 수 있습니다: 프로필 → 설정 → 계정 삭제. 이렇게 하면 계정, 크레딧 내역, 동영상, AI 편집 작업과 AI 편집으로 업로드하거나 렌더링한 동영상, 캐릭터, 프롬프트, 연결된 소셜 계정이 즉시 영구적으로 삭제되며, 사용한 경우 Sign in with Apple 권한도 취소됩니다. 이는 활성 구독을 취소하지 않으므로, App Store 구독은 Apple ID 설정에서, Google Play 구독은 Google Play → 결제 및 정기 결제에서 별도로 취소해야 합니다. 앱에 더 이상 접근할 수 없을 때 이메일로 삭제를 요청하는 방법을 포함한 전체 단계별 안내는 「계정 삭제」 페이지를 참고하세요. 분석, 충돌 보고, 결제, AI 제공업체(Mixpanel, PostHog, Sentry, RevenueCat, fal.ai, Anthropic)가 이미 보유한 사본은 앱 내 삭제로 제거되지 않습니다. 삭제를 요청하시려면 이메일로 문의해 주세요.'] },
       { h: 'GDPR상의 권리 (EEA, 영국, 스위스)', p: ['EEA, 영국, 스위스에 거주하는 경우 개인정보에 대한 접근, 정정, 삭제, 사본 수령(이동성) 권리와 특정 처리에 이의를 제기하거나 제한할 권리가 있습니다. 당사는 계약 이행(앱 제공), 귀하의 동의(예: 세션 리플레이 분석), 당사의 정당한 이익(보안, 악용 방지, 서비스 개선)을 근거로 데이터를 처리합니다. 이러한 권리를 행사하려면 ridvan.uyn@gmail.com으로 연락해 주세요. 한 달 이내에 답변드립니다.'] },
       { h: '캘리포니아 거주자 (CCPA/CPRA)', p: ['캘리포니아 거주자는 당사가 보유한 개인정보의 열람, 삭제, 정정을 요청하고 그 「판매」나 「공유」를 거부할 권리가 있습니다 — 당사는 개인정보를 판매하지 않으며 상황 간 행동 기반 광고 추적기를 사용하지 않습니다. 요청은 ridvan.uyn@gmail.com으로 보내주세요.'] },
       { h: '아동', p: ['Viral Factory는 만 13세 미만(또는 거주 국가에서 요구하는 최소 연령 미만) 아동을 대상으로 하지 않으며, 이들의 정보를 고의로 수집하지 않습니다. 아동이 당사에 개인정보를 제공했다고 판단되는 경우 연락해 주시면 삭제하겠습니다.'] },
@@ -1582,12 +1753,14 @@ const ko: LegalPack = {
   },
   terms: {
     title: '이용약관',
+    effective: '2026년 10월 26일',
     lead: 'Viral Factory 이용을 규율하는 약관입니다.',
     intro:
-      '본 이용약관(「본 약관」)은 Rıdvan Uyan(「당사」)이 제공하는 Viral Factory iOS 앱과 본 웹사이트(합쳐서 「서비스」)의 이용을 규율합니다. 서비스를 다운로드, 접근 또는 이용함으로써 귀하는 본 약관에 동의하게 됩니다.',
+      '본 이용약관(「본 약관」)은 Rıdvan Uyan(「당사」)이 제공하는 Viral Factory iOS 및 Android 앱과 본 웹사이트(합쳐서 「서비스」)의 이용을 규율합니다. 서비스를 다운로드, 접근 또는 이용함으로써 귀하는 본 약관에 동의하게 됩니다.',
     sections: [
       { h: '서비스 소개', p: ['Viral Factory는 귀하가 제공하는 프롬프트와 참조 자료로부터 제3자 AI 모델을 사용하여 동영상, 이미지, 캡션 등 짧은 형식의 콘텐츠를 생성합니다. 생성된 결과물은 부정확하거나, 예상과 다르거나, 목적에 맞지 않을 수 있습니다. 게시하거나 신뢰하기 전에 검토할 책임은 귀하에게 있습니다.'] },
       { h: 'Apple 라이선스 조건', p: ['App Store를 통해 구매한 자동 갱신 구독에는 apple.com/legal/internet-services/itunes/dev/stdeula 에 게시된 Apple의 사용권 계약(라이선스가 부여된 애플리케이션 최종 사용자 사용권 계약)도 적용됩니다. 본 약관이 구독 또는 구매 사항에 관해 해당 계약과 상충할 경우 Apple의 계약이 우선합니다.'] },
+      { h: 'Google Play', p: ['Google Play를 통해 구매한 구독과 크레딧 팩은 Google Play가 청구하고 관리하며, Google Play 구매에 대한 환불 요청은 Google이 처리합니다(support.google.com/googleplay).'] },
       {
         h: '허용되는 이용',
         p: ['귀하는 서비스를 다음의 목적으로 이용하지 않을 것에 동의합니다.'],
@@ -1608,8 +1781,8 @@ const ko: LegalPack = {
           '콘텐츠 생성에는 크레딧이 소모되며, 생성 전에 앱에서 비용이 표시됩니다.',
           '구매 시 별도로 명시하지 않는 한, 1회성 크레딧 팩에는 유효기간이 없습니다.',
           '구독 플랜에는 각 결제 주기마다 갱신되는 크레딧이 포함되며, 사용하지 않은 구독 크레딧은 다음 주기로 이월되지 않습니다.',
-          '구독은 현재 기간 종료 최소 24시간 전에 해지하지 않는 한 그 시점의 가격으로 동일한 기간만큼 자동 갱신됩니다. 기기의 설정 → [이름] → 구독에서 언제든지 관리하거나 해지할 수 있습니다 — 지원 페이지를 참고하세요.',
-          '법률상 요구되는 경우를 제외하고 모든 결제는 환불되지 않으며, App Store 구매에 대한 환불 요청은 Apple이 처리합니다.',
+          '구독은 현재 기간 종료 최소 24시간 전에 해지하지 않는 한 그 시점의 가격으로 동일한 기간만큼 자동 갱신됩니다. iOS에서는 기기의 설정 → [이름] → 구독에서, Android에서는 Google Play → 결제 및 정기 결제에서 언제든지 관리하거나 해지할 수 있습니다 — 지원 페이지를 참고하세요.',
+          '법률상 요구되는 경우를 제외하고 모든 결제는 환불되지 않으며, App Store 구매에 대한 환불 요청은 Apple이, Google Play 구매에 대한 환불 요청은 Google이 처리합니다.',
         ],
       },
       { h: '해지', p: ['귀하는 언제든지 서비스 이용을 중단하고 계정을 삭제할 수 있습니다 — 「계정 삭제」 페이지를 참고하세요. 당사는 본 약관 위반, 크레딧 오용, 사기, 서비스 악용이 있는 경우 사전 통지 여부와 관계없이 접근을 정지하거나 종료할 수 있습니다.'] },
@@ -1626,12 +1799,12 @@ const ko: LegalPack = {
     intro: '질문이나 문제가 있으신가요? ridvan.uyn@gmail.com으로 메일을 보내주세요 — 보통 영업일 기준 2일 이내에 답변드립니다.',
     faqs: [
       { q: '크레딧은 어떻게 작동하나요?', a: '동영상, 이미지 세트, 캐러셀 등 각 생성 작업에는 확인 전에 표시되는 일정량의 크레딧이 소모됩니다 — 정확한 비용은 선택한 스튜디오와 품질 등급에 따라 다릅니다. 구독에는 매 주기마다 갱신되고 이월되지 않는 월간 크레딧이 포함되며, 유효기간이 없는 1회성 크레딧 팩도 구매할 수 있습니다.' },
-      { q: '구매 내역은 어떻게 복원하나요?', a: 'Viral Factory → 프로필 → 설정 → 구매 복원 순서로 이동하세요. 구매할 때 사용한 것과 동일한 Apple ID로 로그인되어 있는지 확인하세요.' },
-      { q: '구독을 해지하려면 어떻게 하나요?', a: '구독은 당사가 아닌 Apple이 청구 및 관리합니다. iPhone에서: 설정 앱 → [이름] → 구독 → Viral Factory → 구독 취소. 해지하면 향후 갱신이 중단되며, 이미 결제한 기간이 끝날 때까지는 이용이 유지됩니다.' },
-      { q: '계정을 삭제하려면 어떻게 하나요?', a: '앱에서: 프로필 → 설정 → 계정 삭제. 정확히 무엇이 삭제되는지, 앱에 더 이상 접근할 수 없을 때 이메일로 삭제를 요청하는 방법은 「계정 삭제」 페이지를 참고하세요.' },
+      { q: '구매 내역은 어떻게 복원하나요?', a: 'Viral Factory → 프로필 → 설정 → 구매 복원 순서로 이동하세요. 구매할 때 사용한 것과 동일한 Apple ID(iOS) 또는 Google 계정(Android)으로 로그인되어 있는지 확인하세요.' },
+      { q: '구독을 해지하려면 어떻게 하나요?', a: '구독은 당사가 아닌 Apple 또는 Google이 청구 및 관리합니다. iPhone에서: 설정 앱 → [이름] → 구독 → Viral Factory → 구독 취소. Android에서: Google Play → 프로필 아이콘 → 결제 및 정기 결제 → 정기 결제 → Viral Factory → 구독 취소. 해지하면 향후 갱신이 중단되며, 이미 결제한 기간이 끝날 때까지는 이용이 유지됩니다.' },
+      { q: '계정을 삭제하려면 어떻게 하나요?', a: '앱(iOS 또는 Android)에서: 프로필 → 설정 → 계정 삭제. AI 편집 동영상과 데이터도 함께 삭제됩니다. 정확히 무엇이 삭제되는지, 앱에 더 이상 접근할 수 없을 때 이메일로 삭제를 요청하는 방법은 「계정 삭제」 페이지를 참고하세요.' },
       { q: '앱은 어떤 언어를 지원하나요?', a: '영어, 독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 터키어, 일본어, 한국어, 아랍어, 힌디어를 지원합니다.' },
       { q: '각 스튜디오는 무엇을 하나요?', a: '「인기 영상 다시 만들기」는 붙여넣은 릴을 내 제품으로 재구성합니다. 「짧은 영상 광고」와 「시네마틱 숏」은 설명으로부터 대본이 있는 영상을 생성합니다. 「크리에이터 후기 영상」은 카메라를 보고 말하는 UGC 스타일 광고를 만듭니다. 「스와이프 게시물」은 이미지 캐러셀을 구성합니다. 「AI 캐릭터」는 영상 간에 일관된 인물을 유지합니다. 「카메오」와 「내 영상에 합성하기」는 실제 사진을 생성되거나 기존의 장면에 배치합니다. 매일의 후크는 매일 아침 열 가지 새로운 아이디어를 제공하며, 완성된 게시물은 TikTok·Instagram·YouTube에 바로 예약 게시할 수 있습니다.' },
-      { q: '앱이 카메라, 사진 보관함, 마이크 접근을 요청하는 이유는 무엇인가요?', a: '생성에 사용할 사진과 동영상을 촬영하거나 선택할 수 있도록 하고, 완성된 동영상을 사진 보관함에 저장할 수 있도록 하기 위해서만 사용됩니다. 자세한 내용은 개인정보처리방침을 참고하세요.' },
+      { q: '앱이 카메라, 사진 보관함, 마이크 접근을 요청하는 이유는 무엇인가요?', a: '생성에 사용할 사진과 동영상을 촬영하거나 선택할 수 있도록 하고, 완성된 동영상을 사진 보관함에 저장할 수 있도록 하기 위해서만 사용됩니다. Android에서는 앱이 시스템 사진·파일 선택기를 사용하며 이러한 권한을 전혀 요청하지 않습니다. 자세한 내용은 개인정보처리방침을 참고하세요.' },
       { q: '생성에 실패했는데 크레딧이 차감되었어요 — 어떻게 해야 하나요?', a: '대략적인 날짜와 시간, 가능하다면 스크린샷을 함께 이메일로 보내주세요. 시스템 오류가 확인되면 조사 후 크레딧을 복원해 드립니다.' },
     ],
   },
@@ -1642,12 +1815,12 @@ const ko: LegalPack = {
     sections: [
       {
         h: '앱에서 삭제하기 (권장)',
-        p: ['기기에서 Viral Factory를 열고 다음 단계를 따르세요.'],
+        p: ['iPhone 또는 Android 기기에서 Viral Factory를 열고 다음 단계를 따르세요(메뉴 경로는 두 플랫폼에서 동일합니다).'],
         ul: [
           '프로필(하단 탭)로 이동합니다.',
           '설정을 누릅니다.',
           '화면 하단 근처의 계정 삭제를 누릅니다.',
-          'Apple로 로그인한 경우, 본인 확인을 위해 Sign in with Apple로 재인증을 요청받을 수 있습니다.',
+          'Apple 또는 Google로 로그인한 경우, 본인 확인을 위해 재인증을 요청받을 수 있습니다.',
           '삭제를 확정합니다. 즉시 적용되며 되돌릴 수 없습니다.',
         ],
       },
@@ -1657,17 +1830,18 @@ const ko: LegalPack = {
           '계정 및 프로필 정보',
           '크레딧 잔액 및 거래 내역',
           '생성한 모든 동영상, 이미지 세트, 캐러셀, 캐릭터 및 그 원본 미디어',
+          'AI 편집 작업, 대본, 편집 계획, 그리고 AI 편집으로 업로드하거나 렌더링한 동영상(업로드한 원본 동영상, 편집된 동영상, 썸네일, 자막 파일)',
           '연결된 소셜 계정(TikTok, Instagram, YouTube) 및 저장된 액세스 토큰',
           '저장된 프롬프트 및 알림',
-          'Sign in with Apple / Google 연동(Apple 권한은 취소됩니다)',
+          'Sign in with Apple / Google 연동(Apple 권한은 취소되며, Android에서는 Google 계정과의 연결이 당사 시스템에서 삭제됩니다. Google 계정의 보안 설정 → 서드 파티 앱 및 서비스에서 앱을 제거할 수도 있습니다)',
         ],
       },
       {
         h: '자동으로 영향받지 않는 항목',
         p: [
-          '계정을 삭제해도 활성 App Store 구독은 해지되지 않습니다 — 기기의 설정 → [이름] → 구독에서 별도로 해지하지 않으면 계속 갱신됩니다.',
+          '계정을 삭제해도 활성 구독은 해지되지 않습니다 — 별도로 해지하지 않으면 계속 갱신됩니다. iOS에서는 설정 → [이름] → 구독에서, Android에서는 Google Play → 결제 및 정기 결제 → 정기 결제에서 해지하세요.',
           '이미 TikTok, Instagram, YouTube에 게시한 콘텐츠는 해당 플랫폼에 그대로 남습니다. 제거하려면 해당 플랫폼에서 직접 삭제하세요.',
-          "분석, 충돌 보고, 결제 제공업체(Mixpanel, PostHog, Sentry, RevenueCat)와 AI 인프라 제공업체(fal.ai)가 이미 보유한 사본은 앱 내 삭제로 제거되지 않습니다. 삭제를 요청하시려면 ridvan.uyn@gmail.com으로 이메일을 보내 주세요.",
+          "분석, 충돌 보고, 결제 제공업체(Mixpanel, PostHog, Sentry, RevenueCat)와 AI 제공업체(fal.ai 및 Anthropic, AI 편집을 위해 처리된 사본 포함)가 이미 보유한 사본은 앱 내 삭제로 제거되지 않습니다. 삭제를 요청하시려면 ridvan.uyn@gmail.com으로 이메일을 보내 주세요.",
         ],
       },
       {
@@ -1683,25 +1857,28 @@ const ar: LegalPack = {
   effectiveDateLabel: '26 سبتمبر 2026',
   privacy: {
     title: 'سياسة الخصوصية',
-    effective: "15 أكتوبر 2026",
+    effective: "26 أكتوبر 2026",
     lead: 'كيف يجمع Viral Factory معلوماتك ويستخدمها ويحميها.',
     intro:
-      'توضح سياسة الخصوصية هذه المعلومات التي يجمعها تطبيق Viral Factory لنظام iOS وهذا الموقع الإلكتروني، ولماذا، والخيارات المتاحة لك. تم تطوير Viral Factory بواسطة Rıdvan Uyan، مطور مستقل، وهو المتحكم في بياناتك للأغراض الموضحة هنا.',
+      'توضح سياسة الخصوصية هذه المعلومات التي يجمعها تطبيقا Viral Factory لنظامي iOS وAndroid وهذا الموقع الإلكتروني، ولماذا، والخيارات المتاحة لك. تم تطوير Viral Factory بواسطة Rıdvan Uyan، مطور مستقل، وهو المتحكم في بياناتك للأغراض الموضحة هنا.',
     sections: [
       {
         h: 'المعلومات التي نجمعها',
         ul: [
-          'معرّفات الحساب — معرّف جهاز عشوائي يُنشأ عند فتح التطبيق لأول مرة، ويُستخدم لحساب الضيف الخاص بك على ذلك الجهاز؛ إذا سجّلت الدخول عبر Apple أو Google بدلاً من ذلك، فإننا نتلقى اسمك وبريدك الإلكتروني (أو بريد وسيط خاص) ومعرّف الحساب لدى مزود الخدمة.',
+          'معرّفات الحساب — معرّف جهاز عشوائي يُنشأ عند فتح التطبيق لأول مرة، ويُستخدم لحساب الضيف الخاص بك على ذلك الجهاز؛ إذا سجّلت الدخول عبر Apple (على iOS) أو Google (على iOS وAndroid) بدلاً من ذلك، فإننا نتلقى اسمك وبريدك الإلكتروني (أو بريد وسيط خاص) ومعرّف الحساب لدى مزود الخدمة.',
           'المحتوى الذي تقدمه — الأوامر النصية (prompts) والنصوص التي تكتبها؛ الصور أو الفيديوهات أو الروابط التي ترفعها أو تلصقها، مثل رابط ريلز لإعادة صنعه، أو صورة مرجعية لاستوديو الشخصية أو الظهور الشخصي، أو تسجيل شاشة لتحليله.',
           'المحتوى المولّد — الوسائط والنصوص والتعليقات التي ينشئها التطبيق لك، وسجل عمليات التوليد ومعاملات الأرصدة الخاصة بك.',
-          'معلومات الشراء — يتم التعامل مع مشتريات الاشتراكات وحزم الأرصدة عبر App Store؛ وتقوم RevenueCat بمعالجة أحداث الشراء والاستحقاقات نيابة عنا. لا نتلقى أبدًا رقم بطاقتك.',
+          'معلومات الشراء — يتم التعامل مع مشتريات الاشتراكات وحزم الأرصدة عبر App Store على iOS وعبر Google Play على Android؛ وتقوم RevenueCat بمعالجة أحداث الشراء والاستحقاقات نيابة عنا. لا نتلقى أبدًا رقم بطاقتك.',
+          'فيديوهات AI Edit — عند استخدامك AI Edit، نتلقى ملفات الفيديو الخام التي ترفعها (حتى 2 جيجابايت)، والنص المفرَّغ من الكلام مع الطوابع الزمنية للكلمات، وخطة المونتاج، ومقاطع الفيديو المعدَّلة الجاهزة والصور المصغّرة وملفات التعليقات التي نُنتجها لك. التفاصيل في قسم AI Edit أدناه.',
           'ربط الحسابات الاجتماعية — إذا قمت بربط TikTok أو Instagram أو YouTube لنشر المحتوى، فإننا نتلقى معلومات الملف الشخصي الأساسية لذلك الحساب (اسم المستخدم، الاسم المعروض، الصورة الرمزية) ونخزّن رمز وصول مشفّر ليتمكن التطبيق من النشر نيابة عنك.',
           'التحليلات — نستخدم Mixpanel وPostHog لفهم كيفية استخدام التطبيق. ميزة إعادة تشغيل الجلسة (session replay) في PostHog مفعّلة لتحليل التفاعل، لكن يتم إخفاء كل النصوص والصور على الشاشة قبل التسجيل، لذا فإن إعادة التشغيل لا تُظهر أبدًا أوامرك النصية أو صورك أو المحتوى المولّد. تستخدم التحليلات معرّف تثبيت عشوائيًا منفصلاً — وليس أبدًا معرّف حساب الضيف الخاص بك.',
           'بيانات الجهاز والتشخيص — إصدار التطبيق، طراز الجهاز العام ونظام التشغيل، وإعدادات اللغة. كما قد يستنتج مزوّدو التحليلات والمشتريات لدينا موقعًا تقريبيًا (مثل البلد أو المنطقة) من عنوان IP الخاص بك؛ ولا يطلب التطبيق موقع جهازك. ونحتفظ أيضًا، لأغراض أمنية، بعنوان IP ووكيل المستخدم (user agent) لجلسات تسجيل دخولك.',
           "تشخيص الأعطال والأداء — نستخدم Sentry (منطقة الاتحاد الأوروبي) لاكتشاف الأعطال والأخطاء وإصلاحها. تتضمن التقارير تتبّع المكدّس وطراز الجهاز ونظام التشغيل وإصدار التطبيق وسجلًا بأحدث أحداث التطبيق مثل التنقل بين الشاشات وقياسات الأداء لعيّنة من الجلسات. وهي مرتبطة بمعرّف حسابك في Viral Factory، لا ببريدك الإلكتروني ولا باسمك.",
           'تفضيلات الإشعارات — ما إذا كنت قد فعّلت تذكير الأفكار اليومي، ويُخزَّن محليًا على جهازك.',
         ],
-        p: ['لا نستخدم متتبعات إعلانية، ولا يطلب التطبيق إذن App Tracking Transparency من Apple.'],
+        p: ['لا نستخدم متتبعات إعلانية، ولا يطلب التطبيق إذن App Tracking Transparency من Apple.',
+          'Android: تتم معالجة المشتريات عبر Google Play (الفوترة) وRevenueCat. إذا سجّلت الدخول عبر Google، فإننا نتلقى اسمك وبريدك الإلكتروني ومعرّف حساب Google. لا يستخدم تطبيق Android معرّف الإعلانات ولا يطلب أي إذن للموقع أو الكاميرا أو الميكروفون أو جهات الاتصال. الإشعارات اختيارية.',
+        ],
       },
       {
         h: 'كيف نستخدم معلوماتك',
@@ -1719,9 +1896,23 @@ const ar: LegalPack = {
       {
         h: 'التوليد بالذكاء الاصطناعي ومعالجو البيانات من الأطراف الثالثة',
         p: [
-          'يتم إرسال المحتوى والمواد المرجعية التي تقدمها إلى fal.ai، مزود البنية التحتية للذكاء الاصطناعي لدينا، فقط لتوليد الناتج الذي طلبته. وحسب الطلب، توجّه fal.ai المهمة إلى مزودي نماذج تشمل حاليًا OpenAI وGoogle (Gemini) وAnthropic (Claude) وKling وElevenLabs وTopaz وOmniHuman. ليس لدينا حسابات مباشرة منفصلة مع هؤلاء المزودين — fal.ai هي معالج البيانات الذي نتعاقد معه. لا نستخدم محتواك لتدريب نماذجنا الخاصة. يقوم مزود البنية التحتية للذكاء الاصطناعي لدينا، fal.ai، بمعالجة محتواك فقط لتوليد الناتج الذي طلبته، وفقًا لشروطه وسياسة الخصوصية الخاصة به (fal.ai/privacy).',
+          'يتم إرسال المحتوى والمواد المرجعية التي تقدمها إلى fal.ai، مزود البنية التحتية للذكاء الاصطناعي لدينا، فقط لتوليد الناتج الذي طلبته. وحسب الطلب، توجّه fal.ai المهمة إلى مزودي نماذج تشمل حاليًا OpenAI وGoogle (Gemini) وAnthropic (Claude) وKling وElevenLabs وTopaz وOmniHuman، وfal.ai هي معالج البيانات الذي نتعاقد معه بخصوصها. وتُعدّ Anthropic أيضًا معالج بيانات نتصل به مباشرةً لمعالجة النصوص وللتخطيط في AI Edit، كما هو موضح أدناه. لا نستخدم محتواك لتدريب نماذجنا الخاصة. يقوم مزود البنية التحتية للذكاء الاصطناعي لدينا، fal.ai، بمعالجة محتواك فقط لتوليد الناتج الذي طلبته، وفقًا لشروطه وسياسة الخصوصية الخاصة به (fal.ai/privacy).',
           'يتم تخزين الصور والفيديوهات التي ترفعها والوسائط التي نولّدها مع مشاريعك إلى أن تحذفها أو تحذف حسابك. تُحلَّل روابط المرجع التي تلصقها — مثل رابط ريل تريد إعادة إنشائه — فقط لكتابة القصة المصورة (storyboard) الخاصة بك؛ ولا يُخزَّن الفيديو المرجعي نفسه في مكتبتك.',
           'يتم تخزين الوسائط المولّدة على Amazon Web Services (S3)، وبالنسبة لبعض الملفات على Supabase Storage، ويتم تسليمها عبر شبكة توصيل محتوى (CDN). تُخزَّن بيانات التطبيق (الحسابات، المشاريع، سجل الأرصدة) في MongoDB. يستضاف الخادم الخلفي لدينا على DigitalOcean.',
+        ],
+      },
+      {
+        h: 'AI Edit: فيديوهاتك الخام',
+        p: [
+          'يحوّل AI Edit اللقطات الخام التي ترفعها إلى فيديوهات قصيرة جاهزة. ولتحقيق ذلك، تتم معالجة ما ترفعه على النحو التالي:',
+        ],
+        ul: [
+          'التخزين — ملفات الفيديو التي ترفعها (حتى 2 جيجابايت)، والفيديوهات المعدَّلة والصور المصغّرة وملفات التعليقات التي نُنتجها منها، تُخزَّن في حاويات التخزين لدينا (Supabase Storage، أو Amazon S3 كخيار احتياطي)، في مجلدات مخصصة لحسابك.',
+          'التفريغ النصي — يُرسل المسار الصوتي إلى fal.ai التي تشغّل ElevenLabs Scribe لإنتاج نص مفرَّغ مع الطوابع الزمنية للكلمات. ويُحفظ النص المفرَّغ واللغة المكتشفة وخطة المونتاج مع مهمة AI Edit في قاعدة بياناتنا.',
+          'Anthropic كمعالج بيانات — يُرسل النص المفرَّغ وعدد قليل من اللقطات الثابتة المأخوذة من الفيديو الخاص بك إلى Anthropic (Claude) عبر واجهتها البرمجية التجارية (API) ليقرر مواضع القص ونص الافتتاحية (hook) والتعليقات، وليتحقق من النتيجة النهائية. تعالج Anthropic ذلك فقط لإرجاع هذا الناتج؛ ووفق شروطها التجارية، لا تُستخدم مدخلات واجهة API ومخرجاتها لتدريب نماذجها.',
+          'التصيير — يتم القص والتعليقات وإعادة تأطير الفيديو على خوادمنا الخاصة باستخدام FFmpeg؛ ولا تُرسل الملفات إلى أي مزود آخر للتصيير.',
+          'مدة الاحتفاظ — نحتفظ بالملفات المرفوعة وخطط المونتاج والنصوص المفرَّغة والفيديوهات المصيَّرة إلى أن تحذفها أو تحذف حسابك. لا نستخدمها لأغراض إعلانية، ولا نشاركها مع مستخدمين آخرين.',
+          'الحذف — حذف حسابك (الملف الشخصي ← الإعدادات ← حذف الحساب) يحذف نهائيًا مهام AI Edit والنصوص المفرَّغة وخطط المونتاج الخاصة بك، ويزيل فيديوهاتك المصدرية المرفوعة والفيديوهات المصيَّرة والصور المصغّرة وملفات التعليقات من تخزيننا. لا يؤدي الحذف داخل التطبيق إلى إزالة النسخ التي تحتفظ بها بالفعل fal.ai وElevenLabs وAnthropic بصفتها معالجي بيانات؛ راسلنا لطلب حذفها.',
         ],
       },
       {
@@ -1735,8 +1926,8 @@ const ar: LegalPack = {
         ],
       },
       { h: 'ما لا نقوم به', p: ['لا نبيع البيانات الشخصية، ولا نشارك أبدًا أوامرك النصية أو ملفاتك المرفوعة أو المحتوى الذي تولّده مع مستخدمين آخرين، إلا إذا اخترت صراحةً جعل شيء ما عامًا.'] },
-      { h: 'الاحتفاظ بالبيانات', p: ['يُحتفظ بحسابك والمحتوى الذي تولّده طالما كان حسابك نشطًا. تُخزَّن الصور والفيديوهات المرفوعة والوسائط المولَّدة مع مشاريعك إلى أن تحذفها أو تحذف حسابك. حذف حسابك (الملف الشخصي ← الإعدادات ← حذف الحساب) يزيل بيانات حسابك والوسائط المخزَّنة. يمكنك حذف عمليات التوليد الفردية في التطبيق في أي وقت.'] },
-      { h: 'حذف حسابك', p: ['يمكنك حذف حسابك نهائيًا في أي وقت من داخل التطبيق: الملف الشخصي ← الإعدادات ← حذف الحساب. يؤدي هذا إلى حذف حسابك وسجل أرصدتك وفيديوهاتك وشخصياتك وأوامرك النصية وحساباتك الاجتماعية المرتبطة فورًا ونهائيًا، وإلغاء إذن Sign in with Apple إن استُخدم. لا يؤدي هذا إلى إلغاء اشتراك نشط في App Store — عليك إلغاءه بشكل منفصل من إعدادات معرّف Apple الخاص بك. راجع صفحة «حذف الحساب» للحصول على تعليمات كاملة خطوة بخطوة، بما في ذلك كيفية طلب الحذف عبر البريد الإلكتروني إذا لم يعد لديك التطبيق. لا يؤدي الحذف داخل التطبيق إلى إزالة النسخ التي تحتفظ بها بالفعل جهات التحليلات والإبلاغ عن الأعطال والمشتريات والذكاء الاصطناعي لدينا (Mixpanel وPostHog وSentry وRevenueCat وfal.ai)؛ راسلنا لطلب حذفها.'] },
+      { h: 'الاحتفاظ بالبيانات', p: ['يُحتفظ بحسابك والمحتوى الذي تولّده طالما كان حسابك نشطًا. تُخزَّن الصور والفيديوهات المرفوعة والوسائط المولَّدة مع مشاريعك إلى أن تحذفها أو تحذف حسابك. يُحتفظ بملفات AI Edit المرفوعة والنصوص المفرَّغة وخطط المونتاج والفيديوهات المصيَّرة على الأساس نفسه. حذف حسابك (الملف الشخصي ← الإعدادات ← حذف الحساب) يزيل بيانات حسابك وبيانات AI Edit والوسائط المخزَّنة. يمكنك حذف عمليات التوليد الفردية في التطبيق في أي وقت.'] },
+      { h: 'حذف حسابك', p: ['يمكنك حذف حسابك نهائيًا في أي وقت من داخل التطبيق: الملف الشخصي ← الإعدادات ← حذف الحساب. يؤدي هذا إلى حذف حسابك وسجل أرصدتك وفيديوهاتك ومهام AI Edit والفيديوهات التي رفعتها إلى AI Edit أو أنتجتها به وشخصياتك وأوامرك النصية وحساباتك الاجتماعية المرتبطة فورًا ونهائيًا، وإلغاء إذن Sign in with Apple إن استُخدم. لا يؤدي هذا إلى إلغاء اشتراك نشط: ألغِ اشتراك App Store من إعدادات معرّف Apple الخاص بك، أو اشتراك Google Play من Google Play ← المدفوعات والاشتراكات. راجع صفحة «حذف الحساب» للحصول على تعليمات كاملة خطوة بخطوة، بما في ذلك كيفية طلب الحذف عبر البريد الإلكتروني إذا لم يعد لديك التطبيق. لا يؤدي الحذف داخل التطبيق إلى إزالة النسخ التي تحتفظ بها بالفعل جهات التحليلات والإبلاغ عن الأعطال والمشتريات والذكاء الاصطناعي لدينا (Mixpanel وPostHog وSentry وRevenueCat وfal.ai وAnthropic)؛ راسلنا لطلب حذفها.'] },
       { h: 'حقوقك بموجب اللائحة العامة لحماية البيانات (المنطقة الاقتصادية الأوروبية، المملكة المتحدة، سويسرا)', p: ['إذا كنت مقيمًا في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة أو سويسرا، فلديك الحق في الوصول إلى بياناتك الشخصية وتصحيحها وحذفها والحصول على نسخة منها (قابلية النقل)، والاعتراض على معالجات معينة أو تقييدها. نعالج بياناتك استنادًا إلى: تنفيذ العقد (توفير التطبيق)، موافقتك (مثل تحليلات إعادة تشغيل الجلسة)، ومصالحنا المشروعة (الأمان، منع إساءة الاستخدام، تحسين الخدمة). لممارسة أي من هذه الحقوق، راسلنا على ridvan.uyn@gmail.com؛ وسنرد خلال شهر واحد.'] },
       { h: 'المقيمون في كاليفورنيا (CCPA/CPRA)', p: ['يمكن لسكان كاليفورنيا طلب معرفة أو حذف أو تصحيح المعلومات الشخصية التي نحتفظ بها عنهم، وإلغاء الاشتراك في «بيعها» أو «مشاركتها» — نحن لا نبيع معلومات شخصية ولا نستخدم متتبعات إعلانية سلوكية عبر السياقات المختلفة. أرسل الطلبات إلى ridvan.uyn@gmail.com.'] },
       { h: 'الأطفال', p: ['لا يستهدف Viral Factory الأطفال دون سن 13 عامًا (أو الحد الأدنى للسن المطلوب في بلدك)، ولا نجمع معلوماتهم عن علم. إذا كنت تعتقد أن طفلاً قدّم لنا معلومات شخصية، فيرجى التواصل معنا وسنقوم بحذفها.'] },
@@ -1748,12 +1939,14 @@ const ar: LegalPack = {
   },
   terms: {
     title: 'شروط الاستخدام',
+    effective: '26 أكتوبر 2026',
     lead: 'الشروط التي تحكم استخدامك لتطبيق Viral Factory.',
     intro:
-      'تحكم شروط الاستخدام هذه («الشروط») استخدامك لتطبيق Viral Factory لنظام iOS وهذا الموقع الإلكتروني (يُشار إليهما معًا بـ«الخدمة»)، المقدَّمين من قِبل Rıdvan Uyan («نحن»). بتنزيل الخدمة أو الوصول إليها أو استخدامها، فإنك توافق على هذه الشروط.',
+      'تحكم شروط الاستخدام هذه («الشروط») استخدامك لتطبيقي Viral Factory لنظامي iOS وAndroid وهذا الموقع الإلكتروني (يُشار إليهما معًا بـ«الخدمة»)، المقدَّمين من قِبل Rıdvan Uyan («نحن»). بتنزيل الخدمة أو الوصول إليها أو استخدامها، فإنك توافق على هذه الشروط.',
     sections: [
       { h: 'الخدمة', p: ['يقوم Viral Factory بتوليد محتوى قصير — فيديو وصور وتعليقات — من الأوامر النصية والمواد المرجعية التي تقدمها، باستخدام نماذج ذكاء اصطناعي من أطراف ثالثة. قد يكون الناتج المولّد غير دقيق أو غير متوقع أو غير مناسب لغرضك؛ وأنت المسؤول عن مراجعته قبل نشره أو الاعتماد عليه.'] },
       { h: 'شروط ترخيص Apple', p: ['تخضع الاشتراكات المتجددة تلقائيًا التي تُشترى عبر App Store أيضًا لاتفاقية ترخيص المستخدم النهائي للتطبيقات المرخّصة من Apple، المتاحة على apple.com/legal/internet-services/itunes/dev/stdeula. وفي حال تعارض هذه الشروط مع تلك الاتفاقية بشأن مسألة اشتراك أو شراء، تسود اتفاقية Apple.'] },
+      { h: 'Google Play', p: ['تتم فوترة الاشتراكات وحزم الأرصدة التي تُشترى عبر Google Play وإدارتها من قِبل Google Play؛ وتتولى Google معالجة طلبات استرداد مشتريات Google Play (support.google.com/googleplay).'] },
       {
         h: 'الاستخدام المقبول',
         p: ['توافق على عدم استخدام الخدمة من أجل:'],
@@ -1774,8 +1967,8 @@ const ar: LegalPack = {
           'يستهلك توليد المحتوى أرصدة؛ وتُعرض التكلفة داخل التطبيق قبل التوليد.',
           'لا تنتهي صلاحية حزم الأرصدة لمرة واحدة ما لم يُذكر خلاف ذلك وقت الشراء.',
           'تتضمن خطط الاشتراك رصيدًا يتجدد في كل فترة فوترة؛ ولا يتم ترحيل أرصدة الاشتراك غير المستخدمة إلى الفترة التالية.',
-          'تتجدد الاشتراكات تلقائيًا لنفس المدة بالسعر السائد آنذاك ما لم يتم إلغاؤها قبل 24 ساعة على الأقل من نهاية الفترة الحالية. يمكنك الإدارة أو الإلغاء في أي وقت عبر الإعدادات ← [اسمك] ← الاشتراكات على جهازك — راجع صفحة الدعم لدينا.',
-          'باستثناء ما يقتضيه القانون، جميع المشتريات غير قابلة للاسترداد؛ وتتولى Apple معالجة طلبات استرداد مشتريات App Store.',
+          'تتجدد الاشتراكات تلقائيًا لنفس المدة بالسعر السائد آنذاك ما لم يتم إلغاؤها قبل 24 ساعة على الأقل من نهاية الفترة الحالية. يمكنك الإدارة أو الإلغاء في أي وقت عبر الإعدادات ← [اسمك] ← الاشتراكات على iOS، أو عبر Google Play ← المدفوعات والاشتراكات على Android — راجع صفحة الدعم لدينا.',
+          'باستثناء ما يقتضيه القانون، جميع المشتريات غير قابلة للاسترداد؛ وتتولى Apple معالجة طلبات استرداد مشتريات App Store، وتتولى Google معالجة طلبات استرداد مشتريات Google Play.',
         ],
       },
       { h: 'الإنهاء', p: ['يمكنك التوقف عن استخدام الخدمة وحذف حسابك في أي وقت — راجع صفحة «حذف الحساب». يجوز لنا تعليق وصولك أو إنهاءه في حال انتهاك هذه الشروط أو إساءة استخدام الأرصدة أو الاحتيال أو إساءة استخدام الخدمة، مع أو بدون إشعار مسبق.'] },
@@ -1792,12 +1985,12 @@ const ar: LegalPack = {
     intro: 'هل لديك سؤال أو مشكلة؟ راسلنا على ridvan.uyn@gmail.com — ونهدف إلى الرد خلال يومي عمل.',
     faqs: [
       { q: 'كيف تعمل الأرصدة؟', a: 'تكلّف كل عملية توليد (فيديو، مجموعة صور، كاروسيل) عددًا من الأرصدة يظهر قبل التأكيد — وتعتمد التكلفة الدقيقة على الاستوديو ومستوى الجودة المختارين. يتضمن الاشتراك رصيدًا شهريًا يتجدد كل فترة دون ترحيل؛ ويمكنك أيضًا شراء حزمة أرصدة لمرة واحدة لا تنتهي صلاحيتها.' },
-      { q: 'كيف أستعيد مشترياتي؟', a: 'افتح Viral Factory ← الملف الشخصي ← الإعدادات ← استعادة المشتريات. تأكد من تسجيل الدخول بنفس معرّف Apple الذي استخدمته للشراء.' },
-      { q: 'كيف ألغي اشتراكي؟', a: 'تتم فوترة الاشتراكات وإدارتها من قِبل Apple وليس من قِبلنا. على هاتفك الآيفون: تطبيق الإعدادات ← [اسمك] ← الاشتراكات ← Viral Factory ← إلغاء الاشتراك. يوقف الإلغاء التجديدات المستقبلية؛ ويستمر وصولك حتى نهاية الفترة التي دفعت مقابلها بالفعل.' },
-      { q: 'كيف أحذف حسابي؟', a: 'داخل التطبيق: الملف الشخصي ← الإعدادات ← حذف الحساب. راجع صفحة «حذف الحساب» لمعرفة ما يُحذف بالضبط وكيفية طلب الحذف عبر البريد الإلكتروني إذا لم يعد لديك التطبيق.' },
+      { q: 'كيف أستعيد مشترياتي؟', a: 'افتح Viral Factory ← الملف الشخصي ← الإعدادات ← استعادة المشتريات. تأكد من تسجيل الدخول بنفس معرّف Apple (على iOS) أو حساب Google (على Android) الذي استخدمته للشراء.' },
+      { q: 'كيف ألغي اشتراكي؟', a: 'تتم فوترة الاشتراكات وإدارتها من قِبل Apple أو Google وليس من قِبلنا. على هاتفك الآيفون: تطبيق الإعدادات ← [اسمك] ← الاشتراكات ← Viral Factory ← إلغاء الاشتراك. على Android: Google Play ← أيقونة الملف الشخصي ← المدفوعات والاشتراكات ← الاشتراكات ← Viral Factory ← إلغاء الاشتراك. يوقف الإلغاء التجديدات المستقبلية؛ ويستمر وصولك حتى نهاية الفترة التي دفعت مقابلها بالفعل.' },
+      { q: 'كيف أحذف حسابي؟', a: 'داخل التطبيق (على iOS أو Android): الملف الشخصي ← الإعدادات ← حذف الحساب. يؤدي هذا أيضًا إلى حذف فيديوهات AI Edit وبياناته. راجع صفحة «حذف الحساب» لمعرفة ما يُحذف بالضبط وكيفية طلب الحذف عبر البريد الإلكتروني إذا لم يعد لديك التطبيق.' },
       { q: 'ما اللغات التي يدعمها التطبيق؟', a: 'الإنجليزية، الألمانية، الفرنسية، الإسبانية، الإيطالية، البرتغالية، التركية، اليابانية، الكورية، العربية، والهندية.' },
       { q: 'ماذا تفعل الاستوديوهات؟', a: '«أعد صناعة فيديو ناجح» يعيد بناء ريلز تلصقه باستخدام منتجك. «إعلان فيديو قصير» و«مشهد سينمائي قصير» يولّدان فيديو بسيناريو من وصف. «فيديو شهادة على طريقة الصنّاع» ينشئ إعلانًا بأسلوب UGC يتحدث إلى الكاميرا. «منشور كاروسيل» يبني كاروسيل صور. «شخصية بالذكاء الاصطناعي» تحافظ على هوية ثابتة عبر الفيديوهات. «الظهور الشخصي» و«إدراج داخل فيديو لديك» يضعان صورة حقيقية داخل مشهد مولّد أو موجود. توفر الأفكار الافتتاحية اليومية عشر أفكار جديدة كل صباح، ويمكن جدولة المنشورات الجاهزة مباشرة على TikTok وInstagram وYouTube.' },
-      { q: 'لماذا يطلب التطبيق الوصول إلى الكاميرا أو مكتبة الصور أو الميكروفون؟', a: 'فقط لتتمكن من التقاط أو اختيار صور وفيديوهات لاستخدامها كمدخل للتوليد، وليتمكن التطبيق من حفظ فيديوهاتك الجاهزة في مكتبة صورك. التفاصيل في سياسة الخصوصية الخاصة بنا.' },
+      { q: 'لماذا يطلب التطبيق الوصول إلى الكاميرا أو مكتبة الصور أو الميكروفون؟', a: 'فقط لتتمكن من التقاط أو اختيار صور وفيديوهات لاستخدامها كمدخل للتوليد، وليتمكن التطبيق من حفظ فيديوهاتك الجاهزة في مكتبة صورك. على Android يستخدم التطبيق أدوات اختيار الصور والملفات الخاصة بالنظام ولا يطلب أيًا من هذه الأذونات. التفاصيل في سياسة الخصوصية الخاصة بنا.' },
       { q: 'فشلت عملية توليد لكنها استهلكت أرصدتي — ماذا أفعل؟', a: 'راسلنا بالتاريخ والوقت التقريبيين، وإن أمكن لقطة شاشة؛ وسنحقق في الأمر ونعيد الأرصدة في حال تأكد وجود خطأ في النظام.' },
     ],
   },
@@ -1808,12 +2001,12 @@ const ar: LegalPack = {
     sections: [
       {
         h: 'الحذف من داخل التطبيق (موصى به)',
-        p: ['افتح Viral Factory على جهازك واتبع هذه الخطوات:'],
+        p: ['افتح Viral Factory على جهاز iPhone أو Android واتبع هذه الخطوات (مسار القائمة نفسه على كليهما):'],
         ul: [
           'انتقل إلى الملف الشخصي (علامة التبويب السفلية).',
           'اضغط على الإعدادات.',
           'اضغط على حذف الحساب، بالقرب من أسفل الشاشة.',
-          'إذا كنت قد سجّلت الدخول عبر Apple، فقد يُطلب منك إعادة المصادقة عبر Sign in with Apple للتأكيد أن هذا أنت.',
+          'إذا كنت قد سجّلت الدخول عبر Apple أو Google، فقد يُطلب منك إعادة المصادقة للتأكيد أن هذا أنت.',
           'أكّد الحذف. يسري هذا فورًا ولا يمكن التراجع عنه.',
         ],
       },
@@ -1823,17 +2016,18 @@ const ar: LegalPack = {
           'حسابك ومعلومات ملفك الشخصي',
           'رصيدك وسجل معاملاتك',
           'كل فيديو ومجموعة صور وكاروسيل وشخصية قمت بتوليدها، ووسائطها المصدرية',
+          'مهام AI Edit والنصوص المفرَّغة وخطط المونتاج لديك، والفيديوهات التي رفعتها إلى AI Edit أو أنتجتها به (الفيديوهات المصدرية المرفوعة، والفيديوهات المعدَّلة، والصور المصغّرة، وملفات التعليقات)',
           'الحسابات الاجتماعية المرتبطة (TikTok وInstagram وYouTube) ورموز الوصول المخزَّنة الخاصة بها',
           'الأوامر النصية المحفوظة والإشعارات',
-          'ارتباطك بـ Sign in with Apple / Google (يتم إلغاء إذن Apple)',
+          'ارتباطك بـ Sign in with Apple / Google (يتم إلغاء إذن Apple؛ وعلى Android تتم إزالة الارتباط بحساب Google الخاص بك من أنظمتنا، ويمكنك أيضًا إزالة التطبيق من إعدادات الأمان في حساب Google ← التطبيقات والخدمات التابعة لجهات خارجية)',
         ],
       },
       {
         h: 'ما لا يتأثر تلقائيًا',
         p: [
-          'حذف حسابك لا يُلغي اشتراكًا نشطًا في App Store — يجب إلغاؤه بشكل منفصل عبر الإعدادات ← [اسمك] ← الاشتراكات على جهازك، وإلا فسيستمر في التجدد.',
+          'حذف حسابك لا يُلغي اشتراكًا نشطًا — ألغِه بشكل منفصل وإلا فسيستمر في التجدد: على iOS عبر الإعدادات ← [اسمك] ← الاشتراكات؛ وعلى Android عبر Google Play ← المدفوعات والاشتراكات ← الاشتراكات.',
           'يبقى المحتوى الذي نشرته بالفعل على TikTok أو Instagram أو YouTube على تلك المنصات؛ احذفه مباشرة هناك إذا أردت إزالته.',
-          "لا يؤدي الحذف داخل التطبيق إلى إزالة النسخ التي تحتفظ بها بالفعل جهات التحليلات والإبلاغ عن الأعطال والمشتريات لدينا (Mixpanel وPostHog وSentry وRevenueCat) ومزوّد بنية الذكاء الاصطناعي لدينا (fal.ai). راسل ridvan.uyn@gmail.com لطلب حذفها.",
+          "لا يؤدي الحذف داخل التطبيق إلى إزالة النسخ التي تحتفظ بها بالفعل جهات التحليلات والإبلاغ عن الأعطال والمشتريات لدينا (Mixpanel وPostHog وSentry وRevenueCat) ومزوّدي الذكاء الاصطناعي لدينا (fal.ai وAnthropic، بما في ذلك النسخ التي جرت معالجتها لأجل AI Edit). راسل ridvan.uyn@gmail.com لطلب حذفها.",
         ],
       },
       {
@@ -1849,25 +2043,28 @@ const hi: LegalPack = {
   effectiveDateLabel: '26 सितंबर 2026',
   privacy: {
     title: 'गोपनीयता नीति',
-    effective: "15 अक्टूबर 2026",
+    effective: "26 अक्टूबर 2026",
     lead: 'Viral Factory आपकी जानकारी कैसे एकत्र, उपयोग और सुरक्षित करता है।',
     intro:
-      'यह गोपनीयता नीति बताती है कि Viral Factory iOS ऐप और यह वेबसाइट कौन-सी जानकारी एकत्र करते हैं, क्यों, और आपके पास कौन-से विकल्प हैं। Viral Factory को व्यक्तिगत डेवलपर Rıdvan Uyan द्वारा विकसित किया गया है, जो यहाँ बताए गए उद्देश्यों के लिए आपके डेटा के नियंत्रक हैं।',
+      'यह गोपनीयता नीति बताती है कि Viral Factory iOS और Android ऐप्स और यह वेबसाइट कौन-सी जानकारी एकत्र करते हैं, क्यों, और आपके पास कौन-से विकल्प हैं। Viral Factory को व्यक्तिगत डेवलपर Rıdvan Uyan द्वारा विकसित किया गया है, जो यहाँ बताए गए उद्देश्यों के लिए आपके डेटा के नियंत्रक हैं।',
     sections: [
       {
         h: 'हम जो जानकारी एकत्र करते हैं',
         ul: [
-          'खाता पहचानकर्ता — ऐप पहली बार खोलने पर बनाया गया एक रैंडम डिवाइस पहचानकर्ता, जो उस डिवाइस पर आपके गेस्ट खाते के लिए उपयोग होता है; अगर आप इसके बजाय Apple या Google से साइन इन करते हैं, तो हमें आपका नाम, ईमेल पता (या एक निजी रिले ईमेल) और प्रदाता खाता आईडी मिलती है।',
+          'खाता पहचानकर्ता — ऐप पहली बार खोलने पर बनाया गया एक रैंडम डिवाइस पहचानकर्ता, जो उस डिवाइस पर आपके गेस्ट खाते के लिए उपयोग होता है; अगर आप इसके बजाय Apple (iOS) या Google (iOS और Android) से साइन इन करते हैं, तो हमें आपका नाम, ईमेल पता (या एक निजी रिले ईमेल) और प्रदाता खाता आईडी मिलती है।',
           'आपके द्वारा दी गई सामग्री — आपके लिखे गए प्रॉम्प्ट और टेक्स्ट; अपलोड या पेस्ट किए गए फ़ोटो, वीडियो या लिंक, जैसे दोबारा बनाने के लिए कोई रील लिंक, कैरेक्टर या कैमियो स्टूडियो के लिए एक रेफ़रेंस फ़ोटो, या विश्लेषण के लिए स्क्रीन रिकॉर्डिंग।',
           'जनरेट की गई सामग्री — ऐप द्वारा आपके लिए बनाए गए मीडिया, स्क्रिप्ट और कैप्शन, और आपका जनरेशन व क्रेडिट-लेनदेन इतिहास।',
-          'खरीद संबंधी जानकारी — सब्सक्रिप्शन और क्रेडिट-पैक खरीद App Store द्वारा संभाली जाती हैं; RevenueCat हमारी ओर से खरीद और अधिकार संबंधी इवेंट्स को प्रोसेस करता है। हमें आपका कार्ड नंबर कभी नहीं मिलता।',
+          'खरीद संबंधी जानकारी — सब्सक्रिप्शन और क्रेडिट-पैक खरीद iOS पर App Store द्वारा और Android पर Google Play द्वारा संभाली जाती हैं; RevenueCat हमारी ओर से खरीद और अधिकार संबंधी इवेंट्स को प्रोसेस करता है। हमें आपका कार्ड नंबर कभी नहीं मिलता।',
+          'AI Edit वीडियो — जब आप AI Edit का उपयोग करते हैं, तो आपके द्वारा अपलोड की गई रॉ वीडियो फ़ाइलें (2 GB तक), शब्द-स्तर टाइमस्टैम्प वाला स्पीच ट्रांसक्रिप्ट, एडिट प्लान, और हमारे द्वारा आपके लिए रेंडर किए गए तैयार एडिट किए गए वीडियो, थंबनेल और कैप्शन फ़ाइलें। विवरण नीचे AI Edit अनुभाग में हैं।',
           'सोशल अकाउंट कनेक्शन — अगर आप कंटेंट पब्लिश करने के लिए TikTok, Instagram या YouTube कनेक्ट करते हैं, तो हमें उस अकाउंट की बुनियादी प्रोफ़ाइल जानकारी (हैंडल, डिस्प्ले नाम, अवतार) मिलती है और हम एक एन्क्रिप्टेड एक्सेस टोकन संग्रहीत करते हैं ताकि ऐप आपकी ओर से पब्लिश कर सके।',
           'एनालिटिक्स — ऐप का उपयोग कैसे होता है यह समझने के लिए हम Mixpanel और PostHog का उपयोग करते हैं। इंटरैक्शन विश्लेषण के लिए PostHog सेशन रीप्ले सक्षम है, लेकिन कैप्चर से पहले स्क्रीन पर मौजूद सभी टेक्स्ट और इमेज मास्क कर दी जाती हैं, इसलिए रीप्ले में आपके प्रॉम्प्ट, फ़ोटो या जनरेट की गई सामग्री कभी नहीं दिखती। एनालिटिक्स एक अलग, रैंडम इंस्टॉलेशन आईडी का उपयोग करता है — कभी भी आपके गेस्ट खाता पहचानकर्ता का नहीं।',
           'डिवाइस और डायग्नोस्टिक डेटा — ऐप वर्शन, सामान्य डिवाइस मॉडल और ऑपरेटिंग सिस्टम, और भाषा सेटिंग्स। हमारे एनालिटिक्स और खरीदारी प्रदाता आपके IP पते से अनुमानित स्थान (जैसे देश या क्षेत्र) भी निकाल सकते हैं; ऐप आपके डिवाइस का स्थान नहीं माँगता। सुरक्षा के लिए हम आपके साइन-इन सेशन का IP पता और यूज़र-एजेंट भी रखते हैं।',
           "क्रैश और प्रदर्शन डायग्नोस्टिक्स — हम क्रैश और त्रुटियों का पता लगाने और उन्हें ठीक करने के लिए Sentry (EU क्षेत्र) का उपयोग करते हैं। रिपोर्ट में स्टैक ट्रेस, डिवाइस मॉडल और ऑपरेटिंग सिस्टम, ऐप संस्करण, स्क्रीन नेविगेशन जैसे हाल के ऐप इवेंट का क्रम, और कुछ सेशन के प्रदर्शन-समय शामिल होते हैं। ये आपके Viral Factory खाता ID से जुड़ी होती हैं, आपके ईमेल पते या नाम से नहीं।",
           'सूचना प्राथमिकताएँ — क्या आपने डेली आइडिया रिमाइंडर चालू किया है, जो आपके डिवाइस पर स्थानीय रूप से संग्रहीत होता है।',
         ],
-        p: ['हम विज्ञापन ट्रैकर्स का उपयोग नहीं करते, और ऐप Apple की App Tracking Transparency अनुमति नहीं मांगता।'],
+        p: ['हम विज्ञापन ट्रैकर्स का उपयोग नहीं करते, और ऐप Apple की App Tracking Transparency अनुमति नहीं मांगता।',
+          'Android: खरीद Google Play (बिलिंग) और RevenueCat द्वारा प्रोसेस की जाती हैं। अगर आप Google से साइन इन करते हैं, तो हमें आपका नाम, ईमेल पता और Google खाता आईडी मिलती है। Android ऐप Advertising ID का उपयोग नहीं करता और लोकेशन, कैमरा, माइक्रोफ़ोन या संपर्कों की कोई अनुमति नहीं मांगता। सूचनाएँ वैकल्पिक हैं।',
+        ],
       },
       {
         h: 'हम आपकी जानकारी का उपयोग कैसे करते हैं',
@@ -1885,9 +2082,23 @@ const hi: LegalPack = {
       {
         h: 'AI जनरेशन और तृतीय-पक्ष प्रोसेसर',
         p: [
-          'आपके द्वारा सबमिट की गई सामग्री और रेफ़रेंस मटीरियल केवल आपके अनुरोध किए गए आउटपुट को जनरेट करने के लिए हमारे AI इन्फ्रास्ट्रक्चर प्रदाता fal.ai को भेजे जाते हैं। अनुरोध के आधार पर, fal.ai उस काम को उन मॉडल प्रदाताओं तक भेजता है जिनमें वर्तमान में OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz और OmniHuman शामिल हैं। इन प्रदाताओं के साथ हमारे अलग, सीधे खाते नहीं हैं — fal.ai वह प्रोसेसर है जिससे हमारा अनुबंध है। हम आपकी सामग्री का उपयोग अपने खुद के मॉडल को प्रशिक्षित करने के लिए नहीं करते। हमारा AI इन्फ्रास्ट्रक्चर प्रदाता, fal.ai, आपकी सामग्री को केवल आपके अनुरोध किए गए आउटपुट को जनरेट करने के उद्देश्य से, अपनी स्वयं की शर्तों और गोपनीयता नीति (fal.ai/privacy) के तहत प्रोसेस करता है।',
+          'आपके द्वारा सबमिट की गई सामग्री और रेफ़रेंस मटीरियल केवल आपके अनुरोध किए गए आउटपुट को जनरेट करने के लिए हमारे AI इन्फ्रास्ट्रक्चर प्रदाता fal.ai को भेजे जाते हैं। अनुरोध के आधार पर, fal.ai उस काम को उन मॉडल प्रदाताओं तक भेजता है जिनमें वर्तमान में OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz और OmniHuman शामिल हैं, और इनके लिए fal.ai वह प्रोसेसर है जिससे हमारा अनुबंध है। Anthropic भी एक प्रोसेसर है जिसे हम टेक्स्ट और AI Edit प्लानिंग के लिए सीधे कॉल करते हैं, जैसा कि नीचे बताया गया है। हम आपकी सामग्री का उपयोग अपने खुद के मॉडल को प्रशिक्षित करने के लिए नहीं करते। हमारा AI इन्फ्रास्ट्रक्चर प्रदाता, fal.ai, आपकी सामग्री को केवल आपके अनुरोध किए गए आउटपुट को जनरेट करने के उद्देश्य से, अपनी स्वयं की शर्तों और गोपनीयता नीति (fal.ai/privacy) के तहत प्रोसेस करता है।',
           'अपलोड की गई फ़ोटो और वीडियो, और हमारे द्वारा जनरेट की गई मीडिया, आपके प्रोजेक्ट्स के साथ तब तक संग्रहीत रहती है जब तक आप उन्हें या अपना खाता न हटा दें। आपके द्वारा पेस्ट किए गए रेफ़रेंस लिंक — जैसे दोबारा बनाने के लिए कोई रील — केवल आपका स्टोरीबोर्ड लिखने के लिए विश्लेषित किए जाते हैं; रेफ़रेंस वीडियो खुद आपकी लाइब्रेरी में संग्रहीत नहीं होता।',
           'जनरेट की गई मीडिया Amazon Web Services (S3) पर, और कुछ फ़ाइलों के लिए Supabase Storage पर संग्रहीत होती है, और एक कंटेंट डिलीवरी नेटवर्क (CDN) के माध्यम से पहुँचाई जाती है। एप्लिकेशन डेटा (खाते, प्रोजेक्ट, क्रेडिट इतिहास) MongoDB में संग्रहीत होता है। हमारा बैकएंड DigitalOcean पर होस्ट किया जाता है।',
+        ],
+      },
+      {
+        h: 'AI Edit: आपके रॉ वीडियो',
+        p: [
+          'AI Edit आपके अपलोड किए गए रॉ फ़ुटेज को तैयार छोटे वीडियो में बदलता है। इसके लिए, आपके अपलोड को इस तरह प्रोसेस किया जाता है:',
+        ],
+        ul: [
+          'स्टोरेज — आपके द्वारा अपलोड की गई वीडियो फ़ाइलें (2 GB तक), और उनसे हमारे द्वारा रेंडर किए गए एडिट किए गए वीडियो, थंबनेल और कैप्शन फ़ाइलें हमारे स्टोरेज बकेट्स (Supabase Storage, या फ़ॉलबैक के रूप में Amazon S3) में, आपके खाते के लिए आरक्षित फ़ोल्डरों में संग्रहीत होती हैं।',
+          'ट्रांसक्रिप्शन — ऑडियो ट्रैक fal.ai को भेजा जाता है, जो शब्द-स्तर टाइमस्टैम्प के साथ ट्रांसक्रिप्ट बनाने के लिए ElevenLabs Scribe चलाता है। ट्रांसक्रिप्ट, पहचानी गई भाषा और एडिट प्लान AI Edit जॉब के साथ हमारे डेटाबेस में सहेजे जाते हैं।',
+          'प्रोसेसर के रूप में Anthropic — ट्रांसक्रिप्ट और आपके वीडियो से लिए गए कुछ स्थिर फ़्रेम Anthropic (Claude) को उसके कमर्शियल API के माध्यम से भेजे जाते हैं, ताकि वह कट, हुक टेक्स्ट और कैप्शन तय कर सके और तैयार नतीजे की जाँच कर सके। Anthropic इसे केवल वही आउटपुट लौटाने के लिए प्रोसेस करता है; उसकी कमर्शियल शर्तों के तहत, API इनपुट और आउटपुट का उपयोग उसके मॉडल को प्रशिक्षित करने के लिए नहीं किया जाता।',
+          'रेंडरिंग — कटिंग, कैप्शन और रीफ़्रेमिंग हमारे अपने सर्वरों पर FFmpeg से की जाती है; रेंडरिंग के लिए फ़ाइलें किसी अन्य प्रदाता को नहीं भेजी जातीं।',
+          'कितने समय तक — हम अपलोड, एडिट प्लान, ट्रांसक्रिप्ट और रेंडर किए गए वीडियो तब तक रखते हैं जब तक आप उन्हें या अपना खाता न हटा दें। हम इनका उपयोग विज्ञापन के लिए नहीं करते, और इन्हें अन्य उपयोगकर्ताओं के साथ साझा नहीं करते।',
+          'हटाना — अपना खाता हटाने (प्रोफ़ाइल → सेटिंग्स → खाता हटाएं) से आपके AI Edit जॉब, ट्रांसक्रिप्ट और एडिट प्लान स्थायी रूप से हट जाते हैं, और आपके अपलोड किए गए सोर्स वीडियो तथा रेंडर किए गए वीडियो, थंबनेल और कैप्शन फ़ाइलें हमारे स्टोरेज से हटा दी जाती हैं। fal.ai, ElevenLabs और Anthropic के पास प्रोसेसर के रूप में पहले से मौजूद प्रतियाँ ऐप में हटाने से नहीं हटतीं; उन्हें हटवाने के लिए हमें ईमेल करें।',
         ],
       },
       {
@@ -1901,8 +2112,8 @@ const hi: LegalPack = {
         ],
       },
       { h: 'हम क्या नहीं करते', p: ['हम व्यक्तिगत डेटा नहीं बेचते, और जब तक आप स्पष्ट रूप से किसी चीज़ को सार्वजनिक करना न चुनें, हम आपके प्रॉम्प्ट, अपलोड या जनरेट की गई सामग्री को कभी भी अन्य उपयोगकर्ताओं के साथ साझा नहीं करते।'] },
-      { h: 'डेटा प्रतिधारण', p: ['आपका खाता और जनरेट की गई सामग्री तब तक बनी रहती है जब तक आपका खाता सक्रिय है। अपलोड की गई फ़ोटो, वीडियो और जनरेट की गई मीडिया आपके प्रोजेक्ट्स के साथ तब तक संग्रहीत रहती है जब तक आप उन्हें या अपना खाता न हटा दें। अपना खाता हटाने से (प्रोफ़ाइल → सेटिंग्स → खाता हटाएं) आपका खाता डेटा और संग्रहीत मीडिया हट जाता है। आप किसी भी समय ऐप में अलग-अलग जनरेशन हटा सकते हैं।'] },
-      { h: 'अपना खाता हटाना', p: ['आप किसी भी समय ऐप में अपना खाता स्थायी रूप से हटा सकते हैं: प्रोफ़ाइल → सेटिंग्स → खाता हटाएं। इससे आपका खाता, क्रेडिट इतिहास, वीडियो, कैरेक्टर, प्रॉम्प्ट और जुड़े हुए सोशल अकाउंट तुरंत और स्थायी रूप से हट जाते हैं, और उपयोग किए जाने पर Sign in with Apple अनुमति रद्द हो जाती है। इससे कोई सक्रिय App Store सब्सक्रिप्शन रद्द नहीं होता — उसे अपनी Apple ID सेटिंग्स में अलग से रद्द करें। अगर आपके पास अब ऐप नहीं है तो ईमेल द्वारा हटाने का अनुरोध करने सहित पूरी चरण-दर-चरण जानकारी के लिए हमारा «खाता हटाएं» पेज देखें। हमारे एनालिटिक्स, क्रैश-रिपोर्टिंग, खरीदारी और AI प्रदाताओं (Mixpanel, PostHog, Sentry, RevenueCat और fal.ai) के पास पहले से मौजूद प्रतियाँ ऐप में हटाने से नहीं हटतीं; उन्हें हटवाने के लिए हमें ईमेल करें।'] },
+      { h: 'डेटा प्रतिधारण', p: ['आपका खाता और जनरेट की गई सामग्री तब तक बनी रहती है जब तक आपका खाता सक्रिय है। अपलोड की गई फ़ोटो, वीडियो और जनरेट की गई मीडिया आपके प्रोजेक्ट्स के साथ तब तक संग्रहीत रहती है जब तक आप उन्हें या अपना खाता न हटा दें। AI Edit के अपलोड, ट्रांसक्रिप्ट, एडिट प्लान और रेंडर किए गए वीडियो भी इसी आधार पर रखे जाते हैं। अपना खाता हटाने से (प्रोफ़ाइल → सेटिंग्स → खाता हटाएं) आपका खाता डेटा, AI Edit डेटा और संग्रहीत मीडिया हट जाता है। आप किसी भी समय ऐप में अलग-अलग जनरेशन हटा सकते हैं।'] },
+      { h: 'अपना खाता हटाना', p: ['आप किसी भी समय ऐप में अपना खाता स्थायी रूप से हटा सकते हैं: प्रोफ़ाइल → सेटिंग्स → खाता हटाएं। इससे आपका खाता, क्रेडिट इतिहास, वीडियो, AI Edit जॉब और AI Edit में आपके अपलोड किए या रेंडर किए गए वीडियो, कैरेक्टर, प्रॉम्प्ट और जुड़े हुए सोशल अकाउंट तुरंत और स्थायी रूप से हट जाते हैं, और उपयोग किए जाने पर Sign in with Apple अनुमति रद्द हो जाती है। इससे कोई सक्रिय सब्सक्रिप्शन रद्द नहीं होता: App Store सब्सक्रिप्शन अपनी Apple ID सेटिंग्स में रद्द करें, या Google Play सब्सक्रिप्शन Google Play → भुगतान और सदस्यताएँ में रद्द करें। अगर आपके पास अब ऐप नहीं है तो ईमेल द्वारा हटाने का अनुरोध करने सहित पूरी चरण-दर-चरण जानकारी के लिए हमारा «खाता हटाएं» पेज देखें। हमारे एनालिटिक्स, क्रैश-रिपोर्टिंग, खरीदारी और AI प्रदाताओं (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai और Anthropic) के पास पहले से मौजूद प्रतियाँ ऐप में हटाने से नहीं हटतीं; उन्हें हटवाने के लिए हमें ईमेल करें।'] },
       { h: 'GDPR के तहत आपके अधिकार (EEA, यूके, स्विट्ज़रलैंड)', p: ['अगर आप EEA, यूके या स्विट्ज़रलैंड में हैं, तो आपको अपने व्यक्तिगत डेटा तक पहुँचने, उसे सही करने, हटाने और उसकी एक प्रति (पोर्टेबिलिटी) प्राप्त करने, और कुछ प्रोसेसिंग पर आपत्ति करने या उसे सीमित करने का अधिकार है। हम आपके डेटा को इन आधारों पर प्रोसेस करते हैं: अनुबंध का निष्पादन (ऐप प्रदान करना), आपकी सहमति (जैसे, सेशन-रीप्ले एनालिटिक्स), और हमारे वैध हित (सुरक्षा, दुरुपयोग रोकथाम, सेवा में सुधार)। इन अधिकारों का उपयोग करने के लिए ridvan.uyn@gmail.com पर लिखें; हम एक महीने के भीतर जवाब देंगे।'] },
       { h: 'कैलिफ़ोर्निया निवासी (CCPA/CPRA)', p: ['कैलिफ़ोर्निया के निवासी हमारे पास मौजूद अपनी व्यक्तिगत जानकारी को जानने, हटाने या सही करने का अनुरोध कर सकते हैं, और उसकी «बिक्री» या «साझाकरण» से बाहर निकल सकते हैं — हम व्यक्तिगत जानकारी नहीं बेचते और क्रॉस-कॉन्टेक्स्ट बिहेवियरल विज्ञापन ट्रैकर्स का उपयोग नहीं करते। अनुरोध ridvan.uyn@gmail.com पर भेजें।'] },
       { h: 'बच्चे', p: ['Viral Factory 13 वर्ष से कम आयु के बच्चों (या आपके देश में आवश्यक न्यूनतम आयु) के लिए नहीं है, और हम जानबूझकर उनकी जानकारी एकत्र नहीं करते। अगर आपको लगता है कि किसी बच्चे ने हमें व्यक्तिगत जानकारी दी है, तो हमसे संपर्क करें और हम उसे हटा देंगे।'] },
@@ -1914,12 +2125,14 @@ const hi: LegalPack = {
   },
   terms: {
     title: 'उपयोग की शर्तें',
+    effective: '26 अक्टूबर 2026',
     lead: 'Viral Factory के उपयोग को नियंत्रित करने वाली शर्तें।',
     intro:
-      'ये उपयोग की शर्तें («शर्तें») Rıdvan Uyan («हम») द्वारा प्रदान किए गए Viral Factory iOS ऐप और इस वेबसाइट (मिलाकर, «सेवा») के आपके उपयोग को नियंत्रित करती हैं। सेवा को डाउनलोड, एक्सेस या उपयोग करके, आप इन शर्तों से सहमत होते हैं।',
+      'ये उपयोग की शर्तें («शर्तें») Rıdvan Uyan («हम») द्वारा प्रदान किए गए Viral Factory iOS और Android ऐप्स और इस वेबसाइट (मिलाकर, «सेवा») के आपके उपयोग को नियंत्रित करती हैं। सेवा को डाउनलोड, एक्सेस या उपयोग करके, आप इन शर्तों से सहमत होते हैं।',
     sections: [
       { h: 'सेवा', p: ['Viral Factory आपके द्वारा दिए गए प्रॉम्प्ट और रेफ़रेंस मटीरियल से, तृतीय-पक्ष AI मॉडल का उपयोग करके, वीडियो, इमेज और कैप्शन जैसी छोटी सामग्री जनरेट करता है। जनरेट किया गया आउटपुट गलत, अप्रत्याशित या आपके उद्देश्य के लिए अनुपयुक्त हो सकता है; इसे पब्लिश करने या इस पर भरोसा करने से पहले इसकी समीक्षा करने की ज़िम्मेदारी आपकी है।'] },
       { h: 'Apple की लाइसेंसिंग शर्तें', p: ['App Store के माध्यम से खरीदे गए ऑटो-रिन्यूएबल सब्सक्रिप्शन Apple के लाइसेंस प्राप्त एप्लिकेशन एंड यूज़र लाइसेंस एग्रीमेंट द्वारा भी नियंत्रित होते हैं, जो apple.com/legal/internet-services/itunes/dev/stdeula पर उपलब्ध है। अगर सब्सक्रिप्शन या खरीद से जुड़े किसी मामले में ये शर्तें उस अनुबंध से टकराती हैं, तो Apple का अनुबंध लागू होगा।'] },
+      { h: 'Google Play', p: ['Google Play के माध्यम से खरीदे गए सब्सक्रिप्शन और क्रेडिट पैक की बिलिंग और प्रबंधन Google Play द्वारा किया जाता है; Google Play खरीद के लिए रिफ़ंड अनुरोध Google द्वारा संभाले जाते हैं (support.google.com/googleplay)।'] },
       {
         h: 'स्वीकार्य उपयोग',
         p: ['आप सेवा का उपयोग निम्न के लिए न करने के लिए सहमत हैं:'],
@@ -1940,8 +2153,8 @@ const hi: LegalPack = {
           'सामग्री जनरेट करने में क्रेडिट खर्च होते हैं; जनरेट करने से पहले लागत ऐप में दिखाई जाती है।',
           'एक बार खरीदे गए क्रेडिट पैक तब तक समाप्त नहीं होते जब तक खरीद के समय अन्यथा न बताया जाए।',
           'सब्सक्रिप्शन प्लान में एक क्रेडिट भत्ता शामिल होता है जो हर बिलिंग अवधि में रिन्यू होता है; उपयोग न किए गए सब्सक्रिप्शन क्रेडिट अगली अवधि में आगे नहीं बढ़ते।',
-          'मौजूदा अवधि समाप्त होने से कम से कम 24 घंटे पहले रद्द न किए जाने पर सब्सक्रिप्शन उसी अवधि के लिए तत्कालीन कीमत पर अपने-आप रिन्यू हो जाते हैं। अपने डिवाइस पर सेटिंग्स → [आपका नाम] → सब्सक्रिप्शन में जाकर कभी भी प्रबंधित करें या रद्द करें — हमारा सहायता पेज देखें।',
-          'कानून द्वारा आवश्यक होने के अलावा, सभी खरीद गैर-वापसी योग्य हैं; App Store खरीद के लिए रिफ़ंड अनुरोध Apple द्वारा संभाले जाते हैं।',
+          'मौजूदा अवधि समाप्त होने से कम से कम 24 घंटे पहले रद्द न किए जाने पर सब्सक्रिप्शन उसी अवधि के लिए तत्कालीन कीमत पर अपने-आप रिन्यू हो जाते हैं। iOS पर सेटिंग्स → [आपका नाम] → सब्सक्रिप्शन में, या Android पर Google Play → भुगतान और सदस्यताएँ में जाकर कभी भी प्रबंधित करें या रद्द करें — हमारा सहायता पेज देखें।',
+          'कानून द्वारा आवश्यक होने के अलावा, सभी खरीद गैर-वापसी योग्य हैं; App Store खरीद के लिए रिफ़ंड अनुरोध Apple द्वारा, और Google Play खरीद के लिए रिफ़ंड अनुरोध Google द्वारा संभाले जाते हैं।',
         ],
       },
       { h: 'समाप्ति', p: ['आप किसी भी समय सेवा का उपयोग बंद कर सकते हैं और अपना खाता हटा सकते हैं — हमारा «खाता हटाएं» पेज देखें। इन शर्तों के उल्लंघन, क्रेडिट के दुरुपयोग, धोखाधड़ी, या सेवा के दुरुपयोग के लिए हम पूर्व सूचना के साथ या उसके बिना आपकी पहुँच को निलंबित या समाप्त कर सकते हैं।'] },
@@ -1958,12 +2171,12 @@ const hi: LegalPack = {
     intro: 'कोई सवाल या समस्या है? ridvan.uyn@gmail.com पर ईमेल करें — हम आमतौर पर 2 कार्यदिवसों के भीतर जवाब देते हैं।',
     faqs: [
       { q: 'क्रेडिट कैसे काम करते हैं?', a: 'हर जनरेशन (एक वीडियो, इमेज का एक सेट, एक कैरोसेल) की लागत एक निश्चित संख्या में क्रेडिट होती है, जो कन्फ़र्म करने से पहले दिखाई जाती है — सटीक लागत चुने गए स्टूडियो और क्वालिटी टियर पर निर्भर करती है। सब्सक्रिप्शन में एक मासिक क्रेडिट भत्ता शामिल होता है जो हर अवधि में रिन्यू होता है और आगे नहीं बढ़ता; आप एक बार खरीदा जाने वाला क्रेडिट पैक भी खरीद सकते हैं, जो समाप्त नहीं होता।' },
-      { q: 'मैं अपनी खरीद कैसे पुनर्स्थापित करूं?', a: 'Viral Factory → प्रोफ़ाइल → सेटिंग्स → खरीद पुनर्स्थापित करें खोलें। सुनिश्चित करें कि आप उसी Apple ID से साइन इन हैं जिससे आपने खरीदारी की थी।' },
-      { q: 'मैं अपना सब्सक्रिप्शन कैसे रद्द करूं?', a: 'सब्सक्रिप्शन Apple द्वारा बिल किए और प्रबंधित किए जाते हैं, हमारे द्वारा नहीं। अपने iPhone पर: सेटिंग्स ऐप → [आपका नाम] → सब्सक्रिप्शन → Viral Factory → सब्सक्रिप्शन रद्द करें। रद्द करने से भविष्य के रिन्यूअल रुक जाते हैं; आपकी पहुँच पहले से भुगतान की गई अवधि के अंत तक बनी रहती है।' },
-      { q: 'मैं अपना खाता कैसे हटाऊं?', a: 'ऐप में: प्रोफ़ाइल → सेटिंग्स → खाता हटाएं। बिल्कुल क्या हटाया जाता है और अगर आपके पास अब ऐप नहीं है तो ईमेल द्वारा हटाने का अनुरोध कैसे करें, इसके लिए हमारा «खाता हटाएं» पेज देखें।' },
+      { q: 'मैं अपनी खरीद कैसे पुनर्स्थापित करूं?', a: 'Viral Factory → प्रोफ़ाइल → सेटिंग्स → खरीद पुनर्स्थापित करें खोलें। सुनिश्चित करें कि आप उसी Apple ID (iOS) या Google खाते (Android) से साइन इन हैं जिससे आपने खरीदारी की थी।' },
+      { q: 'मैं अपना सब्सक्रिप्शन कैसे रद्द करूं?', a: 'सब्सक्रिप्शन Apple या Google द्वारा बिल किए और प्रबंधित किए जाते हैं, हमारे द्वारा नहीं। अपने iPhone पर: सेटिंग्स ऐप → [आपका नाम] → सब्सक्रिप्शन → Viral Factory → सब्सक्रिप्शन रद्द करें। Android पर: Google Play → प्रोफ़ाइल आइकन → भुगतान और सदस्यताएँ → सदस्यताएँ → Viral Factory → सदस्यता रद्द करें। रद्द करने से भविष्य के रिन्यूअल रुक जाते हैं; आपकी पहुँच पहले से भुगतान की गई अवधि के अंत तक बनी रहती है।' },
+      { q: 'मैं अपना खाता कैसे हटाऊं?', a: 'ऐप में (iOS या Android): प्रोफ़ाइल → सेटिंग्स → खाता हटाएं। इससे आपके AI Edit वीडियो और डेटा भी हट जाते हैं। बिल्कुल क्या हटाया जाता है और अगर आपके पास अब ऐप नहीं है तो ईमेल द्वारा हटाने का अनुरोध कैसे करें, इसके लिए हमारा «खाता हटाएं» पेज देखें।' },
       { q: 'ऐप किन भाषाओं को सपोर्ट करता है?', a: 'अंग्रेज़ी, जर्मन, फ़्रेंच, स्पेनिश, इतालवी, पुर्तगाली, तुर्की, जापानी, कोरियाई, अरबी और हिन्दी।' },
       { q: 'स्टूडियो क्या करते हैं?', a: '«हिट को फिर से बनाएं» आपकी पेस्ट की गई रील को आपके अपने प्रोडक्ट के साथ दोबारा बनाता है। «शॉर्ट वीडियो विज्ञापन» और «सिनेमैटिक शॉर्ट» किसी विवरण से स्क्रिप्ट वाला वीडियो जनरेट करते हैं। «क्रिएटर टेस्टिमोनियल» कैमरे की ओर देखकर बोलने वाला UGC-स्टाइल विज्ञापन बनाता है। «स्वाइप पोस्ट» एक इमेज कैरोसेल बनाता है। «AI कैरेक्टर» वीडियो के बीच एक जैसा किरदार बनाए रखता है। «कैमियो» और «अपने वीडियो में जोड़ें» किसी असली फ़ोटो को जनरेट किए गए या मौजूदा सीन में रखते हैं। डेली हुक हर सुबह दस नए आइडिया देते हैं, और तैयार पोस्ट को सीधे TikTok, Instagram और YouTube पर शेड्यूल किया जा सकता है।' },
-      { q: 'ऐप कैमरा, फ़ोटो लाइब्रेरी या माइक्रोफ़ोन एक्सेस क्यों मांगता है?', a: 'सिर्फ़ इसलिए ताकि आप जनरेशन के लिए इनपुट के रूप में उपयोग करने हेतु फ़ोटो और वीडियो कैप्चर या चुन सकें, और ऐप आपके तैयार वीडियो को आपकी फ़ोटो लाइब्रेरी में सेव कर सके। विवरण के लिए हमारी गोपनीयता नीति देखें।' },
+      { q: 'ऐप कैमरा, फ़ोटो लाइब्रेरी या माइक्रोफ़ोन एक्सेस क्यों मांगता है?', a: 'सिर्फ़ इसलिए ताकि आप जनरेशन के लिए इनपुट के रूप में उपयोग करने हेतु फ़ोटो और वीडियो कैप्चर या चुन सकें, और ऐप आपके तैयार वीडियो को आपकी फ़ोटो लाइब्रेरी में सेव कर सके। Android पर ऐप सिस्टम के फ़ोटो और फ़ाइल पिकर का उपयोग करता है और इनमें से कोई अनुमति नहीं मांगता। विवरण के लिए हमारी गोपनीयता नीति देखें।' },
       { q: 'एक जनरेशन विफल हो गया लेकिन मेरे क्रेडिट खर्च हो गए — मैं क्या करूं?', a: 'हमें अनुमानित तारीख और समय, और अगर संभव हो तो एक स्क्रीनशॉट ईमेल करें; सिस्टम एरर की पुष्टि होने पर हम जांच करेंगे और क्रेडिट वापस करेंगे।' },
     ],
   },
@@ -1974,12 +2187,12 @@ const hi: LegalPack = {
     sections: [
       {
         h: 'ऐप में हटाएं (अनुशंसित)',
-        p: ['अपने डिवाइस पर Viral Factory खोलें और इन चरणों का पालन करें:'],
+        p: ['अपने iPhone या Android डिवाइस पर Viral Factory खोलें और इन चरणों का पालन करें (मेनू का रास्ता दोनों पर एक जैसा है):'],
         ul: [
           'प्रोफ़ाइल पर जाएं (नीचे का टैब)।',
           'सेटिंग्स पर टैप करें।',
           'स्क्रीन के नीचे की ओर, खाता हटाएं पर टैप करें।',
-          'अगर आपने Apple से साइन इन किया है, तो यह पुष्टि करने के लिए कि यह आप ही हैं, आपसे Sign in with Apple के ज़रिए दोबारा प्रमाणित करने को कहा जा सकता है।',
+          'अगर आपने Apple या Google से साइन इन किया है, तो यह पुष्टि करने के लिए कि यह आप ही हैं, आपसे दोबारा प्रमाणित करने को कहा जा सकता है।',
           'हटाने की पुष्टि करें। यह तुरंत प्रभावी होता है और इसे पूर्ववत नहीं किया जा सकता।',
         ],
       },
@@ -1989,17 +2202,18 @@ const hi: LegalPack = {
           'आपका खाता और प्रोफ़ाइल जानकारी',
           'आपका क्रेडिट बैलेंस और लेनदेन इतिहास',
           'आपके द्वारा जनरेट किया गया हर वीडियो, इमेज सेट, कैरोसेल और कैरेक्टर, और उनका मूल मीडिया',
+          'आपके AI Edit जॉब, ट्रांसक्रिप्ट और एडिट प्लान, और AI Edit में आपके अपलोड किए या रेंडर किए गए वीडियो (अपलोड किए गए सोर्स वीडियो, एडिट किए गए वीडियो, थंबनेल और कैप्शन फ़ाइलें)',
           'जुड़े हुए सोशल अकाउंट (TikTok, Instagram, YouTube) और उनके संग्रहीत एक्सेस टोकन',
           'सेव किए गए प्रॉम्प्ट और सूचनाएँ',
-          'आपका Sign in with Apple / Google लिंक (Apple की अनुमति रद्द कर दी जाती है)',
+          'आपका Sign in with Apple / Google लिंक (Apple की अनुमति रद्द कर दी जाती है; Android पर, आपके Google खाते का लिंक हमारे सिस्टम से हटा दिया जाता है, और आप ऐप को अपने Google खाते की सुरक्षा सेटिंग्स → तृतीय-पक्ष ऐप्स और सेवाएँ से भी हटा सकते हैं)',
         ],
       },
       {
         h: 'जो स्वतः प्रभावित नहीं होता',
         p: [
-          'खाता हटाने से कोई सक्रिय App Store सब्सक्रिप्शन रद्द नहीं होता — इसे अपने डिवाइस पर सेटिंग्स → [आपका नाम] → सब्सक्रिप्शन में जाकर अलग से रद्द करें, नहीं तो यह रिन्यू होता रहेगा।',
+          'खाता हटाने से कोई सक्रिय सब्सक्रिप्शन रद्द नहीं होता — इसे अलग से रद्द करें, नहीं तो यह रिन्यू होता रहेगा: iOS पर सेटिंग्स → [आपका नाम] → सब्सक्रिप्शन में; Android पर Google Play → भुगतान और सदस्यताएँ → सदस्यताएँ में।',
           'आपने TikTok, Instagram या YouTube पर पहले से जो कंटेंट पब्लिश किया है वह उन प्लेटफ़ॉर्म पर बना रहता है; अगर आप उसे हटवाना चाहते हैं तो उसे सीधे वहीं से हटाएं।',
-          "हमारे एनालिटिक्स, क्रैश-रिपोर्टिंग और खरीदारी प्रदाताओं (Mixpanel, PostHog, Sentry, RevenueCat) तथा AI इंफ्रास्ट्रक्चर प्रदाता (fal.ai) के पास पहले से मौजूद प्रतियाँ ऐप में हटाने से नहीं हटतीं। उन्हें हटवाने के लिए ridvan.uyn@gmail.com पर ईमेल करें।",
+          "हमारे एनालिटिक्स, क्रैश-रिपोर्टिंग और खरीदारी प्रदाताओं (Mixpanel, PostHog, Sentry, RevenueCat) तथा हमारे AI प्रदाताओं (fal.ai और Anthropic, जिनमें AI Edit के लिए प्रोसेस की गई प्रतियाँ भी शामिल हैं) के पास पहले से मौजूद प्रतियाँ ऐप में हटाने से नहीं हटतीं। उन्हें हटवाने के लिए ridvan.uyn@gmail.com पर ईमेल करें।",
         ],
       },
       {

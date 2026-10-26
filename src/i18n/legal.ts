@@ -29,18 +29,19 @@ const en: LegalPack = {
   effectiveDateLabel: 'September 26, 2026',
   privacy: {
     title: 'Privacy Policy',
-    effective: "October 15, 2026",
+    effective: "October 26, 2026",
     lead: 'How Viral Factory collects, uses and protects your information.',
     intro:
-      'This Privacy Policy explains what information the Viral Factory iOS app and this website collect, why, and the choices you have. Viral Factory is developed by Rıdvan Uyan, an individual developer, who is the controller of your information for the purposes described here.',
+      'This Privacy Policy explains what information the Viral Factory iOS and Android apps and this website collect, why, and the choices you have. Viral Factory is developed by Rıdvan Uyan, an individual developer, who is the controller of your information for the purposes described here.',
     sections: [
       {
         h: 'Information we collect',
         ul: [
-          'Account identifiers — a random device identifier created the first time you open the app, used for your guest account on that device; if you sign in with Apple or Google instead, we receive your name, email address (or a private relay email) and the provider account ID.',
+          'Account identifiers — a random device identifier created the first time you open the app, used for your guest account on that device; if you sign in with Apple (iOS) or Google (iOS and Android) instead, we receive your name, email address (or a private relay email) and the provider account ID.',
           'Content you provide — prompts and text you write; photos, videos or links you upload or paste, such as a reel link to remake, a reference photo for the Character or Cameo studios, or a screen recording to analyze.',
           'Generated content — the media, scripts and captions the app creates for you, and your generation and credit-transaction history.',
-          'Purchase information — subscription and credit-pack purchases are handled by the App Store; RevenueCat processes purchase and entitlement events on our behalf. We never receive your card number.',
+          'Purchase information — subscription and credit-pack purchases are handled by the App Store on iOS and by Google Play on Android; RevenueCat processes purchase and entitlement events on our behalf. We never receive your card number.',
+          'AI Edit videos — when you use AI Edit, the raw video files you upload (up to 2 GB), the speech transcript with word timestamps, the edit plan, and the finished edited videos, thumbnails and caption files we render for you. Details are in the AI Edit section below.',
           'Social account connections — if you connect TikTok, Instagram or YouTube to publish content, we receive that account’s basic profile info (handle, display name, avatar) and store an encrypted access token so the app can publish on your behalf.',
           'Analytics — we use Mixpanel and PostHog to understand how the app is used. PostHog session replay is enabled for interaction analysis, but all on-screen text and images are masked before capture, so replay never shows your prompts, photos or generated media. Analytics uses a separate, random installation identifier — never your guest account identifier.',
           'Device and diagnostic data — app version, general device model and operating system, and language settings. Our analytics and purchase providers may also derive an approximate location (such as country or region) from your IP address; the app does not request your device location. We also keep the IP address and user agent of your sign-in sessions for security.',
@@ -49,6 +50,7 @@ const en: LegalPack = {
         ],
         p: [
           'We do not use advertising trackers, and the app does not request Apple’s App Tracking Transparency permission.',
+          'Android: purchases are processed by Google Play (billing) and RevenueCat. If you sign in with Google, we receive your name, email address and Google account ID. The Android app does not use the Advertising ID and requests no location, camera, microphone or contacts permission. Notifications are optional.',
         ],
       },
       {
@@ -67,9 +69,23 @@ const en: LegalPack = {
       {
         h: 'AI generation and third-party processors',
         p: [
-          'Content and reference material you submit are sent to fal.ai, our AI infrastructure provider, solely to generate the output you requested. Depending on the request, fal.ai routes the job to model providers that currently include OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz and OmniHuman. We do not hold separate direct accounts with these providers — fal.ai is the processor we contract with. We do not use your content to train our own models. Our AI infrastructure provider, fal.ai, processes your content only to generate the output you requested, under its own terms and privacy policy (fal.ai/privacy).',
+          'Content and reference material you submit are sent to fal.ai, our AI infrastructure provider, solely to generate the output you requested. Depending on the request, fal.ai routes the job to model providers that currently include OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz and OmniHuman, and fal.ai is the processor we contract with for those. Anthropic is also a processor we call directly for text and AI Edit planning, as described below. We do not use your content to train our own models. Our AI infrastructure provider, fal.ai, processes your content only to generate the output you requested, under its own terms and privacy policy (fal.ai/privacy).',
           'Uploaded photos, videos and the media we generate are stored with your projects until you delete them or delete your account. Reference links you paste — for example, a reel to remake — are analyzed only to write your storyboard; the reference video itself is not stored in your library.',
           'Generated media is stored on Amazon Web Services (S3) and, for some assets, Supabase Storage, and delivered through a content delivery network. Application data (accounts, projects, credit ledger) is stored in MongoDB. Our backend is hosted on DigitalOcean.',
+        ],
+      },
+      {
+        h: 'AI Edit: your raw videos',
+        p: [
+          'AI Edit turns raw footage you upload into finished short videos. To do that, your upload is processed as follows:',
+        ],
+        ul: [
+          'Storage — the video files you upload (up to 2 GB), and the edited videos, thumbnails and caption files we render from them, are stored in our storage buckets (Supabase Storage, or Amazon S3 as a fallback), in folders reserved for your account.',
+          'Transcription — the audio track is sent to fal.ai, which runs ElevenLabs Scribe to produce a transcript with word timestamps. The transcript, the detected language and the edit plan are saved with the AI Edit job in our database.',
+          'Anthropic as a processor — the transcript and a small number of still frames sampled from your video are sent to Anthropic (Claude) through its commercial API so that it can decide the cuts, hook text and captions, and check the finished result. Anthropic processes this only to return that output; under its commercial terms, API inputs and outputs are not used to train its models.',
+          'Rendering — cutting, captions and reframing are done on our own servers with FFmpeg; the files are not sent to any other provider for rendering.',
+          'How long — we keep uploads, edit plans, transcripts and rendered videos until you delete them or delete your account. We do not use them for advertising, and we do not share them with other users.',
+          'Deletion — deleting your account (Profile → Settings → Delete Account) permanently deletes your AI Edit jobs, transcripts and edit plans, and removes your uploaded source videos and rendered videos, thumbnails and caption files from our storage. Copies already held by fal.ai, ElevenLabs and Anthropic as processors are not removed by in-app deletion; email us to request their deletion.',
         ],
       },
       {
@@ -91,13 +107,13 @@ const en: LegalPack = {
       {
         h: 'Data retention',
         p: [
-          'Your account and generated content are retained while your account is active. Uploaded photos, videos and generated media are stored with your projects until you delete them or delete your account. Deleting your account (Profile → Settings → Delete Account) removes your account data and stored media. You can delete individual generations in the app at any time.',
+          'Your account and generated content are retained while your account is active. Uploaded photos, videos and generated media are stored with your projects until you delete them or delete your account. AI Edit uploads, transcripts, edit plans and rendered videos are kept on the same basis. Deleting your account (Profile → Settings → Delete Account) removes your account data, AI Edit data and stored media. You can delete individual generations in the app at any time.',
         ],
       },
       {
         h: 'Deleting your account',
         p: [
-          'You can permanently delete your account at any time in the app: Profile → Settings → Delete Account. This immediately and permanently deletes your account, credit history, videos, characters, prompts and connected social accounts, and revokes the Sign in with Apple grant if used. It does not cancel an active App Store subscription — cancel that separately in your Apple ID settings. See our Delete Account page for full, step-by-step instructions, including how to request deletion by email if you no longer have the app. Copies already held by our analytics, crash-reporting, purchase and AI providers (Mixpanel, PostHog, Sentry, RevenueCat and fal.ai) are not removed by the in-app deletion; email us to request their deletion.',
+          'You can permanently delete your account at any time in the app: Profile → Settings → Delete Account. This immediately and permanently deletes your account, credit history, videos, AI Edit jobs and the videos you uploaded to or rendered with AI Edit, characters, prompts and connected social accounts, and revokes the Sign in with Apple grant if used. It does not cancel an active subscription: cancel an App Store subscription in your Apple ID settings, or a Google Play subscription in Google Play → Payments and subscriptions. See our Delete Account page for full, step-by-step instructions, including how to request deletion by email if you no longer have the app. Copies already held by our analytics, crash-reporting, purchase and AI providers (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai and Anthropic) are not removed by the in-app deletion; email us to request their deletion.',
         ],
       },
       {
@@ -141,9 +157,10 @@ const en: LegalPack = {
   },
   terms: {
     title: 'Terms of Use',
+    effective: 'October 26, 2026',
     lead: 'The terms governing your use of Viral Factory.',
     intro:
-      'These Terms of Use (“Terms”) govern your use of the Viral Factory iOS app and this website (together, the “Service”), provided by Rıdvan Uyan (“we”, “us”). By downloading, accessing or using the Service, you agree to these Terms.',
+      'These Terms of Use (“Terms”) govern your use of the Viral Factory iOS and Android apps and this website (together, the “Service”), provided by Rıdvan Uyan (“we”, “us”). By downloading, accessing or using the Service, you agree to these Terms.',
     sections: [
       {
         h: 'The service',
@@ -155,6 +172,12 @@ const en: LegalPack = {
         h: 'Apple’s licensing terms',
         p: [
           'Auto-renewable subscriptions purchased through the App Store are also governed by Apple’s Licensed Application End User License Agreement, available at apple.com/legal/internet-services/itunes/dev/stdeula. If these Terms conflict with that agreement on a subscription or purchase matter, Apple’s agreement governs.',
+        ],
+      },
+      {
+        h: 'Google Play',
+        p: [
+          'Subscriptions and credit packs purchased through Google Play are billed and managed by Google Play; refund requests for Google Play purchases are handled by Google (support.google.com/googleplay).',
         ],
       },
       {
@@ -187,8 +210,8 @@ const en: LegalPack = {
           'Generating content consumes credits; the cost is shown in the app before you generate.',
           'One-time credit packs do not expire unless stated otherwise at the time of purchase.',
           'Subscription plans include a credit allowance that refreshes each billing period; unused subscription credits do not roll over to the next period.',
-          'Subscriptions automatically renew for the same term at the then-current price unless cancelled at least 24 hours before the end of the current period. Manage or cancel any time in Settings → [your name] → Subscriptions on your device — see our Support page.',
-          'Except where required by law, all purchases are non-refundable; refund requests for App Store purchases are handled by Apple.',
+          'Subscriptions automatically renew for the same term at the then-current price unless cancelled at least 24 hours before the end of the current period. Manage or cancel any time in Settings → [your name] → Subscriptions on iOS, or in Google Play → Payments and subscriptions on Android — see our Support page.',
+          'Except where required by law, all purchases are non-refundable; refund requests for App Store purchases are handled by Apple, and refund requests for Google Play purchases are handled by Google.',
         ],
       },
       {
@@ -226,12 +249,12 @@ const en: LegalPack = {
     intro: 'Have a question or run into a problem? Email ridvan.uyn@gmail.com — we aim to reply within 2 business days.',
     faqs: [
       { q: 'How do credits work?', a: 'Every generation (a video, an image set, a carousel) costs a number of credits, shown before you confirm — the exact cost depends on the studio and quality tier you choose. A subscription includes a monthly credit allowance that refreshes each period and does not carry over; you can also buy a one-time credit pack, which does not expire.' },
-      { q: 'How do I restore my purchases?', a: 'Open Viral Factory → Profile → Settings → Restore Purchases. Make sure you are signed in with the same Apple ID you purchased with.' },
-      { q: 'How do I cancel my subscription?', a: 'Subscriptions are billed and managed by Apple, not by us. On your iPhone: Settings app → [your name] → Subscriptions → Viral Factory → Cancel Subscription. Cancelling stops future renewals; you keep access until the end of the period you already paid for.' },
-      { q: 'How do I delete my account?', a: 'In the app: Profile → Settings → Delete Account. See our Delete Account page for exactly what gets deleted and how to request deletion by email if you no longer have the app.' },
+      { q: 'How do I restore my purchases?', a: 'Open Viral Factory → Profile → Settings → Restore Purchases. Make sure you are signed in with the same Apple ID (iOS) or Google account (Android) you purchased with.' },
+      { q: 'How do I cancel my subscription?', a: 'Subscriptions are billed and managed by Apple or Google, not by us. On iPhone: Settings app → [your name] → Subscriptions → Viral Factory → Cancel Subscription. On Android: Google Play → Profile icon → Payments and subscriptions → Subscriptions → Viral Factory → Cancel subscription. Cancelling stops future renewals; you keep access until the end of the period you already paid for.' },
+      { q: 'How do I delete my account?', a: 'In the app (iOS or Android): Profile → Settings → Delete Account. This also deletes your AI Edit videos and data. See our Delete Account page for exactly what gets deleted and how to request deletion by email if you no longer have the app.' },
       { q: 'What languages does the app support?', a: 'English, German, French, Spanish, Italian, Portuguese, Turkish, Japanese, Korean, Arabic and Hindi.' },
       { q: 'What do the studios do?', a: '“Remake a hit” rebuilds a reel you paste in with your own product in it. “Short video ad” and “Cinematic short” generate scripted video from a description. “Creator testimonial” makes a talking-head, UGC-style ad. “Swipe post” builds an image carousel. “AI character” keeps one persona consistent across videos. “Cameo” and “Swap into your video” put a real photo into a generated or existing scene. Daily hooks give you ten fresh ideas every morning, and finished posts can be scheduled straight to TikTok, Instagram and YouTube.' },
-      { q: 'Why does the app ask for camera, photo library or microphone access?', a: 'Only so you can capture or choose photos and videos to use as input for generation, and so the app can save your finished videos to your photo library. See our Privacy Policy for details.' },
+      { q: 'Why does the app ask for camera, photo library or microphone access?', a: 'Only so you can capture or choose photos and videos to use as input for generation, and so the app can save your finished videos to your photo library. On Android the app uses the system photo and file pickers and requests none of these permissions. See our Privacy Policy for details.' },
       { q: 'A generation failed but used my credits — what do I do?', a: 'Email us the approximate date and time and, if possible, a screenshot; we will investigate and restore credits for a confirmed system error.' },
     ],
   },
@@ -242,12 +265,12 @@ const en: LegalPack = {
     sections: [
       {
         h: 'Delete in the app (recommended)',
-        p: ['Open Viral Factory on your device and follow these steps:'],
+        p: ['Open Viral Factory on your iPhone or Android device and follow these steps (the menu path is the same on both):'],
         ul: [
           'Go to Profile (bottom tab).',
           'Tap Settings.',
           'Tap Delete Account, near the bottom of the screen.',
-          'If you signed in with Apple, you may be asked to re-authenticate with Sign in with Apple to confirm it is you.',
+          'If you signed in with Apple or Google, you may be asked to re-authenticate to confirm it is you.',
           'Confirm deletion. This takes effect immediately and cannot be undone.',
         ],
       },
@@ -257,17 +280,18 @@ const en: LegalPack = {
           'your account and profile information',
           'your credit balance and transaction history',
           'every video, image set, carousel and character you generated, and their source media',
+          'your AI Edit jobs, transcripts and edit plans, and the videos you uploaded to or rendered with AI Edit (uploaded source videos, edited videos, thumbnails and caption files)',
           'connected social accounts (TikTok, Instagram, YouTube) and their stored access tokens',
           'saved prompts and notifications',
-          'your Sign in with Apple / Google link (the Apple grant is revoked)',
+          'your Sign in with Apple / Google link (the Apple grant is revoked; on Android, the link to your Google account is removed from our systems, and you can also remove the app under your Google account’s security settings → Third-party apps and services)',
         ],
       },
       {
         h: 'What isn’t automatically affected',
         p: [
-          'Deleting your account does NOT cancel an active App Store subscription — cancel it separately in Settings → [your name] → Subscriptions on your device, or it will continue to renew.',
+          'Deleting your account does NOT cancel an active subscription — cancel it separately, or it will continue to renew: on iOS in Settings → [your name] → Subscriptions; on Android in Google Play → Payments and subscriptions → Subscriptions.',
           'Content you already published to TikTok, Instagram or YouTube stays on those platforms; delete it there directly if you want it removed.',
-          "Copies already held by our analytics, crash-reporting and purchase providers (Mixpanel, PostHog, Sentry, RevenueCat) and by our AI infrastructure provider (fal.ai) are not removed by in-app deletion. Email ridvan.uyn@gmail.com to request their deletion.",
+          "Copies already held by our analytics, crash-reporting and purchase providers (Mixpanel, PostHog, Sentry, RevenueCat) and by our AI providers (fal.ai and Anthropic, including copies processed for AI Edit) are not removed by in-app deletion. Email ridvan.uyn@gmail.com to request their deletion.",
         ],
       },
       {

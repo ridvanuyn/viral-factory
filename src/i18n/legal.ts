@@ -29,7 +29,7 @@ const en: LegalPack = {
   effectiveDateLabel: 'September 26, 2026',
   privacy: {
     title: 'Privacy Policy',
-    effective: "October 26, 2026",
+    effective: "October 28, 2026",
     lead: 'How Viral Factory collects, uses and protects your information.',
     intro:
       'This Privacy Policy explains what information the Viral Factory iOS and Android apps and this website collect, why, and the choices you have. Viral Factory is developed by Rıdvan Uyan, an individual developer, who is the controller of your information for the purposes described here.',
@@ -40,17 +40,17 @@ const en: LegalPack = {
           'Account identifiers — a random device identifier created the first time you open the app, used for your guest account on that device; if you sign in with Apple (iOS) or Google (iOS and Android) instead, we receive your name, email address (or a private relay email) and the provider account ID.',
           'Content you provide — prompts and text you write; photos, videos or links you upload or paste, such as a reel link to remake, a reference photo for the Character or Cameo studios, or a screen recording to analyze.',
           'Generated content — the media, scripts and captions the app creates for you, and your generation and credit-transaction history.',
-          'Purchase information — subscription and credit-pack purchases are handled by the App Store on iOS and by Google Play on Android; RevenueCat processes purchase and entitlement events on our behalf. We never receive your card number.',
+          'Purchase information — subscription and credit-pack purchases are handled by the App Store on iOS and by Google Play billing on Android; RevenueCat processes purchase and entitlement events on our behalf. We never receive your card number.',
           'AI Edit videos — when you use AI Edit, the raw video files you upload (up to 2 GB), the speech transcript with word timestamps, the edit plan, and the finished edited videos, thumbnails and caption files we render for you. Details are in the AI Edit section below.',
           'Social account connections — if you connect TikTok, Instagram or YouTube to publish content, we receive that account’s basic profile info (handle, display name, avatar) and store an encrypted access token so the app can publish on your behalf.',
-          'Analytics — we use Mixpanel and PostHog to understand how the app is used. PostHog session replay is enabled for interaction analysis, but all on-screen text and images are masked before capture, so replay never shows your prompts, photos or generated media. Analytics uses a separate, random installation identifier — never your guest account identifier.',
+          'Analytics — we use Mixpanel and PostHog to understand how the app is used (screens opened, features used, purchases started). Session replay is switched off: we do not record or replay your screen. Analytics events carry a separate, random installation identifier and your Viral Factory account ID (a random internal ID, not your name, email address or sign-in credential), so that usage can be tied to your account for support and product analysis. The app does not read the advertising identifier.',
           'Device and diagnostic data — app version, general device model and operating system, and language settings. Our analytics and purchase providers may also derive an approximate location (such as country or region) from your IP address; the app does not request your device location. We also keep the IP address and user agent of your sign-in sessions for security.',
           "Crash and performance diagnostics — we use Sentry (EU region) to find and fix crashes and errors. Reports include stack traces, device model and operating system, app version, a trail of recent app events such as screen navigation, and performance timings for a sample of sessions. They are linked to your Viral Factory account ID, not to your email address or name.",
           'Notification preferences — whether you have turned on the daily-idea reminder, stored locally on your device.',
         ],
         p: [
           'We do not use advertising trackers, and the app does not request Apple’s App Tracking Transparency permission.',
-          'Android: purchases are processed by Google Play (billing) and RevenueCat. If you sign in with Google, we receive your name, email address and Google account ID. The Android app does not use the Advertising ID and requests no location, camera, microphone or contacts permission. Notifications are optional.',
+          'Android: purchases are processed by Google Play (billing) and RevenueCat. If you sign in with Google, we receive your name, email address and Google account ID. The Android app does not use the Advertising ID and requests no location, camera, microphone or contacts permission. Notifications are optional. To cancel a Google Play subscription, open Google Play → profile icon → Payments and subscriptions → Subscriptions → Viral Factory → Cancel subscription, or use Profile → Manage subscription in the app, which opens the same Google Play page. Deleting your account does not cancel a subscription.',
         ],
       },
       {
@@ -70,8 +70,9 @@ const en: LegalPack = {
         h: 'AI generation and third-party processors',
         p: [
           'Content and reference material you submit are sent to fal.ai, our AI infrastructure provider, solely to generate the output you requested. Depending on the request, fal.ai routes the job to model providers that currently include OpenAI, Google (Gemini), Anthropic (Claude), Kling, ElevenLabs, Topaz and OmniHuman, and fal.ai is the processor we contract with for those. Anthropic is also a processor we call directly for text and AI Edit planning, as described below. We do not use your content to train our own models. Our AI infrastructure provider, fal.ai, processes your content only to generate the output you requested, under its own terms and privacy policy (fal.ai/privacy).',
-          'Uploaded photos, videos and the media we generate are stored with your projects until you delete them or delete your account. Reference links you paste — for example, a reel to remake — are analyzed only to write your storyboard; the reference video itself is not stored in your library.',
+          'Source files you upload — photos, videos and AI Edit raw videos — are kept for 30 days after upload so you can re-render a scene or fix one without uploading again, and are then automatically deleted from our storage. This is the same promise the in-app AI-processing consent screen makes (“We keep the source for 30 days … After that it is deleted.”). Videos and other media we generate for you stay with your projects until you delete them or delete your account. Reference links you paste — for example, a reel to remake — are analyzed only to write your storyboard; the reference video itself is not stored in your library.',
           'Generated media is stored on Amazon Web Services (S3) and, for some assets, Supabase Storage, and delivered through a content delivery network. Application data (accounts, projects, credit ledger) is stored in MongoDB. Our backend is hosted on DigitalOcean.',
+          'In summary, the service providers (processors) that handle your data on our behalf are: fal.ai and its model providers (AI generation and speech transcription); Anthropic (text and AI Edit planning); Supabase and Amazon Web Services (media storage); MongoDB and DigitalOcean (application data and hosting); RevenueCat (purchases and entitlements); Mixpanel and PostHog (product analytics); Sentry (crash and performance diagnostics); and Google (Google Sign-In and Google Play billing on Android) or Apple (Sign in with Apple and the App Store on iOS).',
         ],
       },
       {
@@ -84,7 +85,7 @@ const en: LegalPack = {
           'Transcription — the audio track is sent to fal.ai, which runs ElevenLabs Scribe to produce a transcript with word timestamps. The transcript, the detected language and the edit plan are saved with the AI Edit job in our database.',
           'Anthropic as a processor — the transcript and a small number of still frames sampled from your video are sent to Anthropic (Claude) through its commercial API so that it can decide the cuts, hook text and captions, and check the finished result. Anthropic processes this only to return that output; under its commercial terms, API inputs and outputs are not used to train its models.',
           'Rendering — cutting, captions and reframing are done on our own servers with FFmpeg; the files are not sent to any other provider for rendering.',
-          'How long — we keep uploads, edit plans, transcripts and rendered videos until you delete them or delete your account. We do not use them for advertising, and we do not share them with other users.',
+          'How long — the raw videos you upload are automatically deleted from our storage 30 days after upload. Edit plans, transcripts and the rendered videos, thumbnails and caption files we create for you are kept until you delete them or delete your account. We do not use any of it for advertising, and we do not share it with other users.',
           'Deletion — deleting your account (Profile → Settings → Delete Account) permanently deletes your AI Edit jobs, transcripts and edit plans, and removes your uploaded source videos and rendered videos, thumbnails and caption files from our storage. Copies already held by fal.ai, ElevenLabs and Anthropic as processors are not removed by in-app deletion; email us to request their deletion.',
         ],
       },
@@ -107,19 +108,19 @@ const en: LegalPack = {
       {
         h: 'Data retention',
         p: [
-          'Your account and generated content are retained while your account is active. Uploaded photos, videos and generated media are stored with your projects until you delete them or delete your account. AI Edit uploads, transcripts, edit plans and rendered videos are kept on the same basis. Deleting your account (Profile → Settings → Delete Account) removes your account data, AI Edit data and stored media. You can delete individual generations in the app at any time.',
+          'Your account and generated content are retained while your account is active. Source photos and videos you upload (including AI Edit raw uploads) are automatically deleted from our storage 30 days after upload. Videos and other media generated for you, and AI Edit transcripts, edit plans and rendered videos, stay until you delete them or delete your account. Deleting your account (Profile → Settings → Delete Account) removes your account data, AI Edit data and stored media. You can delete individual generations in the app at any time.',
         ],
       },
       {
         h: 'Deleting your account',
         p: [
-          'You can permanently delete your account at any time in the app: Profile → Settings → Delete Account. This immediately and permanently deletes your account, credit history, videos, AI Edit jobs and the videos you uploaded to or rendered with AI Edit, characters, prompts and connected social accounts, and revokes the Sign in with Apple grant if used. It does not cancel an active subscription: cancel an App Store subscription in your Apple ID settings, or a Google Play subscription in Google Play → Payments and subscriptions. See our Delete Account page for full, step-by-step instructions, including how to request deletion by email if you no longer have the app. Copies already held by our analytics, crash-reporting, purchase and AI providers (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai and Anthropic) are not removed by the in-app deletion; email us to request their deletion.',
+          'You can permanently delete your account at any time in the app: Profile → Settings → Delete Account. This immediately and permanently deletes your account, credit history, videos, AI Edit jobs and the videos you uploaded to or rendered with AI Edit, characters, prompts and connected social accounts, and revokes the Sign in with Apple grant if used. It does not cancel an active subscription: cancel an App Store subscription in your Apple ID settings, or a Google Play subscription in Google Play → Payments and subscriptions. You can also use our Delete Account page on this website (/delete-account/), which gives step-by-step instructions for iPhone and Android and explains how to request deletion by email if you no longer have the app. Copies already held by our analytics, crash-reporting, purchase and AI providers (Mixpanel, PostHog, Sentry, RevenueCat, fal.ai and Anthropic) are not removed by the in-app deletion; email us to request their deletion.',
         ],
       },
       {
         h: 'Your rights under the GDPR (EEA, UK, Switzerland)',
         p: [
-          'If you are located in the EEA, UK or Switzerland, you have the right to access, correct, delete and receive a copy of (portability) your personal data, and to object to or restrict certain processing. We process your data based on: performance of a contract (providing the app), your consent (for example, session-replay analytics), and our legitimate interests (security, abuse prevention, improving the service). To exercise any of these rights, email ridvan.uyn@gmail.com; we will respond within one month.',
+          'If you are located in the EEA, UK or Switzerland, you have the right to access, correct, delete and receive a copy of (portability) your personal data, and to object to or restrict certain processing. We process your data based on: performance of a contract (providing the app), your consent (for example, the AI-processing consent you give before uploading photos or video), and our legitimate interests (security, abuse prevention, improving the service). To exercise any of these rights, email ridvan.uyn@gmail.com; we will respond within one month.',
         ],
       },
       {
